@@ -1,4 +1,4 @@
-# Fluent — English for Client Calls (PWA)
+# Speak Fluently (PWA)
 
 Offline-first English course PWA for **Tanqeel**: a 90-day path from A2/B1 to B2+ English,
 built for freelance client calls. Vanilla HTML/CSS/JS — no frameworks, no build step, no CDNs.

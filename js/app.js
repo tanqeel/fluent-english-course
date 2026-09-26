@@ -1,4 +1,4 @@
-/* Fluent — hash router + PWA boot. All paths relative: works under any subpath. */
+/*/* Speak Fluently — hash router + PWA boot. All paths relative: works under any subpath. */
 (function(){
 'use strict';
 const TABS=[
