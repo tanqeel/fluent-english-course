@@ -3,7 +3,7 @@
 'use strict';
 const TABS=[
   ['#/home','🏠','Home'],['#/learn','📚','Learn'],['#/practice','⚔️','Practice'],
-  ['#/review','📇','Review'],['#/progress','📊','Progress']
+  ['#/review','📇','Review'],['#/progress','📊','Progress'],['#/coach','🤖','Coach']
 ];
 function drawTabs(active){
   const bar=document.getElementById('tabbar');
@@ -26,6 +26,7 @@ function route(){
       case 'placement': drawTabs('#/learn'); Screens.placement(root); break;
       case 'review': drawTabs('#/review'); Screens.review(root,arg); break;
       case 'progress': drawTabs('#/progress'); Screens.progress(root); break;
+      case 'coach': drawTabs('#/coach'); Screens.coach(root); break;
       default: location.hash='#/home'; return;
     }
     Store.S.lastRoute=hash; Store.save();

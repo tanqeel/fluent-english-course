@@ -31,11 +31,18 @@ so the app works under any subpath (e.g. `username.github.io/fluent/`).
 
 ## Hosting: why GitHub Pages (and what would need more)
 
-This app is **100% static — no backend, no server, no API keys**. Everything runs
+This app is **100% static — no backend, no server**. Everything runs
 client-side: lessons, drills, quizzes, SM-2 scheduling, streaks, badges, error log,
 and on-device TTS fallback all live in the browser + `localStorage`. That is
 deliberate: it deploys free on GitHub Pages, works fully offline after first load,
 and has zero running costs or accounts to manage.
+
+**AI Coach is bring-your-own-key (BYOK):** the coach tab calls Google's Gemini API
+directly from the browser using the user's own free key (`js/aicoach.js`). The key
+is stored **only** in the device's `localStorage`, sent **only** to
+`generativelanguage.googleapis.com`, never logged, never in any file. No key →
+the whole app still works; the coach shows its setup prompt. This keeps the app
+fully static while delivering real in-app AI feedback.
 
 **Vercel / Netlify vs GitHub Pages:** for a static site like this one, all three
 host it identically well. The only reason to move would be to add a backend —
@@ -45,11 +52,10 @@ Functions, both free-tier friendly), and nothing else:
 
 - **Cross-device progress sync** — progress currently lives in `localStorage` on one
   device. Syncing phone ↔ laptop needs an account + a tiny database.
-- **In-app AI speaking feedback** — today, speaking tasks are self-checked or
-  brought to the Muse chat for scoring. Real in-app pronunciation/fluency scoring
-  needs a speech API + an LLM call, i.e. server-side keys.
 - **Accounts & leaderboards** — logins, friend streaks, shared leaderboards all
   need auth + a database.
+
+~~In-app AI feedback~~ — **done without a backend** via BYOK Gemini (see above).
 
 Everything else — including any future modules, drills, quizzes, audio tracks,
 and worksheets — stays static and GitHub Pages-deployable. Rule: if a feature

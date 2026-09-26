@@ -1,9 +1,9 @@
 /* Fluent service worker — offline-first. All URLs relative: safe under any subpath. */
-const CACHE='fluent-v3';
+const CACHE='fluent-v4';
 const PRECACHE=[
   'index.html','manifest.webmanifest',
   'css/styles.css',
-  'js/store.js','js/sm2.js','js/ui.js','js/content.js','js/drills.js','js/screens.js','js/app.js',
+  'js/store.js','js/sm2.js','js/ui.js','js/content.js','js/drills.js','js/screens.js','js/aicoach.js','js/app.js',
   'content/module-foundations.json','content/module-accuracy.json','content/module-pronunciation.json',
   'content/module-fluency.json','content/module-client-communication.json',
   'content/module-self-presentation.json','content/module-sales.json',
