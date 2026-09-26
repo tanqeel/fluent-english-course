@@ -32,8 +32,10 @@ function toast(msg,ms=2600){
   clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),ms);
 }
 
-/* lightweight canvas confetti — zero deps */
+/* lightweight canvas confetti — zero deps. Skipped when the OS asks for reduced motion. */
+const REDUCED_MOTION=typeof matchMedia==='function'&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 function confetti(n=90){
+  if(REDUCED_MOTION)return;
   let c=$('#confetti');
   if(!c){c=document.createElement('canvas');c.id='confetti';document.body.appendChild(c);}
   c.width=innerWidth;c.height=innerHeight;

@@ -1,1 +1,1419 @@
-{"color": "#2dd4bf", "description": "The honest truth first: IELTS 7+ demands solid B2+ English — technique alone doesn't substitute. This module stacks on Modules 1–4 and teaches you how examiners actually score the test.", "icon": "🎓", "id": "ielts", "lessons": [{"id": "ielts-l1", "minutes": 12, "steps": [{"body": "Dear Tanqeel, this lesson is a promise of honesty, not a promise of magic. **IELTS Band 7+ requires solid B2+ English.** No technique, template, or \"examiner trick\" substitutes for real language ability. Anyone who sells you Band 7 in 30 days from A2/B1 is selling you a story.", "example": "", "heading": null, "tip": "", "type": "teach"}, {"body": "The realistic path is: **6–9 months of foundation** (Modules 1–4 of this course: fluency, accuracy, pronunciation, client communication) **plus 6–8 weeks of IELTS technique.** This module is the technique part. It does not replace the foundation — it converts your foundation into a score. Technique adds roughly one band to the level you actually have; it never adds three.", "example": "", "heading": "The realistic path", "tip": "", "type": "teach"}, {"body": "**Listening** — 30 min, 4 sections, 40 questions. **Reading** — 60 min, 3 passages, 40 questions. **Writing** — 60 min: Task 1 (150 words, ~20 min) + Task 2 (250 words, ~40 min). **Speaking** — 11–14 min: Part 1 (4–5 min, familiar topics), Part 2 (3–4 min, cue card talk), Part 3 (4–5 min, discussion). Each section is scored 0–9 in half bands; your overall band is the average.", "example": "", "heading": "What the test actually is", "tip": "", "type": "teach"}, {"body": "Band 7 = **\"good user\"** — operational command with occasional inaccuracies and misunderstandings. Roughly: **30–32/40 in Listening or Reading ≈ Band 7** (varies slightly per test). In Writing and Speaking, Band 7 means you satisfy all four band descriptors with strengths outweighing weaknesses. There is no secret. There is only skill + strategy.", "example": "", "heading": "What Band 7 actually means", "tip": "", "type": "teach"}, {"body": "Technique tumhare actual level par **ek band tak** ka izaafa de sakti hai — teen band nahi. Pehle Modules 1–4 se apni English B2 tak le jao, phir ye module tumhein 6.5 se 7.5 tak pohnchayega. Yehi honest rasta hai, aur yehi kaam karta hai.", "example": "", "heading": "Sachai (seedhi baat)", "tip": "", "type": "teach"}, {"engine": "journal", "id": "ielts-1", "prompt": "**Your IELTS baseline (honesty = strategy)**\n\nWrite 5 sentences, no exaggeration:\n1. Why do you want IELTS? (study abroad? immigration? job?)\n2. What band do you NEED vs what band would be nice?\n3. Which section scares you most and why?\n4. How many real study hours per week can you give for 8 weeks?\n5. One foundation skill from Modules 1–4 you must fix first.\nRead it back: if any sentence fakes your level, rewrite it. A strategy built on an honest baseline beats a fantasy plan every time.", "type": "drill", "xp": 15}, {"answer": "Task 2 is worth twice as much as Task 1.", "engine": "word-order", "explanation": "Writing Task 2 counts double — that's why it gets 40 of your 60 minutes.", "id": "ielts-2", "title": "Test facts in order", "type": "drill", "words": ["Task 2", "is worth", "twice", "as much", "as Task 1"], "xp": 10}], "title": "The honest truth about Band 7", "xp": 40}, {"id": "ielts-l2", "minutes": 14, "steps": [{"body": "IELTS Listening is not hard because of speed — it's hard because of **traps**. The recording is designed to make confident answers wrong. Three traps account for most lost marks: **distractors** (the answer changes — *\"Oh wait, I meant Friday, not Thursday\"*), **paraphrase answers** (the question says *\"cost\"* but the audio says *\"price\"* — you must recognize synonyms, not match words), and **signpost words** (*\"however,\" \"actually,\" \"on the other hand\"* — what follows them usually corrects what came before).", "example": "", "heading": null, "tip": "", "type": "teach"}, {"body": "You get time before each section. Never waste it: **read the questions first and predict the answer type** — a number? a date? a name? a noun? If question 3 asks *\"The course starts in ___\"* you predict a month/date, and your ear is already tuned to date-shaped sounds. Prediction turns listening from a memory test into a **confirmation task** — you're just checking whether what you hear matches your guess.", "example": "", "heading": "The prediction technique (read first, guess, then listen)", "tip": "", "type": "teach"}, {"body": "**Numbers:** *\"fifteen\"* vs *\"fifty\"* — in fast speech the difference is one tiny vowel; always double-check by context. **Dates:** *\"the 17th of July\"* — write *17 July* or *July 17*, either is accepted, but 17/07/2026 can be marked wrong in some formats. **Spelling:** Section 1 always has a name spelled aloud — write it EXACTLY as dictated, letter by letter. One wrong letter = zero. Capital letters don't matter; correct letters do.", "example": "", "heading": "Number, date & spelling traps", "tip": "", "type": "teach"}, {"body": "You get 10 minutes at the end to transfer answers. Use them: check **grammar** (is it singular or plural? *\"two book\"* → *\"two books\"*), check **spelling**, and never leave a blank — **there is no negative marking.** A guess has a chance; a blank has none.", "example": "", "heading": "Transfer time discipline", "tip": "", "type": "teach"}, {"answer": 1, "engine": "multiple-choice", "explanation": "\"Sorry\" is a signpost — what follows corrects what came before. Always take the corrected answer.", "id": "ielts-3", "options": ["Wednesday", "Thursday"], "prompt": "Audio: \"The seminar is on Wednesday... sorry, Thursday.\" What do you write?", "title": "Trap spotting", "type": "drill", "xp": 10}, {"answer": 0, "engine": "multiple-choice", "explanation": "Use context to resolve unclear sounds — and never leave blanks; there's no negative marking.", "id": "ielts-4", "options": ["Write 15 — context confirms it", "Write 50 — safer to guess big", "Leave it blank"], "prompt": "Question asks for the \"price\". Audio says: \"That'll be fifteen pounds.\" You hear something like \"fifteen/fifty\". The question is about a cheap student ticket. Your move?", "title": "Trap spotting", "type": "drill", "xp": 10}, {"answer": "Write the name exactly as dictated: S-M-I-T-H-S-O-N Smithson", "engine": "fill-blank", "explanation": "Letter by letter: S-M-I-T-H-S-O-N = Smithson. One extra letter = zero marks.", "id": "ielts-5", "options": ["Write the name exactly as dictated: S-M-I-T-H-S-O-N ___", "Smithson", "Smithsson"], "text": "Write the name exactly as dictated: S-M-I-T-H-S-O-N ___", "title": "Spelling discipline", "type": "drill", "xp": 10}, {"answer": "15 pounds / three nights", "engine": "fix-sentence", "explanation": "Transfer-time grammar check: plural nouns after numbers. Examiners mark the whole answer wrong for a missing -s.", "hint": "Read it aloud — where does it stumble?", "id": "ielts-6", "title": "Fix the transfer error", "type": "drill", "wrong": "I write the answer '15 pound' for three night.", "xp": 10}], "title": "Listening: traps & the prediction habit", "xp": 45}, {"id": "ielts-l3", "minutes": 16, "steps": [{"body": "First, a shadowing drill with the Section 1 audio (a hotel booking conversation). If the audio file isn't on your device yet, use the **read-along script** below: read it aloud twice at natural speed, have a friend read the receptionist's lines while you play the guest — or record yourself reading both parts and quiz yourself from the recording. The questions after it are the real exercise either way.", "example": "", "heading": "How this drill works", "tip": "", "type": "teach"}, {"audio": "audio/12-ielts-listening-s1.mp3", "engine": "shadowing", "id": "ielts-7", "text": "Shadow the booking conversation — receptionist and guest", "tip": "First pass: just listen. Second pass: shadow the guest. Third: shadow the receptionist. Then answer the 10 questions below.", "title": "Section 1: hotel booking (audio)", "type": "drill", "xp": 15}, {"body": "RECEPTIONIST: Good morning, Grandview Hotel. How can I help you?\nGUEST: Hi, I'd like to book a room for next week — arriving on the 17th of July.\nRECEPTIONIST: The 17th of July... and how many nights will that be?\nGUEST: Three nights. Oh wait — actually make it four. We'll leave on the 21st.\nRECEPTIONIST: Four nights, 17th to 21st July. And what name is the booking under?\nGUEST: Khalid — K-H-A-L-I-D, Mahmood — M-A-H-M-O-O-D.\nRECEPTIONIST: Got it, Mr Mahmood. A single or double room?\nGUEST: A double, please. Sea view if you have one.\nRECEPTIONIST: We have a double with a sea view at 85 dollars a night. Breakfast is included.\nGUEST: Perfect. Do you have parking?\nRECEPTIONIST: We do — underground parking, 10 dollars per night. Actually, it's free for stays of four nights or more.\nGUEST: Great, we'll need one space. My number is 07955 342 118.\nRECEPTIONIST: 07955 342 118. And an email for the confirmation?\nGUEST: k.mahmood at fastmail dot com.\nRECEPTIONIST: You're all set. Check-in is from 2 pm, and check-out is at 11... sorry, 12 noon.\nGUEST: 12 noon, got it. Thanks!", "example": "", "heading": "Read-along fallback (if the audio isn't on your device yet)", "tip": "", "type": "teach"}, {"body": "Prediction check: which questions below contain traps from Lesson 2? (Distractor: nights, check-out time. Signpost \"actually\": parking. Spelling: surname.) Say your answers aloud first, then do the drills.", "example": "", "heading": "Now answer — before looking at the drills", "tip": "", "type": "teach"}, {"answer": 1, "engine": "multiple-choice", "explanation": "4 nights — \"actually make it four\" is a distractor correction. Take the corrected number.", "id": "ielts-8", "options": ["3", "4"], "prompt": "How many nights is the booking for?", "title": "Q1 — dates", "type": "drill", "xp": 10}, {"answer": "Guest's surname, exactly as spelled: M-A-H-M-O-O-D → Mahmood", "engine": "fill-blank", "explanation": "M-A-H-M-O-O-D. Letter-by-letter discipline — no guessing.", "id": "ielts-9", "options": ["Guest's surname, exactly as spelled: M-A-H-M-O-O-D → ___", "Mahmood", "Mahmud"], "text": "Guest's surname, exactly as spelled: M-A-H-M-O-O-D → ___", "title": "Q2 — spelling", "type": "drill", "xp": 10}, {"answer": 1, "engine": "multiple-choice", "explanation": "Double with sea view, $85/night. The single was the first offer, not the final choice.", "id": "ielts-10", "options": ["Single with sea view", "Double with sea view"], "prompt": "Which room did the guest book?", "title": "Q3 — room type", "type": "drill", "xp": 10}, {"answer": "Price per night: $85", "engine": "fill-blank", "explanation": "$85/night with breakfast included. Watch 85 vs 58 — the vowel is the whole difference.", "id": "ielts-11", "options": ["Price per night: $___", "85", "58"], "text": "Price per night: $___", "title": "Q4 — price", "type": "drill", "xp": 10}, {"answer": 1, "engine": "multiple-choice", "explanation": "\"Actually, it's free for stays of four nights or more\" — a signpost + paraphrase of the guest's 4-night stay. Free.", "id": "ielts-12", "options": ["$10 per night", "Free"], "prompt": "How much does parking cost for this guest?", "title": "Q5 — parking", "type": "drill", "xp": 10}, {"answer": "Guest's phone number: 07955 342 118", "engine": "fill-blank", "explanation": "07955 342 118 — digits must be exact, every one.", "id": "ielts-13", "options": ["Guest's phone number: ___", "07955 342 118", "07955 342 188"], "text": "Guest's phone number: ___", "title": "Q6 — number", "type": "drill", "xp": 10}, {"answer": "Confirmation email: k.mahmood at fastmail dot com", "engine": "fill-blank", "explanation": "fastmail — one word. Hearing \"fast mail\" as two words is the trap.", "id": "ielts-14", "options": ["Confirmation email: k.mahmood at ___ dot com", "fastmail", "fast male"], "text": "Confirmation email: k.mahmood at ___ dot com", "title": "Q7 — email", "type": "drill", "xp": 10}, {"answer": 1, "engine": "multiple-choice", "explanation": "\"11... sorry, 12 noon\" — sorry = signpost of correction. Take 12.", "id": "ielts-15", "options": ["11 am", "12 noon"], "prompt": "Check-out time?", "title": "Q8 — check-out", "type": "drill", "xp": 10}, {"answer": "arrives 17 July, stays 4 nights, check-out 12 noon", "engine": "fix-sentence", "explanation": "4 nights (distractor), 12 noon (correction), and grammar: singular/plural in your notes becomes the answer you write.", "hint": "Three trap errors are hiding in this note.", "id": "ielts-16", "title": "Q9 — fix the note", "type": "drill", "wrong": "Guest arrive 17 july, stay 3 night, checkout 11am.", "xp": 10}, {"answer": 0, "engine": "multiple-choice", "explanation": "\"Actually make it four\" and \"sorry, 12 noon\" — signposts mark the real answer.", "id": "ielts-17", "options": ["\"actually\" and \"sorry\"", "\"please\" and \"thanks\""], "prompt": "Which signpost words in the script signaled a corrected answer?", "title": "Q10 — review", "type": "drill", "xp": 10}], "title": "Listening Section 1: full drill", "xp": 55}, {"id": "ielts-l4", "minutes": 16, "steps": [{"body": "Reading has 3 passages, 40 questions, **60 minutes — and no extra transfer time.** That means ~20 minutes per passage, no negotiation. Most Band 6 candidates fail on time, not on English. So the #1 strategy is a reading method that stops you from reading the whole passage.", "example": "", "heading": null, "tip": "", "type": "teach"}, {"body": "**Skim** = read for structure, not detail: title, first sentence of each paragraph, last paragraph. 90 seconds. You should be able to say: \"This passage is about X; paragraph 2 gives history, paragraph 3 gives problems.\" **Scan** = hunt for one specific word or number in the question, then find its paraphrase in the text. You never read top-to-bottom; you **skim for the map, then scan for the treasure.**", "example": "", "heading": "Skim vs scan (the only reading method you need)", "tip": "", "type": "teach"}, {"body": "**TRUE** = the text says exactly this (paraphrased). **FALSE** = the text directly contradicts it. **NOT GIVEN** = the text neither confirms nor denies it. The trap: if the passage says *\"the library opens at 9\"* and the question says *\"the library opens at 9 and is free\"* — that's NOT GIVEN, not TRUE. Part of it matches, part is unknown. **Rule of thumb: if you're \"sure it's probably true\" — it's NOT GIVEN.** TRUE requires text evidence; FALSE requires text contradiction.", "example": "", "heading": "The NOT GIVEN trap — the #1 score killer", "tip": "", "type": "teach"}, {"body": "Short passage — read it once (skim), then answer the 6 questions by scanning:\n\n**Urban rooftops**\nA. In 2018, the city of Oslo required all new buildings over 500 m² to include a green roof. The policy aimed to reduce flooding and improve air quality.\nB. Early results disappointed engineers. Many roofs planted with grass needed constant watering, and in 2021 the council admitted maintenance costs were higher than expected.\nC. Researchers then tested native wildflower mixes. These needed almost no watering and attracted bees. By 2023, wildflower roofs were cheaper to maintain than grass roofs, though the city has not published exact savings figures.\nD. Architect Lina Berg argues the real value is psychological: residents report feeling calmer. No clinical study has confirmed this, she admits, but she believes green roofs make cities more humane.", "example": "", "heading": "Practice passage: Urban rooftops", "tip": "", "type": "teach"}, {"answer": 0, "engine": "multiple-choice", "explanation": "Paragraph A: \"all new buildings over 500 m²\" — matches. TRUE needs text evidence, and it's there.", "id": "ielts-18", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "1. Oslo requires green roofs on all new buildings over 500 m².", "title": "T/F/NG practice", "type": "drill", "xp": 10}, {"answer": 0, "engine": "multiple-choice", "explanation": "Paragraph B: \"the council admitted maintenance costs were higher than expected\" — direct contradiction of \"lower\". FALSE.", "id": "ielts-19", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "2. Early green roofs were cheaper to maintain than expected.", "title": "T/F/NG practice", "type": "drill", "xp": 10}, {"answer": 2, "engine": "multiple-choice", "explanation": "Paragraph C says wildflower roofs were cheaper but \"the city has not published exact savings figures\" — we can't confirm 40%. NOT GIVEN.", "id": "ielts-20", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "3. Wildflower roofs save the city exactly 40% on maintenance.", "title": "T/F/NG practice", "type": "drill", "xp": 10}, {"answer": 2, "engine": "multiple-choice", "explanation": "Paragraph D: Berg reports residents \"feeling calmer\" but \"no clinical study has confirmed this\". Claimed, not proven — NOT GIVEN.", "id": "ielts-21", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "4. Green roofs have proven health benefits.", "title": "T/F/NG practice", "type": "drill", "xp": 10}, {"answer": 1, "engine": "multiple-choice", "explanation": "Paragraph C: wildflower mixes \"needed almost no watering\" — the opposite of constant watering. FALSE.", "id": "ielts-22", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "5. Wildflower roofs need constant watering.", "title": "T/F/NG practice", "type": "drill", "xp": 10}, {"answer": 2, "engine": "multiple-choice", "explanation": "The passage never mentions a year for the wildflower tests, only results by 2023. NOT GIVEN.", "id": "ielts-23", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "6. Wildflower roof tests began in 2020.", "title": "T/F/NG practice", "type": "drill", "xp": 10}, {"body": "A heading summarizes the **main idea of a whole paragraph** — ignore details, ask \"what is this paragraph mostly FOR?\" Paragraph B = problems with early grass roofs. Paragraph C = a better solution (wildflowers). Paragraph D = a claimed psychological benefit. **Trap:** headings reuse words from the passage. Match ideas, not words — if you match the word \"bees\" you picked the detail, not the main idea.", "example": "", "heading": "Matching headings: match ideas, not words", "tip": "", "type": "teach"}, {"body": "- Passage 1: 17 min (save time on the easy one)\n- Passage 2: 20 min\n- Passage 3: 23 min (hardest — steal time from Passage 1)\n- **If a question eats 2 minutes, guess and move.** A skipped easy question later costs the same mark as a solved hard one now.\n- Answer every question — no negative marking.", "example": "", "heading": "The 20-minute rule (timing strategy)", "tip": "", "type": "teach"}, {"answer": 1, "engine": "multiple-choice", "explanation": "17 + 20 + 23 = 60, with the hardest passage getting the most time. Discipline beats brilliance.", "id": "ielts-24", "options": ["20 minutes each, no exceptions", "17 / 20 / 23 — hardest passage gets the most"], "prompt": "Which split fits the 60-minute limit?", "title": "Timing drill", "type": "drill", "xp": 10}], "title": "Reading: skim, scan, and the NOT GIVEN trap", "xp": 50}, {"id": "ielts-l5", "minutes": 16, "steps": [{"body": "Writing Task 1 is a **report, not an essay.** 150+ words, ~20 minutes. You describe what you see: trends, comparisons, processes. **Task 2 counts double**, so Task 1 must be efficient, not beautiful.", "example": "", "heading": null, "tip": "", "type": "teach"}, {"body": "- **Line graphs:** *\"rose sharply / increased gradually / peaked at / remained stable / fell slightly / fluctuated.\"*\n- **Bar charts:** comparisons — *\"twice as high as,\" \"the highest,\" \"slightly more than.\"*\n- **Pie charts:** proportions — *\"accounted for 40%,\" \"made up a quarter of,\" \"the smallest share.\"*\n- **Tables:** pick the biggest differences, ignore the rest. Never describe every number.\n- **Maps (before/after):** *\"was replaced by,\" \"was converted into,\" \"was demolished to make way for,\" \"remained unchanged.\"*\n- **Process diagrams:** passive + sequencers — *\"The beans are harvested, then they are dried...\"* Use *\"first, next, after that, finally.\"*", "example": "", "heading": "Frameworks: trend language for each chart type", "tip": "", "type": "teach"}, {"body": "Every Task 1 needs 4 paragraphs: **(1) Paraphrase** the question (one sentence). **(2) Overview** — the 2–3 most important trends, NO numbers. **(3) Detail 1** (with numbers). **(4) Detail 2** (with numbers). **The overview paragraph IS the band score.** Examiners decide your Task Achievement band from it. If you skip the overview or fill it with numbers, you cap yourself at Band 6.", "example": "", "heading": "The 4-paragraph structure — the overview is the band score", "tip": "", "type": "teach"}, {"body": "*The line graph shows average monthly temperatures in a coastal city and an inland city in 2023.*\n\n**Model answer (Band 8):**\n*\"The line graph compares monthly average temperatures in a coastal city and an inland city during 2023. **(1 — paraphrase)** Overall, the inland city experienced greater temperature variation throughout the year, while the coastal city remained relatively stable. Temperatures in both cities were lowest in January and highest in July. **(2 — overview: two trends, zero numbers)** In January, the coastal city averaged 8°C compared to just 2°C inland. Both cities warmed steadily until July, when the inland city peaked at 28°C, 6 degrees higher than the coastal city. **(3 — detail 1)** From August onwards, temperatures fell in both locations, though the decline was sharper inland, dropping to 4°C by December, while the coast eased down to 9°C. **(4 — detail 2)**\"*\n**Annotations:** (1) paraphrase changes every key word (shows→compares). (2) Overview = 2 trends, no data — this paragraph earns Task Achievement. (3–4) data grouped logically (rise, then fall), not month by month. Vocabulary: *peaked, eased, sharper* — variety, not repetition of \"increased/decreased.\"", "example": "", "heading": "Model Band 8 answer (annotated)", "tip": "", "type": "teach"}, {"body": "Band 6 Task 1 answers all share three flaws: (1) **no overview** — they start listing numbers immediately; (2) **mechanical description** — *\"In January it was 8. In February it was 9...\"* (examiners call this \"listing\"); (3) **opinions** — *\"This is good because...\"* Task 1 has no opinions. Report only.", "example": "", "heading": "Common Band 6 traps", "tip": "", "type": "teach"}, {"answer": "Overview paragraph: the 2–3 key trends, no numbers", "engine": "fix-sentence", "explanation": "The overview earns Task Achievement; data goes in detail paragraphs.", "hint": "The band score lives in one paragraph — which?", "id": "ielts-25", "title": "Fix the structure", "type": "drill", "wrong": "Task 1 needs introduction, then numbers for every month, then a conclusion with my opinion.", "xp": 10}, {"answer": 2, "engine": "multiple-choice", "explanation": "\"Peaked at\" is precise trend vocabulary; Band 7+ rewards exact verbs.", "id": "ielts-26", "options": ["It was very high at 28°C.", "It peaked at 28°C.", "It became big at 28°C."], "prompt": "Which sentence shows Band 7+ trend language?", "title": "Trend language", "type": "drill", "xp": 10}, {"answer": "The wheat is harvested, then it is transported to the mill, where it is ground into flour.", "engine": "fix-sentence", "explanation": "Process diagrams: passive voice + sequencers. No \"they do\" — the focus is the material, not the people.", "hint": "Passive voice + sequencers.", "id": "ielts-27", "title": "Process diagram sentence", "type": "drill", "wrong": "First they harvest the wheat then they transport to mill.", "xp": 10}], "title": "Writing Task 1: describe data like an examiner", "xp": 50}, {"id": "ielts-l6", "minutes": 18, "steps": [{"body": "Task 2 is the heavyweight: **250+ words, 40 minutes, worth double.** One prompt, one essay, four types you must recognize instantly:\n1. **Opinion** (*\"To what extent do you agree or disagree?\"*) — take ONE clear position, defend it. Never \"I partly agree\" wishy-washy... actually a balanced position is fine IF clearly stated and defended.\n2. **Discussion** (*\"Discuss both views and give your opinion.\"*) — both sides fairly, then YOUR view in the conclusion.\n3. **Problem–solution** (*\"What are the causes and what can be done?\"*) — one paragraph causes, one paragraph solutions.\n4. **Two-part** (*\"Why is this happening? Is it positive or negative?\"*) — answer EACH part in its own paragraph.", "example": "", "heading": null, "tip": "", "type": "teach"}, {"body": "Every body paragraph follows **PEEL**: **P**oint — one clear idea (*\"Online learning reduces costs.\"*). **E**xplain — why/how (*\"Students avoid transport and accommodation expenses...\"*). **E**xample — specific (*\"A student in Multan can study at a university in Lahore without relocating.\"*). **L**ink — back to the question (*\"This makes higher education accessible to poorer families.\"*). One paragraph = one idea. Two ideas in one paragraph is how Band 6 essays die.", "example": "", "heading": "PEEL: one paragraph, one idea", "tip": "", "type": "teach"}, {"body": "Band 6 writers write *\"however\"* 12 times. Band 7+ writers rotate the toolkit: **contrast** — *however, nevertheless, on the other hand, whereas, in contrast*; **cause** — *because, since, as a result of, this leads to*; **addition** — *furthermore, moreover, in addition*; **example** — *for instance, namely*; **conclusion** — *therefore, consequently, in summary*. One device per idea, then a different one. Variety IS the Cohesion score.", "example": "", "heading": "Cohesion devices (not \"however\" spam)", "tip": "", "type": "teach"}, {"body": "Examiners reward three grammar shapes: **conditionals** (*\"If governments invested in public transport, cities would be cleaner.\"*), **relative clauses** (*\"Students **who** study online often save money.\"*), **passive** (*\"Data **is collected** from millions of users.\"*). Aim for 2–3 of each across the essay. They prove \"grammatical range\" — half your Grammar band.", "example": "", "heading": "High-band grammar: the big three", "tip": "", "type": "teach"}, {"body": "*\"Some people believe online education will replace traditional classrooms. To what extent do you agree or disagree?\"*\n\n**Model answer (Band 8–9):**\n*\"Online education has grown rapidly, leading some to claim that physical classrooms will soon disappear. **(1 — position in intro)** I largely disagree: while online learning offers real advantages, it cannot replace the social and practical dimensions of classroom education. **(2 — clear position)** The strongest argument for online learning is access. Students in remote areas, **who** previously had no options, can now study with top instructors. **(3 — relative clause)** For instance, a student in rural Pakistan can complete a data science degree without moving to a big city, which dramatically reduces costs. **(4 — example)** Nevertheless **(5 — cohesion variety)**, education is not only information transfer. Classrooms build discipline, teamwork, and communication — skills **that** employers consistently demand. **(6)** If learning moved entirely online **(7 — conditional)**, millions of students would lose daily human interaction, and the motivation that comes from peer pressure would weaken. In conclusion, online education is a powerful supplement, but it should complement rather than replace traditional classrooms. **(8 — restated position, no new ideas)**\"*\n**Annotations:** (1–2) position stated twice, never vague. (3–4) PEEL: point → who-clause → specific example. (5) *nevertheless* not *however*. (7) conditional for the Band 7+ grammar tick. (8) conclusion restates, adds nothing new — a classic Band 6 mistake avoided.", "example": "", "heading": "Model Band 8–9 essay (annotated)", "tip": "", "type": "teach"}, {"body": "(1) **Memorized phrases** — *\"In this contemporary era of globalization...\"* Examiners spot templates instantly and penalize them. (2) **New ideas in the conclusion.** (3) **No position** — sitting on the fence for 250 words. (4) **Under-length** — below 250 words = automatic Task Achievement penalty, however good the English. (5) **Over-generalizing** — *\"All students prefer online learning.\"* Use *\"many / most / some\"* qualifiers.", "example": "", "heading": "Common Band 6 traps", "tip": "", "type": "teach"}, {"body": "Score any practice essay with the examiner's four criteria, simplified:\n- [ ] **Task achievement:** Did I answer ALL parts? 250+ words? Clear position throughout?\n- [ ] **Coherence & cohesion:** PEEL paragraphs? One idea each? Cohesion devices varied (not however ×10)? Logical order?\n- [ ] **Lexical resource:** Topic vocabulary used naturally? Collocations (*\"reduce costs,\" \"gain access\"*)? Any word repeated 5+ times? No memorized phrases?\n- [ ] **Grammatical range & accuracy:** 2+ conditionals? Relative clauses? Passive? Errors rare and don't block meaning?\nOne honest \"no\" = one band lost. Fix the no, not the whole essay.", "example": "", "heading": "Self-scoring rubric: Writing (the examiner's checklist)", "tip": "", "type": "teach"}, {"answer": "PEEL: one clear point, explained, with a specific example, linked back to the question", "engine": "fix-sentence", "explanation": "One paragraph = one idea. PEEL enforces it.", "hint": "Four letters: P-E-E-L.", "id": "ielts-28", "title": "Fix the paragraph", "type": "drill", "wrong": "Good body paragraphs just need many ideas and long sentences to impress the examiner.", "xp": 10}, {"answer": 1, "engine": "multiple-choice", "explanation": "A fence-sitting essay scores Band 6 for Task Achievement. Take a position and defend it.", "id": "ielts-29", "options": ["\"I partly agree with both sides and everyone is right.\"", "\"I largely agree: online learning expands access, though classrooms still matter.\""], "prompt": "Which intro line shows a clear position?", "title": "Position drill", "type": "drill", "xp": 10}, {"answer": "If governments invested in public transport, cities would be cleaner and less congested.", "engine": "fix-sentence", "explanation": "Second conditional: If + past, would + verb. A Band 7+ grammar shape.", "hint": "High-band grammar: conditional.", "id": "ielts-30", "title": "Build the conditional", "type": "drill", "wrong": "If government invest in public transport, cities will be more clean.", "xp": 10}], "title": "Writing Task 2: the essay machine", "xp": 55}, {"id": "ielts-l7", "minutes": 16, "steps": [{"body": "**Part 1 (4–5 min):** familiar topics — home, studies, hobbies. The examiner wants natural, extended answers. Formula: **Answer + Reason + Example.** *\"Do you like reading?\"* → *\"Yes, I do **(answer)** — mostly non-fiction, because I enjoy learning how things work **(reason)**. I just finished a book on data science, actually **(example)**.\"* One-word answers = Band 5. This formula alone lifts most candidates a full band.", "example": "", "heading": null, "tip": "", "type": "teach"}, {"body": "You get a topic card + **1 minute to prepare** + **2 minutes to talk**. Method: (1) Use the minute — write 5–6 keywords, not sentences. Shorthand: \"cabin — lake — quiet — stars — 2024\". (2) Talk for the full 2 minutes using this structure: **past** (when/where it happened) → **description** (what it was like, 2–3 details) → **feeling + why** (how it affected you). (3) If you finish early, the examiner stays silent — keep going: add one more detail. Never stop at 90 seconds.", "example": "", "heading": "Part 2: the cue-card method (1-min prep, 2-min talk)", "tip": "", "type": "teach"}, {"body": "**Part 3 (4–5 min):** abstract discussion linked to your Part 2 topic. The examiner wants **balanced views**: *\"On the one hand... on the other hand...\"*, *\"It depends on...\"*, *\"Generally speaking...\"* Structure: **opinion → reason → contrast/other side → conclusion.** *\"Will technology replace teachers?\"* → *\"I don't think so entirely (opinion) — teaching is partly emotional connection (reason). That said, for rote subjects like vocabulary, apps are already better (contrast). So technology will assist, not replace (conclusion).\"*", "example": "", "heading": "Part 3: discussion with balanced views", "tip": "", "type": "teach"}, {"audio": "audio/09-ielts-speaking-mock.mp3", "engine": "shadowing", "id": "ielts-31", "text": "Shadow a full Part 2 cue-card answer — copy the structure, not just the words", "tip": "Notice the past → description → feeling structure. Then record your own 2-minute answer on the same topic.", "title": "Part 2 model answer (audio)", "type": "drill", "xp": 15}, {"body": "Score any practice recording with the examiner's four criteria, simplified:\n- [ ] **Fluency & coherence:** Did I speak at length without long pauses? Ideas in logical order? Self-corrections rare?\n- [ ] **Lexical resource:** Topic vocabulary? Collocations? Any word I leaned on 10+ times? Paraphrasing when stuck instead of freezing?\n- [ ] **Grammatical range & accuracy:** Mix of simple and complex sentences? Past/present/future used correctly? Errors don't block understanding?\n- [ ] **Pronunciation:** Word stress right? Sentence stress on key words? Could a stranger understand me first time?\nRecord → score honestly → re-record the weakest 60 seconds. That loop is the whole method.", "example": "", "heading": "Self-scoring rubric: Speaking (the examiner's checklist)", "tip": "", "type": "teach"}, {"engine": "speaking-task", "id": "ielts-32", "prompt": "Part 2 cue card: \"Describe a skill you would like to learn.\" You should say: what the skill is, why you want to learn it, how you would learn it — and explain how it would help you in the future. 1 minute prep (5–6 keywords only), then talk for 2 full minutes. Record it. Score yourself with the Speaking rubric above, honestly.", "seconds": 120, "tip": "Past → description → feeling. Keep talking when the examiner goes silent.", "type": "drill", "xp": 25}], "title": "Speaking: Parts 1, 2, 3", "xp": 55}, {"id": "ielts-mock-a", "minutes": 18, "steps": [{"body": "Full Mock A. Work it under **exam conditions**: no pausing, no dictionary, timer on. Do the listening questions first (imagine the audio plays once), then reading (20 min), then write both tasks (60 min), then record the speaking. Answer keys live in the explanations — attempt before peeking.", "example": "", "heading": null, "tip": "", "type": "teach"}, {"body": "**LISTENING — Section 2: Museum tour (script)**\nGUIDE: Welcome to the Riverside Museum. Before we start, a few practical details. We open at 10 am... actually, on weekends it's 9:30. The main exhibition is on the ground floor. The café is on the top floor — the third floor — and it's open until 4 pm. Photography is allowed everywhere except the special exhibition room. Today's guided tour costs 12 pounds for adults — oh, I should say 10 pounds; we reduced the price this month. Children under 12 go free. The tour takes about 90 minutes. We finish in the gift shop on the first floor. Any questions? No? Then let's begin in the main hall — straight through those doors.", "example": "", "heading": "Mock A — Listening script", "tip": "", "type": "teach"}, {"answer": 1, "engine": "multiple-choice", "explanation": "\"10 am... actually, on weekends it's 9:30\" — signpost correction. Key: Mock A", "id": "ielts-a1", "options": ["10:00 am", "9:30 am"], "prompt": "1. Weekend opening time?", "title": "Mock A — Listening Q1", "type": "drill", "xp": 10}, {"answer": "Café location: top floor (third floor)", "engine": "fill-blank", "explanation": "Paraphrase: \"top floor\" = \"third floor\". Same meaning, different words — the classic IELTS move. Key: Mock A", "id": "ielts-a2", "options": ["Café location: ___", "top floor (third floor)", "ground floor"], "text": "Café location: ___", "title": "Mock A — Listening Q2", "type": "drill", "xp": 10}, {"answer": 0, "engine": "multiple-choice", "explanation": "\"12 pounds... oh, I should say 10 pounds\" — distractor corrected. Key: Mock A", "id": "ielts-a3", "options": ["£10", "£12"], "prompt": "3. Adult tour price?", "title": "Mock A — Listening Q3", "type": "drill", "xp": 10}, {"answer": 1, "engine": "multiple-choice", "explanation": "Photography allowed \"everywhere except the special exhibition room\". Key: Mock A", "id": "ielts-a4", "options": ["Everywhere", "Everywhere except the special exhibition room"], "prompt": "4. Where is photography banned?", "title": "Mock A — Listening Q4", "type": "drill", "xp": 10}, {"answer": "Gift shop location: first floor", "engine": "fill-blank", "explanation": "\"We finish in the gift shop on the first floor.\" Key: Mock A", "id": "ielts-a5", "options": ["Gift shop location: ___ floor", "first", "third"], "text": "Gift shop location: ___ floor", "title": "Mock A — Listening Q5", "type": "drill", "xp": 10}, {"answer": "Tour duration: about 90 minutes", "engine": "fix-sentence", "explanation": "90 minutes (distractor-free this time — not every question is a trap). Key: Mock A", "hint": "Check every detail against the script.", "id": "ielts-a6", "title": "Mock A — Listening Q6–10", "type": "drill", "wrong": "The tour costs 12 pound, takes 60 minute, and finishes at the cafe on third floor.", "xp": 10}, {"body": "**READING — Passage: \"The return of the night train\"**\nA. For decades, night trains across Europe were disappearing. Cheap flights made them uneconomical, and by 2016 several countries had cancelled their last sleeper services.\nB. Then the mood shifted. Climate concern made flying feel guilty, and in 2021 Austria's state railway reported sleeper bookings up 30% on 2019. New routes opened: Vienna–Paris, Zurich–Amsterdam.\nC. The economics remain difficult. A sleeper carriage costs far more to run than a daytime seat, and tickets must stay cheap enough to compete with budget airlines. Operators survive on a mix of ticket sales and state subsidies.\nD. Critics argue night trains will always be a niche. Supporters counter that niches matter: even a 5% shift from planes to trains on short European routes would cut aviation emissions measurably.", "example": "", "heading": "Mock A — Reading passage", "tip": "", "type": "teach"}, {"answer": 2, "engine": "multiple-choice", "explanation": "The passage gives a 2021 figure but never says when bookings peaked overall. NOT GIVEN. Key: Mock A", "id": "ielts-a7", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "1. Sleeper bookings peaked in 2021.", "title": "Mock A — Reading Q1", "type": "drill", "xp": 10}, {"answer": 0, "engine": "multiple-choice", "explanation": "Paragraph B: bookings \"up 30% on 2019\". TRUE. Key: Mock A", "id": "ielts-a8", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "2. Austrian sleeper bookings rose 30% compared with 2019.", "title": "Mock A — Reading Q2", "type": "drill", "xp": 10}, {"answer": 1, "engine": "multiple-choice", "explanation": "Paragraph C: operators \"survive on a mix of ticket sales and state subsidies\" — so ticket sales alone are NOT enough. FALSE. Key: Mock A", "id": "ielts-a9", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "3. Ticket sales alone keep night train operators profitable.", "title": "Mock A — Reading Q3", "type": "drill", "xp": 10}, {"answer": 2, "engine": "multiple-choice", "explanation": "Paragraph D says emissions would fall \"measurably\" but gives no exact figure. NOT GIVEN. Key: Mock A", "id": "ielts-a10", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "4. A 5% shift to trains would cut aviation emissions by exactly 20%.", "title": "Mock A — Reading Q4", "type": "drill", "xp": 10}, {"answer": "Paragraph C", "engine": "multiple-choice", "explanation": "Paragraph C is about costs vs ticket prices — the economics problem. Key: Mock A", "id": "ielts-a11", "options": ["Paragraph B", "Paragraph C"], "prompt": "5. Which paragraph discusses the financial difficulty of running sleepers?", "title": "Mock A — Reading Q5", "type": "drill", "xp": 10}, {"answer": "Climate concern / guilt about flying", "engine": "fix-sentence", "explanation": "Paragraph B: \"Climate concern made flying feel guilty\" — paraphrase accepted. Key: Mock A", "hint": "One phrase from paragraph B.", "id": "ielts-a12", "title": "Mock A — Reading Q6", "type": "drill", "wrong": "Night trains returned because tickets became cheaper than flights.", "xp": 10}, {"answer": 0, "engine": "multiple-choice", "explanation": "Cheap flights made sleepers \"uneconomical\" — TRUE. Key: Mock A", "id": "ielts-a13", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "7. Cheap flights contributed to the decline of night trains.", "title": "Mock A — Reading Q7", "type": "drill", "xp": 10}, {"answer": "Vienna–Paris and Zurich–Amsterdam", "engine": "fill-blank", "explanation": "Two new routes named in paragraph B. Key: Mock A", "id": "ielts-a14", "options": ["New routes opened: ___", "Vienna–Paris and Zurich–Amsterdam", "Vienna–Paris only"], "text": "8. New routes opened: ___", "title": "Mock A — Reading Q8", "type": "drill", "xp": 10}, {"body": "**WRITING TASK 1 (20 min, 150+ words):** The bar chart below shows the percentage of households with internet access in four countries in 2010 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\n**Model answer (Band 8):** *\"The bar chart compares household internet access in four countries in 2010 and 2020. (paraphrase) Overall, access rose in every country over the decade, with Country A remaining the clear leader throughout. (overview — trend + leader, no numbers) In 2010, 80% of households in Country A had internet, roughly double the figure for Country D at 40%. Countries B and C sat in the middle at 55% and 60%. (detail 1 — 2010 snapshot) By 2020, Country A had reached near-universal access at 95%, while Country D had more than doubled to 85%, the fastest growth of the four. Countries B and C also climbed steadily to 78% and 82%. (detail 2 — 2020 + change)\"*\n**Annotations:** overview = 2 trends, zero numbers. Details grouped by year (2010, then 2020), not by country. Language: *near-universal, fastest growth, climbed steadily.*", "example": "", "heading": "Mock A — Writing Task 1 + model answer", "tip": "", "type": "teach"}, {"body": "**WRITING TASK 2 (40 min, 250+ words):** Some people think that university education should be free for all students. Others believe students should pay for their own tuition. Discuss both views and give your own opinion.\n\n**Model answer (Band 8–9):** *\"Whether higher education should be free is one of the most debated policy questions of our time. (paraphrase) This essay will discuss both perspectives before arguing that a mixed system is fairest. (roadmap) Supporters of free university argue that talent is evenly distributed but opportunity is not. (point) If tuition were free (conditional), bright students from poor families could study medicine or engineering instead of taking low-paid jobs at eighteen. (explain + example) Countries like Germany, which abolished tuition fees, have seen wider participation without collapsing quality. (evidence) On the other hand, critics point out that free university is expensive for taxpayers, many of whom never attend. (other view) They argue that graduates earn significantly more over their lifetimes, so it is reasonable for them to contribute through fees or graduate taxes. (explain) In my opinion, the fairest model combines both: free tuition for students from low-income families, funded partly by contributions from higher earners after graduation. (clear position) This keeps opportunity open while sharing costs fairly. (link) In conclusion, while both sides raise valid concerns, a targeted free-tuition system best balances fairness and sustainability. (restated position, no new ideas)\"*\n**Annotations:** discussion type — both views fairly, own opinion clearly in body + conclusion. PEEL in each paragraph. Conditional + relative clause (*\"which abolished\"*). Position never vague.", "example": "", "heading": "Mock A — Writing Task 2 + model answer", "tip": "", "type": "teach"}, {"body": "**SPEAKING PART 2 cue card:** \"Describe a journey you remember well.\" You should say: where you went, who you went with, what happened during the journey — and explain why you remember it well. (1 min prep, 2 min talk)\n\n**SPEAKING PART 3 questions:**\n1. Why do some people enjoy travelling by train more than by plane?\n2. How has travel changed in your country in the last 20 years?\n3. Do you think people will travel less in the future because of technology? Why / why not?\n4. What are the environmental effects of increased tourism?", "example": "", "heading": "Mock A — Speaking Part 2 + Part 3", "tip": "", "type": "teach"}, {"engine": "speaking-task", "id": "ielts-a15", "prompt": "Record the full Mock A Speaking: Part 1 (answer 4 questions about travel: Answer+Reason+Example), then the Part 2 cue card above (2 full minutes), then answer the 4 Part 3 questions with balanced views (opinion → reason → contrast → conclusion). 11–14 minutes total. Score yourself with the Speaking rubric from Lesson 7.", "seconds": 120, "tip": "Exam conditions: no stopping, no re-recording mid-mock.", "type": "drill", "xp": 30}], "title": "Full mock test A", "xp": 60}, {"id": "ielts-mock-b", "minutes": 18, "steps": [{"body": "Full Mock B — same exam conditions as Mock A: no pausing, no dictionary, timer on. Different content, same traps. Keys in the explanations — attempt before peeking.", "example": "", "heading": null, "tip": "", "type": "teach"}, {"body": "**LISTENING — Section 3: student and tutor discussing a project (script)**\nTUTOR: So, Aisha, your proposal for the water-quality project. You've chosen the river site?\nAISHA: Yes — the north bank. I first thought about the south bank, but the readings there were... actually, the north bank had higher pollution levels in last year's survey.\nTUTOR: Good. And your sample size?\nAISHA: I planned 20 samples, but my supervisor suggested 30. So, 30.\nTUTOR: Sensible. Deadline is the 5th of March — no wait, the department moved it to the 12th of March.\nAISHA: 12th of March, noted. I'll present the results as a chart... or maybe a table would be clearer.\nTUTOR: A table works well for this kind of data. And the report length?\nAISHA: 2,000 words, excluding references.", "example": "", "heading": "Mock B — Listening script", "tip": "", "type": "teach"}, {"answer": 0, "engine": "multiple-choice", "explanation": "\"I first thought about the south bank, but... actually, the north bank\" — signpost correction. Key: Mock B", "id": "ielts-b1", "options": ["North bank", "South bank"], "prompt": "1. Which site did Aisha choose?", "title": "Mock B — Listening Q1", "type": "drill", "xp": 10}, {"answer": "Sample size: 30", "engine": "fill-blank", "explanation": "\"I planned 20 samples, but my supervisor suggested 30. So, 30.\" — distractor corrected. Key: Mock B", "id": "ielts-b2", "options": ["Sample size: ___", "30", "20"], "text": "Sample size: ___", "title": "Mock B — Listening Q2", "type": "drill", "xp": 10}, {"answer": 1, "engine": "multiple-choice", "explanation": "\"the 5th of March — no wait... the 12th of March\" — take the correction. Key: Mock B", "id": "ielts-b3", "options": ["5th March", "12th March"], "prompt": "3. Project deadline?", "title": "Mock B — Listening Q3", "type": "drill", "xp": 10}, {"answer": 0, "engine": "multiple-choice", "explanation": "\"I'll present the results as a chart... or maybe a table would be clearer\" + tutor agrees: table. Key: Mock B", "id": "ielts-b4", "options": ["Table", "Chart"], "prompt": "4. How will she present the results?", "title": "Mock B — Listening Q4", "type": "drill", "xp": 10}, {"answer": "Report length: 2,000 words (excluding references)", "engine": "fill-blank", "explanation": "2,000 words — note \"excluding references\". Key: Mock B", "id": "ielts-b5", "options": ["Report length: ___ words", "2,000", "3,000"], "text": "Report length: ___ words", "title": "Mock B — Listening Q5", "type": "drill", "xp": 10}, {"answer": "Aisha chose the north bank, 30 samples, deadline 12 March, table presentation", "engine": "fix-sentence", "explanation": "Three corrections in one script — signpost words (\"actually\", \"no wait\") always mark the real answer. Key: Mock B", "hint": "Three trap errors in the notes.", "id": "ielts-b6", "title": "Mock B — Listening Q6–10", "type": "drill", "wrong": "Aisha chose south bank, 20 sample, deadline 5 March, chart presentation.", "xp": 10}, {"body": "**READING — Passage: \"Why waiting feels longer than it is\"**\nA. Psychologists have long known that perceived waiting time differs from clock time. A two-minute wait can feel like ten if the conditions are wrong.\nB. The key factor is uncertainty. In a famous 2018 experiment, passengers told their bus would arrive \"soon\" estimated the wait as twice as long as passengers given an exact countdown. Information, it seems, shortens time.\nC. Occupied time also feels shorter. Airports discovered that passengers complained less about baggage delays after walkways to the carousel were lengthened — the walk filled the wait.\nD. However, not all distractions help. A 2022 study found that phone scrolling during waits increased frustration, possibly because it raised expectations of constant stimulation.", "example": "", "heading": "Mock B — Reading passage", "tip": "", "type": "teach"}, {"answer": 0, "engine": "multiple-choice", "explanation": "Paragraph A: \"perceived waiting time differs from clock time\" — TRUE. Key: Mock B", "id": "ielts-b7", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "1. People experience waiting time differently from actual time.", "title": "Mock B — Reading Q1", "type": "drill", "xp": 10}, {"answer": 2, "engine": "multiple-choice", "explanation": "The passage mentions a 2018 bus experiment but never names the city. NOT GIVEN. Key: Mock B", "id": "ielts-b8", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "2. The 2018 bus experiment took place in London.", "title": "Mock B — Reading Q2", "type": "drill", "xp": 10}, {"answer": 0, "engine": "multiple-choice", "explanation": "Paragraph B: passengers with an exact countdown estimated shorter waits — information shortens perceived time. TRUE. Key: Mock B", "id": "ielts-b9", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "3. Knowing the exact waiting time makes the wait feel shorter.", "title": "Mock B — Reading Q3", "type": "drill", "xp": 10}, {"answer": 1, "engine": "multiple-choice", "explanation": "Paragraph C: lengthening the walk REDUCED complaints — the opposite of increasing them. FALSE. Key: Mock B", "id": "ielts-b10", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "4. Longer walks to baggage claim increased passenger complaints.", "title": "Mock B — Reading Q4", "type": "drill", "xp": 10}, {"answer": 1, "engine": "multiple-choice", "explanation": "Paragraph D: phone scrolling \"increased frustration\" — distraction did NOT always help. FALSE. Key: Mock B", "id": "ielts-b11", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "5. All distractions reduce the frustration of waiting.", "title": "Mock B — Reading Q5", "type": "drill", "xp": 10}, {"answer": 2, "engine": "multiple-choice", "explanation": "No mention of music anywhere in the passage. NOT GIVEN. Key: Mock B", "id": "ielts-b12", "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "6. Playing music reduces perceived waiting time.", "title": "Mock B — Reading Q6", "type": "drill", "xp": 10}, {"answer": "Paragraph B", "engine": "multiple-choice", "explanation": "Paragraph B is about uncertainty and countdown information. Key: Mock B", "id": "ielts-b13", "options": ["Paragraph B", "Paragraph D"], "prompt": "7. Which paragraph discusses the effect of information on waiting?", "title": "Mock B — Reading Q7", "type": "drill", "xp": 10}, {"answer": "Airports lengthened walkways to the baggage carousel", "engine": "fix-sentence", "explanation": "Paragraph C: the walk filled the wait — occupied time feels shorter. Key: Mock B", "hint": "What did airports change?", "id": "ielts-b14", "title": "Mock B — Reading Q8", "type": "drill", "wrong": "Airports shortened walkways so passengers wait less.", "xp": 10}, {"body": "**WRITING TASK 1 (20 min, 150+ words):** The table below shows the percentage of household income spent on four categories in three countries in 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\n**Model answer (Band 8):** *\"The table compares how households in three countries allocated their income across four categories in 2022. (paraphrase) Overall, housing was the largest expense in all three countries, while spending on entertainment was consistently the smallest. Country X devoted the highest share to housing, whereas Country Z spent relatively more on food. (overview — two patterns, no numbers) In Country X, housing absorbed 32% of income, compared with 28% in Country Y and 25% in Country Z. Food showed the reverse pattern: Country Z spent 22%, noticeably more than Country X at 15%. (detail 1) Transport costs were similar everywhere, ranging from 12% to 14%, and entertainment accounted for just 6–8% in all three countries, the lowest share in each case. (detail 2)\"*\n**Annotations:** table strategy — pick the biggest differences, ignore the rest. Overview first, numbers only in details. Comparatives (*higher, noticeably more*) carry the Cohesion score.", "example": "", "heading": "Mock B — Writing Task 1 + model answer", "tip": "", "type": "teach"}, {"body": "**WRITING TASK 2 (40 min, 250+ words):** Some people believe that children should learn a foreign language at primary school rather than secondary school. To what extent do you agree or disagree?\n\n**Model answer (Band 8–9):** *\"At what age children should begin learning foreign languages is widely debated. (paraphrase) I strongly agree that primary school is the better starting point, for reasons of brain development and long-term motivation. (clear position) Young children acquire pronunciation far more naturally than teenagers. (point) Research on language acquisition shows that the ability to hear and reproduce unfamiliar sounds declines after roughly age twelve. (explain) A child who starts English at seven, therefore, is more likely to develop a natural accent than one who begins at fourteen. (example + link) Furthermore (cohesion variety), early success builds confidence. (point) A ten-year-old who can already hold a simple conversation feels capable, and this sense of achievement sustains motivation through the harder grammar of later years. (explain) If language learning is delayed until secondary school (conditional), many students associate it only with exams and memorisation, which kills interest. (contrast) Admittedly, primary curricula are already crowded. (concession) However, language games and songs take little time and suit young learners perfectly. (rebuttal) In conclusion, starting foreign languages in primary school gives children a lasting advantage in both pronunciation and motivation. (restated position)\"*\n**Annotations:** opinion type — one clear position defended throughout. PEEL in each paragraph. Concession + rebuttal (*admittedly... however*) = Band 8 discussion skill. Conditional for grammar range.", "example": "", "heading": "Mock B — Writing Task 2 + model answer", "tip": "", "type": "teach"}, {"body": "**SPEAKING PART 2 cue card:** \"Describe a person who has taught you something important.\" You should say: who the person is, what they taught you, how they taught you — and explain why it was important to you. (1 min prep, 2 min talk)\n\n**SPEAKING PART 3 questions:**\n1. What qualities make someone a good teacher?\n2. Is it better to learn from books or from people? Why?\n3. How has the role of teachers changed with the internet?\n4. Should schools invite professionals to teach practical skills? Why / why not?", "example": "", "heading": "Mock B — Speaking Part 2 + Part 3", "tip": "", "type": "teach"}, {"engine": "speaking-task", "id": "ielts-b15", "prompt": "Record the full Mock B Speaking: Part 1 (4 questions about learning: Answer+Reason+Example), then the Part 2 cue card above (2 full minutes, past → description → feeling), then the 4 Part 3 questions with balanced views. 11–14 minutes total. Score yourself with the Speaking rubric. Compare with Mock A: which part improved?", "seconds": 120, "tip": "Two full mocks = the minimum before the real test.", "type": "drill", "xp": 30}], "title": "Full mock test B", "xp": 60}, {"id": "ielts-quiz", "minutes": 10, "steps": [{"engine": "timed-quiz", "id": "ielts-34", "questions": [{"answer": 1, "explanation": "The corrected answer always wins: \"actually make it four\".", "kind": "mc", "n": 1, "options": ["Three", "Four"], "prompt": "Audio: \"Three nights. Oh wait — actually make it four.\" How many nights?"}, {"answer": 2, "explanation": "\"Probably true\" without text evidence = NOT GIVEN. Never upgrade a guess to TRUE.", "kind": "mc", "n": 2, "options": ["TRUE", "FALSE", "NOT GIVEN"], "prompt": "Passage gives no exact savings figure. Statement: \"The policy saved exactly 40%.\""}, {"answer": "12 noon", "explanation": "\"11... sorry, 12 noon\" — \"sorry\" signals the correction.", "kind": "fix", "n": 3, "prompt": "Fix the note:", "wrong": "Checkout time is 11am."}, {"answer": 1, "explanation": "A blank is a guaranteed zero; a guess is a chance.", "kind": "mc", "n": 4, "options": ["Leave it blank", "Guess"], "prompt": "You're unsure of a Listening answer. What do you do?"}, {"answer": "The overview paragraph: 2–3 key trends, no numbers.", "explanation": "The overview decides your Task Achievement band.", "kind": "order", "n": 5, "prompt": "Put in exam order:", "words": ["Write detail paragraphs with numbers", "Write the overview paragraph", "Paraphrase the question"]}, {"answer": "I largely agree: online learning expands access, though classrooms still matter.", "explanation": "Clear position, defended — that's Task Achievement.", "kind": "self", "n": 6, "prompt": "Write an opinion-essay position line for: \"Online learning will replace classrooms.\"\n   You: \"___\"", "sample": "Sample: \"I largely agree: online learning expands access, though classrooms still matter.\""}, {"answer": 1, "explanation": "Double Task 1 — that's why it gets 40 of the 60 minutes.", "kind": "mc", "n": 7, "options": ["They count equally", "Task 2 counts double"], "prompt": "Task 1 vs Task 2 weighting?"}, {"answer": "Answer + Reason + Example", "explanation": "One-word answers = Band 5; extend every Part 1 answer.", "kind": "fix", "n": 8, "prompt": "Complete the Part 1 formula:", "wrong": "Answer only."}, {"answer": 1, "explanation": "Never read top-to-bottom in IELTS Reading.", "kind": "mc", "n": 9, "options": ["Read every word carefully", "Skim for structure, then scan for the answer"], "prompt": "The Reading method?"}, {"answer": "The wheat is harvested, then it is dried in the sun.", "explanation": "Process diagrams = passive voice + sequencers.", "kind": "fix", "n": 10, "prompt": "Rewrite in process-diagram style:", "wrong": "They harvest the wheat then they dry it."}, {"answer": "If governments invested in public transport, cities would be cleaner.", "explanation": "Second conditional — a Band 7+ grammar shape.", "kind": "self", "n": 11, "prompt": "Write a conditional sentence about the environment.\n   You: \"___\"", "sample": "Sample: \"If governments invested in public transport, cities would be cleaner.\""}, {"answer": "Take one clear position and defend it with PEEL paragraphs.", "explanation": "Fence-sitting caps Task Achievement at Band 6.", "kind": "order", "n": 12, "prompt": "Put in order:", "words": ["Defend it with PEEL paragraphs", "Take one clear position"]}], "rule": "10/12 to move on. Answer first, then learn from the misses.", "seconds": 600, "title": "Quiz — IELTS Mastery", "type": "drill", "xp": 100}], "title": "Module quiz — 12 questions", "xp": 40}, {"id": "ielts-checkpoint", "minutes": 10, "steps": [{"body": "- [ ] I can name the three Listening traps (distractors, paraphrase, signposts) and use the prediction technique\n- [ ] I skim for structure and scan for answers; I never read a passage top-to-bottom\n- [ ] I apply T/F/NG logic without upgrading guesses to TRUE\n- [ ] My Task 1 has a real overview paragraph (trends, no numbers) in 4 paragraphs\n- [ ] My Task 2 takes a clear position, uses PEEL paragraphs, varied cohesion devices, and 2+ high-band grammar shapes\n- [ ] I can extend Part 1 answers (Answer+Reason+Example), run the Part 2 cue-card method, and give balanced Part 3 views\n- [ ] I can self-score any writing or speaking performance with the examiner checklists", "example": "", "heading": "Can-do statements", "type": "teach", "tip": ""}, {"body": "Record one **full Speaking mock** — Parts 1, 2, and 3, 11–14 minutes, no stopping: Part 1 (5 questions on a familiar topic, Answer+Reason+Example), Part 2 (a fresh cue card: \"Describe a place you would like to visit\" — 1 min prep, 2 min talk), Part 3 (4 discussion questions, balanced views). Then score it with the Speaking rubric from Lesson 7. This recording is your IELTS baseline artifact — redo it after 8 weeks of technique practice and compare.", "example": "", "heading": "Mini-test (the final exam)", "type": "teach", "tip": ""}, {"body": "Technique decays without use. One full mock per month keeps it alive: redo Mock A or B under exam conditions, and re-record the Speaking mock. When your self-scores stop rising, your foundation (Modules 1–4) needs the work — technique has done its job.\n\n🎓 **Badge earned: Band Hunter** — technique is yours. Now go build the B2+ foundation it multiplies.\n\n---", "example": "", "heading": "Re-entry note", "type": "teach", "tip": ""}, {"engine": "speaking-task", "id": "ielts-35", "prompt": "Record one full Speaking mock — Parts 1, 2, 3 (11–14 minutes, no stopping). Part 1: 5 familiar-topic questions (Answer+Reason+Example). Part 2: \"Describe a place you would like to visit\" — 1 minute prep, 2 full minutes of talking. Part 3: 4 discussion questions with balanced views. Score it with the Speaking rubric, honestly.\n\nRe-entry note: one full mock per month keeps technique alive. When self-scores stop rising, the foundation needs the work — technique has done its job.\n\n🎓 Badge earned: Band Hunter — technique is yours. Now go build the B2+ foundation it multiplies.\n\n---", "seconds": 120, "tip": "Fluency mode: no stopping, no mid-sentence correcting.", "type": "drill", "xp": 30}], "title": "Checkpoint: full Speaking mock", "xp": 40}], "tagline": "Band 7+ technique for all four sections", "title": "IELTS Mastery"}
+{
+ "color": "#38bdf8",
+ "description": "The honest truth first: IELTS 7+ demands solid B2+ English — technique alone doesn't substitute. This module stacks on Modules 1–4 and teaches you how examiners actually score the test.",
+ "icon": "🎓",
+ "id": "ielts",
+ "lessons": [
+  {
+   "id": "ielts-l1",
+   "minutes": 12,
+   "steps": [
+    {
+     "body": "Dear Tanqeel, this lesson is a promise of honesty, not a promise of magic. **IELTS Band 7+ requires solid B2+ English.** No technique, template, or \"examiner trick\" substitutes for real language ability. Anyone who sells you Band 7 in 30 days from A2/B1 is selling you a story.",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "The realistic path is: **6–9 months of foundation** (Modules 1–4 of this course: fluency, accuracy, pronunciation, client communication) **plus 6–8 weeks of IELTS technique.** This module is the technique part. It does not replace the foundation — it converts your foundation into a score. Technique adds roughly one band to the level you actually have; it never adds three.",
+     "example": "",
+     "heading": "The realistic path",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "**Listening** — 30 min, 4 sections, 40 questions. **Reading** — 60 min, 3 passages, 40 questions. **Writing** — 60 min: Task 1 (150 words, ~20 min) + Task 2 (250 words, ~40 min). **Speaking** — 11–14 min: Part 1 (4–5 min, familiar topics), Part 2 (3–4 min, cue card talk), Part 3 (4–5 min, discussion). Each section is scored 0–9 in half bands; your overall band is the average.",
+     "example": "",
+     "heading": "What the test actually is",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "Band 7 = **\"good user\"** — operational command with occasional inaccuracies and misunderstandings. Roughly: **30–32/40 in Listening or Reading ≈ Band 7** (varies slightly per test). In Writing and Speaking, Band 7 means you satisfy all four band descriptors with strengths outweighing weaknesses. There is no secret. There is only skill + strategy.",
+     "example": "",
+     "heading": "What Band 7 actually means",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "Technique tumhare actual level par **ek band tak** ka izaafa de sakti hai — teen band nahi. Pehle Modules 1–4 se apni English B2 tak le jao, phir ye module tumhein 6.5 se 7.5 tak pohnchayega. Yehi honest rasta hai, aur yehi kaam karta hai.",
+     "example": "",
+     "heading": "Sachai (seedhi baat)",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "engine": "journal",
+     "id": "ielts-1",
+     "prompt": "**Your IELTS baseline (honesty = strategy)**\n\nWrite 5 sentences, no exaggeration:\n1. Why do you want IELTS? (study abroad? immigration? job?)\n2. What band do you NEED vs what band would be nice?\n3. Which section scares you most and why?\n4. How many real study hours per week can you give for 8 weeks?\n5. One foundation skill from Modules 1–4 you must fix first.\nRead it back: if any sentence fakes your level, rewrite it. A strategy built on an honest baseline beats a fantasy plan every time.",
+     "type": "drill",
+     "xp": 15
+    },
+    {
+     "answer": "Task 2 is worth twice as much as Task 1.",
+     "engine": "word-order",
+     "explanation": "Writing Task 2 counts double — that's why it gets 40 of your 60 minutes.",
+     "id": "ielts-2",
+     "title": "Test facts in order",
+     "type": "drill",
+     "words": [
+      "Task 2",
+      "is worth",
+      "twice",
+      "as much",
+      "as Task 1"
+     ],
+     "xp": 10
+    }
+   ],
+   "title": "The honest truth about Band 7",
+   "xp": 40
+  },
+  {
+   "id": "ielts-l2",
+   "minutes": 14,
+   "steps": [
+    {
+     "body": "IELTS Listening is not hard because of speed — it's hard because of **traps**. The recording is designed to make confident answers wrong. Three traps account for most lost marks: **distractors** (the answer changes — *\"Oh wait, I meant Friday, not Thursday\"*), **paraphrase answers** (the question says *\"cost\"* but the audio says *\"price\"* — you must recognize synonyms, not match words), and **signpost words** (*\"however,\" \"actually,\" \"on the other hand\"* — what follows them usually corrects what came before).",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "You get time before each section. Never waste it: **read the questions first and predict the answer type** — a number? a date? a name? a noun? If question 3 asks *\"The course starts in ___\"* you predict a month/date, and your ear is already tuned to date-shaped sounds. Prediction turns listening from a memory test into a **confirmation task** — you're just checking whether what you hear matches your guess.",
+     "example": "",
+     "heading": "The prediction technique (read first, guess, then listen)",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "**Numbers:** *\"fifteen\"* vs *\"fifty\"* — in fast speech the difference is one tiny vowel; always double-check by context. **Dates:** *\"the 17th of July\"* — write *17 July* or *July 17*, either is accepted, but 17/07/2026 can be marked wrong in some formats. **Spelling:** Section 1 always has a name spelled aloud — write it EXACTLY as dictated, letter by letter. One wrong letter = zero. Capital letters don't matter; correct letters do.",
+     "example": "",
+     "heading": "Number, date & spelling traps",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "You get 10 minutes at the end to transfer answers. Use them: check **grammar** (is it singular or plural? *\"two book\"* → *\"two books\"*), check **spelling**, and never leave a blank — **there is no negative marking.** A guess has a chance; a blank has none.",
+     "example": "",
+     "heading": "Transfer time discipline",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "\"Sorry\" is a signpost — what follows corrects what came before. Always take the corrected answer.",
+     "id": "ielts-3",
+     "options": [
+      "Wednesday",
+      "Thursday"
+     ],
+     "prompt": "Audio: \"The seminar is on Wednesday... sorry, Thursday.\" What do you write?",
+     "title": "Trap spotting",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 0,
+     "engine": "multiple-choice",
+     "explanation": "Use context to resolve unclear sounds — and never leave blanks; there's no negative marking.",
+     "id": "ielts-4",
+     "options": [
+      "Write 15 — context confirms it",
+      "Write 50 — safer to guess big",
+      "Leave it blank"
+     ],
+     "prompt": "Question asks for the \"price\". Audio says: \"That'll be fifteen pounds.\" You hear something like \"fifteen/fifty\". The question is about a cheap student ticket. Your move?",
+     "title": "Trap spotting",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Write the name exactly as dictated: S-M-I-T-H-S-O-N Smithson",
+     "engine": "fill-blank",
+     "explanation": "Letter by letter: S-M-I-T-H-S-O-N = Smithson. One extra letter = zero marks.",
+     "id": "ielts-5",
+     "options": [
+      "Write the name exactly as dictated: S-M-I-T-H-S-O-N ___",
+      "Smithson",
+      "Smithsson"
+     ],
+     "text": "Write the name exactly as dictated: S-M-I-T-H-S-O-N ___",
+     "title": "Spelling discipline",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "15 pounds / three nights",
+     "engine": "fix-sentence",
+     "explanation": "Transfer-time grammar check: plural nouns after numbers. Examiners mark the whole answer wrong for a missing -s.",
+     "hint": "Read it aloud — where does it stumble?",
+     "id": "ielts-6",
+     "title": "Fix the transfer error",
+     "type": "drill",
+     "wrong": "I write the answer '15 pound' for three night.",
+     "xp": 10
+    }
+   ],
+   "title": "Listening: traps & the prediction habit",
+   "xp": 45
+  },
+  {
+   "id": "ielts-l3",
+   "minutes": 16,
+   "steps": [
+    {
+     "body": "First, a shadowing drill with the Section 1 audio (a hotel booking conversation). If the audio file isn't on your device yet, use the **read-along script** below: read it aloud twice at natural speed, have a friend read the receptionist's lines while you play the guest — or record yourself reading both parts and quiz yourself from the recording. The questions after it are the real exercise either way.",
+     "example": "",
+     "heading": "How this drill works",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "audio": "audio/12-ielts-listening-s1.mp3",
+     "engine": "shadowing",
+     "id": "ielts-7",
+     "text": "Shadow the booking conversation — receptionist and guest",
+     "tip": "First pass: just listen. Second pass: shadow the guest. Third: shadow the receptionist. Then answer the 10 questions below.",
+     "title": "Section 1: hotel booking (audio)",
+     "type": "drill",
+     "xp": 15
+    },
+    {
+     "body": "RECEPTIONIST: Good morning, Grandview Hotel. How can I help you?\nGUEST: Hi, I'd like to book a room for next week — arriving on the 17th of July.\nRECEPTIONIST: The 17th of July... and how many nights will that be?\nGUEST: Three nights. Oh wait — actually make it four. We'll leave on the 21st.\nRECEPTIONIST: Four nights, 17th to 21st July. And what name is the booking under?\nGUEST: Khalid — K-H-A-L-I-D, Mahmood — M-A-H-M-O-O-D.\nRECEPTIONIST: Got it, Mr Mahmood. A single or double room?\nGUEST: A double, please. Sea view if you have one.\nRECEPTIONIST: We have a double with a sea view at 85 dollars a night. Breakfast is included.\nGUEST: Perfect. Do you have parking?\nRECEPTIONIST: We do — underground parking, 10 dollars per night. Actually, it's free for stays of four nights or more.\nGUEST: Great, we'll need one space. My number is 07955 342 118.\nRECEPTIONIST: 07955 342 118. And an email for the confirmation?\nGUEST: k.mahmood at fastmail dot com.\nRECEPTIONIST: You're all set. Check-in is from 2 pm, and check-out is at 11... sorry, 12 noon.\nGUEST: 12 noon, got it. Thanks!",
+     "example": "",
+     "heading": "Read-along fallback (if the audio isn't on your device yet)",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "Prediction check: which questions below contain traps from Lesson 2? (Distractor: nights, check-out time. Signpost \"actually\": parking. Spelling: surname.) Say your answers aloud first, then do the drills.",
+     "example": "",
+     "heading": "Now answer — before looking at the drills",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "4 nights — \"actually make it four\" is a distractor correction. Take the corrected number.",
+     "id": "ielts-8",
+     "options": [
+      "3",
+      "4"
+     ],
+     "prompt": "How many nights is the booking for?",
+     "title": "Q1 — dates",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Guest's surname, exactly as spelled: M-A-H-M-O-O-D → Mahmood",
+     "engine": "fill-blank",
+     "explanation": "M-A-H-M-O-O-D. Letter-by-letter discipline — no guessing.",
+     "id": "ielts-9",
+     "options": [
+      "Guest's surname, exactly as spelled: M-A-H-M-O-O-D → ___",
+      "Mahmood",
+      "Mahmud"
+     ],
+     "text": "Guest's surname, exactly as spelled: M-A-H-M-O-O-D → ___",
+     "title": "Q2 — spelling",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "Double with sea view, $85/night. The single was the first offer, not the final choice.",
+     "id": "ielts-10",
+     "options": [
+      "Single with sea view",
+      "Double with sea view"
+     ],
+     "prompt": "Which room did the guest book?",
+     "title": "Q3 — room type",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Price per night: $85",
+     "engine": "fill-blank",
+     "explanation": "$85/night with breakfast included. Watch 85 vs 58 — the vowel is the whole difference.",
+     "id": "ielts-11",
+     "options": [
+      "Price per night: $___",
+      "85",
+      "58"
+     ],
+     "text": "Price per night: $___",
+     "title": "Q4 — price",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "\"Actually, it's free for stays of four nights or more\" — a signpost + paraphrase of the guest's 4-night stay. Free.",
+     "id": "ielts-12",
+     "options": [
+      "$10 per night",
+      "Free"
+     ],
+     "prompt": "How much does parking cost for this guest?",
+     "title": "Q5 — parking",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Guest's phone number: 07955 342 118",
+     "engine": "fill-blank",
+     "explanation": "07955 342 118 — digits must be exact, every one.",
+     "id": "ielts-13",
+     "options": [
+      "Guest's phone number: ___",
+      "07955 342 118",
+      "07955 342 188"
+     ],
+     "text": "Guest's phone number: ___",
+     "title": "Q6 — number",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Confirmation email: k.mahmood at fastmail dot com",
+     "engine": "fill-blank",
+     "explanation": "fastmail — one word. Hearing \"fast mail\" as two words is the trap.",
+     "id": "ielts-14",
+     "options": [
+      "Confirmation email: k.mahmood at ___ dot com",
+      "fastmail",
+      "fast male"
+     ],
+     "text": "Confirmation email: k.mahmood at ___ dot com",
+     "title": "Q7 — email",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "\"11... sorry, 12 noon\" — sorry = signpost of correction. Take 12.",
+     "id": "ielts-15",
+     "options": [
+      "11 am",
+      "12 noon"
+     ],
+     "prompt": "Check-out time?",
+     "title": "Q8 — check-out",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "arrives 17 July, stays 4 nights, check-out 12 noon",
+     "engine": "fix-sentence",
+     "explanation": "4 nights (distractor), 12 noon (correction), and grammar: singular/plural in your notes becomes the answer you write.",
+     "hint": "Three trap errors are hiding in this note.",
+     "id": "ielts-16",
+     "title": "Q9 — fix the note",
+     "type": "drill",
+     "wrong": "Guest arrive 17 july, stay 3 night, checkout 11am.",
+     "xp": 10
+    },
+    {
+     "answer": 0,
+     "engine": "multiple-choice",
+     "explanation": "\"Actually make it four\" and \"sorry, 12 noon\" — signposts mark the real answer.",
+     "id": "ielts-17",
+     "options": [
+      "\"actually\" and \"sorry\"",
+      "\"please\" and \"thanks\""
+     ],
+     "prompt": "Which signpost words in the script signaled a corrected answer?",
+     "title": "Q10 — review",
+     "type": "drill",
+     "xp": 10
+    }
+   ],
+   "title": "Listening Section 1: full drill",
+   "xp": 55
+  },
+  {
+   "id": "ielts-l4",
+   "minutes": 16,
+   "steps": [
+    {
+     "body": "Reading has 3 passages, 40 questions, **60 minutes — and no extra transfer time.** That means ~20 minutes per passage, no negotiation. Most Band 6 candidates fail on time, not on English. So the #1 strategy is a reading method that stops you from reading the whole passage.",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "**Skim** = read for structure, not detail: title, first sentence of each paragraph, last paragraph. 90 seconds. You should be able to say: \"This passage is about X; paragraph 2 gives history, paragraph 3 gives problems.\" **Scan** = hunt for one specific word or number in the question, then find its paraphrase in the text. You never read top-to-bottom; you **skim for the map, then scan for the treasure.**",
+     "example": "",
+     "heading": "Skim vs scan (the only reading method you need)",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "**TRUE** = the text says exactly this (paraphrased). **FALSE** = the text directly contradicts it. **NOT GIVEN** = the text neither confirms nor denies it. The trap: if the passage says *\"the library opens at 9\"* and the question says *\"the library opens at 9 and is free\"* — that's NOT GIVEN, not TRUE. Part of it matches, part is unknown. **Rule of thumb: if you're \"sure it's probably true\" — it's NOT GIVEN.** TRUE requires text evidence; FALSE requires text contradiction.",
+     "example": "",
+     "heading": "The NOT GIVEN trap — the #1 score killer",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "Short passage — read it once (skim), then answer the 6 questions by scanning:\n\n**Urban rooftops**\nA. In 2018, the city of Oslo required all new buildings over 500 m² to include a green roof. The policy aimed to reduce flooding and improve air quality.\nB. Early results disappointed engineers. Many roofs planted with grass needed constant watering, and in 2021 the council admitted maintenance costs were higher than expected.\nC. Researchers then tested native wildflower mixes. These needed almost no watering and attracted bees. By 2023, wildflower roofs were cheaper to maintain than grass roofs, though the city has not published exact savings figures.\nD. Architect Lina Berg argues the real value is psychological: residents report feeling calmer. No clinical study has confirmed this, she admits, but she believes green roofs make cities more humane.",
+     "example": "",
+     "heading": "Practice passage: Urban rooftops",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "answer": 0,
+     "engine": "multiple-choice",
+     "explanation": "Paragraph A: \"all new buildings over 500 m²\" — matches. TRUE needs text evidence, and it's there.",
+     "id": "ielts-18",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "1. Oslo requires green roofs on all new buildings over 500 m².",
+     "title": "T/F/NG practice",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 0,
+     "engine": "multiple-choice",
+     "explanation": "Paragraph B: \"the council admitted maintenance costs were higher than expected\" — direct contradiction of \"lower\". FALSE.",
+     "id": "ielts-19",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "2. Early green roofs were cheaper to maintain than expected.",
+     "title": "T/F/NG practice",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 2,
+     "engine": "multiple-choice",
+     "explanation": "Paragraph C says wildflower roofs were cheaper but \"the city has not published exact savings figures\" — we can't confirm 40%. NOT GIVEN.",
+     "id": "ielts-20",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "3. Wildflower roofs save the city exactly 40% on maintenance.",
+     "title": "T/F/NG practice",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 2,
+     "engine": "multiple-choice",
+     "explanation": "Paragraph D: Berg reports residents \"feeling calmer\" but \"no clinical study has confirmed this\". Claimed, not proven — NOT GIVEN.",
+     "id": "ielts-21",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "4. Green roofs have proven health benefits.",
+     "title": "T/F/NG practice",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "Paragraph C: wildflower mixes \"needed almost no watering\" — the opposite of constant watering. FALSE.",
+     "id": "ielts-22",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "5. Wildflower roofs need constant watering.",
+     "title": "T/F/NG practice",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 2,
+     "engine": "multiple-choice",
+     "explanation": "The passage never mentions a year for the wildflower tests, only results by 2023. NOT GIVEN.",
+     "id": "ielts-23",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "6. Wildflower roof tests began in 2020.",
+     "title": "T/F/NG practice",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "body": "A heading summarizes the **main idea of a whole paragraph** — ignore details, ask \"what is this paragraph mostly FOR?\" Paragraph B = problems with early grass roofs. Paragraph C = a better solution (wildflowers). Paragraph D = a claimed psychological benefit. **Trap:** headings reuse words from the passage. Match ideas, not words — if you match the word \"bees\" you picked the detail, not the main idea.",
+     "example": "",
+     "heading": "Matching headings: match ideas, not words",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "- Passage 1: 17 min (save time on the easy one)\n- Passage 2: 20 min\n- Passage 3: 23 min (hardest — steal time from Passage 1)\n- **If a question eats 2 minutes, guess and move.** A skipped easy question later costs the same mark as a solved hard one now.\n- Answer every question — no negative marking.",
+     "example": "",
+     "heading": "The 20-minute rule (timing strategy)",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "17 + 20 + 23 = 60, with the hardest passage getting the most time. Discipline beats brilliance.",
+     "id": "ielts-24",
+     "options": [
+      "20 minutes each, no exceptions",
+      "17 / 20 / 23 — hardest passage gets the most"
+     ],
+     "prompt": "Which split fits the 60-minute limit?",
+     "title": "Timing drill",
+     "type": "drill",
+     "xp": 10
+    }
+   ],
+   "title": "Reading: skim, scan, and the NOT GIVEN trap",
+   "xp": 50
+  },
+  {
+   "id": "ielts-l5",
+   "minutes": 16,
+   "steps": [
+    {
+     "body": "Writing Task 1 is a **report, not an essay.** 150+ words, ~20 minutes. You describe what you see: trends, comparisons, processes. **Task 2 counts double**, so Task 1 must be efficient, not beautiful.",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "- **Line graphs:** *\"rose sharply / increased gradually / peaked at / remained stable / fell slightly / fluctuated.\"*\n- **Bar charts:** comparisons — *\"twice as high as,\" \"the highest,\" \"slightly more than.\"*\n- **Pie charts:** proportions — *\"accounted for 40%,\" \"made up a quarter of,\" \"the smallest share.\"*\n- **Tables:** pick the biggest differences, ignore the rest. Never describe every number.\n- **Maps (before/after):** *\"was replaced by,\" \"was converted into,\" \"was demolished to make way for,\" \"remained unchanged.\"*\n- **Process diagrams:** passive + sequencers — *\"The beans are harvested, then they are dried...\"* Use *\"first, next, after that, finally.\"*",
+     "example": "",
+     "heading": "Frameworks: trend language for each chart type",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "Every Task 1 needs 4 paragraphs: **(1) Paraphrase** the question (one sentence). **(2) Overview** — the 2–3 most important trends, NO numbers. **(3) Detail 1** (with numbers). **(4) Detail 2** (with numbers). **The overview paragraph IS the band score.** Examiners decide your Task Achievement band from it. If you skip the overview or fill it with numbers, you cap yourself at Band 6.",
+     "example": "",
+     "heading": "The 4-paragraph structure — the overview is the band score",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "*The line graph shows average monthly temperatures in a coastal city and an inland city in 2023.*\n\n**Model answer (Band 8):**\n*\"The line graph compares monthly average temperatures in a coastal city and an inland city during 2023. **(1 — paraphrase)** Overall, the inland city experienced greater temperature variation throughout the year, while the coastal city remained relatively stable. Temperatures in both cities were lowest in January and highest in July. **(2 — overview: two trends, zero numbers)** In January, the coastal city averaged 8°C compared to just 2°C inland. Both cities warmed steadily until July, when the inland city peaked at 28°C, 6 degrees higher than the coastal city. **(3 — detail 1)** From August onwards, temperatures fell in both locations, though the decline was sharper inland, dropping to 4°C by December, while the coast eased down to 9°C. **(4 — detail 2)**\"*\n**Annotations:** (1) paraphrase changes every key word (shows→compares). (2) Overview = 2 trends, no data — this paragraph earns Task Achievement. (3–4) data grouped logically (rise, then fall), not month by month. Vocabulary: *peaked, eased, sharper* — variety, not repetition of \"increased/decreased.\"",
+     "example": "",
+     "heading": "Model Band 8 answer (annotated)",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "Band 6 Task 1 answers all share three flaws: (1) **no overview** — they start listing numbers immediately; (2) **mechanical description** — *\"In January it was 8. In February it was 9...\"* (examiners call this \"listing\"); (3) **opinions** — *\"This is good because...\"* Task 1 has no opinions. Report only.",
+     "example": "",
+     "heading": "Common Band 6 traps",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "answer": "Overview paragraph: the 2–3 key trends, no numbers",
+     "engine": "fix-sentence",
+     "explanation": "The overview earns Task Achievement; data goes in detail paragraphs.",
+     "hint": "The band score lives in one paragraph — which?",
+     "id": "ielts-25",
+     "title": "Fix the structure",
+     "type": "drill",
+     "wrong": "Task 1 needs introduction, then numbers for every month, then a conclusion with my opinion.",
+     "xp": 10
+    },
+    {
+     "answer": 2,
+     "engine": "multiple-choice",
+     "explanation": "\"Peaked at\" is precise trend vocabulary; Band 7+ rewards exact verbs.",
+     "id": "ielts-26",
+     "options": [
+      "It was very high at 28°C.",
+      "It peaked at 28°C.",
+      "It became big at 28°C."
+     ],
+     "prompt": "Which sentence shows Band 7+ trend language?",
+     "title": "Trend language",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "The wheat is harvested, then it is transported to the mill, where it is ground into flour.",
+     "engine": "fix-sentence",
+     "explanation": "Process diagrams: passive voice + sequencers. No \"they do\" — the focus is the material, not the people.",
+     "hint": "Passive voice + sequencers.",
+     "id": "ielts-27",
+     "title": "Process diagram sentence",
+     "type": "drill",
+     "wrong": "First they harvest the wheat then they transport to mill.",
+     "xp": 10
+    }
+   ],
+   "title": "Writing Task 1: describe data like an examiner",
+   "xp": 50
+  },
+  {
+   "id": "ielts-l6",
+   "minutes": 18,
+   "steps": [
+    {
+     "body": "Task 2 is the heavyweight: **250+ words, 40 minutes, worth double.** One prompt, one essay, four types you must recognize instantly:\n1. **Opinion** (*\"To what extent do you agree or disagree?\"*) — take ONE clear position, defend it. Never \"I partly agree\" wishy-washy... actually a balanced position is fine IF clearly stated and defended.\n2. **Discussion** (*\"Discuss both views and give your opinion.\"*) — both sides fairly, then YOUR view in the conclusion.\n3. **Problem–solution** (*\"What are the causes and what can be done?\"*) — one paragraph causes, one paragraph solutions.\n4. **Two-part** (*\"Why is this happening? Is it positive or negative?\"*) — answer EACH part in its own paragraph.",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "Every body paragraph follows **PEEL**: **P**oint — one clear idea (*\"Online learning reduces costs.\"*). **E**xplain — why/how (*\"Students avoid transport and accommodation expenses...\"*). **E**xample — specific (*\"A student in Multan can study at a university in Lahore without relocating.\"*). **L**ink — back to the question (*\"This makes higher education accessible to poorer families.\"*). One paragraph = one idea. Two ideas in one paragraph is how Band 6 essays die.",
+     "example": "",
+     "heading": "PEEL: one paragraph, one idea",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "Band 6 writers write *\"however\"* 12 times. Band 7+ writers rotate the toolkit: **contrast** — *however, nevertheless, on the other hand, whereas, in contrast*; **cause** — *because, since, as a result of, this leads to*; **addition** — *furthermore, moreover, in addition*; **example** — *for instance, namely*; **conclusion** — *therefore, consequently, in summary*. One device per idea, then a different one. Variety IS the Cohesion score.",
+     "example": "",
+     "heading": "Cohesion devices (not \"however\" spam)",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "Examiners reward three grammar shapes: **conditionals** (*\"If governments invested in public transport, cities would be cleaner.\"*), **relative clauses** (*\"Students **who** study online often save money.\"*), **passive** (*\"Data **is collected** from millions of users.\"*). Aim for 2–3 of each across the essay. They prove \"grammatical range\" — half your Grammar band.",
+     "example": "",
+     "heading": "High-band grammar: the big three",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "*\"Some people believe online education will replace traditional classrooms. To what extent do you agree or disagree?\"*\n\n**Model answer (Band 8–9):**\n*\"Online education has grown rapidly, leading some to claim that physical classrooms will soon disappear. **(1 — position in intro)** I largely disagree: while online learning offers real advantages, it cannot replace the social and practical dimensions of classroom education. **(2 — clear position)** The strongest argument for online learning is access. Students in remote areas, **who** previously had no options, can now study with top instructors. **(3 — relative clause)** For instance, a student in rural Pakistan can complete a data science degree without moving to a big city, which dramatically reduces costs. **(4 — example)** Nevertheless **(5 — cohesion variety)**, education is not only information transfer. Classrooms build discipline, teamwork, and communication — skills **that** employers consistently demand. **(6)** If learning moved entirely online **(7 — conditional)**, millions of students would lose daily human interaction, and the motivation that comes from peer pressure would weaken. In conclusion, online education is a powerful supplement, but it should complement rather than replace traditional classrooms. **(8 — restated position, no new ideas)**\"*\n**Annotations:** (1–2) position stated twice, never vague. (3–4) PEEL: point → who-clause → specific example. (5) *nevertheless* not *however*. (7) conditional for the Band 7+ grammar tick. (8) conclusion restates, adds nothing new — a classic Band 6 mistake avoided.",
+     "example": "",
+     "heading": "Model Band 8–9 essay (annotated)",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "(1) **Memorized phrases** — *\"In this contemporary era of globalization...\"* Examiners spot templates instantly and penalize them. (2) **New ideas in the conclusion.** (3) **No position** — sitting on the fence for 250 words. (4) **Under-length** — below 250 words = automatic Task Achievement penalty, however good the English. (5) **Over-generalizing** — *\"All students prefer online learning.\"* Use *\"many / most / some\"* qualifiers.",
+     "example": "",
+     "heading": "Common Band 6 traps",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "Score any practice essay with the examiner's four criteria, simplified:\n- [ ] **Task achievement:** Did I answer ALL parts? 250+ words? Clear position throughout?\n- [ ] **Coherence & cohesion:** PEEL paragraphs? One idea each? Cohesion devices varied (not however ×10)? Logical order?\n- [ ] **Lexical resource:** Topic vocabulary used naturally? Collocations (*\"reduce costs,\" \"gain access\"*)? Any word repeated 5+ times? No memorized phrases?\n- [ ] **Grammatical range & accuracy:** 2+ conditionals? Relative clauses? Passive? Errors rare and don't block meaning?\nOne honest \"no\" = one band lost. Fix the no, not the whole essay.",
+     "example": "",
+     "heading": "Self-scoring rubric: Writing (the examiner's checklist)",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "answer": "PEEL: one clear point, explained, with a specific example, linked back to the question",
+     "engine": "fix-sentence",
+     "explanation": "One paragraph = one idea. PEEL enforces it.",
+     "hint": "Four letters: P-E-E-L.",
+     "id": "ielts-28",
+     "title": "Fix the paragraph",
+     "type": "drill",
+     "wrong": "Good body paragraphs just need many ideas and long sentences to impress the examiner.",
+     "xp": 10
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "A fence-sitting essay scores Band 6 for Task Achievement. Take a position and defend it.",
+     "id": "ielts-29",
+     "options": [
+      "\"I partly agree with both sides and everyone is right.\"",
+      "\"I largely agree: online learning expands access, though classrooms still matter.\""
+     ],
+     "prompt": "Which intro line shows a clear position?",
+     "title": "Position drill",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "If governments invested in public transport, cities would be cleaner and less congested.",
+     "engine": "fix-sentence",
+     "explanation": "Second conditional: If + past, would + verb. A Band 7+ grammar shape.",
+     "hint": "High-band grammar: conditional.",
+     "id": "ielts-30",
+     "title": "Build the conditional",
+     "type": "drill",
+     "wrong": "If government invest in public transport, cities will be more clean.",
+     "xp": 10
+    }
+   ],
+   "title": "Writing Task 2: the essay machine",
+   "xp": 55
+  },
+  {
+   "id": "ielts-l7",
+   "minutes": 16,
+   "steps": [
+    {
+     "body": "**Part 1 (4–5 min):** familiar topics — home, studies, hobbies. The examiner wants natural, extended answers. Formula: **Answer + Reason + Example.** *\"Do you like reading?\"* → *\"Yes, I do **(answer)** — mostly non-fiction, because I enjoy learning how things work **(reason)**. I just finished a book on data science, actually **(example)**.\"* One-word answers = Band 5. This formula alone lifts most candidates a full band.",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "You get a topic card + **1 minute to prepare** + **2 minutes to talk**. Method: (1) Use the minute — write 5–6 keywords, not sentences. Shorthand: \"cabin — lake — quiet — stars — 2024\". (2) Talk for the full 2 minutes using this structure: **past** (when/where it happened) → **description** (what it was like, 2–3 details) → **feeling + why** (how it affected you). (3) If you finish early, the examiner stays silent — keep going: add one more detail. Never stop at 90 seconds.",
+     "example": "",
+     "heading": "Part 2: the cue-card method (1-min prep, 2-min talk)",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "**Part 3 (4–5 min):** abstract discussion linked to your Part 2 topic. The examiner wants **balanced views**: *\"On the one hand... on the other hand...\"*, *\"It depends on...\"*, *\"Generally speaking...\"* Structure: **opinion → reason → contrast/other side → conclusion.** *\"Will technology replace teachers?\"* → *\"I don't think so entirely (opinion) — teaching is partly emotional connection (reason). That said, for rote subjects like vocabulary, apps are already better (contrast). So technology will assist, not replace (conclusion).\"*",
+     "example": "",
+     "heading": "Part 3: discussion with balanced views",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "audio": "audio/09-ielts-speaking-mock.mp3",
+     "engine": "shadowing",
+     "id": "ielts-31",
+     "text": "Shadow a full Part 2 cue-card answer — copy the structure, not just the words",
+     "tip": "Notice the past → description → feeling structure. Then record your own 2-minute answer on the same topic.",
+     "title": "Part 2 model answer (audio)",
+     "type": "drill",
+     "xp": 15
+    },
+    {
+     "body": "Score any practice recording with the examiner's four criteria, simplified:\n- [ ] **Fluency & coherence:** Did I speak at length without long pauses? Ideas in logical order? Self-corrections rare?\n- [ ] **Lexical resource:** Topic vocabulary? Collocations? Any word I leaned on 10+ times? Paraphrasing when stuck instead of freezing?\n- [ ] **Grammatical range & accuracy:** Mix of simple and complex sentences? Past/present/future used correctly? Errors don't block understanding?\n- [ ] **Pronunciation:** Word stress right? Sentence stress on key words? Could a stranger understand me first time?\nRecord → score honestly → re-record the weakest 60 seconds. That loop is the whole method.",
+     "example": "",
+     "heading": "Self-scoring rubric: Speaking (the examiner's checklist)",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "engine": "speaking-task",
+     "id": "ielts-32",
+     "prompt": "Part 2 cue card: \"Describe a skill you would like to learn.\" You should say: what the skill is, why you want to learn it, how you would learn it — and explain how it would help you in the future. 1 minute prep (5–6 keywords only), then talk for 2 full minutes. Record it. Score yourself with the Speaking rubric above, honestly.",
+     "seconds": 120,
+     "tip": "Past → description → feeling. Keep talking when the examiner goes silent.",
+     "type": "drill",
+     "xp": 25
+    }
+   ],
+   "title": "Speaking: Parts 1, 2, 3",
+   "xp": 55
+  },
+  {
+   "id": "ielts-mock-a",
+   "minutes": 18,
+   "steps": [
+    {
+     "body": "Full Mock A. Work it under **exam conditions**: no pausing, no dictionary, timer on. Do the listening questions first (imagine the audio plays once), then reading (20 min), then write both tasks (60 min), then record the speaking. Answer keys live in the explanations — attempt before peeking.",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "**LISTENING — Section 2: Museum tour (script)**\nGUIDE: Welcome to the Riverside Museum. Before we start, a few practical details. We open at 10 am... actually, on weekends it's 9:30. The main exhibition is on the ground floor. The café is on the top floor — the third floor — and it's open until 4 pm. Photography is allowed everywhere except the special exhibition room. Today's guided tour costs 12 pounds for adults — oh, I should say 10 pounds; we reduced the price this month. Children under 12 go free. The tour takes about 90 minutes. We finish in the gift shop on the first floor. Any questions? No? Then let's begin in the main hall — straight through those doors.",
+     "example": "",
+     "heading": "Mock A — Listening script",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "\"10 am... actually, on weekends it's 9:30\" — signpost correction. Key: Mock A",
+     "id": "ielts-a1",
+     "options": [
+      "10:00 am",
+      "9:30 am"
+     ],
+     "prompt": "1. Weekend opening time?",
+     "title": "Mock A — Listening Q1",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Café location: top floor (third floor)",
+     "engine": "fill-blank",
+     "explanation": "Paraphrase: \"top floor\" = \"third floor\". Same meaning, different words — the classic IELTS move. Key: Mock A",
+     "id": "ielts-a2",
+     "options": [
+      "Café location: ___",
+      "top floor (third floor)",
+      "ground floor"
+     ],
+     "text": "Café location: ___",
+     "title": "Mock A — Listening Q2",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 0,
+     "engine": "multiple-choice",
+     "explanation": "\"12 pounds... oh, I should say 10 pounds\" — distractor corrected. Key: Mock A",
+     "id": "ielts-a3",
+     "options": [
+      "£10",
+      "£12"
+     ],
+     "prompt": "3. Adult tour price?",
+     "title": "Mock A — Listening Q3",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "Photography allowed \"everywhere except the special exhibition room\". Key: Mock A",
+     "id": "ielts-a4",
+     "options": [
+      "Everywhere",
+      "Everywhere except the special exhibition room"
+     ],
+     "prompt": "4. Where is photography banned?",
+     "title": "Mock A — Listening Q4",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Gift shop location: first floor",
+     "engine": "fill-blank",
+     "explanation": "\"We finish in the gift shop on the first floor.\" Key: Mock A",
+     "id": "ielts-a5",
+     "options": [
+      "Gift shop location: ___ floor",
+      "first",
+      "third"
+     ],
+     "text": "Gift shop location: ___ floor",
+     "title": "Mock A — Listening Q5",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Tour duration: about 90 minutes",
+     "engine": "fix-sentence",
+     "explanation": "90 minutes (distractor-free this time — not every question is a trap). Key: Mock A",
+     "hint": "Check every detail against the script.",
+     "id": "ielts-a6",
+     "title": "Mock A — Listening Q6–10",
+     "type": "drill",
+     "wrong": "The tour costs 12 pound, takes 60 minute, and finishes at the cafe on third floor.",
+     "xp": 10
+    },
+    {
+     "body": "**READING — Passage: \"The return of the night train\"**\nA. For decades, night trains across Europe were disappearing. Cheap flights made them uneconomical, and by 2016 several countries had cancelled their last sleeper services.\nB. Then the mood shifted. Climate concern made flying feel guilty, and in 2021 Austria's state railway reported sleeper bookings up 30% on 2019. New routes opened: Vienna–Paris, Zurich–Amsterdam.\nC. The economics remain difficult. A sleeper carriage costs far more to run than a daytime seat, and tickets must stay cheap enough to compete with budget airlines. Operators survive on a mix of ticket sales and state subsidies.\nD. Critics argue night trains will always be a niche. Supporters counter that niches matter: even a 5% shift from planes to trains on short European routes would cut aviation emissions measurably.",
+     "example": "",
+     "heading": "Mock A — Reading passage",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "answer": 2,
+     "engine": "multiple-choice",
+     "explanation": "The passage gives a 2021 figure but never says when bookings peaked overall. NOT GIVEN. Key: Mock A",
+     "id": "ielts-a7",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "1. Sleeper bookings peaked in 2021.",
+     "title": "Mock A — Reading Q1",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 0,
+     "engine": "multiple-choice",
+     "explanation": "Paragraph B: bookings \"up 30% on 2019\". TRUE. Key: Mock A",
+     "id": "ielts-a8",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "2. Austrian sleeper bookings rose 30% compared with 2019.",
+     "title": "Mock A — Reading Q2",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "Paragraph C: operators \"survive on a mix of ticket sales and state subsidies\" — so ticket sales alone are NOT enough. FALSE. Key: Mock A",
+     "id": "ielts-a9",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "3. Ticket sales alone keep night train operators profitable.",
+     "title": "Mock A — Reading Q3",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 2,
+     "engine": "multiple-choice",
+     "explanation": "Paragraph D says emissions would fall \"measurably\" but gives no exact figure. NOT GIVEN. Key: Mock A",
+     "id": "ielts-a10",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "4. A 5% shift to trains would cut aviation emissions by exactly 20%.",
+     "title": "Mock A — Reading Q4",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Paragraph C",
+     "engine": "multiple-choice",
+     "explanation": "Paragraph C is about costs vs ticket prices — the economics problem. Key: Mock A",
+     "id": "ielts-a11",
+     "options": [
+      "Paragraph B",
+      "Paragraph C"
+     ],
+     "prompt": "5. Which paragraph discusses the financial difficulty of running sleepers?",
+     "title": "Mock A — Reading Q5",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Climate concern / guilt about flying",
+     "engine": "fix-sentence",
+     "explanation": "Paragraph B: \"Climate concern made flying feel guilty\" — paraphrase accepted. Key: Mock A",
+     "hint": "One phrase from paragraph B.",
+     "id": "ielts-a12",
+     "title": "Mock A — Reading Q6",
+     "type": "drill",
+     "wrong": "Night trains returned because tickets became cheaper than flights.",
+     "xp": 10
+    },
+    {
+     "answer": 0,
+     "engine": "multiple-choice",
+     "explanation": "Cheap flights made sleepers \"uneconomical\" — TRUE. Key: Mock A",
+     "id": "ielts-a13",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "7. Cheap flights contributed to the decline of night trains.",
+     "title": "Mock A — Reading Q7",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Vienna–Paris and Zurich–Amsterdam",
+     "engine": "fill-blank",
+     "explanation": "Two new routes named in paragraph B. Key: Mock A",
+     "id": "ielts-a14",
+     "options": [
+      "New routes opened: ___",
+      "Vienna–Paris and Zurich–Amsterdam",
+      "Vienna–Paris only"
+     ],
+     "text": "8. New routes opened: ___",
+     "title": "Mock A — Reading Q8",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "body": "**WRITING TASK 1 (20 min, 150+ words):** The bar chart below shows the percentage of households with internet access in four countries in 2010 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\n**Model answer (Band 8):** *\"The bar chart compares household internet access in four countries in 2010 and 2020. (paraphrase) Overall, access rose in every country over the decade, with Country A remaining the clear leader throughout. (overview — trend + leader, no numbers) In 2010, 80% of households in Country A had internet, roughly double the figure for Country D at 40%. Countries B and C sat in the middle at 55% and 60%. (detail 1 — 2010 snapshot) By 2020, Country A had reached near-universal access at 95%, while Country D had more than doubled to 85%, the fastest growth of the four. Countries B and C also climbed steadily to 78% and 82%. (detail 2 — 2020 + change)\"*\n**Annotations:** overview = 2 trends, zero numbers. Details grouped by year (2010, then 2020), not by country. Language: *near-universal, fastest growth, climbed steadily.*",
+     "example": "",
+     "heading": "Mock A — Writing Task 1 + model answer",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "**WRITING TASK 2 (40 min, 250+ words):** Some people think that university education should be free for all students. Others believe students should pay for their own tuition. Discuss both views and give your own opinion.\n\n**Model answer (Band 8–9):** *\"Whether higher education should be free is one of the most debated policy questions of our time. (paraphrase) This essay will discuss both perspectives before arguing that a mixed system is fairest. (roadmap) Supporters of free university argue that talent is evenly distributed but opportunity is not. (point) If tuition were free (conditional), bright students from poor families could study medicine or engineering instead of taking low-paid jobs at eighteen. (explain + example) Countries like Germany, which abolished tuition fees, have seen wider participation without collapsing quality. (evidence) On the other hand, critics point out that free university is expensive for taxpayers, many of whom never attend. (other view) They argue that graduates earn significantly more over their lifetimes, so it is reasonable for them to contribute through fees or graduate taxes. (explain) In my opinion, the fairest model combines both: free tuition for students from low-income families, funded partly by contributions from higher earners after graduation. (clear position) This keeps opportunity open while sharing costs fairly. (link) In conclusion, while both sides raise valid concerns, a targeted free-tuition system best balances fairness and sustainability. (restated position, no new ideas)\"*\n**Annotations:** discussion type — both views fairly, own opinion clearly in body + conclusion. PEEL in each paragraph. Conditional + relative clause (*\"which abolished\"*). Position never vague.",
+     "example": "",
+     "heading": "Mock A — Writing Task 2 + model answer",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "**SPEAKING PART 2 cue card:** \"Describe a journey you remember well.\" You should say: where you went, who you went with, what happened during the journey — and explain why you remember it well. (1 min prep, 2 min talk)\n\n**SPEAKING PART 3 questions:**\n1. Why do some people enjoy travelling by train more than by plane?\n2. How has travel changed in your country in the last 20 years?\n3. Do you think people will travel less in the future because of technology? Why / why not?\n4. What are the environmental effects of increased tourism?",
+     "example": "",
+     "heading": "Mock A — Speaking Part 2 + Part 3",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "engine": "speaking-task",
+     "id": "ielts-a15",
+     "prompt": "Record the full Mock A Speaking: Part 1 (answer 4 questions about travel: Answer+Reason+Example), then the Part 2 cue card above (2 full minutes), then answer the 4 Part 3 questions with balanced views (opinion → reason → contrast → conclusion). 11–14 minutes total. Score yourself with the Speaking rubric from Lesson 7.",
+     "seconds": 120,
+     "tip": "Exam conditions: no stopping, no re-recording mid-mock.",
+     "type": "drill",
+     "xp": 30
+    }
+   ],
+   "title": "Full mock test A",
+   "xp": 60
+  },
+  {
+   "id": "ielts-mock-b",
+   "minutes": 18,
+   "steps": [
+    {
+     "body": "Full Mock B — same exam conditions as Mock A: no pausing, no dictionary, timer on. Different content, same traps. Keys in the explanations — attempt before peeking.",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "**LISTENING — Section 3: student and tutor discussing a project (script)**\nTUTOR: So, Aisha, your proposal for the water-quality project. You've chosen the river site?\nAISHA: Yes — the north bank. I first thought about the south bank, but the readings there were... actually, the north bank had higher pollution levels in last year's survey.\nTUTOR: Good. And your sample size?\nAISHA: I planned 20 samples, but my supervisor suggested 30. So, 30.\nTUTOR: Sensible. Deadline is the 5th of March — no wait, the department moved it to the 12th of March.\nAISHA: 12th of March, noted. I'll present the results as a chart... or maybe a table would be clearer.\nTUTOR: A table works well for this kind of data. And the report length?\nAISHA: 2,000 words, excluding references.",
+     "example": "",
+     "heading": "Mock B — Listening script",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "answer": 0,
+     "engine": "multiple-choice",
+     "explanation": "\"I first thought about the south bank, but... actually, the north bank\" — signpost correction. Key: Mock B",
+     "id": "ielts-b1",
+     "options": [
+      "North bank",
+      "South bank"
+     ],
+     "prompt": "1. Which site did Aisha choose?",
+     "title": "Mock B — Listening Q1",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Sample size: 30",
+     "engine": "fill-blank",
+     "explanation": "\"I planned 20 samples, but my supervisor suggested 30. So, 30.\" — distractor corrected. Key: Mock B",
+     "id": "ielts-b2",
+     "options": [
+      "Sample size: ___",
+      "30",
+      "20"
+     ],
+     "text": "Sample size: ___",
+     "title": "Mock B — Listening Q2",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "\"the 5th of March — no wait... the 12th of March\" — take the correction. Key: Mock B",
+     "id": "ielts-b3",
+     "options": [
+      "5th March",
+      "12th March"
+     ],
+     "prompt": "3. Project deadline?",
+     "title": "Mock B — Listening Q3",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 0,
+     "engine": "multiple-choice",
+     "explanation": "\"I'll present the results as a chart... or maybe a table would be clearer\" + tutor agrees: table. Key: Mock B",
+     "id": "ielts-b4",
+     "options": [
+      "Table",
+      "Chart"
+     ],
+     "prompt": "4. How will she present the results?",
+     "title": "Mock B — Listening Q4",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Report length: 2,000 words (excluding references)",
+     "engine": "fill-blank",
+     "explanation": "2,000 words — note \"excluding references\". Key: Mock B",
+     "id": "ielts-b5",
+     "options": [
+      "Report length: ___ words",
+      "2,000",
+      "3,000"
+     ],
+     "text": "Report length: ___ words",
+     "title": "Mock B — Listening Q5",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Aisha chose the north bank, 30 samples, deadline 12 March, table presentation",
+     "engine": "fix-sentence",
+     "explanation": "Three corrections in one script — signpost words (\"actually\", \"no wait\") always mark the real answer. Key: Mock B",
+     "hint": "Three trap errors in the notes.",
+     "id": "ielts-b6",
+     "title": "Mock B — Listening Q6–10",
+     "type": "drill",
+     "wrong": "Aisha chose south bank, 20 sample, deadline 5 March, chart presentation.",
+     "xp": 10
+    },
+    {
+     "body": "**READING — Passage: \"Why waiting feels longer than it is\"**\nA. Psychologists have long known that perceived waiting time differs from clock time. A two-minute wait can feel like ten if the conditions are wrong.\nB. The key factor is uncertainty. In a famous 2018 experiment, passengers told their bus would arrive \"soon\" estimated the wait as twice as long as passengers given an exact countdown. Information, it seems, shortens time.\nC. Occupied time also feels shorter. Airports discovered that passengers complained less about baggage delays after walkways to the carousel were lengthened — the walk filled the wait.\nD. However, not all distractions help. A 2022 study found that phone scrolling during waits increased frustration, possibly because it raised expectations of constant stimulation.",
+     "example": "",
+     "heading": "Mock B — Reading passage",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "answer": 0,
+     "engine": "multiple-choice",
+     "explanation": "Paragraph A: \"perceived waiting time differs from clock time\" — TRUE. Key: Mock B",
+     "id": "ielts-b7",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "1. People experience waiting time differently from actual time.",
+     "title": "Mock B — Reading Q1",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 2,
+     "engine": "multiple-choice",
+     "explanation": "The passage mentions a 2018 bus experiment but never names the city. NOT GIVEN. Key: Mock B",
+     "id": "ielts-b8",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "2. The 2018 bus experiment took place in London.",
+     "title": "Mock B — Reading Q2",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 0,
+     "engine": "multiple-choice",
+     "explanation": "Paragraph B: passengers with an exact countdown estimated shorter waits — information shortens perceived time. TRUE. Key: Mock B",
+     "id": "ielts-b9",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "3. Knowing the exact waiting time makes the wait feel shorter.",
+     "title": "Mock B — Reading Q3",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "Paragraph C: lengthening the walk REDUCED complaints — the opposite of increasing them. FALSE. Key: Mock B",
+     "id": "ielts-b10",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "4. Longer walks to baggage claim increased passenger complaints.",
+     "title": "Mock B — Reading Q4",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "Paragraph D: phone scrolling \"increased frustration\" — distraction did NOT always help. FALSE. Key: Mock B",
+     "id": "ielts-b11",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "5. All distractions reduce the frustration of waiting.",
+     "title": "Mock B — Reading Q5",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": 2,
+     "engine": "multiple-choice",
+     "explanation": "No mention of music anywhere in the passage. NOT GIVEN. Key: Mock B",
+     "id": "ielts-b12",
+     "options": [
+      "TRUE",
+      "FALSE",
+      "NOT GIVEN"
+     ],
+     "prompt": "6. Playing music reduces perceived waiting time.",
+     "title": "Mock B — Reading Q6",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Paragraph B",
+     "engine": "multiple-choice",
+     "explanation": "Paragraph B is about uncertainty and countdown information. Key: Mock B",
+     "id": "ielts-b13",
+     "options": [
+      "Paragraph B",
+      "Paragraph D"
+     ],
+     "prompt": "7. Which paragraph discusses the effect of information on waiting?",
+     "title": "Mock B — Reading Q7",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Airports lengthened walkways to the baggage carousel",
+     "engine": "fix-sentence",
+     "explanation": "Paragraph C: the walk filled the wait — occupied time feels shorter. Key: Mock B",
+     "hint": "What did airports change?",
+     "id": "ielts-b14",
+     "title": "Mock B — Reading Q8",
+     "type": "drill",
+     "wrong": "Airports shortened walkways so passengers wait less.",
+     "xp": 10
+    },
+    {
+     "body": "**WRITING TASK 1 (20 min, 150+ words):** The table below shows the percentage of household income spent on four categories in three countries in 2022. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\n**Model answer (Band 8):** *\"The table compares how households in three countries allocated their income across four categories in 2022. (paraphrase) Overall, housing was the largest expense in all three countries, while spending on entertainment was consistently the smallest. Country X devoted the highest share to housing, whereas Country Z spent relatively more on food. (overview — two patterns, no numbers) In Country X, housing absorbed 32% of income, compared with 28% in Country Y and 25% in Country Z. Food showed the reverse pattern: Country Z spent 22%, noticeably more than Country X at 15%. (detail 1) Transport costs were similar everywhere, ranging from 12% to 14%, and entertainment accounted for just 6–8% in all three countries, the lowest share in each case. (detail 2)\"*\n**Annotations:** table strategy — pick the biggest differences, ignore the rest. Overview first, numbers only in details. Comparatives (*higher, noticeably more*) carry the Cohesion score.",
+     "example": "",
+     "heading": "Mock B — Writing Task 1 + model answer",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "**WRITING TASK 2 (40 min, 250+ words):** Some people believe that children should learn a foreign language at primary school rather than secondary school. To what extent do you agree or disagree?\n\n**Model answer (Band 8–9):** *\"At what age children should begin learning foreign languages is widely debated. (paraphrase) I strongly agree that primary school is the better starting point, for reasons of brain development and long-term motivation. (clear position) Young children acquire pronunciation far more naturally than teenagers. (point) Research on language acquisition shows that the ability to hear and reproduce unfamiliar sounds declines after roughly age twelve. (explain) A child who starts English at seven, therefore, is more likely to develop a natural accent than one who begins at fourteen. (example + link) Furthermore (cohesion variety), early success builds confidence. (point) A ten-year-old who can already hold a simple conversation feels capable, and this sense of achievement sustains motivation through the harder grammar of later years. (explain) If language learning is delayed until secondary school (conditional), many students associate it only with exams and memorisation, which kills interest. (contrast) Admittedly, primary curricula are already crowded. (concession) However, language games and songs take little time and suit young learners perfectly. (rebuttal) In conclusion, starting foreign languages in primary school gives children a lasting advantage in both pronunciation and motivation. (restated position)\"*\n**Annotations:** opinion type — one clear position defended throughout. PEEL in each paragraph. Concession + rebuttal (*admittedly... however*) = Band 8 discussion skill. Conditional for grammar range.",
+     "example": "",
+     "heading": "Mock B — Writing Task 2 + model answer",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "**SPEAKING PART 2 cue card:** \"Describe a person who has taught you something important.\" You should say: who the person is, what they taught you, how they taught you — and explain why it was important to you. (1 min prep, 2 min talk)\n\n**SPEAKING PART 3 questions:**\n1. What qualities make someone a good teacher?\n2. Is it better to learn from books or from people? Why?\n3. How has the role of teachers changed with the internet?\n4. Should schools invite professionals to teach practical skills? Why / why not?",
+     "example": "",
+     "heading": "Mock B — Speaking Part 2 + Part 3",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "engine": "speaking-task",
+     "id": "ielts-b15",
+     "prompt": "Record the full Mock B Speaking: Part 1 (4 questions about learning: Answer+Reason+Example), then the Part 2 cue card above (2 full minutes, past → description → feeling), then the 4 Part 3 questions with balanced views. 11–14 minutes total. Score yourself with the Speaking rubric. Compare with Mock A: which part improved?",
+     "seconds": 120,
+     "tip": "Two full mocks = the minimum before the real test.",
+     "type": "drill",
+     "xp": 30
+    }
+   ],
+   "title": "Full mock test B",
+   "xp": 60
+  },
+  {
+   "id": "ielts-quiz",
+   "minutes": 10,
+   "steps": [
+    {
+     "engine": "timed-quiz",
+     "id": "ielts-34",
+     "questions": [
+      {
+       "answer": 1,
+       "explanation": "The corrected answer always wins: \"actually make it four\".",
+       "kind": "mc",
+       "n": 1,
+       "options": [
+        "Three",
+        "Four"
+       ],
+       "prompt": "Audio: \"Three nights. Oh wait — actually make it four.\" How many nights?"
+      },
+      {
+       "answer": 2,
+       "explanation": "\"Probably true\" without text evidence = NOT GIVEN. Never upgrade a guess to TRUE.",
+       "kind": "mc",
+       "n": 2,
+       "options": [
+        "TRUE",
+        "FALSE",
+        "NOT GIVEN"
+       ],
+       "prompt": "Passage gives no exact savings figure. Statement: \"The policy saved exactly 40%.\""
+      },
+      {
+       "answer": "12 noon",
+       "explanation": "\"11... sorry, 12 noon\" — \"sorry\" signals the correction.",
+       "kind": "fix",
+       "n": 3,
+       "prompt": "Fix the note:",
+       "wrong": "Checkout time is 11am."
+      },
+      {
+       "answer": 1,
+       "explanation": "A blank is a guaranteed zero; a guess is a chance.",
+       "kind": "mc",
+       "n": 4,
+       "options": [
+        "Leave it blank",
+        "Guess"
+       ],
+       "prompt": "You're unsure of a Listening answer. What do you do?"
+      },
+      {
+       "answer": "The overview paragraph: 2–3 key trends, no numbers.",
+       "explanation": "The overview decides your Task Achievement band.",
+       "kind": "order",
+       "n": 5,
+       "prompt": "Put in exam order:",
+       "words": [
+        "Write detail paragraphs with numbers",
+        "Write the overview paragraph",
+        "Paraphrase the question"
+       ]
+      },
+      {
+       "answer": "I largely agree: online learning expands access, though classrooms still matter.",
+       "explanation": "Clear position, defended — that's Task Achievement.",
+       "kind": "self",
+       "n": 6,
+       "prompt": "Write an opinion-essay position line for: \"Online learning will replace classrooms.\"\n   You: \"___\"",
+       "sample": "Sample: \"I largely agree: online learning expands access, though classrooms still matter.\""
+      },
+      {
+       "answer": 1,
+       "explanation": "Double Task 1 — that's why it gets 40 of the 60 minutes.",
+       "kind": "mc",
+       "n": 7,
+       "options": [
+        "They count equally",
+        "Task 2 counts double"
+       ],
+       "prompt": "Task 1 vs Task 2 weighting?"
+      },
+      {
+       "answer": "Answer + Reason + Example",
+       "explanation": "One-word answers = Band 5; extend every Part 1 answer.",
+       "kind": "fix",
+       "n": 8,
+       "prompt": "Complete the Part 1 formula:",
+       "wrong": "Answer only."
+      },
+      {
+       "answer": 1,
+       "explanation": "Never read top-to-bottom in IELTS Reading.",
+       "kind": "mc",
+       "n": 9,
+       "options": [
+        "Read every word carefully",
+        "Skim for structure, then scan for the answer"
+       ],
+       "prompt": "The Reading method?"
+      },
+      {
+       "answer": "The wheat is harvested, then it is dried in the sun.",
+       "explanation": "Process diagrams = passive voice + sequencers.",
+       "kind": "fix",
+       "n": 10,
+       "prompt": "Rewrite in process-diagram style:",
+       "wrong": "They harvest the wheat then they dry it."
+      },
+      {
+       "answer": "If governments invested in public transport, cities would be cleaner.",
+       "explanation": "Second conditional — a Band 7+ grammar shape.",
+       "kind": "self",
+       "n": 11,
+       "prompt": "Write a conditional sentence about the environment.\n   You: \"___\"",
+       "sample": "Sample: \"If governments invested in public transport, cities would be cleaner.\""
+      },
+      {
+       "answer": "Take one clear position and defend it with PEEL paragraphs.",
+       "explanation": "Fence-sitting caps Task Achievement at Band 6.",
+       "kind": "order",
+       "n": 12,
+       "prompt": "Put in order:",
+       "words": [
+        "Defend it with PEEL paragraphs",
+        "Take one clear position"
+       ]
+      }
+     ],
+     "rule": "10/12 to move on. Answer first, then learn from the misses.",
+     "seconds": 600,
+     "title": "Quiz — IELTS Mastery",
+     "type": "drill",
+     "xp": 100
+    }
+   ],
+   "title": "Module quiz — 12 questions",
+   "xp": 40
+  },
+  {
+   "id": "ielts-checkpoint",
+   "minutes": 10,
+   "steps": [
+    {
+     "body": "- [ ] I can name the three Listening traps (distractors, paraphrase, signposts) and use the prediction technique\n- [ ] I skim for structure and scan for answers; I never read a passage top-to-bottom\n- [ ] I apply T/F/NG logic without upgrading guesses to TRUE\n- [ ] My Task 1 has a real overview paragraph (trends, no numbers) in 4 paragraphs\n- [ ] My Task 2 takes a clear position, uses PEEL paragraphs, varied cohesion devices, and 2+ high-band grammar shapes\n- [ ] I can extend Part 1 answers (Answer+Reason+Example), run the Part 2 cue-card method, and give balanced Part 3 views\n- [ ] I can self-score any writing or speaking performance with the examiner checklists",
+     "example": "",
+     "heading": "Can-do statements",
+     "type": "teach",
+     "tip": ""
+    },
+    {
+     "body": "Record one **full Speaking mock** — Parts 1, 2, and 3, 11–14 minutes, no stopping: Part 1 (5 questions on a familiar topic, Answer+Reason+Example), Part 2 (a fresh cue card: \"Describe a place you would like to visit\" — 1 min prep, 2 min talk), Part 3 (4 discussion questions, balanced views). Then score it with the Speaking rubric from Lesson 7. This recording is your IELTS baseline artifact — redo it after 8 weeks of technique practice and compare.",
+     "example": "",
+     "heading": "Mini-test (the final exam)",
+     "type": "teach",
+     "tip": ""
+    },
+    {
+     "body": "Technique decays without use. One full mock per month keeps it alive: redo Mock A or B under exam conditions, and re-record the Speaking mock. When your self-scores stop rising, your foundation (Modules 1–4) needs the work — technique has done its job.\n\n🎓 **Badge earned: Band Hunter** — technique is yours. Now go build the B2+ foundation it multiplies.\n\n---",
+     "example": "",
+     "heading": "Re-entry note",
+     "type": "teach",
+     "tip": ""
+    },
+    {
+     "engine": "speaking-task",
+     "id": "ielts-35",
+     "prompt": "Record one full Speaking mock — Parts 1, 2, 3 (11–14 minutes, no stopping). Part 1: 5 familiar-topic questions (Answer+Reason+Example). Part 2: \"Describe a place you would like to visit\" — 1 minute prep, 2 full minutes of talking. Part 3: 4 discussion questions with balanced views. Score it with the Speaking rubric, honestly.\n\nRe-entry note: one full mock per month keeps technique alive. When self-scores stop rising, the foundation needs the work — technique has done its job.\n\n🎓 Badge earned: Band Hunter — technique is yours. Now go build the B2+ foundation it multiplies.\n\n---",
+     "seconds": 120,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "type": "drill",
+     "xp": 30
+    }
+   ],
+   "title": "Checkpoint: full Speaking mock",
+   "xp": 40
+  }
+ ],
+ "tagline": "Band 7+ technique for all four sections",
+ "title": "IELTS Mastery"
+}

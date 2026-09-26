@@ -46,6 +46,7 @@ async function boot(){
     console.error(e); return;
   }
   Store.touchDay();
+  if(window.Theme)Theme.init();
   window.addEventListener('hashchange',route);
   if(!location.hash)location.hash=Store.S.lastRoute||'#/home';
   route();

@@ -76,8 +76,16 @@ is made deliberately.
 
 ### First-load size
 
-~277 KB total (HTML + CSS + JS + all content JSON), well under the 2 MB budget.
+~285 KB total (HTML + CSS + JS + all content JSON), well under the 2 MB budget.
 Audio is excluded — it streams/caches on demand.
+
+## Themes
+
+Light / dark / system modes, switchable from the ☀️/🌙 button in the header
+(default: system — follows the phone). All colors are CSS custom properties
+(`css/styles.css` token blocks); there are no hardcoded theme-breaking colors.
+The choice is stored in localStorage (`fluent_theme`) and applied pre-paint to
+avoid a flash of the wrong theme. `meta theme-color` follows the active theme.
 
 ## What's inside
 

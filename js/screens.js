@@ -68,7 +68,7 @@ function home(root){
 /* ================= LEARN ================= */
 function learn(root){
   const S=Store.S;
-  let html=`<div class="greet">Learn 📚</div><p class="sub">7 modules · bite-sized lessons · built for client calls</p>
+  let html=`<div class="greet">Learn 📚</div><p class="sub">${Content.MODULES.length} modules · bite-sized lessons · everyday, work & exam English</p>
   ${!S.placement?`<div class="card" style="border:1.5px solid var(--acc);cursor:pointer" data-go="#/placement">
     <div class="kicker" style="color:var(--acc)">🧭 START HERE</div>
     <p style="margin:8px 0"><b>Placement test</b> <span class="small dim">· not taken yet</span></p>
@@ -78,10 +78,10 @@ function learn(root){
     const total=(m.lessons||[]).length,done=(m.lessons||[]).filter(l=>S.lessonsDone[l.id]).length;
     const pct=total?Math.round(done/total*100):0;
     html+=`<div class="mod" data-mod="${mid}">
-      <div class="ic">${m.icon||'📦'}</div>
+      <div class="ic" style="--mc:${m.color}">${m.icon||'📦'}</div>
       <div><h3>${esc(m.title)}</h3><p>${esc(m.tagline||'')}</p>
       ${m.phase2Note?`<p class="small" style="color:var(--amber)">⏳ ${esc(m.phase2Note)}</p>`:''}</div>
-      <div class="pct"><b style="color:${m.color}">${pct}%</b><div class="bar"><i style="width:${pct}%;background:${m.color}"></i></div>
+      <div class="pct"><span class="pct-num">${pct}%</span><div class="bar"><i style="width:${pct}%;background:${m.color}"></i></div>
       <div class="small dim">${done}/${total}</div></div></div>`;
   }
   root.innerHTML=html;
@@ -495,7 +495,7 @@ function progress(root){
   });
   root.querySelector('#reset').onclick=()=>{
     const m=modal(`<h3>Reset everything?</h3><p class="mut small">XP, streak, badges, error log — all gone. This can't be undone.</p>
-      <button class="btn" id="r-yes" style="background:linear-gradient(135deg,#f87171,#dc2626);color:#fff">Yes, reset</button>
+      <button class="btn danger" id="r-yes">Yes, reset</button>
       <button class="btn ghost mt" id="r-no">Keep my progress</button>`);
     m.querySelector('#r-yes').onclick=()=>Store.reset();
     m.querySelector('#r-no').onclick=()=>m.remove();

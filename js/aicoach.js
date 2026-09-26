@@ -229,7 +229,7 @@ function setupView(root,back){
       await callGemini(k,'You are a test. Reply with exactly: OK',{text:'Say OK'},{maxTokens:5,temp:0});
       setKey(k);st.innerHTML='<b style="color:var(--acc)">✅ Connected! Smarter coach is live.</b>';confetti(80);
       setTimeout(back,900);
-    }catch(e){st.innerHTML='<b style="color:#f87171">'+esc(e.friendly||'Connection failed.')+'</b>';}
+    }catch(e){st.innerHTML='<b style="color:var(--red)">'+esc(e.friendly||'Connection failed.')+'</b>';}
   };
 }
 
@@ -259,7 +259,7 @@ function keySettings(root){
       ?'<b style="color:var(--acc)">🔑 Gemini key</b><br><span class="small dim">Model: '+esc(MODEL_LABEL)+' · free tier · speaking feedback ON</span>'
       :'<b style="color:var(--acc)">✨ Free AI</b><br><span class="small dim">No key · conversation + writing work now · speaking feedback needs a Gemini key</span>'}</p>
     ${prov==='gemini'
-      ?`<button class="btn" id="k-remove" style="background:linear-gradient(135deg,#f87171,#dc2626);color:#fff">Remove my key</button>
+      ?`<button class="btn danger" id="k-remove">Remove my key</button>
         <p class="small dim">Removes the key from this device immediately. The coach falls back to Free AI. Chat history and progress stay.</p>`
       :`<button class="btn vio" id="k-upgrade">Upgrade: add a free Gemini key ↗</button>
         <p class="small dim">For smarter feedback and speaking feedback on your recordings. Still free — takes 2 minutes.</p>`}</div>
@@ -269,7 +269,7 @@ function keySettings(root){
   if(up)up.onclick=()=>setupView(root,()=>coachHome(root));
   const rm=root.querySelector('#k-remove');
   if(rm)rm.onclick=()=>{const m=modal(`<h3>Remove your API key?</h3><p class="mut small">The coach falls back to Free AI. Your progress is untouched.</p>
-    <button class="btn" id="rk-yes" style="background:linear-gradient(135deg,#f87171,#dc2626);color:#fff">Remove it</button>
+    <button class="btn danger" id="rk-yes">Remove it</button>
     <button class="btn ghost mt" id="rk-no">Keep it</button>`);
     m.querySelector('#rk-yes').onclick=()=>{clearKey();m.remove();toast('Key removed — back to Free AI 🔒');coachHome(root);};
     m.querySelector('#rk-no').onclick=()=>m.remove();};
@@ -324,7 +324,7 @@ function chatView(root){
       if(!navigator.onLine){toast('No internet — AI Coach needs it. The rest of Fluent works offline. 🌐');return;}
       busy=true;inp.value='';
       push('you',txt);xpToday(5);
-      const typing=el('<div class="msg ai"><div class="msg-b dim">typing…</div></div>');log.appendChild(typing);log.scrollTop=log.scrollHeight;
+      const typing=el('<div class="msg ai"><div class="msg-b typing"><span></span><span></span><span></span></div></div>');log.appendChild(typing);log.scrollTop=log.scrollHeight;
       const history=s.chat.slice(-12).map(m=>({role:m.w==='you'?'user':'assistant',content:m.t}));
       try{
         const reply=await askCoach(SYS_CHAT,history.slice(0,-1).concat([{role:'user',content:txt}]));
@@ -354,7 +354,7 @@ function writeView(root){
         const reply=await askCoach(SYS_WRITE,[{role:'user',content:'Score and correct this writing:\n\n'+txt}],{maxTokens:700});
         out.innerHTML=`<div class="card"><span class="ai-badge">🤖 AI feedback</span><div class="mt" style="font-size:14.5px;line-height:1.65">${md(reply)}</div></div>`;
         xpToday(15);Store.S.speakingDone++;Store.save();
-      }catch(e){out.innerHTML=`<div class="card"><p style="color:#f87171">${esc(e.friendly)}</p></div>`;}
+      }catch(e){out.innerHTML=`<div class="card"><p style="color:var(--red)">${esc(e.friendly)}</p></div>`;}
       busy=false;window.scrollTo({top:document.body.scrollHeight});
     };
   });
@@ -410,7 +410,7 @@ function speakView(root){
           rec=new MediaRecorder(stream);chunks=[];
           rec.ondataavailable=e=>{if(e.data.size)chunks.push(e.data);};
           rec.start();recording=true;rec._stream=stream;
-          recBtn.classList.add('live');status.innerHTML='<b style="color:#f87171">● Recording… tap again to stop</b>';
+          recBtn.classList.add('live');status.innerHTML='<b style="color:var(--red)">● Recording… tap again to stop</b>';
         }catch(e){toast('Microphone blocked. Allow mic access in your browser settings. 🎙️');}
         return;
       }
@@ -440,7 +440,7 @@ function speakView(root){
         ],{maxTokens:600});
         out.innerHTML=`<div class="card"><span class="ai-badge">🤖 AI feedback</span><div class="mt" style="font-size:14.5px;line-height:1.65">${md(reply)}</div></div>`;
         status.textContent='Done — tap 🎙️ to record again.';xpToday(20);Store.S.speakingDone++;Store.save();
-      }catch(e){out.innerHTML=`<div class="card"><p style="color:#f87171">${esc(e.friendly)}</p></div>`;status.textContent='Tap 🎙️ to try again.';}
+      }catch(e){out.innerHTML=`<div class="card"><p style="color:var(--red)">${esc(e.friendly)}</p></div>`;status.textContent='Tap 🎙️ to try again.';}
       busy=false;window.scrollTo({top:document.body.scrollHeight});
     };
   });
