@@ -160,6 +160,27 @@
    "icon": "🤝",
    "desc": "Complete the Sales module — the full 90-day path is done.",
    "check": "sales_done == true"
+  },
+  {
+   "id": "social-butterfly",
+   "name": "Social Butterfly",
+   "icon": "🦋",
+   "desc": "Complete the Everyday & Social module — walk into any room abroad and belong in it.",
+   "check": "everyday_social_done == true"
+  },
+  {
+   "id": "meeting-pro",
+   "name": "Meeting Pro",
+   "icon": "🏢",
+   "desc": "Complete the Workplace module — hold your own in any professional room.",
+   "check": "workplace_done == true"
+  },
+  {
+   "check": "ielts_done == true",
+   "desc": "Complete the IELTS Mastery module — Band 7+ technique across all four sections.",
+   "icon": "🎓",
+   "id": "band-hunter",
+   "name": "Band Hunter"
   }
  ]
 }

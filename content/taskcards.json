@@ -462,5 +462,202 @@
    "Full sentences",
    "Honest — real facts only"
   ]
+ },
+ {
+  "id": "card-31",
+  "n": 31,
+  "module": "everyday-social",
+  "title": "The 20 openers, aloud",
+  "kind": "speak",
+  "seconds": 120,
+  "prompt": "Goal: Make small-talk openers automatic.\n\nRead all 20 starter lines from Lesson 8.1 aloud — standing up, smiling, like you mean them. Then pick your 5 favourites and say each one twice more.",
+  "tip": "Lens trained: Clarity. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Said like you mean it",
+   "5 favourites picked"
+  ]
+ },
+ {
+  "id": "card-32",
+  "n": 32,
+  "module": "everyday-social",
+  "title": "Airport arrival narration",
+  "kind": "speak",
+  "seconds": 120,
+  "prompt": "Goal: Narrate a full arrival without a script.\n\nRecord yourself landing in a new country: immigration answers (purpose, duration, hotel), then the hotel check-in script. Full sentences, calm pace — like it's really happening.",
+  "tip": "Lens trained: Clarity. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Calm, unhurried pace"
+  ]
+ },
+ {
+  "id": "card-33",
+  "n": 33,
+  "module": "everyday-social",
+  "title": "The phone recovery drill",
+  "kind": "speak",
+  "seconds": 120,
+  "prompt": "Goal: Survive a call with zero visual cues.\n\nCall the hotel (AI tutor or voice memo): confirm booking for the 14th — date, room type, price. You MUST use two recovery phrases (repeat / spell / slow down) and one confirm-back (\"So that's... correct?\").",
+  "tip": "Lens trained: Clarity. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "2 recovery phrases used",
+   "1 confirm-back used"
+  ]
+ },
+ {
+  "id": "card-34",
+  "n": 34,
+  "module": "everyday-social",
+  "title": "Your emergency card",
+  "kind": "journal",
+  "seconds": 0,
+  "prompt": "Goal: Emergency lines on paper before you need them.\n\nWrite: (1) your lost-passport sentence for the police + embassy, (2) your symptom list (8 words from Lesson 8.4), (3) \"I'm allergic to penicillin.\" in your own handwriting — then say it aloud 5 times. Save a passport photo on your phone today.",
+  "tip": "Lens trained: Clarity. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Passport-loss script written",
+   "8 symptoms listed",
+   "Passport photo saved on phone"
+  ]
+ },
+ {
+  "id": "card-35",
+  "n": 35,
+  "module": "workplace",
+  "title": "Three meeting moves",
+  "kind": "speak",
+  "seconds": 90,
+  "prompt": "Goal: Participate in a meeting without freezing.\n\nAI tutor runs a short meeting. Use all three moves once: agree-and-add, one polite interruption (\"Sorry, can I jump in for a second?\"), one clarification question. Under 20 seconds per turn.",
+  "tip": "Lens trained: Clarity. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "All 3 moves used",
+   "Under 20s per turn"
+  ]
+ },
+ {
+  "id": "card-36",
+  "n": 36,
+  "module": "workplace",
+  "title": "The 2-minute presentation",
+  "kind": "speak",
+  "seconds": 120,
+  "prompt": "Goal: Present a real project with structure.\n\nDeliver 2 minutes on a REAL project of yours: one hook (question, number, or story) → 3 signposted points (\"First... Second... Finally...\") → one-sentence close + \"Happy to take questions.\" Record and redo once, slower.",
+  "tip": "Lens trained: Clarity. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Hook + 3 points + close",
+   "Real facts only"
+  ]
+ },
+ {
+  "id": "card-37",
+  "n": 37,
+  "module": "workplace",
+  "title": "Interview kit aloud",
+  "kind": "speak",
+  "seconds": 180,
+  "prompt": "Goal: Walk into interviews with the kit loaded.\n\nSpeak your 60-second \"tell me about yourself\" (Present → Past → Future), then one full STAR story with a number in it. Then say your 3 questions to ask them. Real facts only — honesty contract applies double here.",
+  "tip": "Lens trained: Clarity. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "STAR has a number",
+   "Real facts only"
+  ]
+ },
+ {
+  "id": "card-38",
+  "n": 38,
+  "module": "workplace",
+  "title": "SBI feedback letter",
+  "kind": "journal",
+  "seconds": 0,
+  "prompt": "Goal: Give feedback that fixes, not fights.\n\nWrite SBI+R feedback for a real or imagined situation: Situation, Behavior (fact, not verdict), Impact, Request. Then write the receiving script: \"Thanks for telling me — can you give me one example? I'll think about it.\" Say both aloud.",
+  "tip": "Lens trained: Clarity. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Behavior stated as fact",
+   "Request included",
+   "Receiving script written"
+  ]
+ },
+ {
+  "checklist": [
+   "Predicted answer types before listening",
+   "Spotted at least 3 signpost corrections",
+   "Wrote names/digits letter-perfect",
+   "No blanks left"
+  ],
+  "id": "card-39",
+  "kind": "speak",
+  "module": "ielts",
+  "n": 39,
+  "prompt": "Goal: Beat the Listening traps — distractors, paraphrase, signposts.\n\nRe-read the Mock A listening script (Lesson 9). Predict the answer type for each of the 6 questions BEFORE re-reading the answers (number? name? place?). Then have a friend (or your AI tutor) read the script aloud once while you take notes. Score: how many of 6 did you get? Tell Muse the task number and your score.",
+  "seconds": 0,
+  "tip": "Prediction first, listening second — that's the whole technique.",
+  "title": "Trap-hunting: listening under pressure",
+  "xp": 30
+ },
+ {
+  "checklist": [
+   "250+ words",
+   "Clear position in intro and conclusion",
+   "PEEL paragraphs",
+   "Varied cohesion (not however ×10)",
+   "2+ conditionals/relative clauses/passives",
+   "Self-scored with the Writing rubric"
+  ],
+  "id": "card-40",
+  "kind": "journal",
+  "module": "ielts",
+  "n": 40,
+  "prompt": "Goal: Write a full Task 2 essay in 40 minutes, exam conditions.\n\nPrompt: \"Some people believe that social media has improved communication between people. Others think it has made communication worse. Discuss both views and give your own opinion.\"\n\nTimer on: 40 minutes, 250+ words, no AI help while writing. Then self-score with the Writing rubric (Lesson 6) — one honest \"no\" = one band lost. Tell Muse the task number and paste the essay for feedback.",
+  "seconds": 0,
+  "tip": "Plan 5 minutes, write 30, check 5. The plan is where Band 7 is won.",
+  "title": "Task 2 essay — full exam conditions",
+  "xp": 40
+ },
+ {
+  "checklist": [
+   "Used prediction before each question",
+   "Caught the NOT GIVEN traps (didn't upgrade guesses)",
+   "Stayed within 20 minutes"
+  ],
+  "id": "card-41",
+  "kind": "speak",
+  "module": "ielts",
+  "n": 41,
+  "prompt": "Goal: Run a full Reading passage in 20 minutes.\n\nTake any IELTS Reading passage (or re-do the Mock B passage from Lesson 10 with fresh eyes). Skim 90 seconds for structure, then scan for each answer — no top-to-bottom reading. Timer: 20 minutes hard stop. Any question eating 2+ minutes gets a guess and you move on. Tell Muse the task number and your score out of 8.",
+  "seconds": 0,
+  "tip": "The 20-minute rule is non-negotiable: guess and move.",
+  "title": "Reading sprint — 20 minutes, no mercy",
+  "xp": 30
+ },
+ {
+  "checklist": [
+   "1 min prep, keywords only",
+   "Spoke the full 2 minutes",
+   "Past → description → feeling",
+   "Balanced Part 3 views"
+  ],
+  "id": "card-42",
+  "kind": "speak",
+  "module": "ielts",
+  "n": 42,
+  "prompt": "Goal: Deliver a complete Part 2 cue-card answer — 1 minute prep, 2 full minutes of speaking.\n\nTopic: \"Describe a skill you would like to learn.\" Structure: past → description → feeling. Then answer 3 Part 3 questions about learning with balanced views. Record it, score it with the Speaking rubric (Lesson 7), re-record the weakest 60 seconds. Tell Muse the task number for feedback.",
+  "seconds": 120,
+  "tip": "The silence after you finish early is the examiner waiting — keep talking.",
+  "title": "Cue-card full talk + Part 3",
+  "xp": 30
  }
 ]

@@ -706,5 +706,350 @@
    }
   ],
   "rule": "8/10 to move on. Answer first, then learn from the misses."
+ },
+ {
+  "id": "quiz-everyday-social",
+  "module": "everyday-social",
+  "title": "Quiz — Everyday & Social",
+  "seconds": 300,
+  "xp": 100,
+  "questions": [
+   {
+    "answer": 0,
+    "explanation": "Observe something real, Ask an easy question, React and share a little of you.",
+    "kind": "mc",
+    "n": 1,
+    "options": [
+     "Observe → Ask → React",
+     "Open → Answer → Repeat",
+     "Offer → Accept → Relax"
+    ],
+    "prompt": "OAR stands for…"
+   },
+   {
+    "explanation": "Sample: \"That delay board is depressing — are you on the 9:40 too? I'm Tanqeel, flying home after a conference.\" (Observe → Ask → React)",
+    "kind": "self",
+    "n": 2,
+    "prompt": "Write one OAR opener for a stranger at an airport gate.",
+    "sample": "Sample: \"That delay board is depressing — are you on the 9:40 too? I'm Tanqeel, flying home after a conference.\" (Observe → Ask → React)"
+   },
+   {
+    "answer": "I need a doctor urgently, please.",
+    "explanation": "'I need' not 'I am needing'; 'urgently' is the adverb.",
+    "kind": "fix",
+    "n": 3,
+    "prompt": "Fix the error:",
+    "wrong": "I am needing doctor urgent, please."
+   },
+   {
+    "answer": 1,
+    "explanation": "specific + proof offered. Vague answers invite more questions.",
+    "kind": "mc",
+    "n": 4,
+    "options": [
+     "\"Some hotel, I forgot the name.\"",
+     "\"At the Ibis Hotel near the airport — here's my booking.\"",
+     "\"Why do you ask?\""
+    ],
+    "prompt": "Immigration: \"Where will you stay?\" Best answer?"
+   },
+   {
+    "answer": "I'd like to open a current account.",
+    "explanation": "I'd like to open a current account.",
+    "kind": "order",
+    "n": 5,
+    "prompt": "Put the words in order:",
+    "words": [
+     "open",
+     "like",
+     "I'd",
+     "to",
+     "a current account"
+    ]
+   },
+   {
+    "explanation": "Sample: \"Excuse me, my key card isn't working — room 312. Could you activate a new one, please?\"",
+    "kind": "self",
+    "n": 6,
+    "prompt": "Your hotel key card doesn't work at 1 AM. What do you say at reception?",
+    "sample": "Sample: \"Excuse me, my key card isn't working — room 312. Could you activate a new one, please?\""
+   },
+   {
+    "answer": 0,
+    "explanation": "asking to spell is professional. Guessing is how bookings go wrong.",
+    "kind": "mc",
+    "n": 7,
+    "options": [
+     "\"Could you spell that for me, please?\"",
+     "\"Whatever, I'll figure it out.\"",
+     "Pretend you heard it."
+    ],
+    "prompt": "On a phone call you missed the name. Best recovery?"
+   },
+   {
+    "explanation": "Sample: \"I've lost my passport. I'm Pakistani — I need a temporary travel document to fly home.\"",
+    "kind": "self",
+    "n": 8,
+    "prompt": "Lost passport abroad. Your first sentence to the police officer: \"___\"",
+    "sample": "Sample: \"I've lost my passport. I'm Pakistani — I need a temporary travel document to fly home.\""
+   },
+   {
+    "answer": "Hi, I'm checking in for flight PK-702.",
+    "explanation": "check IN for a flight — fixed chunk.",
+    "kind": "fix",
+    "n": 9,
+    "prompt": "Fix the error:",
+    "wrong": "Hi, I'm checking on for flight PK-702."
+   },
+   {
+    "answer": 1,
+    "explanation": "short first meetings + a concrete plan (day + time) beat long chats and vague 'sometime'.",
+    "kind": "mc",
+    "n": 10,
+    "options": [
+     "Talk for two hours so they remember you.",
+     "End early with one concrete plan: a day and a time.",
+     "Add them on social media and wait."
+    ],
+    "prompt": "Best way to turn a first meeting into a friendship?"
+   }
+  ]
+ },
+ {
+  "id": "quiz-workplace",
+  "module": "workplace",
+  "title": "Quiz — Workplace",
+  "seconds": 300,
+  "xp": 100,
+  "questions": [
+   {
+    "answer": 0,
+    "explanation": "agree with a detail + add. Shows you listened and thought.",
+    "kind": "mc",
+    "n": 1,
+    "options": [
+     "\"That's a good point — especially the part about the timeline. I'd add...\"",
+     "\"Interesting. Anyway, moving on.\"",
+     "\"I agree with everything.\""
+    ],
+    "prompt": "Best agree-and-add in a meeting?"
+   },
+   {
+    "explanation": "Sample: \"Sorry, can I jump in for a second?\" (then the point in under 20 seconds)",
+    "kind": "self",
+    "n": 2,
+    "prompt": "Write the polite-interruption line.",
+    "sample": "Sample: \"Sorry, can I jump in for a second?\" (then the point in under 20 seconds)"
+   },
+   {
+    "answer": "Could you please review the dashboard draft by Friday?",
+    "explanation": "requests, not commands; article + preposition fixed.",
+    "kind": "fix",
+    "n": 3,
+    "prompt": "Fix the error:",
+    "wrong": "Review dashboard draft till Friday."
+   },
+   {
+    "answer": 1,
+    "explanation": "who + what + by when, said aloud and confirmed.",
+    "kind": "mc",
+    "n": 4,
+    "options": [
+     "\"Someone should handle the file.\"",
+     "\"So — Ali will send the cleaned file by Thursday. Correct?\"",
+     "\"Let's all try to be faster.\""
+    ],
+    "prompt": "Best action-item close to a meeting?"
+   },
+   {
+    "answer": "First, the problem. Second, what I built. Finally, what it changes.",
+    "explanation": "First, the problem. Second, what I built. Finally, what it changes.",
+    "kind": "order",
+    "n": 5,
+    "prompt": "Put the words in order:",
+    "words": [
+     "the problem.",
+     "First,",
+     "what I built.",
+     "Second,",
+     "what it changes.",
+     "Finally,"
+    ]
+   },
+   {
+    "explanation": "Sample: \"Thanks for telling me — can you give me one example? I'll think about it.\" (no defending in the moment)",
+    "kind": "self",
+    "n": 6,
+    "prompt": "Your manager says your slides were hard to read. Your first response: \"___\"",
+    "sample": "Sample: \"Thanks for telling me — can you give me one example? I'll think about it.\" (no defending in the moment)"
+   },
+   {
+    "answer": 2,
+    "explanation": "email carries the official record; delay news deserves a subject line.",
+    "kind": "mc",
+    "n": 7,
+    "options": [
+     "A voice note in the team group",
+     "A two-line Slack message",
+     "An email with a clear subject + new date + short reason"
+    ],
+    "prompt": "Deadline moved 2 days. Official channel?"
+   },
+   {
+    "explanation": "Sample: \"In yesterday's standup, you interrupted twice while I was presenting — it broke my flow. Could you hold questions till the end?\" (Situation, Behavior, Impact, Request)",
+    "kind": "self",
+    "n": 8,
+    "prompt": "Give SBI+R feedback to a teammate who keeps interrupting you.",
+    "sample": "Sample: \"In yesterday's standup, you interrupted twice while I was presenting — it broke my flow. Could you hold questions till the end?\" (Situation, Behavior, Impact, Request)"
+   },
+   {
+    "answer": "I'm a data science student in my 5th semester.",
+    "explanation": "present-tense fact. 'student in my 5th semester' — article + ordinal.",
+    "kind": "fix",
+    "n": 9,
+    "prompt": "Fix the error:",
+    "wrong": "I am student in 5th semester."
+   },
+   {
+    "answer": 0,
+    "explanation": "Present → Past → Future. Real facts, 60 seconds.",
+    "kind": "mc",
+    "n": 10,
+    "options": [
+     "Present → Past → Future",
+     "Childhood → hobbies → dreams",
+     "Apology → excuses → promises"
+    ],
+    "prompt": "\"Tell me about yourself\" follows…"
+   }
+  ]
+ },
+ {
+  "id": "quiz-ielts",
+  "module": "ielts",
+  "questions": [
+   {
+    "answer": 1,
+    "explanation": "The corrected answer always wins: \"actually make it four\".",
+    "kind": "mc",
+    "n": 1,
+    "options": [
+     "Three",
+     "Four"
+    ],
+    "prompt": "Audio: \"Three nights. Oh wait — actually make it four.\" How many nights?"
+   },
+   {
+    "answer": 2,
+    "explanation": "\"Probably true\" without text evidence = NOT GIVEN. Never upgrade a guess to TRUE.",
+    "kind": "mc",
+    "n": 2,
+    "options": [
+     "TRUE",
+     "FALSE",
+     "NOT GIVEN"
+    ],
+    "prompt": "Passage gives no exact savings figure. Statement: \"The policy saved exactly 40%.\""
+   },
+   {
+    "answer": "12 noon",
+    "explanation": "\"11... sorry, 12 noon\" — \"sorry\" signals the correction.",
+    "kind": "fix",
+    "n": 3,
+    "prompt": "Fix the note:",
+    "wrong": "Checkout time is 11am."
+   },
+   {
+    "answer": 1,
+    "explanation": "A blank is a guaranteed zero; a guess is a chance.",
+    "kind": "mc",
+    "n": 4,
+    "options": [
+     "Leave it blank",
+     "Guess"
+    ],
+    "prompt": "You're unsure of a Listening answer. What do you do?"
+   },
+   {
+    "answer": "The overview paragraph: 2–3 key trends, no numbers.",
+    "explanation": "The overview decides your Task Achievement band.",
+    "kind": "order",
+    "n": 5,
+    "prompt": "Put in exam order:",
+    "words": [
+     "Write detail paragraphs with numbers",
+     "Write the overview paragraph",
+     "Paraphrase the question"
+    ]
+   },
+   {
+    "answer": "I largely agree: online learning expands access, though classrooms still matter.",
+    "explanation": "Clear position, defended — that's Task Achievement.",
+    "kind": "self",
+    "n": 6,
+    "prompt": "Write an opinion-essay position line for: \"Online learning will replace classrooms.\"\n   You: \"___\"",
+    "sample": "Sample: \"I largely agree: online learning expands access, though classrooms still matter.\""
+   },
+   {
+    "answer": 1,
+    "explanation": "Double Task 1 — that's why it gets 40 of the 60 minutes.",
+    "kind": "mc",
+    "n": 7,
+    "options": [
+     "They count equally",
+     "Task 2 counts double"
+    ],
+    "prompt": "Task 1 vs Task 2 weighting?"
+   },
+   {
+    "answer": "Answer + Reason + Example",
+    "explanation": "One-word answers = Band 5; extend every Part 1 answer.",
+    "kind": "fix",
+    "n": 8,
+    "prompt": "Complete the Part 1 formula:",
+    "wrong": "Answer only."
+   },
+   {
+    "answer": 1,
+    "explanation": "Never read top-to-bottom in IELTS Reading.",
+    "kind": "mc",
+    "n": 9,
+    "options": [
+     "Read every word carefully",
+     "Skim for structure, then scan for the answer"
+    ],
+    "prompt": "The Reading method?"
+   },
+   {
+    "answer": "The wheat is harvested, then it is dried in the sun.",
+    "explanation": "Process diagrams = passive voice + sequencers.",
+    "kind": "fix",
+    "n": 10,
+    "prompt": "Rewrite in process-diagram style:",
+    "wrong": "They harvest the wheat then they dry it."
+   },
+   {
+    "answer": "If governments invested in public transport, cities would be cleaner.",
+    "explanation": "Second conditional — a Band 7+ grammar shape.",
+    "kind": "self",
+    "n": 11,
+    "prompt": "Write a conditional sentence about the environment.\n   You: \"___\"",
+    "sample": "Sample: \"If governments invested in public transport, cities would be cleaner.\""
+   },
+   {
+    "answer": "Take one clear position and defend it with PEEL paragraphs.",
+    "explanation": "Fence-sitting caps Task Achievement at Band 6.",
+    "kind": "order",
+    "n": 12,
+    "prompt": "Put in order:",
+    "words": [
+     "Defend it with PEEL paragraphs",
+     "Take one clear position"
+    ]
+   }
+  ],
+  "seconds": 600,
+  "title": "Quiz — IELTS Mastery",
+  "xp": 100
  }
 ]

@@ -29,13 +29,40 @@ All paths are relative (`css/…`, `js/…`, `content/…`, `audio/…`), the ro
 (`#/learn`, `#/lesson/…`), and the service worker registers with a relative scope —
 so the app works under any subpath (e.g. `username.github.io/fluent/`).
 
+## Hosting: why GitHub Pages (and what would need more)
+
+This app is **100% static — no backend, no server, no API keys**. Everything runs
+client-side: lessons, drills, quizzes, SM-2 scheduling, streaks, badges, error log,
+and on-device TTS fallback all live in the browser + `localStorage`. That is
+deliberate: it deploys free on GitHub Pages, works fully offline after first load,
+and has zero running costs or accounts to manage.
+
+**Vercel / Netlify vs GitHub Pages:** for a static site like this one, all three
+host it identically well. The only reason to move would be to add a backend —
+and that backend is **not built**. If it's ever wanted, these are the exact
+features that would need serverless functions (Netlify Functions / Vercel Edge
+Functions, both free-tier friendly), and nothing else:
+
+- **Cross-device progress sync** — progress currently lives in `localStorage` on one
+  device. Syncing phone ↔ laptop needs an account + a tiny database.
+- **In-app AI speaking feedback** — today, speaking tasks are self-checked or
+  brought to the Muse chat for scoring. Real in-app pronunciation/fluency scoring
+  needs a speech API + an LLM call, i.e. server-side keys.
+- **Accounts & leaderboards** — logins, friend streaks, shared leaderboards all
+  need auth + a database.
+
+Everything else — including any future modules, drills, quizzes, audio tracks,
+and worksheets — stays static and GitHub Pages-deployable. Rule: if a feature
+can't work from a static file host, it doesn't ship until the backend decision
+is made deliberately.
+
 ## Offline behavior
 
-- On first visit the service worker (`sw.js`, cache `fluent-v2`) precaches **everything
-  except audio**: HTML, CSS, all JS, all 12 content JSON files, manifest and icons.
+- On first visit the service worker (`sw.js`, cache `fluent-v3`) precaches **everything
+  except audio**: HTML, CSS, all JS, all 15 content JSON files, manifest and icons.
 - After that first load the app works **fully offline** — lessons, drills, quizzes,
   task cards, review deck, progress: all local.
-- **Audio** (8 MP3s, ~4.6 MB) is cached lazily: the first time a lesson plays a clip,
+- **Audio** (12 MP3s, ~8 MB) is cached lazily: the first time a lesson plays a clip,
   the service worker stores it, and it works offline from then on. This keeps the
   install light on hostel Wi-Fi.
 - Progress lives in `localStorage` on the device only. Nothing is uploaded anywhere.
@@ -51,7 +78,7 @@ Audio is excluded — it streams/caches on demand.
 | Screen | Route | What it does |
 |---|---|---|
 | Home | `#/home` | Greeting, streak hero, today's plan, continue-where-you-left-off, START HERE card |
-| Learn | `#/learn` | 7 modules, per-module progress |
+| Learn | `#/learn` | 10 modules, per-module progress |
 | Module / Lesson | `#/module/:id`, `#/lesson/:id` | Teach cards + drills, step-by-step |
 | Practice | `#/practice`, `#/practice/:engine` | Drill arena, module quizzes, speaking task cards |
 | Placement | `#/placement` | **START HERE**: 30 items, 100 points, bands A2 0–39 / B1 40–69 / B2 70–100 |
@@ -73,8 +100,9 @@ TTS fallback) · `flashcard`/`flashcards` (SM-2 self-grade) · `timed-quiz`
 - **Forgiving streaks** — any day with ≥10 XP counts; one missed day is auto-covered
   by a Streak Freeze (earned every 7-day streak, max 2 banked); longer gaps trigger a
   gentle comeback message, never shame.
-- **Badges** — 23 badges incl. manuscript badges: Placed & Planned, Habit Locked,
-  Article Ace, Clear Speaker, Flow State, Call-Ready, Brand Voice, Closer.
+- **Badges** — 26 badges incl. manuscript badges: Placed & Planned, Habit Locked,
+  Article Ace, Clear Speaker, Flow State, Call-Ready, Brand Voice, Closer,
+  Social Butterfly, Meeting Pro, Band Hunter.
 - **Error Log** — every wrong answer is saved with your answer, the correction and
   the "why"; review and clear them from Review → Errors.
 - **SM-2 review** — flashcards scheduled with EF 2.5, 1-day / 6-day / growing
@@ -100,11 +128,12 @@ Sources (kept outside this folder, next to it):
 
 ### Content counts (generated)
 
-- 7 modules · 41 lessons · 109 lesson drills
-- 70 quiz questions (7 module quizzes × 10) · 30 speaking task cards
+- 10 modules · 68 lessons · 198 lesson drills
+- 102 quiz questions (10 module quizzes) · 42 speaking task cards
 - Placement: 30 items (12 fix + 8 MCQ + 4 writing + 2 speaking + 4 self-check), 100 points
-- 8 MP3s wired to shadowing steps (warm-up, minimal pairs, discovery call,
-  client phrases, self-intro, negotiation, accuracy chants, shadowing demo)
+- 12 MP3s wired to shadowing steps (warm-up, minimal pairs, discovery call,
+  client phrases, self-intro, negotiation, accuracy chants, shadowing demo,
+  IELTS speaking mock, presentation delivery, small talk, IELTS listening S1)
 
 ### JSON schema
 

@@ -1,6 +1,6 @@
 /* Content loader — all lesson/drill content lives in content/*.json (relative paths, subpath-safe) */
 (function(){
-const MODULES=['foundations','accuracy','pronunciation','fluency','client-communication','self-presentation','sales'];
+const MODULES=['foundations','accuracy','pronunciation','fluency','client-communication','self-presentation','sales','everyday-social','workplace','ielts'];
 const cache={modules:{},practice:null,plan:null,badges:null,quizzes:null,taskcards:null,placement:null};
 async function j(p){const r=await fetch(p);if(!r.ok)throw new Error('missing '+p);return r.json();}
 async function loadAll(){

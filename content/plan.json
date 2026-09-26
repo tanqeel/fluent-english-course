@@ -37,6 +37,21 @@
    "days": "86–90",
    "module": "sales",
    "focus": "Sales + final mock call: close like a professional."
+  },
+  {
+   "days": "91–100",
+   "module": "everyday-social",
+   "focus": "Everyday & social fluency: small talk, travel, living abroad, phone calls."
+  },
+  {
+   "days": "101–110",
+   "module": "workplace",
+   "focus": "Workplace English: meetings, presentations, emails, feedback, interviews."
+  },
+  {
+   "days": "111–120",
+   "module": "ielts",
+   "focus": "IELTS mastery: 4-section technique + 2 full mock tests. Band 7+ needs B2+ — technique stacks on foundation."
   }
  ],
  "weeks": [
@@ -117,6 +132,30 @@
    "module": "sales",
    "focus": "Pricing, objections, closing + final mock call.",
    "milestone": "Final mock call — close like a professional. 🎉"
+  },
+  {
+   "week": 14,
+   "module": "everyday-social",
+   "focus": "Small talk, travel scripts, living abroad, phone-call recovery.",
+   "milestone": "Hold a 3-minute small-talk conversation without freezing."
+  },
+  {
+   "week": 15,
+   "module": "workplace",
+   "focus": "Meetings, presentations, workplace writing, feedback, interviews.",
+   "milestone": "Deliver a 5-minute presentation in English."
+  },
+  {
+   "week": 16,
+   "module": "ielts",
+   "focus": "Listening + Reading technique: traps, prediction, T/F/NG logic.",
+   "milestone": "Listening/Reading mock at 7.0+."
+  },
+  {
+   "week": 17,
+   "module": "ielts",
+   "focus": "Writing + Speaking: Task 1/2 frameworks, cue-card method, 2 full mocks.",
+   "milestone": "Full IELTS mock — score yourself with the band rubrics. 🎓"
   }
  ]
 }

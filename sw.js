@@ -1,5 +1,5 @@
 /* Fluent service worker — offline-first. All URLs relative: safe under any subpath. */
-const CACHE='fluent-v2';
+const CACHE='fluent-v3';
 const PRECACHE=[
   'index.html','manifest.webmanifest',
   'css/styles.css',
@@ -7,6 +7,7 @@ const PRECACHE=[
   'content/module-foundations.json','content/module-accuracy.json','content/module-pronunciation.json',
   'content/module-fluency.json','content/module-client-communication.json',
   'content/module-self-presentation.json','content/module-sales.json',
+  'content/module-everyday-social.json','content/module-workplace.json','content/module-ielts.json',
   'content/practice.json','content/plan.json','content/badges.json',
   'content/quizzes.json','content/taskcards.json','content/placement.json',
   'icons/icon-192.png','icons/icon-512.png'
