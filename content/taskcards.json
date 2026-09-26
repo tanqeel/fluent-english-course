@@ -1,0 +1,466 @@
+[
+ {
+  "id": "card-1",
+  "n": 1,
+  "module": "foundations",
+  "title": "The 60-second self intro",
+  "kind": "speak",
+  "seconds": 60,
+  "prompt": "Goal: Say 5–6 clean SVO sentences about yourself without freezing.\n\nRecord yourself: name, city, university + semester, what you study, one hobby. Full sentences only.",
+  "tip": "Lens trained: Clarity.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-2",
+  "n": 2,
+  "module": "foundations",
+  "title": "Describe your room (SVO only)",
+  "kind": "speak",
+  "seconds": 90,
+  "prompt": "Goal: Force English word order (verb second, not last).\n\n90 seconds describing your hostel room. Every sentence must be Subject–Verb–Object. If you catch yourself putting the verb last, keep going — do not stop.",
+  "tip": "Lens trained: Clarity.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-3",
+  "n": 3,
+  "module": "foundations",
+  "title": "The a/an read-aloud",
+  "kind": "speak",
+  "seconds": 600,
+  "prompt": "Goal: Make a/an automatic before vowel and consonant sounds.\n\nWrite 10 sentences, each using a or an correctly (include: honest man, university, hour, orange, European client). Then read all 10 aloud and record.",
+  "tip": "Lens trained: Clarity.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-4",
+  "n": 4,
+  "module": "foundations",
+  "title": "Back-translation sprint",
+  "kind": "speak",
+  "seconds": 900,
+  "prompt": "Goal: Expose where Urdu word order breaks your English.\n\nTake 5 Urdu sentences about your day. Say each in English (record), then translate your English back into Urdu. Where the round trip breaks, that is your transfer point — note it.",
+  "tip": "Lens trained: Clarity. ## Module 2 — Accuracy. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-5",
+  "n": 5,
+  "module": "accuracy",
+  "title": "Explain present perfect to a shopkeeper",
+  "kind": "speak",
+  "seconds": 90,
+  "prompt": "Goal: If you can teach it simply, you own it.\n\nRecord 90 seconds explaining present perfect (\"I have done\") to someone who never studied grammar. Use only examples from your own life. No grammar terms allowed except the tense name.",
+  "tip": "Lens trained: Clarity.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-6",
+  "n": 6,
+  "module": "accuracy",
+  "title": "The -s hunt",
+  "kind": "speak",
+  "seconds": 1200,
+  "prompt": "Goal: Train self-monitoring for 3rd-person -s.\n\nRecord 60 seconds about what your friend does every day (he/she sentences). Transcribe it yourself, circle every 3rd-person verb, fix the missing -s endings, then re-record clean.",
+  "tip": "Lens trained: Structure.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-7",
+  "n": 7,
+  "module": "accuracy",
+  "title": "Preposition picture",
+  "kind": "speak",
+  "seconds": 120,
+  "prompt": "Goal: Use 5 prepositions correctly under light pressure.\n\nPick any photo on your phone. Describe it in 60 seconds using at least 5 of: in, on, at, behind, next to, between, since, for. Record.",
+  "tip": "Lens trained: Clarity.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-8",
+  "n": 8,
+  "module": "accuracy",
+  "title": "Experience in present perfect (writing)",
+  "kind": "journal",
+  "seconds": 900,
+  "prompt": "Goal: Portfolio-ready sentences about your real experience.\n\nWrite 6 lines about your skills/projects. Use present perfect (\"I have built…\") at least 3 times. Every claim must be true.",
+  "tip": "Lens trained: Client-safety. ## Module 3 — Pronunciation. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 20,
+  "checklist": []
+ },
+ {
+  "id": "card-9",
+  "n": 9,
+  "module": "pronunciation",
+  "title": "Shadow a 2-minute clip",
+  "kind": "speak",
+  "seconds": 600,
+  "prompt": "Goal: 10 minutes of rhythm and stress training.\n\nPick a 2-minute BBC Learning English clip. Shadow it (speak along, half a second behind) for 10 minutes at 0.75× speed if needed. Record the last 2 minutes.",
+  "tip": "Lens trained: Clarity.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-10",
+  "n": 10,
+  "module": "pronunciation",
+  "title": "Minimal-pair drill: thin/tin",
+  "kind": "speak",
+  "seconds": 600,
+  "prompt": "Goal: Separate /th/ from /t/ by feel.\n\nRecord yourself saying thin–tin, thigh–tie, though–dough, 10 rounds. Tongue between teeth for the th words. Listen back — mark any round where they sounded the same.",
+  "tip": "Lens trained: Clarity.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-11",
+  "n": 11,
+  "module": "pronunciation",
+  "title": "The thank-you sentence",
+  "kind": "speak",
+  "seconds": 300,
+  "prompt": "Goal: th-sounds in a real client sentence.\n\nRecord 5 clean takes of: \"I think this is the best thing for the project, and I thank you for your thoughts.\" All th-words with tongue between teeth.",
+  "tip": "Lens trained: Tone.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-12",
+  "n": 12,
+  "module": "pronunciation",
+  "title": "Clap the stress",
+  "kind": "speak",
+  "seconds": 300,
+  "prompt": "Goal: First-syllable stress as a physical habit.\n\nRecord 10 words, clapping on the stressed syllable: PHOtograph, COMputer, DEveloper, IMportant, CLIent, PROject, DElivery, TIme-line, UPdate, REport.",
+  "tip": "Lens trained: Clarity.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-13",
+  "n": 13,
+  "module": "pronunciation",
+  "title": "The v/w mirror drill",
+  "kind": "speak",
+  "seconds": 600,
+  "prompt": "Goal: Kill the v/w merger.\n\nIn front of a mirror, record: vest–west, vine–wine, very–wary ×5. Teeth on lip = /v/, rounded lips = /w/. Watch your mouth, not just listen.",
+  "tip": "Lens trained: Clarity. ## Module 4 — Fluency. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-14",
+  "n": 14,
+  "module": "fluency",
+  "title": "60-second day retell (no stopping)",
+  "kind": "speak",
+  "seconds": 60,
+  "prompt": "Goal: Continuous speech with zero self-correction.\n\nRecord 60 seconds on \"what I did today\". Rules: no pausing to fix, no restarting, fillers allowed this once. Fluency first.",
+  "tip": "Lens trained: Clarity.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-15",
+  "n": 15,
+  "module": "fluency",
+  "title": "Same story, smoother (task repetition)",
+  "kind": "speak",
+  "seconds": 600,
+  "prompt": "Goal: Feel repetition layering accuracy onto fluency.\n\nTake Card 14's recording. Listen once. Re-record the same content — smoother, fewer fillers, fixed verbs. Compare the two takes yourself first.",
+  "tip": "Lens trained: Structure.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-16",
+  "n": 16,
+  "module": "fluency",
+  "title": "Picture sprint (SVO only)",
+  "kind": "speak",
+  "seconds": 60,
+  "prompt": "Goal: Automatic sentence building under time pressure.\n\nOpen any busy photo. 60 seconds: describe it in SVO sentences only, as many as you can. Count your sentences after.",
+  "tip": "Lens trained: Clarity.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-17",
+  "n": 17,
+  "module": "fluency",
+  "title": "Filler detox",
+  "kind": "speak",
+  "seconds": 900,
+  "prompt": "Goal: Zero um/like/you-know for 90 seconds.\n\nRecord 90 seconds on \"my goals for this year\". Count your fillers. Redo it with zero fillers — pause silently instead.",
+  "tip": "Lens trained: Tone. ## Module 5 — Client Communication. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-18",
+  "n": 18,
+  "module": "client-communication",
+  "title": "The 2-day delay email (writing)",
+  "kind": "journal",
+  "seconds": 900,
+  "prompt": "Goal: The most-sent email in freelancing, done right.\n\nWrite a 4–6 line delay email: you need 2 more days on a dashboard. Early warning + honest reason + what you are doing now + new date. Plus a subject line.",
+  "tip": "Lens trained: Structure + Tone.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 20,
+  "checklist": []
+ },
+ {
+  "id": "card-19",
+  "n": 19,
+  "module": "client-communication",
+  "title": "Role-play: \"too expensive\" (speaking)",
+  "kind": "speak",
+  "seconds": 90,
+  "prompt": "Goal: Handle the #1 price objection out loud without freezing.\n\nRecord both sides, 90 seconds: you are the client saying \"Too expensive.\" Then you are yourself, answering. Diagnose before discounting — offer scope options.",
+  "tip": "Lens trained: Tone.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-20",
+  "n": 20,
+  "module": "client-communication",
+  "title": "Discovery-call opening",
+  "kind": "speak",
+  "seconds": 60,
+  "prompt": "Goal: Sound in control in the first 60 seconds of a call.\n\nRecord your opening: greet, one line about you, then the question that hands them the floor (\"Tell me what you are trying to build.\"). Warm, unhurried.",
+  "tip": "Lens trained: Tone.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-21",
+  "n": 21,
+  "module": "client-communication",
+  "title": "\"This isn't what I asked for\" (writing + speaking)",
+  "kind": "speak",
+  "seconds": 900,
+  "prompt": "Goal: De-escalate a revision complaint in writing, then voice.\n\nFirst write your reply (3–4 lines): apologize once, ask for specifics, promise speed. Then read it aloud and record — it must sound calm, not defensive.",
+  "tip": "Lens trained: Tone.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-22",
+  "n": 22,
+  "module": "client-communication",
+  "title": "\"Why should I hire you?\" (speaking)",
+  "kind": "speak",
+  "seconds": 60,
+  "prompt": "Goal: A 60-second answer with proof, not adjectives.\n\nRecord: one similar thing you have built + how you work (milestones, updates) + a low-risk offer (small first milestone). No \"hardworking\", no \"trust me\".",
+  "tip": "Lens trained: Client-safety. ## Module 6 — Self-Presentation & Branding. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-23",
+  "n": 23,
+  "module": "self-presentation",
+  "title": "30 seconds, then 90",
+  "kind": "speak",
+  "seconds": 300,
+  "prompt": "Goal: An intro that scales to the time you are given.\n\nRecord your 30-second intro (name + what you do + one proof). Then record the 90-second version (add how you work + what you want next).",
+  "tip": "Lens trained: Structure.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-24",
+  "n": 24,
+  "module": "self-presentation",
+  "title": "Camera answer: \"Tell me about yourself\"",
+  "kind": "speak",
+  "seconds": 900,
+  "prompt": "Goal: Survive video-call pressure: eye contact, pacing, no fillers.\n\nPhone on a table, camera on. Answer \"Tell me about yourself\" in 60 seconds, looking at the lens. Watch it back once — note one thing to fix — then record once more.",
+  "tip": "Lens trained: Tone.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-25",
+  "n": 25,
+  "module": "self-presentation",
+  "title": "Your bio, written and spoken (writing)",
+  "kind": "journal",
+  "seconds": 1200,
+  "prompt": "Goal: A 150-word profile bio that is honest and hireable.\n\nWrite a 150-word bio for Upwork/Fiverr: who you are, what you do best, how you work, one honest proof point. Then read it aloud and record — bios get read on calls too.",
+  "tip": "Lens trained: Client-safety.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 20,
+  "checklist": []
+ },
+ {
+  "id": "card-26",
+  "n": 26,
+  "module": "self-presentation",
+  "title": "Small-talk ladder",
+  "kind": "speak",
+  "seconds": 600,
+  "prompt": "Goal: Five warm answers, zero awkward silence.\n\nRecord answers (20–30 seconds each) to: \"How's your day going?\" / \"Where are you based?\" / \"How long have you done this?\" / \"What do you do for fun?\" / then pivot: \"Tell me about the project.\"",
+  "tip": "Lens trained: Tone. ## Module 7 — Sales. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-27",
+  "n": 27,
+  "module": "sales",
+  "title": "The 60-second proposal pitch",
+  "kind": "speak",
+  "seconds": 300,
+  "prompt": "Goal: Sell a dashboard project out loud, like a voice note to a client.\n\nRecord a 60-second pitch: name their goal back to them, your approach in 2 steps, price with scope, and a start date. End with a question.",
+  "tip": "Lens trained: Structure.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-28",
+  "n": 28,
+  "module": "sales",
+  "title": "Follow-up to a quiet client (writing)",
+  "kind": "journal",
+  "seconds": 600,
+  "prompt": "Goal: One nudge that reopens a stalled proposal.\n\nA client went quiet 3 days after your proposal. Write the follow-up: 3 lines max. Warm, no guilt, offer an adjustment.",
+  "tip": "Lens trained: Tone.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 20,
+  "checklist": []
+ },
+ {
+  "id": "card-29",
+  "n": 29,
+  "module": "sales",
+  "title": "Ask for the advance, out loud",
+  "kind": "speak",
+  "seconds": 600,
+  "prompt": "Goal: Make money talk feel normal, not awkward.\n\nRecord 3 versions of asking for a 30% advance. Different words each time. Pick the warmest, mark it, and tell me why it wins.",
+  "tip": "Lens trained: Tone.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ },
+ {
+  "id": "card-30",
+  "n": 30,
+  "module": "sales",
+  "title": "The trial close",
+  "kind": "speak",
+  "seconds": 300,
+  "prompt": "Goal: End a sales conversation with a clear yes/no question.\n\nRecord: \"Does that scope and timeline work for you? If yes, I can start tomorrow.\" Then add your own one-line version. Both must sound confident — voice falling at the end, not rising.",
+  "tip": "Lens trained: Tone + Client-safety. --- Done all 30? That is a complete output portfolio: 30 recordings + writings, every lens trained, and a before/after trail from Card 1 to Card 30. Keep them — in month 3 you will compare Card 1 against a fresh intro and hear exactly how far you came.. Submit per the feedback contract: tell Muse the task number.",
+  "xp": 30,
+  "checklist": [
+   "Full time, no stopping",
+   "Full sentences",
+   "Honest — real facts only"
+  ]
+ }
+]

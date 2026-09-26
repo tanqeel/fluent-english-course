@@ -1,0 +1,320 @@
+{
+ "id": "self-presentation",
+ "title": "Self-Presentation & Branding",
+ "tagline": "Your Story, Your Pitch",
+ "icon": "🌟",
+ "color": "#f472b6",
+ "description": "People hire people, not skill lists. In 60 seconds — a pitch, an \"about\" page, the start of a call — a client decides whether you feel real and reliable. Your story is ge",
+ "lessons": [
+  {
+   "id": "self-presentation-l1",
+   "title": "Your story arc (student → freelancer)",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "People hire people, not skill lists. In 60 seconds — a pitch, an \"about\" page, the start of a call — a client decides whether you feel *real and reliable*. Your story is genuinely good: sales supervisor for three years, now a data science student building real skill. That's not a weakness to hide; it's a narrative of someone who understands business AND data. This module turns that story into assets: your introduction, your 60-second pitch, your LinkedIn.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The branding rule",
+     "body": "every line must pass the honesty contract. \"Skilled learner with real projects\" beats \"expert\" every time — because it's true, and truth survives follow-up questions.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "A good professional story has 3 beats. Here's yours — fill in the brackets honestly:\n\n1. **Where you were:** *\"I spent three years as a sales supervisor (2021–2024). I learned how businesses actually run — targets, customers, messy real-world data.\"*\n2. **The turn:** *\"In 2024 I started a BS in Data Science because I wanted to work with data, not just report it.\"*\n3. **Where you are now:** *\"I'm in my 5th semester, building real projects — [your actual project]. I help [who] with [specific problem] through [concrete deliverable].\"*\n\nNotice what's missing: no \"passionate ninja guru,\" no fake years, no \"I can do everything.\" Specificity IS the confidence.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Roman Urdu check",
+     "body": "*agar tum ye kahani apne dost ko suna sako bina sharmaye, to ye tayyar hai.* If you can tell this story to a friend without embarrassment, it's ready.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "id": "self-presentation-l1-intro",
+     "type": "drill",
+     "engine": "shadowing",
+     "title": "Self-intro model (audio)",
+     "text": "Shadow a strong 60-second self-introduction",
+     "audio": "audio/05-self-intro.mp3",
+     "tip": "Steal the structure, keep your own facts.",
+     "xp": 15
+    },
+    {
+     "type": "drill",
+     "engine": "journal",
+     "id": "self-presentation-52",
+     "prompt": "**Record your pitch**\n\nWrite your 60-second pitch using the Hook → Proof → Offer structure. Record it. Listen back with this checklist: under 70 seconds? Falling intonation? Zero banned phrases? Clean ending (not trailing off)? Re-record twice. This recording is an asset — you'll reuse it for months.",
+     "xp": 15
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "self-presentation-l2",
+   "title": "The 60-second pitch (structure)",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "60 seconds = ~130–150 words. Structure: **Hook (who you help) → Proof (one real thing) → Offer (what you do next).**",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Model (adapt, don't copy)",
+     "body": "Delivery notes: 60 seconds, steady pace, falling intonation on statements (Module 3), pause after the proof (let it land), end with the offer — always end with a next step.",
+     "example": "\"I'm Tanqeel, a data science student specializing in sales data analysis. I spent three years in sales before starting my degree, so I understand the business side — not just the code. Recently I built a sales dashboard analyzing 6,000 retail orders — I can show you the demo. I help small shops turn messy Excel files into clear monthly reports. If that's useful, I can look at a sample of your data, free, and tell you exactly what's possible.\"",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "journal",
+     "id": "self-presentation-53",
+     "prompt": "**Build your LinkedIn**\n\nWrite: (1) your headline using the formula, (2) your 4-paragraph about section. Every claim must be verifiable — if you can't show it, cut it. Read it aloud: does it sound like you on your best day? That's the target.",
+     "xp": 15
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "self-presentation-54",
+     "wrong": "I am a highly skilled data scientist with many years of experience.\" → ?",
+     "answer": "I'm a data science student (5th semester) specializing in sales data analysis.",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "self-presentation-l3",
+   "title": "LinkedIn & about text (written branding)",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": "Headline formula",
+     "body": "[What you do] | [Who you help] | [Proof in 5 words]\n*Example: \"Data Science Student | Helping small shops turn Excel chaos into clear reports | Built a 6,000-order sales dashboard\"*",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "About section (4 short paragraphs)",
+     "body": "1. What you do and who it's for (2 lines).\n2. Your background in one honest arc (the 3 beats, compressed).\n3. One real proof with a number (project, orders analyzed, course completed).\n4. Call to action: what to do next (DM me / see my work at [link]).\n\n**Banned phrases** (they mark you as fake instantly): *\"highly skilled,\" \"years of experience\" (you don't have them), \"expert,\" \"guru,\" \"I can do any work,\" \"cheap rates,\" \"sir please give me a chance.\"* Confidence without begging: state the offer, state the next step, stop.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Headline",
+     "body": "Data Science Student | Helping small shops turn Excel chaos into clear sales reports | Built a 6,000-order retail dashboard",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "About",
+     "body": "Notice: every claim is checkable. No \"expert,\" no \"years of experience,\" no \"cheap rates.\" The offer is specific and low-risk. That's what makes it strong.",
+     "example": "I help small shop owners stop building sales reports by hand.\nI spent three years as a sales supervisor (2021–2024), so I know how business decisions actually get made. In 2024 I started a BS in Data Science to work with data properly — I'm now in my 5th semester, building real projects in Python and data analysis.\nRecent work: a sales dashboard analyzing 6,000 retail orders — cleaning messy Excel data, building clear charts, and delivering it as a link anyone can open. Happy to share the demo.\nIf your sales data lives in Excel and your monthly report eats a day of your life, message me. I'll look at a sample of your data, free, and tell you exactly what's possible.",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "self-presentation-55",
+     "wrong": "I can do any work you give me at very cheap rates.\" → ?",
+     "answer": "I build [specific deliverable] at fixed, fair prices — here's what $X gets you.",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "self-presentation-56",
+     "wrong": "Please give me a chance sir, I will do my best.\" → ?",
+     "answer": "Cut entirely — replace with an offer: \"Want me to look at a sample of your data, free?",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "self-presentation-57",
+     "wrong": "I am expert in Python, ML, AI, deep learning etc.\" → ?",
+     "answer": "I'm building strong foundations in Python and data analysis — here's a project that shows where I am: [link].",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "speaking-task",
+     "id": "self-presentation-58",
+     "title": "\"Tell me about yourself\"",
+     "prompt": "AI tutor plays an interviewer. You get 90 seconds, then follow-up questions (\"Why freelancing?\" \"What's your biggest strength?\" \"Where are you weakest?\" — answer the weakness one HONESTLY: \"I'm still building [X] — here's how I'm closing that gap.\"). Honesty about weakness, stated calmly, reads as strength.",
+     "seconds": 90,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "xp": 25
+    }
+   ],
+   "xp": 70
+  },
+  {
+   "id": "self-presentation-quiz",
+   "title": "Module quiz — 10 questions",
+   "minutes": 10,
+   "steps": [
+    {
+     "type": "drill",
+     "engine": "timed-quiz",
+     "id": "self-presentation-59",
+     "title": "Quiz — Self-Presentation & Branding",
+     "seconds": 300,
+     "questions": [
+      {
+       "n": 1,
+       "kind": "fix",
+       "prompt": "Fix the error:",
+       "wrong": "I am Tanqeel. I am student. I learning data science.",
+       "answer": "Sample: \"I'm Tanqeel, a data science student learning to build AI-powered tools.",
+       "explanation": "Sample: \"I'm Tanqeel, a data science student learning to build AI-powered tools.\""
+      },
+      {
+       "n": 2,
+       "kind": "mc",
+       "prompt": "Which portfolio line is stronger?",
+       "options": [
+        "\"I made a dashboard in 2024.\"",
+        "\"I have built dashboards with Python and Power BI.\""
+       ],
+       "answer": 1,
+       "explanation": "present perfect (\"have built\") = experience you still own; portfolio gold"
+      },
+      {
+       "n": 3,
+       "kind": "self",
+       "prompt": "\"I have no experience but I am hardworking.\"",
+       "sample": "Sample: \"I'm early in my career and make up for it with fast, careful work — here's a sample project.\" (proof, not adjectives)",
+       "explanation": "Sample: \"I'm early in my career and make up for it with fast, careful work — here's a sample project.\" (proof, not adjectives)"
+      },
+      {
+       "n": 4,
+       "kind": "self",
+       "prompt": "A 30-second intro must include: your name + what you do + ___.",
+       "sample": "one proof (a project, a sample, a result — something real)",
+       "explanation": "(a project, a sample, a result — something real)"
+      },
+      {
+       "n": 5,
+       "kind": "mc",
+       "prompt": "\"I do data science, AI, video editing, everything.\" What's the problem?",
+       "options": [
+        "It's too long.",
+        "\"Everything\" kills trust — specialists get hired.",
+        "Nothing, it's fine."
+       ],
+       "answer": 1,
+       "explanation": "\"everything\" people don't get hired; specialists do"
+      },
+      {
+       "n": 6,
+       "kind": "self",
+       "prompt": "Write your opening line for \"Tell me about yourself\" (name + current status).",
+       "sample": "Sample: \"I'm Tanqeel, a 5th-semester data science student at Emerson University in Multan.\"",
+       "explanation": "Sample: \"I'm Tanqeel, a 5th-semester data science student at Emerson University in Multan.\""
+      },
+      {
+       "n": 7,
+       "kind": "self",
+       "prompt": "\"Hire me I am cheap and fast.\"",
+       "sample": "Sample: \"I deliver clean, on-time work at a fair rate.\" (\"Cheap\" attracts bad clients)",
+       "explanation": "Sample: \"I deliver clean, on-time work at a fair rate.\" (\"Cheap\" attracts bad clients)"
+      },
+      {
+       "n": 8,
+       "kind": "mc",
+       "prompt": "Client: \"Where are you based?\" Best reply?",
+       "options": [
+        "\"Pakistan.\"",
+        "\"I'm based in Multan, Pakistan — I work with clients in any timezone.\""
+       ],
+       "answer": 1,
+       "explanation": "turns location into a strength"
+      },
+      {
+       "n": 9,
+       "kind": "self",
+       "prompt": "\"I am 5th semester in Emerson University.\"",
+       "sample": "I'm in my 5th semester of BS Data Science at Emerson University, Multan.",
+       "explanation": "I'm in my 5th semester of BS Data Science at Emerson University, Multan."
+      },
+      {
+       "n": 10,
+       "kind": "self",
+       "prompt": "End small talk and move to business, in one line.\n---",
+       "sample": "Sample: \"Anyway — tell me about the project. What are you trying to build?\"",
+       "explanation": "Sample: \"Anyway — tell me about the project. What are you trying to build?\""
+      }
+     ],
+     "xp": 100,
+     "rule": "8/10 to move on. Answer first, then learn from the misses."
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "self-presentation-checkpoint",
+   "title": "Checkpoint",
+   "minutes": 10,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": "Can-do statements",
+     "body": "- [ ] I can tell my 3-beat story in 60 seconds without notes\n- [ ] My pitch has a hook, one real proof, and a clear next step\n- [ ] My LinkedIn headline + about section are written, honest, and specific\n- [ ] I can answer \"tell me about yourself\" and \"what's your weakness\" without inventing anything",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Mini-test",
+     "body": "Send your pitch recording + LinkedIn about text to your AI tutor. One question: \"Does anything here sound fake or vague?\" Fix whatever it flags.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Re-entry note",
+     "body": "Your pitch is a living asset. Re-record it monthly — it should get shorter and more specific as your real proof grows.\n\n⭐ **Badge earned: Brand Voice** — you now sound like yourself at your best. Next: getting paid.\n\n---",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "speaking-task",
+     "id": "self-presentation-60",
+     "title": "Checkpoint mini-test",
+     "prompt": "Send your pitch recording + LinkedIn about text to your AI tutor. One question: \"Does anything here sound fake or vague?\" Fix whatever it flags.\n\nRe-entry note: Your pitch is a living asset. Re-record it monthly — it should get shorter and more specific as your real proof grows.\n\n⭐ Badge earned: Brand Voice — you now sound like yourself at your best. Next: getting paid.\n\n---",
+     "seconds": 120,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "xp": 30
+    }
+   ],
+   "xp": 38
+  }
+ ]
+}

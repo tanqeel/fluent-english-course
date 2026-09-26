@@ -1,0 +1,294 @@
+{
+ "id": "fluency",
+ "title": "Fluency",
+ "tagline": "Speak Smoothly Without Freezing",
+ "icon": "💬",
+ "color": "#fbbf24",
+ "description": "Accuracy is saying it right. Fluency is saying it without stopping to build every sentence from scratch. On a client call, nobody waits while you mentally conjugate verbs",
+ "lessons": [
+  {
+   "id": "fluency-l1",
+   "title": "The golden rule: never correct during a fluency task",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Accuracy is saying it right. Fluency is saying it *without stopping to build every sentence from scratch*. On a client call, nobody waits while you mentally conjugate verbs — pauses read as uncertainty, and uncertainty loses work. The research is clear on the mechanism: fluency and accuracy compete for the same attention (Skehan's trade-off), so we train them *separately* — fluency tasks with zero correction, accuracy tasks with full correction — and then integrate them by repeating tasks.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Two modes. Never mix them.\n\n- **Fluency mode:** timed retell, free talk, role-play. Goal: keep going. Mistakes are not just allowed — they're *invisible* until the task ends. If you stop to fix an article, you've left fluency mode and the drill is wasted.\n- **Accuracy mode:** recorded, transcribed, corrected (Modules 2–3 drills). Goal: fix it.\n\nAfter a fluency task, you MAY do an accuracy pass on the recording. That's the integration: *do it fluent → get feedback → redo it better* (task repetition — the evidence says this is what actually merges fluency and accuracy).",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "speaking-task",
+     "id": "fluency-40",
+     "title": "The retell ladder",
+     "prompt": "Listen to a 2-minute clip (your narrow-input source). Then retell it in your own words: 90 seconds → 60 seconds → 45 seconds. Same content, shrinking time. No notes on round 1; keywords only on rounds 2–3. Fluency mode: NO correction, NO stopping. Record all three; compare round 1 vs round 3 — round 3 is always smoother. That's task repetition working.",
+     "seconds": 90,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "xp": 25
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "fluency-l2",
+   "title": "The 1-minute planning rule",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "One minute of planning before speaking improves accuracy dramatically; more than a few minutes adds almost nothing. For client calls, this is a superpower: before the call, rehearse answers to the 5 predictable questions (who are you, what do you do, how would you approach this, what's your timeline, what's your price). Planned performance is the legal cheat code — you sound fluent AND accurate because you did the accuracy work *before* the pressure.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "How to plan in 60 seconds",
+     "body": "jot 3–4 keyword bullets (NOT full sentences — full sentences turn into reading). Then speak from the bullets.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "speaking-task",
+     "id": "fluency-41",
+     "title": "Plan it, say it, redo it",
+     "prompt": "Client question: \"How would you approach building a sales dashboard for a clothing shop?\" Take exactly 60 seconds to write 4 keyword bullets. Speak for 90 seconds. Then: listen to your recording, note 2 errors, and redo the answer once. The redo is where fluency + accuracy fuse.",
+     "seconds": 60,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "xp": 25
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "fluency-l3",
+   "title": "Thinking in English (stop translating)",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "The JALT study on Urdu-L1 learners found it plainly: *\"My mind follows Urdu word order automatically.\"* As long as you compose in Urdu then translate, you'll be slow forever. Retraining:",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "1. **Narrate your day in English, silently.** *\"I'm making chai. The water is boiling. I'll check my phone after this.\"* Start with present actions — no translation needed because you're describing, not converting.\n2. **Name 10 things around you in English** every morning. Builds direct concept→English links.\n3. **When stuck on a word mid-sentence, describe around it** (circumlocution): don't freeze searching for \"dashboard\" — say *\"the page that shows your sales numbers.\"* Clients respect this; freezing they don't.\n4. **Dream in English?** Not required. But the day you catch yourself thinking *\"I need to buy milk\"* instead of *\"doodh lena hai\"* — that's the switch flipping.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "speaking-task",
+     "id": "fluency-42",
+     "title": "Filler detox",
+     "prompt": "Explain \"What is Python?\" to an imaginary shopkeeper in 60 seconds. Record. Count your fillers (umm, matlab, you know, like). Now re-record with the replacement table taped in front of you. Target: under 3 fillers. Repeat weekly with a new topic (SQL, mean vs median, machine learning — the Feynman bank from your communication program works here).",
+     "seconds": 60,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "xp": 25
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "fluency-l4",
+   "title": "Filler-word replacement",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Fillers aren't evil — natives use \"um\" too. But *matlab*, *you know*, and long *ummm*s signal \"I'm translating right now.\" Replace, don't just remove:\n\nInstead of... · Say... (or do...)\nmatlab... · \"What I mean is...\"\nyou know (every sentence) · delete it, or \"as you know\" (once per call max)\nummm (long) · silent pause — pauses sound confident, umms sound lost\nlike (filler) · \"for example\"\nFreezing on a word · describe around it (Lesson 4.3.3)",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The pause trick",
+     "body": "when you need thinking time, say *\"That's a good question — let me think for a second.\"* You've bought 5 seconds and sounded thoughtful doing it.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "One focused week per month. Same drill every day, 20 minutes. Pick ONE per sprint:\n\n- **Sprint A — Retell week:** one new 2-minute clip per day, retell ladder (90s → 60s → 45s).\n- **Sprint B — Question week:** answer 5 bank questions per day (Module 5, Lesson 5.4) with 60-second planning, recorded.\n- **Sprint C — Narration week:** narrate your entire day in English, silently, from waking to sleeping. Every action, every plan. When you catch yourself translating — stop, describe instead.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Rules for sprint weeks: fluency mode ONLY (no correction during tasks). Do your accuracy pass on Sunday using the week's recordings. One sprint per month is enough — more burns you out, fewer lets fluency rust.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "speaking-task",
+     "id": "fluency-43",
+     "title": "30-second news sprint",
+     "prompt": "Read one short news paragraph. You have 30 seconds to retell it — SVO sentences only, no stopping. Do it 3× back-to-back, faster each time. This builds automaticity under pressure: the exact skill a live call demands.",
+     "seconds": 30,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "xp": 25
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "fluency-quiz",
+   "title": "Module quiz — 10 questions",
+   "minutes": 10,
+   "steps": [
+    {
+     "type": "drill",
+     "engine": "timed-quiz",
+     "id": "fluency-44",
+     "title": "Quiz — Fluency",
+     "seconds": 300,
+     "questions": [
+      {
+       "n": 1,
+       "kind": "mc",
+       "prompt": "Combine into one smooth sentence using \"get back to\":",
+       "options": [
+        "\"I will get back you to tomorrow.\"",
+        "\"I will get back to you tomorrow.\""
+       ],
+       "answer": 1,
+       "explanation": "I will get back to you tomorrow. (\"get back to\" is one unbreakable chunk)"
+      },
+      {
+       "n": 2,
+       "kind": "self",
+       "prompt": "\"I am writing this email to inform you about the delay.\" (aim: under 12 words)",
+       "sample": "Sample: \"Quick update — I'm running a little behind, but Thursday is locked in.\"",
+       "explanation": "Sample: \"Quick update — I'm running a little behind, but Thursday is locked in.\""
+      },
+      {
+       "n": 3,
+       "kind": "fix",
+       "prompt": "Fix the error:",
+       "wrong": "Um, so I, like, started the project yesterday.",
+       "answer": "I started the project yesterday. (zero fillers — pause silently instead)",
+       "explanation": "I started the project yesterday. (zero fillers — pause silently instead)"
+      },
+      {
+       "n": 4,
+       "kind": "self",
+       "prompt": "Put this delay email in order:",
+       "sample": "b-a-d-c — greeting → reason → what you're doing now → new date",
+       "explanation": "greeting → reason → what you're doing now → new date"
+      },
+      {
+       "n": 5,
+       "kind": "mc",
+       "prompt": "Client: \"Can you do it cheaper?\" Best reply?",
+       "options": [
+        "\"No.\"",
+        "\"I can adjust the scope to fit your budget.\"",
+        "\"OK, half price.\""
+       ],
+       "answer": 1,
+       "explanation": "never just drop price; trade scope"
+      },
+      {
+       "n": 6,
+       "kind": "self",
+       "prompt": "You: \"___\"\n   Client: \"Sounds good, let's start Monday.\"",
+       "sample": "Sample: \"I can start Monday. I'll send a short plan with milestones, and your first update lands Wednesday.\"",
+       "explanation": "Sample: \"I can start Monday. I'll send a short plan with milestones, and your first update lands Wednesday.\""
+      },
+      {
+       "n": 7,
+       "kind": "self",
+       "prompt": "\"Send requirements fast.\"",
+       "sample": "Sample: \"Could you send the requirements when you get a chance? I'll start as soon as they arrive.\"",
+       "explanation": "Sample: \"Could you send the requirements when you get a chance? I'll start as soon as they arrive.\""
+      },
+      {
+       "n": 8,
+       "kind": "mc",
+       "prompt": "Which is warmer?",
+       "options": [
+        "\"I want money advance before work.\"",
+        "\"I usually take a 30% advance before starting — is that okay?\""
+       ],
+       "answer": 1,
+       "explanation": "states the policy as normal process, asks permission"
+      },
+      {
+       "n": 9,
+       "kind": "self",
+       "prompt": "\"You need the report by Friday.\"",
+       "sample": "Do you need the report by Friday?",
+       "explanation": "Do you need the report by Friday?"
+      },
+      {
+       "n": 10,
+       "kind": "self",
+       "prompt": "Write the FIRST line (a hook) of a 60-second talk about your week.\n---",
+       "sample": "Sample: \"This week I finally finished something I'd been avoiding for a month.\" (energy, not \"Um, so this week…\")",
+       "explanation": "Sample: \"This week I finally finished something I'd been avoiding for a month.\" (energy, not \"Um, so this week…\")"
+      }
+     ],
+     "xp": 100,
+     "rule": "8/10 to move on. Answer first, then learn from the misses."
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "fluency-checkpoint",
+   "title": "Checkpoint",
+   "minutes": 10,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": "Can-do statements",
+     "body": "- [ ] I can retell a 2-minute clip in 60 seconds without long pauses\n- [ ] I plan with keyword bullets (60 sec) before any important speaking\n- [ ] I can narrate my daily routine in English without translating from Urdu\n- [ ] My filler count is under 3 per minute (measured on recordings)\n- [ ] When I forget a word, I describe around it instead of freezing",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Mini-test",
+     "body": "Record a 2-minute answer to *\"Tell me about yourself and what you're learning.\"* Score: pauses over 3 seconds (count them — target ≤2), fillers (target ≤5), and one thing that improved vs your Module 0 placement recording.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Re-entry note",
+     "body": "Fluency rusts fast. Back after a break? Three days of Drill 4.1 before anything else — retelling rebuilds flow quicker than any other drill.\n\n🌊 **Badge earned: Flow State** — you can now keep talking. Next: saying the right things to the right people.\n\n---",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "speaking-task",
+     "id": "fluency-45",
+     "title": "Checkpoint mini-test",
+     "prompt": "Record a 2-minute answer to \"Tell me about yourself and what you're learning.\" Score: pauses over 3 seconds (count them — target ≤2), fillers (target ≤5), and one thing that improved vs your Module 0 placement recording.\n\nRe-entry note: Fluency rusts fast. Back after a break? Three days of Drill 4.1 before anything else — retelling rebuilds flow quicker than any other drill.\n\n🌊 Badge earned: Flow State — you can now keep talking. Next: saying the right things to the right people.\n\n---",
+     "seconds": 120,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "xp": 30
+    }
+   ],
+   "xp": 38
+  }
+ ]
+}

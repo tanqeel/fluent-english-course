@@ -1,0 +1,710 @@
+[
+ {
+  "id": "quiz-foundations",
+  "module": "foundations",
+  "title": "Quiz — Foundations",
+  "seconds": 300,
+  "xp": 100,
+  "questions": [
+   {
+    "n": 1,
+    "kind": "mc",
+    "prompt": "Which sentence is correct?",
+    "options": [
+     "He don't like tea.",
+     "He doesn't like tea.",
+     "He not like tea."
+    ],
+    "answer": 1,
+    "explanation": "He doesn't like tea. (he/she/it → doesn't)"
+   },
+   {
+    "n": 2,
+    "kind": "mc",
+    "prompt": "Fill the blank: She is ___ honest person.",
+    "options": [
+     "a",
+     "an",
+     "the"
+    ],
+    "answer": 1,
+    "explanation": "an honest person (silent h → vowel sound)"
+   },
+   {
+    "n": 3,
+    "kind": "fix",
+    "prompt": "Fix the error:",
+    "wrong": "They is my friends.",
+    "answer": "are",
+    "explanation": "my friends."
+   },
+   {
+    "n": 4,
+    "kind": "order",
+    "prompt": "Put the words in order:",
+    "words": [
+     "go",
+     "I",
+     "to",
+     "university",
+     "every day"
+    ],
+    "answer": "I go to university every day.",
+    "explanation": "I go to university every day."
+   },
+   {
+    "n": 5,
+    "kind": "mc",
+    "prompt": "She has two ___ .",
+    "options": [
+     "brother",
+     "brothers",
+     "brotheres"
+    ],
+    "answer": 1,
+    "explanation": ""
+   },
+   {
+    "n": 6,
+    "kind": "self",
+    "prompt": "A: \"What's your name?\"\n   B: \"___\"",
+    "sample": "Sample: \"My name is Tanqeel.\" (full sentence, not just \"Tanqeel\")",
+    "explanation": "Sample: \"My name is Tanqeel.\" (full sentence, not just \"Tanqeel\")"
+   },
+   {
+    "n": 7,
+    "kind": "fix",
+    "prompt": "Fix the error:",
+    "wrong": "She have two brother.",
+    "answer": "has",
+    "explanation": "two brothers."
+   },
+   {
+    "n": 8,
+    "kind": "mc",
+    "prompt": "There ___ many people at the hostel.",
+    "options": [
+     "is",
+     "are"
+    ],
+    "answer": 1,
+    "explanation": "plural → are"
+   },
+   {
+    "n": 9,
+    "kind": "self",
+    "prompt": "Which is correct? a) I am agree. b) I agree.",
+    "sample": "b) I agree. (\"Agree\" is already a verb — no \"am\")",
+    "explanation": "I agree. (\"Agree\" is already a verb — no \"am\")"
+   },
+   {
+    "n": 10,
+    "kind": "self",
+    "prompt": "Write one full SVO sentence about what you did yesterday.\n---",
+    "sample": "Sample: \"I practiced Python in the evening.\" (any correct simple-past SVO sentence)",
+    "explanation": "Sample: \"I practiced Python in the evening.\" (any correct simple-past SVO sentence)"
+   }
+  ],
+  "rule": "8/10 to move on. Answer first, then learn from the misses."
+ },
+ {
+  "id": "quiz-accuracy",
+  "module": "accuracy",
+  "title": "Quiz — Accuracy",
+  "seconds": 300,
+  "xp": 100,
+  "questions": [
+   {
+    "n": 1,
+    "kind": "mc",
+    "prompt": "I got ___ message from ___ client.",
+    "options": [
+     "a/a",
+     "an/a",
+     "a/an"
+    ],
+    "answer": 0,
+    "explanation": "I got a message from a client. (both first mentions)"
+   },
+   {
+    "n": 2,
+    "kind": "mc",
+    "prompt": "She is interested ___ data science.",
+    "options": [
+     "in",
+     "on",
+     "at"
+    ],
+    "answer": 0,
+    "explanation": "interested in (fixed chunk — never translate it)"
+   },
+   {
+    "n": 3,
+    "kind": "fix",
+    "prompt": "Fix the error:",
+    "wrong": "He work in Multan.",
+    "answer": "works",
+    "explanation": "in Multan. (3rd-person -s)"
+   },
+   {
+    "n": 4,
+    "kind": "mc",
+    "prompt": "I ___ the analysis yesterday.",
+    "options": [
+     "have finished",
+     "finished"
+    ],
+    "answer": 0,
+    "explanation": "\"yesterday\" is finished time → simple past"
+   },
+   {
+    "n": 5,
+    "kind": "mc",
+    "prompt": "I have worked with Python ___ two years.",
+    "options": [
+     "since",
+     "for"
+    ],
+    "answer": 1,
+    "explanation": "for + length of time (since + starting point)"
+   },
+   {
+    "n": 6,
+    "kind": "self",
+    "prompt": "Client: \"Can you finish by Friday?\"\n   You: \"___\"",
+    "sample": "Sample: \"Yes — I'll have it ready by Friday morning, and I'll send a preview Thursday night.\"",
+    "explanation": "Sample: \"Yes — I'll have it ready by Friday morning, and I'll send a preview Thursday night.\""
+   },
+   {
+    "n": 7,
+    "kind": "fix",
+    "prompt": "Fix the error:",
+    "wrong": "She gave me many advices.",
+    "answer": "a lot of advice",
+    "explanation": ". (\"Advice\" is uncountable — no plural)"
+   },
+   {
+    "n": 8,
+    "kind": "mc",
+    "prompt": "___ sun rises in ___ east.",
+    "options": [
+     "A/The",
+     "The/the",
+     "The/The"
+    ],
+    "answer": 1,
+    "explanation": "The sun rises in the east. (unique things → the)"
+   },
+   {
+    "n": 9,
+    "kind": "mc",
+    "prompt": "I ___ three dashboards so far.",
+    "options": [
+     "built",
+     "have built"
+    ],
+    "answer": 1,
+    "explanation": "\"so far\" = up to now → present perfect"
+   },
+   {
+    "n": 10,
+    "kind": "fix",
+    "prompt": "Fix the error:",
+    "wrong": "Make a n Etsy account.",
+    "answer": "an",
+    "explanation": "Etsy account. (one article only)"
+   }
+  ],
+  "rule": "8/10 to move on. Answer first, then learn from the misses."
+ },
+ {
+  "id": "quiz-pronunciation",
+  "module": "pronunciation",
+  "title": "Quiz — Pronunciation",
+  "seconds": 300,
+  "xp": 100,
+  "questions": [
+   {
+    "n": 1,
+    "kind": "mc",
+    "prompt": "Tongue between the teeth — which word?",
+    "options": [
+     "think",
+     "sink"
+    ],
+    "answer": 0,
+    "explanation": "tongue between teeth + air"
+   },
+   {
+    "n": 2,
+    "kind": "mc",
+    "prompt": "Teeth on the lower lip — which word starts with /v/?",
+    "options": [
+     "vest",
+     "west"
+    ],
+    "answer": 0,
+    "explanation": "bite the lower lip (west = rounded lips = /w/)"
+   },
+   {
+    "n": 3,
+    "kind": "mc",
+    "prompt": "Which stress is correct?",
+    "options": [
+     "PHOtograph",
+     "photoGRAPH"
+    ],
+    "answer": 0,
+    "explanation": "stress the first syllable"
+   },
+   {
+    "n": 4,
+    "kind": "fix",
+    "prompt": "Fix the error:",
+    "wrong": "methos",
+    "answer": "methods",
+    "explanation": "say METH-uds (th = tongue between teeth)"
+   },
+   {
+    "n": 5,
+    "kind": "fix",
+    "prompt": "Fix the error:",
+    "wrong": "regrading",
+    "answer": "regarding",
+    "explanation": "re-GARD-ing (means \"about\", not \"grading again\")"
+   },
+   {
+    "n": 6,
+    "kind": "mc",
+    "prompt": "No extra vowel at the start — which is correct?",
+    "options": [
+     "school",
+     "iskool"
+    ],
+    "answer": 0,
+    "explanation": "build it backwards: ool → skool → school"
+   },
+   {
+    "n": 7,
+    "kind": "mc",
+    "prompt": "Which is polite on a call?",
+    "options": [
+     "\"Send me the files.\"",
+     "\"Could you please send me the files?\""
+    ],
+    "answer": 1,
+    "explanation": "commands sound rude; \"Could you please…\" is the professional default"
+   },
+   {
+    "n": 8,
+    "kind": "mc",
+    "prompt": "Stretch the vowel with a glide — which is correct?",
+    "options": [
+     "day",
+     "de"
+    ],
+    "answer": 0,
+    "explanation": "hold it: daaaay, feel the glide"
+   },
+   {
+    "n": 9,
+    "kind": "fix",
+    "prompt": "Fix the error:",
+    "wrong": "gona",
+    "answer": "gonna",
+    "explanation": "(speech) / going to (writing) — never \"gona\" to a client"
+   },
+   {
+    "n": 10,
+    "kind": "mc",
+    "prompt": "A statement with FALLING pitch at the end sounds…",
+    "options": [
+     "confident",
+     "unsure"
+    ],
+    "answer": 0,
+    "explanation": "falling pitch = certain; rising pitch on statements sounds unsure"
+   }
+  ],
+  "rule": "8/10 to move on. Answer first, then learn from the misses."
+ },
+ {
+  "id": "quiz-fluency",
+  "module": "fluency",
+  "title": "Quiz — Fluency",
+  "seconds": 300,
+  "xp": 100,
+  "questions": [
+   {
+    "n": 1,
+    "kind": "mc",
+    "prompt": "Combine into one smooth sentence using \"get back to\":",
+    "options": [
+     "\"I will get back you to tomorrow.\"",
+     "\"I will get back to you tomorrow.\""
+    ],
+    "answer": 1,
+    "explanation": "I will get back to you tomorrow. (\"get back to\" is one unbreakable chunk)"
+   },
+   {
+    "n": 2,
+    "kind": "self",
+    "prompt": "\"I am writing this email to inform you about the delay.\" (aim: under 12 words)",
+    "sample": "Sample: \"Quick update — I'm running a little behind, but Thursday is locked in.\"",
+    "explanation": "Sample: \"Quick update — I'm running a little behind, but Thursday is locked in.\""
+   },
+   {
+    "n": 3,
+    "kind": "fix",
+    "prompt": "Fix the error:",
+    "wrong": "Um, so I, like, started the project yesterday.",
+    "answer": "I started the project yesterday. (zero fillers — pause silently instead)",
+    "explanation": "I started the project yesterday. (zero fillers — pause silently instead)"
+   },
+   {
+    "n": 4,
+    "kind": "self",
+    "prompt": "Put this delay email in order:",
+    "sample": "b-a-d-c — greeting → reason → what you're doing now → new date",
+    "explanation": "greeting → reason → what you're doing now → new date"
+   },
+   {
+    "n": 5,
+    "kind": "mc",
+    "prompt": "Client: \"Can you do it cheaper?\" Best reply?",
+    "options": [
+     "\"No.\"",
+     "\"I can adjust the scope to fit your budget.\"",
+     "\"OK, half price.\""
+    ],
+    "answer": 1,
+    "explanation": "never just drop price; trade scope"
+   },
+   {
+    "n": 6,
+    "kind": "self",
+    "prompt": "You: \"___\"\n   Client: \"Sounds good, let's start Monday.\"",
+    "sample": "Sample: \"I can start Monday. I'll send a short plan with milestones, and your first update lands Wednesday.\"",
+    "explanation": "Sample: \"I can start Monday. I'll send a short plan with milestones, and your first update lands Wednesday.\""
+   },
+   {
+    "n": 7,
+    "kind": "self",
+    "prompt": "\"Send requirements fast.\"",
+    "sample": "Sample: \"Could you send the requirements when you get a chance? I'll start as soon as they arrive.\"",
+    "explanation": "Sample: \"Could you send the requirements when you get a chance? I'll start as soon as they arrive.\""
+   },
+   {
+    "n": 8,
+    "kind": "mc",
+    "prompt": "Which is warmer?",
+    "options": [
+     "\"I want money advance before work.\"",
+     "\"I usually take a 30% advance before starting — is that okay?\""
+    ],
+    "answer": 1,
+    "explanation": "states the policy as normal process, asks permission"
+   },
+   {
+    "n": 9,
+    "kind": "self",
+    "prompt": "\"You need the report by Friday.\"",
+    "sample": "Do you need the report by Friday?",
+    "explanation": "Do you need the report by Friday?"
+   },
+   {
+    "n": 10,
+    "kind": "self",
+    "prompt": "Write the FIRST line (a hook) of a 60-second talk about your week.\n---",
+    "sample": "Sample: \"This week I finally finished something I'd been avoiding for a month.\" (energy, not \"Um, so this week…\")",
+    "explanation": "Sample: \"This week I finally finished something I'd been avoiding for a month.\" (energy, not \"Um, so this week…\")"
+   }
+  ],
+  "rule": "8/10 to move on. Answer first, then learn from the misses."
+ },
+ {
+  "id": "quiz-client-communication",
+  "module": "client-communication",
+  "title": "Quiz — Client Communication",
+  "seconds": 300,
+  "xp": 100,
+  "questions": [
+   {
+    "n": 1,
+    "kind": "self",
+    "prompt": "\"Your budget too low, increase it.\"",
+    "sample": "Sample: \"Thanks for sharing your budget — for this scope my rate would be higher. Can we adjust the scope to fit?\"",
+    "explanation": "Sample: \"Thanks for sharing your budget — for this scope my rate would be higher. Can we adjust the scope to fit?\""
+   },
+   {
+    "n": 2,
+    "kind": "self",
+    "prompt": "Client: \"This isn't what I asked for.\"\n   You: \"___\"",
+    "sample": "Sample: \"I'm sorry about that. Can you point out exactly what needs to change? I'll revise it today.\" (apologize once, ask for specifics, promise speed)",
+    "explanation": "Sample: \"I'm sorry about that. Can you point out exactly what needs to change? I'll revise it today.\" (apologize once, ask for specifics, promise speed)"
+   },
+   {
+    "n": 3,
+    "kind": "mc",
+    "prompt": "A delay email must include…",
+    "options": [
+     "an excuse and someone to blame",
+     "early warning + honest reason + what you're doing now + a new date",
+     "silence until it's done"
+    ],
+    "answer": 1,
+    "explanation": "never hide a delay; always end on the new date"
+   },
+   {
+    "n": 4,
+    "kind": "self",
+    "prompt": "Write a subject line for a 2-day delay email.",
+    "sample": "Sample: \"Quick update on your project timeline\" / \"Revised delivery date: Thursday\" (never just \"Sorry\")",
+    "explanation": "Sample: \"Quick update on your project timeline\" / \"Revised delivery date: Thursday\" (never just \"Sorry\")"
+   },
+   {
+    "n": 5,
+    "kind": "mc",
+    "prompt": "Client: \"Can you also do the logo?\" (free extra work). Best reply?",
+    "options": [
+     "\"No.\"",
+     "\"I can do the logo too — that would add $X. Shall I include it?\"",
+     "\"OK, free.\""
+    ],
+    "answer": 1,
+    "explanation": "yes + price + easy yes/no"
+   },
+   {
+    "n": 6,
+    "kind": "self",
+    "prompt": "\"I don't know this, but I try.\"",
+    "sample": "Sample: \"I haven't done exactly this before, but here's how I'd approach it…\" (honest AND capable)",
+    "explanation": "Sample: \"I haven't done exactly this before, but here's how I'd approach it…\" (honest AND capable)"
+   },
+   {
+    "n": 7,
+    "kind": "self",
+    "prompt": "Ask for the advance payment, politely: \"___\"",
+    "sample": "Sample: \"Before I start, I take a 30% advance — I'll send the payment details with the agreement.\"",
+    "explanation": "Sample: \"Before I start, I take a 30% advance — I'll send the payment details with the agreement.\""
+   },
+   {
+    "n": 8,
+    "kind": "mc",
+    "prompt": "After a price disagreement, the professional closing line is…",
+    "options": [
+     "\"Fine, your loss.\"",
+     "\"Thanks for your time — think it over, and I'm here if you want to adjust the scope.\""
+    ],
+    "answer": 1,
+    "explanation": "door open, dignity intact"
+   },
+   {
+    "n": 9,
+    "kind": "self",
+    "prompt": "\"Send me details fast I start work.\"",
+    "sample": "Sample: \"Please send the details — I'll start as soon as I have them.\"",
+    "explanation": "Sample: \"Please send the details — I'll start as soon as I have them.\""
+   },
+   {
+    "n": 10,
+    "kind": "self",
+    "prompt": "End a first call warmly, in one line.\n---",
+    "sample": "Sample: \"Great speaking with you — I'll send the proposal tonight.\"",
+    "explanation": "Sample: \"Great speaking with you — I'll send the proposal tonight.\""
+   }
+  ],
+  "rule": "8/10 to move on. Answer first, then learn from the misses."
+ },
+ {
+  "id": "quiz-self-presentation",
+  "module": "self-presentation",
+  "title": "Quiz — Self-Presentation & Branding",
+  "seconds": 300,
+  "xp": 100,
+  "questions": [
+   {
+    "n": 1,
+    "kind": "fix",
+    "prompt": "Fix the error:",
+    "wrong": "I am Tanqeel. I am student. I learning data science.",
+    "answer": "Sample: \"I'm Tanqeel, a data science student learning to build AI-powered tools.",
+    "explanation": "Sample: \"I'm Tanqeel, a data science student learning to build AI-powered tools.\""
+   },
+   {
+    "n": 2,
+    "kind": "mc",
+    "prompt": "Which portfolio line is stronger?",
+    "options": [
+     "\"I made a dashboard in 2024.\"",
+     "\"I have built dashboards with Python and Power BI.\""
+    ],
+    "answer": 1,
+    "explanation": "present perfect (\"have built\") = experience you still own; portfolio gold"
+   },
+   {
+    "n": 3,
+    "kind": "self",
+    "prompt": "\"I have no experience but I am hardworking.\"",
+    "sample": "Sample: \"I'm early in my career and make up for it with fast, careful work — here's a sample project.\" (proof, not adjectives)",
+    "explanation": "Sample: \"I'm early in my career and make up for it with fast, careful work — here's a sample project.\" (proof, not adjectives)"
+   },
+   {
+    "n": 4,
+    "kind": "self",
+    "prompt": "A 30-second intro must include: your name + what you do + ___.",
+    "sample": "one proof (a project, a sample, a result — something real)",
+    "explanation": "(a project, a sample, a result — something real)"
+   },
+   {
+    "n": 5,
+    "kind": "mc",
+    "prompt": "\"I do data science, AI, video editing, everything.\" What's the problem?",
+    "options": [
+     "It's too long.",
+     "\"Everything\" kills trust — specialists get hired.",
+     "Nothing, it's fine."
+    ],
+    "answer": 1,
+    "explanation": "\"everything\" people don't get hired; specialists do"
+   },
+   {
+    "n": 6,
+    "kind": "self",
+    "prompt": "Write your opening line for \"Tell me about yourself\" (name + current status).",
+    "sample": "Sample: \"I'm Tanqeel, a 5th-semester data science student at Emerson University in Multan.\"",
+    "explanation": "Sample: \"I'm Tanqeel, a 5th-semester data science student at Emerson University in Multan.\""
+   },
+   {
+    "n": 7,
+    "kind": "self",
+    "prompt": "\"Hire me I am cheap and fast.\"",
+    "sample": "Sample: \"I deliver clean, on-time work at a fair rate.\" (\"Cheap\" attracts bad clients)",
+    "explanation": "Sample: \"I deliver clean, on-time work at a fair rate.\" (\"Cheap\" attracts bad clients)"
+   },
+   {
+    "n": 8,
+    "kind": "mc",
+    "prompt": "Client: \"Where are you based?\" Best reply?",
+    "options": [
+     "\"Pakistan.\"",
+     "\"I'm based in Multan, Pakistan — I work with clients in any timezone.\""
+    ],
+    "answer": 1,
+    "explanation": "turns location into a strength"
+   },
+   {
+    "n": 9,
+    "kind": "self",
+    "prompt": "\"I am 5th semester in Emerson University.\"",
+    "sample": "I'm in my 5th semester of BS Data Science at Emerson University, Multan.",
+    "explanation": "I'm in my 5th semester of BS Data Science at Emerson University, Multan."
+   },
+   {
+    "n": 10,
+    "kind": "self",
+    "prompt": "End small talk and move to business, in one line.\n---",
+    "sample": "Sample: \"Anyway — tell me about the project. What are you trying to build?\"",
+    "explanation": "Sample: \"Anyway — tell me about the project. What are you trying to build?\""
+   }
+  ],
+  "rule": "8/10 to move on. Answer first, then learn from the misses."
+ },
+ {
+  "id": "quiz-sales",
+  "module": "sales",
+  "title": "Quiz — Sales",
+  "seconds": 300,
+  "xp": 100,
+  "questions": [
+   {
+    "n": 1,
+    "kind": "self",
+    "prompt": "\"Dear sir, I am very interested in your job.\" (proposal opener)",
+    "sample": "Sample: \"Hi [Name] — I read your brief carefully, and the part about [specific detail] stood out…\"",
+    "explanation": "Sample: \"Hi [Name] — I read your brief carefully, and the part about [specific detail] stood out…\""
+   },
+   {
+    "n": 2,
+    "kind": "self",
+    "prompt": "Client: \"Too expensive.\"\n   You: \"___\"",
+    "sample": "Sample: \"I understand. Which part feels high? I can adjust the scope — here's a lighter version at your budget.\" (diagnose before discounting)",
+    "explanation": "Sample: \"I understand. Which part feels high? I can adjust the scope — here's a lighter version at your budget.\" (diagnose before discounting)"
+   },
+   {
+    "n": 3,
+    "kind": "mc",
+    "prompt": "\"I guarantee first-page ranking.\" Verdict?",
+    "options": [
+     "Strong selling.",
+     "DELETE — never guarantee results you don't control."
+    ],
+    "answer": 1,
+    "explanation": "DELETE — rewrite: \"I'll follow proven SEO practices and report progress weekly.\""
+   },
+   {
+    "n": 4,
+    "kind": "mc",
+    "prompt": "\"I have 5 years of experience.\" (untrue). Verdict?",
+    "options": [
+     "Fine if it wins the job.",
+     "DELETE — never fake experience; rewrite honestly."
+    ],
+    "answer": 1,
+    "explanation": "DELETE — rewrite honestly: \"I'm early-career with strong training in X — here's sample work.\""
+   },
+   {
+    "n": 5,
+    "kind": "self",
+    "prompt": "Client: \"Can you do a free sample?\"\n   You: \"___\"",
+    "sample": "Sample: \"I don't do free custom work, but I can show you similar past work — or we start with a small paid milestone.\"",
+    "explanation": "Sample: \"I don't do free custom work, but I can show you similar past work — or we start with a small paid milestone.\""
+   },
+   {
+    "n": 6,
+    "kind": "self",
+    "prompt": "A client went quiet 3 days after your proposal. Write the follow-up (3 lines max).",
+    "sample": "Sample: \"Hi [Name] — just checking in on the proposal. Happy to answer any questions or adjust the scope.\"",
+    "explanation": "Sample: \"Hi [Name] — just checking in on the proposal. Happy to answer any questions or adjust the scope.\""
+   },
+   {
+    "n": 7,
+    "kind": "mc",
+    "prompt": "Best trial close after presenting the price?",
+    "options": [
+     "\"So… do you want it?\"",
+     "\"Does that scope and timeline work for you? If yes, I can start tomorrow.\""
+    ],
+    "answer": 1,
+    "explanation": "price always rides with scope, and it ends on a clear next step"
+   },
+   {
+    "n": 8,
+    "kind": "self",
+    "prompt": "\"Please give me this job, I need money.\"",
+    "sample": "Sample: \"I'd like to earn this project — here's how I'd approach it…\" (clients buy outcomes, not your needs)",
+    "explanation": "Sample: \"I'd like to earn this project — here's how I'd approach it…\" (clients buy outcomes, not your needs)"
+   },
+   {
+    "n": 9,
+    "kind": "self",
+    "prompt": "After delivering great work, ask for a review (2 lines).",
+    "sample": "Sample: \"Glad you're happy with it! A short review would mean a lot — it helps me win more work like this.\"",
+    "explanation": "Sample: \"Glad you're happy with it! A short review would mean a lot — it helps me win more work like this.\""
+   },
+   {
+    "n": 10,
+    "kind": "mc",
+    "prompt": "Which line is an automatic client-safety fail?",
+    "options": [
+     "\"I guarantee #1 ranking in a month.\"",
+     "\"I reply within a few hours and deliver on agreed dates.\"",
+     "\"Here's a sample of similar work I did.\""
+    ],
+    "answer": 0,
+    "explanation": "guarantees are an instant client-safety fail, no matter how good the English is"
+   }
+  ],
+  "rule": "8/10 to move on. Answer first, then learn from the misses."
+ }
+]

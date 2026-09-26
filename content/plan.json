@@ -1,0 +1,122 @@
+{
+ "title": "Tanqeel's 90-Day Path",
+ "subtitle": "A2/B1 → B2+ · English for client calls",
+ "dailyMinutes": 25,
+ "phases": [
+  {
+   "days": "1–7",
+   "module": "foundations",
+   "focus": "Module 0 + Foundations: placement, learning system, sound-first base."
+  },
+  {
+   "days": "8–35",
+   "module": "accuracy",
+   "focus": "Accuracy: tense, articles, prepositions, sentence surgery."
+  },
+  {
+   "days": "36–50",
+   "module": "pronunciation",
+   "focus": "Pronunciation: the sounds that decide whether clients understand you."
+  },
+  {
+   "days": "51–64",
+   "module": "fluency",
+   "focus": "Fluency: thinking in English, fast small talk, no translating."
+  },
+  {
+   "days": "65–78",
+   "module": "client-communication",
+   "focus": "Client communication: discovery calls, updates, problem talk."
+  },
+  {
+   "days": "79–85",
+   "module": "self-presentation",
+   "focus": "Self-presentation: introductions that open doors."
+  },
+  {
+   "days": "86–90",
+   "module": "sales",
+   "focus": "Sales + final mock call: close like a professional."
+  }
+ ],
+ "weeks": [
+  {
+   "week": 1,
+   "module": "foundations",
+   "focus": "Placement + learning system. Input/output/feedback loop.",
+   "milestone": "Placement done · learning system set up."
+  },
+  {
+   "week": 2,
+   "module": "accuracy",
+   "focus": "Present simple + past simple. Short, correct sentences.",
+   "milestone": "Describe your studies in 5 correct sentences."
+  },
+  {
+   "week": 3,
+   "module": "accuracy",
+   "focus": "Present perfect + future forms. Talk about experience and plans.",
+   "milestone": "Say what you have done and what you will do — correctly."
+  },
+  {
+   "week": 4,
+   "module": "accuracy",
+   "focus": "Articles (a/an/the). The tiny words that mark B2.",
+   "milestone": "Use articles correctly in 10 sentences."
+  },
+  {
+   "week": 5,
+   "module": "accuracy",
+   "focus": "Prepositions: time, place, movement + verb chunks.",
+   "milestone": "Nail 15 preposition call-phrases."
+  },
+  {
+   "week": 6,
+   "module": "pronunciation",
+   "focus": "TH, v/w, word stress. The sounds that decide understanding.",
+   "milestone": "Shadow 10 client-call phrases clearly."
+  },
+  {
+   "week": 7,
+   "module": "pronunciation",
+   "focus": "Rhythm, linking, intonation. Sound natural, not robotic.",
+   "milestone": "Record a 60-second intro that sounds smooth."
+  },
+  {
+   "week": 8,
+   "module": "fluency",
+   "focus": "Chunking + thinking in English. Stop translating.",
+   "milestone": "Answer 5 quick questions with zero Urdu in your head."
+  },
+  {
+   "week": 9,
+   "module": "fluency",
+   "focus": "Small talk + opinions. Keep a conversation alive.",
+   "milestone": "Hold 3 minutes of small talk without freezing."
+  },
+  {
+   "week": 10,
+   "module": "client-communication",
+   "focus": "Discovery calls: questions that uncover client needs.",
+   "milestone": "Run a 5-minute mock discovery call."
+  },
+  {
+   "week": 11,
+   "module": "client-communication",
+   "focus": "Updates, delays, problems. Honest professional talk.",
+   "milestone": "Deliver bad news professionally (mock)."
+  },
+  {
+   "week": 12,
+   "module": "self-presentation",
+   "focus": "Self-introduction + 60-second pitch + Q&A answers.",
+   "milestone": "Record a 60-second intro you're proud of."
+  },
+  {
+   "week": 13,
+   "module": "sales",
+   "focus": "Pricing, objections, closing + final mock call.",
+   "milestone": "Final mock call — close like a professional. 🎉"
+  }
+ ]
+}

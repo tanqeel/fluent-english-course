@@ -1,0 +1,664 @@
+{
+ "id": "accuracy",
+ "title": "Accuracy",
+ "tagline": "Grammar That Matters for Clients",
+ "icon": "🎯",
+ "color": "#f472b6",
+ "description": "Clients don't grade your grammar — but they feel it. Dropped articles and scrambled tenses make you sound unsure, and unsure freelancers don't get hired. The good news: y",
+ "lessons": [
+  {
+   "id": "accuracy-l1",
+   "title": "Articles, part 1: the system",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Clients don't grade your grammar — but they *feel* it. Dropped articles and scrambled tenses make you sound unsure, and unsure freelancers don't get hired. The good news: your errors aren't random. Urdu has no articles, uses postpositions instead of prepositions, and builds time differently — so your mistakes follow predictable patterns. Fix the pattern once, and dozens of individual errors disappear. This module targets your six interference points in order of client impact.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "How to use this module",
+     "body": "One topic per ~4 days. Read the contrastive explanation (Urdu ↔ English — this is deliberate: seeing the difference kills the error at its root), do the examples aloud, then hit the drills at the end. Log every error you make into your error log.\n\n---",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The Urdu problem",
+     "body": "Urdu has no articles at all. You can't translate what doesn't exist — so learners either drop them (*\"make Etsy account\"*) or panic-insert them (*\"make a n Etsy account\"* — your actual message). Pakistani research found 83% of article errors are with a/an, and over half are simple omission.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The system (learn this, not a list of rules)",
+     "body": "Think of articles as answering the listener's question: *\"Which one?\"*\n\n- **First mention, one of many → a/an:** *\"I built **a** dashboard.\"* (One dashboard among many possible. Listener thinks: okay, a dashboard.)\n- **Already known / specific → the:** *\"**The** dashboard is ready.\"* (Now we both know which one.)\n- **Plural or uncountable, general → nothing:** *\"I build dashboards.\" / \"I need information.\"*",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-6",
+     "wrong": "I gona send you the file tomorrow.",
+     "answer": "I am going to",
+     "accept": [
+      "I will send you the file tomorrow."
+     ],
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-7",
+     "wrong": "What is best methos for this?",
+     "answer": "What is the best method for this?",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-8",
+     "wrong": "I have question regrading timeline.",
+     "answer": "I have a question regarding the timeline.",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-9",
+     "wrong": "Can you make a n Fiverr account?",
+     "answer": "Can you make a Fiverr account? (no article before proper noun — or \"an account on Fiverr\")",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    }
+   ],
+   "xp": 50
+  },
+  {
+   "id": "accuracy-l2",
+   "title": "Articles, part 2: mixed reps",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": "Still articles — new reps",
+     "body": "Same system as Part 1: **a/an** = first mention, **the** = the listener knows which one. These reps mix every article rule — say each fixed sentence out loud."
+    },
+    {
+     "type": "teach",
+     "heading": "a vs an — the only rule",
+     "body": "use **an** before vowel *sounds* (an apple, an hour, an Etsy account — \"Etsy\" starts with an E sound), **a** before consonant sounds (a university — \"university\" starts with a Y sound!).",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The freelancer's shortcut",
+     "body": "memorize articles *inside chunks*, not as rules. Your mouth learns \"make **an** appointment\", \"**a** fixed quote\", \"**the** client\", \"**the** deadline\" as whole pieces. In a live call you won't have time to compute rules — chunks fire instantly.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Contrastive corner (Urdu ↔ English)",
+     "body": "Urdu (no article needed) · English (article required)\nMain ne dashboard banaya. · I built a dashboard. (first mention)\nWo dashboard tayyar hai. · The dashboard is ready. (we know which)\nMujhe information chahiye. · I need some information. (uncountable — never \"an information\")\nEk Etsy account banao. · Make an Etsy account. (\"ek\" ≈ \"a/an\" only for first mention!)",
+     "example": "",
+     "tip": "Warning: Don't map Urdu \"ek\" → \"a\" everywhere. \"Ek\" works for first mention (ek client → a client), but the has no Urdu equivalent — learn it as \"the one we both know.\""
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-10",
+     "wrong": "I was working pastly in sales.",
+     "answer": "I worked in sales.",
+     "accept": [
+      "I used to work in sales."
+     ],
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-11",
+     "wrong": "You gone find me on Upwork.",
+     "answer": "You will find me on Upwork.",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-12",
+     "wrong": "She is married with my cousin.",
+     "answer": "She is married to my cousin.",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-13",
+     "wrong": "I have saw this error before.",
+     "answer": "I have seen this error before.",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    }
+   ],
+   "xp": 50
+  },
+  {
+   "id": "accuracy-l3",
+   "title": "Countable nouns + article review",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": "The Urdu problem",
+     "body": "Urdu countability doesn't match English. So *\"advices,\" \"informations,\" \"homeworks\"* feel natural — but they're wrong, and they jump out in client writing.\n\n**The closed list** (memorize these 12 — they cover nearly all client situations): **advice, information, homework, work, news, furniture, luggage, equipment, money, knowledge, progress, feedback.** All uncountable: no -s, no \"a/an\". Workarounds: *a piece of **advice***, *some **information***, *two items of **feedback***.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Your error, fixed",
+     "body": "*\"Give me some advices\"* → *\"Give me some **advice**.\"*",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "SRS card format for these",
+     "body": "never \"advice = ?\". Always the chunk: front → *\"Give me some ___ (advice)\"*, back → *\"Give me some **advice**.\"* The quantifier rides along with the word.\n\n---",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The Urdu problem",
+     "body": "Urdu is SOV — verb goes last. *\"Yeh kitaab main parh raha hoon\"* = literally \"this book I reading am.\" Your brain composes in Urdu, then translates — and the verb lands in the wrong place: *\"This book I'm reading\"* instead of *\"I'm reading this book.\"* Research with Urdu-L1 students found this transfer \"inevitable\" and even subconscious at advanced levels.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The one rule",
+     "body": "**In English, the verb comes second. In Urdu, the verb comes last.** That's it. One systematic difference, drilled until it's a motor habit.\n\nUrdu order (SOV) · English order (SVO)\nMain kal client se mila. (I yesterday client met) · I met the client yesterday.\nUs ne file bheji hai. (He file sent has) · He has sent the file.\nTum kya kar rahe ho? (You what doing are?) · What are you doing?",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The time-word trap",
+     "body": "Urdu puts time words early (*\"kal main...\"*). English prefers them at the end or start — but the verb still stays second: *\"**Yesterday** I **met** the client\"* or *\"I **met** the client **yesterday**.\"* Never *\"I yesterday met the client.\"*",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-14",
+     "wrong": "He don't reply fast.",
+     "answer": "He doesn't reply fast.",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-15",
+     "wrong": "Please give me your advices.",
+     "answer": "Please give me your advice.",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "journal",
+     "id": "accuracy-23",
+     "prompt": "**Back-translation relay**\n\nTake these Urdu sentences, translate to English (SVO! verb second!), then translate your English BACK to Urdu. Where the round trip breaks, your word order broke:\n1. Main ne kal client ko email bheji.\n2. Wo is project par do hafte se kaam kar raha hai.\n3. Tum ne file kab bheji thi?\nModel: 1. I sent the client an email yesterday. 2. He has been working on this project for two weeks. 3. When did you send the file?",
+     "xp": 15
+    },
+    {
+     "id": "accuracy-l3-chant",
+     "type": "drill",
+     "engine": "shadowing",
+     "title": "Article chant (audio)",
+     "text": "a client, the client — first mention a, known thing the",
+     "audio": "audio/07-accuracy-chants.mp3",
+     "tip": "Chant along with the audio, then record yourself.",
+     "xp": 15
+    }
+   ],
+   "xp": 50
+  },
+  {
+   "id": "accuracy-l4",
+   "title": "Prepositions, part 1",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": "The Urdu problem",
+     "body": "Urdu uses postpositions (*mein, se, ko, par*) that come AFTER the word, and one Urdu word covers many English ones. Urdu *se* alone can mean *of, with,* or *from*. So your brain picks one English preposition per Urdu word — and it's wrong 72% of the time (that's the documented substitution rate).",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The rule that replaces translation",
+     "body": "**Never translate prepositions. Learn them as chunks.**\n\nThese 20 chunks cover 90% of client-call prepositions. Learn each as one unbreakable piece:\n\n- interested **in**, good **at**, responsible **for**, depend **on**, wait **for**, married **to**, agree **with** (a person) / agree **to** (a proposal) / agree **on** (a price), angry **with**, afraid **of**, different **from**, discuss **∅** (no preposition! \"discuss the project\", never \"discuss about\"), work **on** (a project), work **for** (a client), work **with** (a team), apply **for** (a job), ask **for** (a raise), belong **to**, consist **of**, deal **with**, follow up **on**, get back **to** you, look forward **to** meeting you.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Your error, fixed",
+     "body": "*\"She is married with Ali\"* → *\"She is married **to** Ali.\"* (Married takes **to**. Always. It's a chunk.)",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The since/for trap (time prepositions)",
+     "body": "**since** = starting point (*since 2021, since Monday*). **for** = duration (*for 3 years, for six months*). Urdu doesn't split these — English does. Client sentence: *\"I have been learning Python **since** 2024\"* vs *\"I have been learning Python **for** two years.\"*",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "fill-blank",
+     "id": "accuracy-16",
+     "text": "I'm looking forward ___ meeting you.",
+     "options": [
+      "I'm looking forward ___ meeting you.",
+      "to",
+      "for"
+     ],
+     "answer": "I'm looking forward to meeting you.",
+     "explanation": "(chunk: look forward to + -ing)",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fill-blank",
+     "id": "accuracy-17",
+     "text": "We need to discuss ___ the pricing.",
+     "options": [
+      "We need to discuss ___ the pricing.",
+      "about",
+      {
+       "t": "∅ (nothing)",
+       "v": ""
+      }
+     ],
+     "answer": "We need to discuss — the pricing.",
+     "explanation": "(discuss takes no preposition)",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fill-blank",
+     "id": "accuracy-18",
+     "text": "He's responsible ___ the dashboard.",
+     "options": [
+      "He's responsible ___ the dashboard.",
+      "for",
+      "of"
+     ],
+     "answer": "He's responsible for the dashboard.",
+     "explanation": "Correct: for",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "multiple-choice",
+     "id": "accuracy-19",
+     "prompt": "I have experience ___ Python ___ two years.",
+     "options": [
+      "in+for",
+      "with+since"
+     ],
+     "answer": 0,
+     "explanation": "(duration → for)",
+     "xp": 10
+    }
+   ],
+   "xp": 50
+  },
+  {
+   "id": "accuracy-l5",
+   "title": "Prepositions, part 2 + present perfect",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": "Two topics, one lesson",
+     "body": "First: preposition reps. Then one agreement fix, then a present-perfect writing task. Switching gears fast is fluency training."
+    },
+    {
+     "type": "drill",
+     "engine": "fill-blank",
+     "id": "accuracy-20",
+     "text": "This depends ___ your data quality.",
+     "options": [
+      "This depends ___ your data quality.",
+      "on",
+      "upon→on"
+     ],
+     "answer": "This depends on your data quality.",
+     "explanation": "Correct: on",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fill-blank",
+     "id": "accuracy-21",
+     "text": "I'll get back ___ you by Friday.",
+     "options": [
+      "I'll get back ___ you by Friday.",
+      "to",
+      "with"
+     ],
+     "answer": "I'll get back to. you by Friday.",
+     "explanation": "Correct: to.",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-24",
+     "wrong": "I am agree with you but I gona take 2 days more.",
+     "answer": "I agree — I'll need two more days to get this right.",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "teach",
+     "heading": "The Urdu problem",
+     "body": "Urdu marks time with helpers (*hai, tha, hoga*) and verb shapes, not with English's tense+aspect machinery. Result: *\"I was working pastly in 2021 2024\"* (wrong tense + invented adverb) and *\"I have saw\"* (right helper, wrong participle). Pakistani learners' most frequent tense error is actually the simple present (*\"he work\"* — dropping the -s), with present perfect confusion close behind.\n\n**Learn tenses as timelines, not tables.** For freelancing, you need exactly four uses of the present perfect (**have/has + past participle**):",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "1. **Life experience (your portfolio):** *\"I **have built** three dashboards.\"* (At some point in your life, unspecified when. This is how you talk about skills without faking timelines.)\n2. **Recent result:** *\"I **have just finished** the data cleaning.\"* (Done very recently — the result matters now.)\n3. **Duration continuing now:** *\"I **have worked** with Python **for** two years.\"* (Started in the past, still true.)\n4. **Unfinished time:** *\"I **have sent** two proposals this week.\"* (This week isn't over.)",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The contrast that matters",
+     "body": "*\"I **worked** on this project in 2023\"* (finished, closed chapter — simple past) vs *\"I **have worked** on this project\"* (experience I carry with me — present perfect). On a client call, use present perfect for your skills and simple past for finished stories.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Your error, fixed",
+     "body": "*\"I was working pastly in 2021 2024\"* → *\"I **worked** as a sales supervisor **from** 2021 **to** 2024.\"* (Finished period → simple past. \"Pastly\" isn't a word — and \"from X to Y\" is the chunk for ranges.)\n\n**Participle watch-list** (the irregulars Pakistani learners actually mix up): see→**seen**, do→**done**, go→**gone**, write→**written**, build→**built**, send→**sent**, speak→**spoken**, take→**taken**. (*\"I have saw\"* → *\"I have **seen**.\"*)",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "journal",
+     "id": "accuracy-22",
+     "prompt": "**Timeline mapping**\n\nDraw a line. Mark 2021, 2024, and NOW. Place these events, then write each as a sentence choosing simple past or present perfect:\n1. Your sales supervisor job (2021–2024, finished)\n2. Starting BS Data Science (2024, still studying)\n3. A Python project you finished last month\n4. A skill you have been building since January\nThen explain to your AI tutor WHY you chose each tense. The explaining is the learning.",
+     "xp": 15
+    }
+   ],
+   "xp": 50
+  },
+  {
+   "id": "accuracy-l6",
+   "title": "Subject–verb agreement",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": "The problem",
+     "body": "English adds **-s** for he/she/it in the present: *he works, she goes.* It's tiny, it's redundant (the \"he\" already tells you who's acting), so your brain drops it: *\"he work.\"* You usually KNOW this rule — it's a monitoring problem, not a knowledge problem.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The fix is a habit, not a lesson",
+     "body": "after writing anything for a client, circle every verb with a he/she/it subject and check the -s. In speech, shadowing native audio builds the *expectation* of hearing that -s, which slowly fixes production.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Priority note",
+     "body": "this error is high-visibility in *writing* (proposals, emails — clients read those slowly) and low-visibility in *speech* (calls move fast). Fix it in writing first.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The doesn't/don't pair",
+     "body": "*he/she/it* → **doesn't** (*\"He **doesn't** have time\"* — your placement item 8). Everything else → **don't**. One of the most common slips in South Asian English; clients notice it instantly.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-25",
+     "wrong": "He don't have the data so I am waiting for him since 2 weeks.",
+     "answer": "He doesn't have the data yet; I've been waiting for two weeks. I'll follow up today.",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-26",
+     "wrong": "I have saw your requirements and I will make a dashboard, it will be having 5 charts.",
+     "answer": "I've reviewed your requirements. I'll build a dashboard with 5 charts.",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-27",
+     "wrong": "Give me advices about what you want exactly.",
+     "answer": "Could you share more detail about exactly what you need?",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    },
+    {
+     "type": "drill",
+     "engine": "fix-sentence",
+     "id": "accuracy-28",
+     "wrong": "I was working pastly on similar project in 2024.",
+     "answer": "I worked on a similar project in 2024.",
+     "hint": "Read it aloud — where does it stumble?",
+     "explanation": "",
+     "xp": 10
+    }
+   ],
+   "xp": 50
+  },
+  {
+   "id": "accuracy-quiz",
+   "title": "Module quiz — 10 questions",
+   "minutes": 10,
+   "steps": [
+    {
+     "type": "drill",
+     "engine": "timed-quiz",
+     "id": "accuracy-29",
+     "title": "Quiz — Accuracy",
+     "seconds": 300,
+     "questions": [
+      {
+       "n": 1,
+       "kind": "mc",
+       "prompt": "I got ___ message from ___ client.",
+       "options": [
+        "a/a",
+        "an/a",
+        "a/an"
+       ],
+       "answer": 0,
+       "explanation": "I got a message from a client. (both first mentions)"
+      },
+      {
+       "n": 2,
+       "kind": "mc",
+       "prompt": "She is interested ___ data science.",
+       "options": [
+        "in",
+        "on",
+        "at"
+       ],
+       "answer": 0,
+       "explanation": "interested in (fixed chunk — never translate it)"
+      },
+      {
+       "n": 3,
+       "kind": "fix",
+       "prompt": "Fix the error:",
+       "wrong": "He work in Multan.",
+       "answer": "works",
+       "explanation": "in Multan. (3rd-person -s)"
+      },
+      {
+       "n": 4,
+       "kind": "mc",
+       "prompt": "I ___ the analysis yesterday.",
+       "options": [
+        "have finished",
+        "finished"
+       ],
+       "answer": 0,
+       "explanation": "\"yesterday\" is finished time → simple past"
+      },
+      {
+       "n": 5,
+       "kind": "mc",
+       "prompt": "I have worked with Python ___ two years.",
+       "options": [
+        "since",
+        "for"
+       ],
+       "answer": 1,
+       "explanation": "for + length of time (since + starting point)"
+      },
+      {
+       "n": 6,
+       "kind": "self",
+       "prompt": "Client: \"Can you finish by Friday?\"\n   You: \"___\"",
+       "sample": "Sample: \"Yes — I'll have it ready by Friday morning, and I'll send a preview Thursday night.\"",
+       "explanation": "Sample: \"Yes — I'll have it ready by Friday morning, and I'll send a preview Thursday night.\""
+      },
+      {
+       "n": 7,
+       "kind": "fix",
+       "prompt": "Fix the error:",
+       "wrong": "She gave me many advices.",
+       "answer": "a lot of advice",
+       "explanation": ". (\"Advice\" is uncountable — no plural)"
+      },
+      {
+       "n": 8,
+       "kind": "mc",
+       "prompt": "___ sun rises in ___ east.",
+       "options": [
+        "A/The",
+        "The/the",
+        "The/The"
+       ],
+       "answer": 1,
+       "explanation": "The sun rises in the east. (unique things → the)"
+      },
+      {
+       "n": 9,
+       "kind": "mc",
+       "prompt": "I ___ three dashboards so far.",
+       "options": [
+        "built",
+        "have built"
+       ],
+       "answer": 1,
+       "explanation": "\"so far\" = up to now → present perfect"
+      },
+      {
+       "n": 10,
+       "kind": "fix",
+       "prompt": "Fix the error:",
+       "wrong": "Make a n Etsy account.",
+       "answer": "an",
+       "explanation": "Etsy account. (one article only)"
+      }
+     ],
+     "xp": 100,
+     "rule": "8/10 to move on. Answer first, then learn from the misses."
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "accuracy-checkpoint",
+   "title": "Checkpoint",
+   "minutes": 10,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": "Can-do statements",
+     "body": "- [ ] I can explain when to use a/an/the/the-nothing using the \"which one?\" test\n- [ ] I know 20+ preposition chunks by heart and never translate prepositions from Urdu\n- [ ] I can choose simple past vs present perfect by asking \"finished chapter or living experience?\"\n- [ ] My verbs sit in second position automatically, even in long sentences\n- [ ] I check he/she/it verbs for -s before sending any client writing",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Mini-test",
+     "body": "Write 6 client sentences, each demonstrating one lesson: (1) an article rule, (2) a preposition chunk, (3) present perfect for experience, (4) SVO order with a time word, (5) a he/she/it verb, (6) an uncountable noun. Send them to your AI tutor for the strict correction pass.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Re-entry note",
+     "body": "Back after a break? Don't reread all six lessons. Open your error log, find your most frequent error type, and redo just that lesson's drill. Accuracy is maintained by sprints, not marathons.\n\n🎯 **Badge earned: Article Ace** — your sentences are now client-safe on paper. Next: making them client-clear out loud.\n\n---",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "journal",
+     "id": "accuracy-30",
+     "prompt": "**Checkpoint mini-test**\n\nWrite 6 client sentences, each demonstrating one lesson: (1) an article rule, (2) a preposition chunk, (3) present perfect for experience, (4) SVO order with a time word, (5) a he/she/it verb, (6) an uncountable noun. Send them to your AI tutor for the strict correction pass.\n\nRe-entry note: Back after a break? Don't reread all six lessons. Open your error log, find your most frequent error type, and redo just that lesson's drill. Accuracy is maintained by sprints, not marathons.\n\n🎯 Badge earned: Article Ace — your sentences are now client-safe on paper. Next: making them client-clear out loud.\n\n---",
+     "xp": 30
+    }
+   ],
+   "xp": 38
+  }
+ ]
+}

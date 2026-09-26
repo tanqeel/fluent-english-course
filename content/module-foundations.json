@@ -1,0 +1,291 @@
+{
+ "id": "foundations",
+ "title": "Foundations",
+ "tagline": "How English Actually Gets Learned",
+ "icon": "🧱",
+ "color": "#34d399",
+ "description": "You don't need more grammar tables. You need to understand the machine you're operating: input goes in, output comes out, feedback corrects the loop. Learners who underst",
+ "lessons": [
+  {
+   "id": "foundations-l1",
+   "title": "The input → output cycle (in plain words)",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "You don't need more grammar tables. You need to understand the *machine* you're operating: input goes in, output comes out, feedback corrects the loop. Learners who understand this stop wasting months on the wrong activities (like re-reading grammar rules) and start doing the few things that compound. This module is short — it's the operating manual for everything after it.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Think of learning English like learning cricket. Watching matches (input) teaches you what good batting looks like. But you only learn to bat by batting (output) — and by a coach telling you your elbow is wrong (feedback).",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "- **Input:** listening and reading slightly above your level. This is where your brain *acquires* patterns unconsciously. Rule: lots of it, narrow (one topic at a time), every day.\n- **Output:** speaking and writing. This forces your brain to go from \"I get the idea\" to \"I can build the sentence.\" This is where gaps get *noticed* — you feel the sentence break, and that feeling is learning.\n- **Feedback:** correction that is immediate and specific. A coach who says \"wrong\" helps a little. A coach who says \"you dropped the article — it's *an* Etsy account, not *a n*\" fixes the error permanently.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Roman Urdu version",
+     "body": "*Input matlab angrezi andar — sunna, parhna. Output matlab angrezi bahar — bolna, likhna. Sirf andar karne se samajh aayegi, bolna nahi aayega. Sirf bahar karne se ghaltiyan pakki ho jayengi. Dono chahiye, roz.*",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "What this means for your routine",
+     "body": "that's why the Daily Routine has all four blocks. Input without speaking = you understand clients but freeze when replying. Speaking without input = you get fluent at your own mistakes.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "id": "foundations-l1-warmup",
+     "type": "drill",
+     "engine": "shadowing",
+     "title": "Daily warm-up (audio)",
+     "text": "Shadow this 60-second warm-up every day before you start",
+     "audio": "audio/08-daily-warmup.mp3",
+     "tip": "Do this first every day — it switches your brain to English.",
+     "xp": 15
+    },
+    {
+     "type": "drill",
+     "engine": "journal",
+     "id": "foundations-1",
+     "prompt": "**Start your error log**\n\nTake your placement test answers. Log your 5 worst errors in the format above. This is now page 1 of your error log. It will look embarrassing. Good — in 90 days this page becomes your favorite trophy.",
+     "xp": 15
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "foundations-l2",
+   "title": "The consistency design (built for your 2–3 day pattern)",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Here's the truth: motivation is weather. Systems are climate. Your pattern — strong for 2–3 days, then fading — is normal, not a character flaw. The course is designed around it:",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "1. **The 20-minute minimum.** On dead days, do 10 min shadowing + 10 min speaking. A short day keeps the chain of *identity* (\"I'm someone who practices daily\") even when the chain of hours breaks.\n2. **Re-entry, not restart.** Missed 5 days? Don't redo Week 1. Open the module you left, read its re-entry note, do one minimum day. Restarting from zero is how courses die.\n3. **Same time, same place.** Habit research is boring and unanimous: anchor the routine to an existing habit (after Fajr, after dinner). \"I'll do it when I have time\" = never.\n4. **Make the start stupidly small.** Open Anki. That's it. Starting is the hard part; continuing is easy.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "speaking-task",
+     "id": "foundations-2",
+     "title": "Explain the cycle to a friend",
+     "prompt": "Explain input → output → feedback in 4–6 sentences to a friend (in Roman Urdu if needed, then in English). If you can't explain it simply, re-read Lesson 1.1. Teaching is the fastest test of understanding.",
+     "seconds": 90,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "xp": 25
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "foundations-l3",
+   "title": "The error log method (your most valuable document)",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Buy a notebook or open a doc. Title: **My Error Log**. Every time you (or your AI tutor) catch an error in YOUR speech or writing, log it in this format:\n\nRules of the log:\n\n- **Log only YOUR errors**, not textbook exercises. Your errors are the curriculum.\n- **The 5-strike rule:** any error that appears 5 times gets a full drill week (Module 2 has drills for each type). This is how you prevent *fossilization* — errors that feel \"good enough\" and freeze permanently.\n- **Review the log every Sunday** (5 minutes). Read your old errors aloud, correctly. Watching the list shrink is your real progress bar.",
+     "example": "Date: 3 Oct | My sentence: I was working pastly in 2021 2024 | Fixed: I worked as a sales supervisor from 2021 to 2024 | Rule: finished past time → simple past; \"pastly\" isn't a word; use \"from X to Y\" | Count: 3rd time",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Every Sunday — or whatever your rest day is — spend 15 minutes on this. Not an hour. Fifteen minutes.\n\n1. **Error log skim (5 min):** Read the week's entries aloud, correctly. Star any error that appeared 3+ times — that's next week's accuracy sprint target.\n2. **Recording compare (5 min):** Play 60 seconds of this week's recording against last week's. Write one line: \"better at ___, still weak at ___.\"\n3. **Week score (5 min):** Score your Daily Routine adherence, not your English: how many days did you hit the 20-minute minimum? 6–7 = strong. 4–5 = fine. Under 4 = shrink the routine (do the 20-min minimum as the full routine for a week) instead of quitting.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Write the 3 lines in your log. That's the whole review. Small, honest, repeatable — the opposite of the \"new month, new me\" restart cycle.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "journal",
+     "id": "foundations-3",
+     "prompt": "**Write your re-entry contract**\n\nFinish these sentences honestly, in writing:\n\n1. When I miss 3 days, the thought that stops me from returning is...\n2. My 20-minute minimum will happen at (time) in (place)...\n3. The person I can tell about this course for accountability is...\n4. If I feel \"this isn't working\" in week 3, I will first check... (hint: your error log — the errors will already be shrinking)",
+     "xp": 15
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "foundations-quiz",
+   "title": "Module quiz — 10 questions",
+   "minutes": 10,
+   "steps": [
+    {
+     "type": "drill",
+     "engine": "timed-quiz",
+     "id": "foundations-4",
+     "title": "Quiz — Foundations",
+     "seconds": 300,
+     "questions": [
+      {
+       "n": 1,
+       "kind": "mc",
+       "prompt": "Which sentence is correct?",
+       "options": [
+        "He don't like tea.",
+        "He doesn't like tea.",
+        "He not like tea."
+       ],
+       "answer": 1,
+       "explanation": "He doesn't like tea. (he/she/it → doesn't)"
+      },
+      {
+       "n": 2,
+       "kind": "mc",
+       "prompt": "Fill the blank: She is ___ honest person.",
+       "options": [
+        "a",
+        "an",
+        "the"
+       ],
+       "answer": 1,
+       "explanation": "an honest person (silent h → vowel sound)"
+      },
+      {
+       "n": 3,
+       "kind": "fix",
+       "prompt": "Fix the error:",
+       "wrong": "They is my friends.",
+       "answer": "are",
+       "explanation": "my friends."
+      },
+      {
+       "n": 4,
+       "kind": "order",
+       "prompt": "Put the words in order:",
+       "words": [
+        "go",
+        "I",
+        "to",
+        "university",
+        "every day"
+       ],
+       "answer": "I go to university every day.",
+       "explanation": "I go to university every day."
+      },
+      {
+       "n": 5,
+       "kind": "mc",
+       "prompt": "She has two ___ .",
+       "options": [
+        "brother",
+        "brothers",
+        "brotheres"
+       ],
+       "answer": 1,
+       "explanation": ""
+      },
+      {
+       "n": 6,
+       "kind": "self",
+       "prompt": "A: \"What's your name?\"\n   B: \"___\"",
+       "sample": "Sample: \"My name is Tanqeel.\" (full sentence, not just \"Tanqeel\")",
+       "explanation": "Sample: \"My name is Tanqeel.\" (full sentence, not just \"Tanqeel\")"
+      },
+      {
+       "n": 7,
+       "kind": "fix",
+       "prompt": "Fix the error:",
+       "wrong": "She have two brother.",
+       "answer": "has",
+       "explanation": "two brothers."
+      },
+      {
+       "n": 8,
+       "kind": "mc",
+       "prompt": "There ___ many people at the hostel.",
+       "options": [
+        "is",
+        "are"
+       ],
+       "answer": 1,
+       "explanation": "plural → are"
+      },
+      {
+       "n": 9,
+       "kind": "self",
+       "prompt": "Which is correct? a) I am agree. b) I agree.",
+       "sample": "b) I agree. (\"Agree\" is already a verb — no \"am\")",
+       "explanation": "I agree. (\"Agree\" is already a verb — no \"am\")"
+      },
+      {
+       "n": 10,
+       "kind": "self",
+       "prompt": "Write one full SVO sentence about what you did yesterday.\n---",
+       "sample": "Sample: \"I practiced Python in the evening.\" (any correct simple-past SVO sentence)",
+       "explanation": "Sample: \"I practiced Python in the evening.\" (any correct simple-past SVO sentence)"
+      }
+     ],
+     "xp": 100,
+     "rule": "8/10 to move on. Answer first, then learn from the misses."
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "foundations-checkpoint",
+   "title": "Checkpoint",
+   "minutes": 10,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "**Can-do statements** (check honestly):\n\n- [ ] I can explain the input→output→feedback cycle in my own words\n- [ ] I have a fixed daily time slot for the 45–60 min routine\n- [ ] My error log exists and has at least 5 real entries from my placement test\n- [ ] I know exactly what to do after missing 5 days (re-entry, not restart)",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Mini-test",
+     "body": "Without looking, write the 4 blocks of the Daily Routine with their minutes. Then write your re-entry rule in one sentence.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Re-entry note",
+     "body": "Coming back here? Do Drill 1.1 (log 3 fresh errors from anything you said/wrote this week) and one 20-minute minimum day. That's it. Continue to Module 2.\n\n🔒 **Badge earned: Habit Locked** — you now have a system, not a wish.\n\n---",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "journal",
+     "id": "foundations-5",
+     "prompt": "**Checkpoint mini-test**\n\nWithout looking, write the 4 blocks of the Daily Routine with their minutes. Then write your re-entry rule in one sentence.\n\nRe-entry note: Coming back here? Do Drill 1.1 (log 3 fresh errors from anything you said/wrote this week) and one 20-minute minimum day. That's it. Continue to Module 2.\n\n🔒 Badge earned: Habit Locked — you now have a system, not a wish.\n\n---",
+     "xp": 30
+    }
+   ],
+   "xp": 38
+  }
+ ]
+}

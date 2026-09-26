@@ -1,0 +1,340 @@
+{
+ "id": "pronunciation",
+ "title": "Pronunciation",
+ "tagline": "Be Understood, Not American",
+ "icon": "🔊",
+ "color": "#60a5fa",
+ "description": "Here is the most freeing fact in this book: intelligibility and accent are separate things. Research (Derwing & Munro) shows a strong Pakistani accent can be 100% intelli",
+ "lessons": [
+  {
+   "id": "pronunciation-l1",
+   "title": "The 9-item hit-list (in intelligibility order)",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Here is the most freeing fact in this book: **intelligibility and accent are separate things.** Research (Derwing & Munro) shows a strong Pakistani accent can be 100% intelligible — and clients don't hire accents, they hire people they understand without effort. So we are NOT eliminating your accent. We are fixing the 9 specific sound problems that make Urdu/Hindi speakers hard to understand in English, in order of impact. Everything else about your accent stays — it's part of you.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "**1. Word stress & rhythm (biggest impact).** English is stress-timed: some syllables are loud and long, others nearly vanish. Urdu/Hindi stress patterns applied to English (*\"pho-to-GRAPH\"* instead of *\"PHO-to-graph\"*) confuse listeners more than any single wrong sound. **Rule:** every new word you learn gets its stress marked: **PHO**-to-graph, de-**VEL**-op-ment, **CLI**-ent. Clap the stressed syllable. English rhythm = stressed syllables land like drum beats, roughly evenly spaced.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "**2. /θ/ and /ð/ (thin, this).** These sounds don't exist in Urdu — speakers substitute *t/d* (\"tin\" for \"thin\", \"dis\" for \"this\"). **Fix:** put your tongue tip *between your teeth* and blow. Feel the air on your hand — that's the fricative. If your tongue isn't visible, you're saying /t/. 50 reps/day for two weeks on: thin/tin, thigh/tie, though/dough, three/tree.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "3. /v/ vs /w/ (very/wary).** Many Urdu/Hindi speakers merge these. **Fix",
+     "body": "/v/ = top teeth touch bottom lip (*vvvv* — feel the buzz). /w/ = lips round, no teeth (*www* — like blowing out a candle). Mirror work: vest/west, vine/wine, very/wary.\n\n**4. Consonant clusters (school, not \"iskool\").** Urdu resists initial clusters, so speakers insert a vowel. **Fix — backward buildup:** say \"kool\" → \"skool\" → \"school\". Stretch the cluster, never accept the inserted vowel in drills. Practice: school, station, please, project, street.\n\n**5. Diphthongs (day, go).** /eɪ/ and /oʊ/ get flattened to single vowels (\"de\", \"go\"). **Fix — glide-hold:** stretch it: \"daaaay\", \"goooow\". Feel the two-vowel slide. If your mouth doesn't move, it's not a diphthong.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "**6. /p/ vs /f/.** Aspiration patterns differ across the languages. **Fix — tissue test:** hold tissue before your mouth. \"Pat\" blows it; \"fat\" doesn't. Minimal pairs: pat/fat, pull/full.\n\n**7. /ʒ/ (vision, decision).** Rare sound, low priority — but it appears in client words (*decision, revision, usual*). **Fix:** learn it inside those 10–15 words only. No drill needed beyond shadowing them.\n\n**8. Intonation.** Urdu/Hindi melody on English statements can sound uncertain or abrupt on calls. **Fix:** English statements fall ⤵ at the end; yes/no questions rise ⤴. Shadow 5 core call sentences (below) copying the *melody*, not just words.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "**9. /r/ quality.** Retroflex Urdu /r/ vs English approximant. Rarely blocks understanding — polish it last, if ever.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "id": "pronunciation-l1-demo",
+     "type": "drill",
+     "engine": "shadowing",
+     "title": "Shadowing demo (audio)",
+     "text": "Listen once, then shadow line by line with the recording",
+     "audio": "audio/01-shadowing-demo.mp3",
+     "tip": "Copy the music of the voice, not just the words.",
+     "xp": 15
+    },
+    {
+     "type": "drill",
+     "engine": "shadowing",
+     "id": "pronunciation-34",
+     "title": "Minimal-pair chant",
+     "text": "Say each pair 10×, exaggerating the difference. Record the last round. Do one row per day:\n- Row A (/θ/): thin–tin, thigh–tie, three–tree, thank–tank\n- Row B (/ð/): this–dis, though–dough, they–day\n- Row C (/v-w/): very–wary, vest–west, vine–wine\n- Row D (clusters): say \"kool→skool→school\", \"tation→station→station\", \"please\" (no \"palease\")\n- Row E (diphthongs): day (\"daaaay\"), go (\"goooow\"), late, phone — hold the glide 2 seconds\nSelf-check: play your recording. If a pair sounds identical, that pair goes on tomorrow's list too.",
+     "audio": "audio/02-minimal-pairs.mp3",
+     "tip": "Shadow 0.5–1 sec behind the speaker. Copy the music, not just the words.",
+     "xp": 15
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "pronunciation-l2",
+   "title": "The shadowing protocol (10–15 min/day)",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Shadowing is the single best-evidenced speaking-fluency technique in the research: studies show large gains in fluency and pronunciation (including +20% pronunciation accuracy at 20 min/day over 6 weeks), plus 30–40% listening gains. Here's the exact protocol:",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "1. **Material:** one clear native recording, slightly above your level (BBC 6 Minute English, a TED talk, an audiobook chapter). Same clip all week (narrow input).\n2. **Blind shadowing (days 1–2):** no script. Repeat 0.5–1 second behind the speaker, copying rhythm, stress, melody. Mumble along if you miss words — staying in rhythm matters more than catching every word. Start at 0.75× speed if needed.\n3. **Script-checked shadowing (days 3–4):** read the transcript first, mark the stresses, then shadow. Now you know what you're saying.\n4. **Selective shadowing (days 5–7):** shadow only the stressed/key words; let the small words blur past. This trains English rhythm directly.\n5. **Rules:** do it privately (anxiety kills the benefit — phone recorder, your room, no audience). Never shadow as a graded performance.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "**The 5 core call sentences** (intonation shadowing — copy the melody exactly):\n\n1. *\"Hi Ahmed, thanks for reaching out.\"* ⤵\n2. *\"I'll send you the quote within twenty-four hours.\"* ⤵\n3. *\"Quick heads-up: the dashboard will be ready Wednesday.\"* ⤵\n4. *\"Could you share the data file when you get a chance?\"* ⤵ (polite request — slight rise, then fall)\n5. *\"Does that timeline work for you?\"* ⤴ (yes/no question rises)",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "shadowing",
+     "id": "pronunciation-31",
+     "title": "Graded script 1 (A2 — your story)",
+     "text": "My NAME is TanQEEL. I'm a STUdents of DAta SCIence. I WORKED in SALES for THREE YEARS. NOW I'm LEARNing PYthon and BUIlding proJECTS. I WANT to WORK with CLIents on FREElance proJECTS.",
+     "audio": null,
+     "tip": "Shadow 0.5–1 sec behind the speaker. Copy the music, not just the words.",
+     "xp": 15
+    },
+    {
+     "type": "drill",
+     "engine": "shadowing",
+     "id": "pronunciation-32",
+     "title": "Graded script 2 (B1 — a status update)",
+     "text": "Here's my WEEKly upDATE. I've FInished CLEANing the SALES DAta and BUILT the FIRST CHARTS. This WEEK I'll FInish the DASHboard and SEND it for reVIEW. I'm WAIting ON the MARCH FILE — PLEASE SHARE it WHEN you CAN. We're ON TRACK for FRIday.",
+     "audio": null,
+     "tip": "Shadow 0.5–1 sec behind the speaker. Copy the music, not just the words.",
+     "xp": 15
+    },
+    {
+     "type": "drill",
+     "engine": "shadowing",
+     "id": "pronunciation-33",
+     "title": "Graded script 3 (B2 — handling a delay)",
+     "text": "QUICK HEADS-UP: the rePORT will be READy WEDnesday inSTEAD of MONday — the DAta NEEDEd EXtra CLEANing. Everything ELSE is ON TRACK. I'll SEND you a preVIEW TUESday EveNING so you can SEE the PROgress. SOrry for the SHIFT.",
+     "audio": null,
+     "tip": "Shadow 0.5–1 sec behind the speaker. Copy the music, not just the words.",
+     "xp": 15
+    },
+    {
+     "type": "drill",
+     "engine": "shadowing",
+     "id": "pronunciation-35",
+     "title": "Shadow the news",
+     "text": "Pick one 3-minute BBC 6 Minute English episode. Days 1–2: blind shadow. Days 3–4: script-checked. Days 5–7: selective shadowing of stressed words. Same episode all week. Log one sentence per day: \"today shadowing felt ___ because ___.\"",
+     "audio": "audio/02-minimal-pairs.mp3",
+     "tip": "Shadow 0.5–1 sec behind the speaker. Copy the music, not just the words.",
+     "xp": 15
+    }
+   ],
+   "xp": 62
+  },
+  {
+   "id": "pronunciation-l3",
+   "title": "The self-recording method",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Your ear lies to you in real time — it hears what you *meant* to say. The recorder doesn't. Method:\n\n1. Record 60–90 seconds (a drill answer, a pitch, a call simulation).\n2. Listen once WITHOUT the transcript. Mark every moment you stumble.\n3. Transcribe what you actually said (painful, essential).\n4. Compare against what you meant. Log the errors (Module 1 format).\n5. Re-record once, fixing only the worst problem.\n\nOne cycle per day is worth more than an hour of unrecorded talking.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "speaking-task",
+     "id": "pronunciation-36",
+     "title": "Record, transcribe, flinch, fix",
+     "prompt": "Record yourself answering: \"What did you work on this week?\" (60 seconds). Transcribe it fully. Circle: dropped articles, /θ/→/t/ slips, flat intonation, filler words. Log the top 3 in your error log. Re-record once.",
+     "seconds": 60,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "xp": 25
+    },
+    {
+     "type": "drill",
+     "engine": "journal",
+     "id": "pronunciation-37",
+     "prompt": "**Stress-mark the script**\n\nTake the 5 core call sentences from Lesson 3.2. Mark the stressed syllable in CAPS in every content word (\"I'll SEND you the QUOTE withIN TWENty-four HOURS\"). Read them aloud 5× each, hitting the caps like drum beats. Then shadow them from a native speaker on YouGlish (type each phrase, play 5 clips at 0.5×, copy the melody).",
+     "xp": 15
+    }
+   ],
+   "xp": 46
+  },
+  {
+   "id": "pronunciation-quiz",
+   "title": "Module quiz — 10 questions",
+   "minutes": 10,
+   "steps": [
+    {
+     "type": "drill",
+     "engine": "timed-quiz",
+     "id": "pronunciation-38",
+     "title": "Quiz — Pronunciation",
+     "seconds": 300,
+     "questions": [
+      {
+       "n": 1,
+       "kind": "mc",
+       "prompt": "Tongue between the teeth — which word?",
+       "options": [
+        "think",
+        "sink"
+       ],
+       "answer": 0,
+       "explanation": "tongue between teeth + air"
+      },
+      {
+       "n": 2,
+       "kind": "mc",
+       "prompt": "Teeth on the lower lip — which word starts with /v/?",
+       "options": [
+        "vest",
+        "west"
+       ],
+       "answer": 0,
+       "explanation": "bite the lower lip (west = rounded lips = /w/)"
+      },
+      {
+       "n": 3,
+       "kind": "mc",
+       "prompt": "Which stress is correct?",
+       "options": [
+        "PHOtograph",
+        "photoGRAPH"
+       ],
+       "answer": 0,
+       "explanation": "stress the first syllable"
+      },
+      {
+       "n": 4,
+       "kind": "fix",
+       "prompt": "Fix the error:",
+       "wrong": "methos",
+       "answer": "methods",
+       "explanation": "say METH-uds (th = tongue between teeth)"
+      },
+      {
+       "n": 5,
+       "kind": "fix",
+       "prompt": "Fix the error:",
+       "wrong": "regrading",
+       "answer": "regarding",
+       "explanation": "re-GARD-ing (means \"about\", not \"grading again\")"
+      },
+      {
+       "n": 6,
+       "kind": "mc",
+       "prompt": "No extra vowel at the start — which is correct?",
+       "options": [
+        "school",
+        "iskool"
+       ],
+       "answer": 0,
+       "explanation": "build it backwards: ool → skool → school"
+      },
+      {
+       "n": 7,
+       "kind": "mc",
+       "prompt": "Which is polite on a call?",
+       "options": [
+        "\"Send me the files.\"",
+        "\"Could you please send me the files?\""
+       ],
+       "answer": 1,
+       "explanation": "commands sound rude; \"Could you please…\" is the professional default"
+      },
+      {
+       "n": 8,
+       "kind": "mc",
+       "prompt": "Stretch the vowel with a glide — which is correct?",
+       "options": [
+        "day",
+        "de"
+       ],
+       "answer": 0,
+       "explanation": "hold it: daaaay, feel the glide"
+      },
+      {
+       "n": 9,
+       "kind": "fix",
+       "prompt": "Fix the error:",
+       "wrong": "gona",
+       "answer": "gonna",
+       "explanation": "(speech) / going to (writing) — never \"gona\" to a client"
+      },
+      {
+       "n": 10,
+       "kind": "mc",
+       "prompt": "A statement with FALLING pitch at the end sounds…",
+       "options": [
+        "confident",
+        "unsure"
+       ],
+       "answer": 0,
+       "explanation": "falling pitch = certain; rising pitch on statements sounds unsure"
+      }
+     ],
+     "xp": 100,
+     "rule": "8/10 to move on. Answer first, then learn from the misses."
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "pronunciation-checkpoint",
+   "title": "Checkpoint",
+   "minutes": 10,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": "Can-do statements",
+     "body": "- [ ] A listener can distinguish my thin/tin, very/wary, west/vest pairs\n- [ ] I never insert vowels into clusters in drills (school, station, project)\n- [ ] I mark stress on every new vocabulary word\n- [ ] My 5 core call sentences have falling intonation on statements, rising on yes/no questions\n- [ ] I can shadow a 3-minute clip staying within 1 second of the speaker",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Mini-test",
+     "body": "Record the 5 core call sentences + Row A minimal pairs. Send the audio to your AI tutor (or a Tandem partner from B1 onward) with one question: \"Which words were unclear?\" Their answer is your next drill list.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Re-entry note",
+     "body": "Pronunciation decays without maintenance (research: gains fade in ~3 weeks without practice). Back after a break? One week of Drill 3.1 rows + 10 min daily shadowing before anything else.\n\n🗣️ **Badge earned: Clear Speaker** — you are now intelligible on purpose, not by luck.\n\n---",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "speaking-task",
+     "id": "pronunciation-39",
+     "title": "Checkpoint mini-test",
+     "prompt": "Record the 5 core call sentences + Row A minimal pairs. Send the audio to your AI tutor (or a Tandem partner from B1 onward) with one question: \"Which words were unclear?\" Their answer is your next drill list.\n\nRe-entry note: Pronunciation decays without maintenance (research: gains fade in ~3 weeks without practice). Back after a break? One week of Drill 3.1 rows + 10 min daily shadowing before anything else.\n\n🗣️ Badge earned: Clear Speaker — you are now intelligible on purpose, not by luck.\n\n---",
+     "seconds": 120,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "xp": 30
+    }
+   ],
+   "xp": 38
+  }
+ ]
+}

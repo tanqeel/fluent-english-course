@@ -1,0 +1,165 @@
+{
+ "badges": [
+  {
+   "check": "lessons_done >= 1",
+   "desc": "Finish your very first lesson.",
+   "icon": "🌱",
+   "id": "first-steps",
+   "name": "First Steps"
+  },
+  {
+   "check": "streak >= 3",
+   "desc": "Keep a 3-day streak.",
+   "icon": "🔥",
+   "id": "on-fire-3",
+   "name": "Warming Up"
+  },
+  {
+   "check": "streak >= 7",
+   "desc": "Keep a 7-day streak.",
+   "icon": "🚀",
+   "id": "on-fire-7",
+   "name": "One Week Strong"
+  },
+  {
+   "check": "streak >= 30",
+   "desc": "Keep a 30-day streak.",
+   "icon": "⚡",
+   "id": "on-fire-30",
+   "name": "Unstoppable"
+  },
+  {
+   "check": "xp >= 500",
+   "desc": "Earn 500 total XP.",
+   "icon": "💎",
+   "id": "xp-500",
+   "name": "Point Collector"
+  },
+  {
+   "check": "xp >= 2000",
+   "desc": "Earn 2,000 total XP.",
+   "icon": "🏆",
+   "id": "xp-2000",
+   "name": "XP Machine"
+  },
+  {
+   "check": "drills_fix_sentence >= 10",
+   "desc": "Fix 10 broken sentences.",
+   "icon": "🔍",
+   "id": "sharp-eyes",
+   "name": "Sharp Eyes"
+  },
+  {
+   "check": "quiz_80 == true",
+   "desc": "Score 80%+ on any timed quiz.",
+   "icon": "🎯",
+   "id": "quiz-master",
+   "name": "Quiz Master"
+  },
+  {
+   "check": "shadowing_done >= 5",
+   "desc": "Complete 5 shadowing reps.",
+   "icon": "🎙️",
+   "id": "echo",
+   "name": "Echo"
+  },
+  {
+   "check": "speaking_done >= 3",
+   "desc": "Finish 3 speaking tasks.",
+   "icon": "🗣️",
+   "id": "voice-up",
+   "name": "Voice Up"
+  },
+  {
+   "check": "error_reviews >= 10",
+   "desc": "Review 10 cards from your error log.",
+   "icon": "🧠",
+   "id": "mistake-hunter",
+   "name": "Mistake Hunter"
+  },
+  {
+   "check": "srs_reviews >= 25",
+   "desc": "Review 25 SRS flashcards.",
+   "icon": "🗂️",
+   "id": "memory-keeper",
+   "name": "Memory Keeper"
+  },
+  {
+   "check": "comebacks >= 1",
+   "desc": "Restart your streak after a break. No shame — that's the hard part.",
+   "icon": "💪",
+   "id": "comeback",
+   "name": "Comeback"
+  },
+  {
+   "check": "module_complete == true",
+   "desc": "Finish every lesson in any module.",
+   "icon": "🧱",
+   "id": "module-complete",
+   "name": "Module Crusher"
+  },
+  {
+   "check": "late_study == true",
+   "desc": "Study after 10 PM. Hostel grind counts.",
+   "icon": "🦉",
+   "id": "night-owl",
+   "name": "Night Owl"
+  },
+  {
+   "id": "placed-planned",
+   "name": "Placed & Planned",
+   "icon": "🧭",
+   "desc": "Finish the placement test and know your level.",
+   "check": "placement_done == true"
+  },
+  {
+   "id": "habit-locked",
+   "name": "Habit Locked",
+   "icon": "🔒",
+   "desc": "Keep a 21-day streak — the habit is yours now.",
+   "check": "streak >= 21"
+  },
+  {
+   "id": "article-ace",
+   "name": "Article Ace",
+   "icon": "🅰️",
+   "desc": "Complete the Accuracy module — articles & prepositions mastered.",
+   "check": "accuracy_done == true"
+  },
+  {
+   "id": "clear-speaker",
+   "name": "Clear Speaker",
+   "icon": "🔊",
+   "desc": "Complete the Pronunciation module — your mouth knows the moves.",
+   "check": "pronunciation_done == true"
+  },
+  {
+   "id": "flow-state",
+   "name": "Flow State",
+   "icon": "🌊",
+   "desc": "Complete the Fluency module — stop translating, start talking.",
+   "check": "fluency_done == true"
+  },
+  {
+   "id": "call-ready",
+   "name": "Call-Ready",
+   "icon": "📞",
+   "desc": "Complete the Client Communication module — ready for real calls.",
+   "check": "client_communication_done == true"
+  },
+  {
+   "id": "brand-voice",
+   "name": "Brand Voice",
+   "icon": "🎤",
+   "desc": "Complete the Self-Presentation module — introduce yourself with confidence.",
+   "check": "self_presentation_done == true"
+  },
+  {
+   "id": "closer",
+   "name": "Closer",
+   "icon": "🤝",
+   "desc": "Complete the Sales module — the full 90-day path is done.",
+   "check": "sales_done == true"
+  }
+ ]
+}

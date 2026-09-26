@@ -1,0 +1,294 @@
+{
+ "id": "sales",
+ "title": "Sales",
+ "tagline": "Selling Yourself, Your Services, Your Time",
+ "icon": "💼",
+ "color": "#fb923c",
+ "description": "Everything before this was preparation. Sales is where English becomes income. And here's the reframe: selling isn't convincing people to buy things they don't need. It's",
+ "lessons": [
+  {
+   "id": "sales-l1",
+   "title": "The sales mindset (for people who hate \"selling\")",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Everything before this was preparation. Sales is where English becomes income. And here's the reframe: selling isn't convincing people to buy things they don't need. It's **helping a client see that their problem is solvable, by you, at a fair price.** The freelancers who starve aren't the unskilled ones — they're the ones who can't say their price out loud without apologizing.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Three beliefs to install:\n\n1. **You're not begging; you're offering.** Begging: *\"Please give me a chance sir.\"* Offering: *\"I can solve this problem. Here's the price. Interested?\"* Same person, different posture. Clients buy from the second one.\n2. **Price is information, not a confession.** Say your price the way you'd say the time: flat, calm, no apology. *\"The Standard package is $150.\"* Full stop. The moment you add *\"but we can negotiate...\"* unprompted, you've told them the price was fake.\n3. **\"No\" is data, not rejection.** Every \"too expensive\" teaches you about your positioning. The response is never panic — it's Lesson 7.3.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "id": "sales-l1-neg",
+     "type": "drill",
+     "engine": "shadowing",
+     "title": "Negotiation lines (audio)",
+     "text": "Shadow confident negotiation lines",
+     "audio": "audio/06-negotiation.mp3",
+     "tip": "Say them until they feel like your own words.",
+     "xp": 15
+    },
+    {
+     "type": "drill",
+     "engine": "journal",
+     "id": "sales-61",
+     "prompt": "**Spot the desperation**\n\nFind the 6 sales mistakes in this message (then rewrite it):\n\"Dear Sir, I am very interested in your project sir. I am highly skilled and can do any work at cheap rates. My price is $50 but I can do $30 for you sir, just give me one chance please. I guarantee 100% satisfaction. Waiting for your kind reply.\"\nMistakes: (1) \"Dear Sir\" + \"sir\" ×3 — begging tone; (2) \"highly skilled\" — unverifiable; (3) \"any work\" — no one believes it; (4) \"cheap rates\" + instant self-discount $50→$30 — prices are fiction; (5) \"100% guarantee\" — client-safety violation; (6) no specific offer, no proof, no next step.",
+     "xp": 15
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "sales-l2",
+   "title": "Scope → price: the chain that protects you",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Amateurs discuss; professionals scope. The chain, in order — never skip a link:\n\n1. **Scope in one paragraph:** what IS included, what is NOT. No \"etc.\", no \"full solution\", no \"complete package\". Concrete nouns only.\n2. **Tiered pricing (3 tiers, fixed prices):** Basic / Standard / Premium. The middle tier is the one you want them to pick — make it the obvious value. Never hourly as a beginner (clients fear open-ended meters).\n3. **Say it once, then silence.** After stating the price, stop talking. The silence feels eternal; it's usually 5 seconds. Whoever speaks first loses positioning.\n\n**Model scope + tiers** (adapt to your real offer):",
+     "example": "Scope: clean 12 months of sales Excel data; build one Streamlit dashboard (sales by product, city, month + top customers); deploy to a browser link. Not included: POS connection, mobile app, data entry. One revision round included.\nBasic — $80: dashboard from your Excel file, 1 revision round. Standard — $150 (most popular): everything in Basic + monthly auto-update setup + 2 revision rounds. Premium — $250: everything in Standard + 30-min training call + 30 days support.",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "shadowing",
+     "id": "sales-62",
+     "title": "The price conversation, aloud",
+     "text": "Read both parts aloud, twice — once as the client (feel their hesitation), once as you (practice the calm):\nClient: \"So... what's the damage?\"\nYou: \"For the Standard package — dashboard, auto-updates, two revision rounds, 30 days of support — it's $150 fixed. 50% to start, 50% on delivery.\"\n(silence — count to 5 in your head, don't fill it)\nClient: \"Hmm, that's more than I expected.\"\nYou: \"I hear you. What were you hoping to stay around?\"\nClient: \"Maybe $80?\"\nYou: \"Got it. At $80 I can do the Basic — dashboard from your Excel file, one revision round. The auto-update setup and the extra revision round are what make the Standard $150. Which fits better — or want me to walk through the difference once more?\"\nNote the moves: price stated flat, silence held, budget asked (not assumed), smaller",
+     "audio": "audio/06-negotiation.mp3",
+     "tip": "Shadow 0.5–1 sec behind the speaker. Copy the music, not just the words.",
+     "xp": 15
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "sales-l3",
+   "title": "Handling \"too expensive\" (the script)",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "This is the moment most beginners lose. The script:",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "1. **Agree, don't defend:** *\"Totally understand — budgets matter.\"* (Never argue with their budget. It's real to them.)\n2. **Restate the value:** *\"At $150 you get [X, Y, Z + support].\"* (Remind them what the number buys. Briefly.)\n3. **Offer a smaller scope — never a smaller price for the same work:** *\"If $60 is the budget, I can do a smaller version: [reduced scope] for $70.\"* (Discounting the same work teaches them your prices are fiction.)\n4. **Name the risk of cheap, not the competitor:** *\"What I'd avoid is promising the full thing for $60 — that's how projects end up half-done.\"* (Never badmouth the $60 guy. Make cheap sound risky, not him sound bad.)\n5. **Hand back the choice:** *\"Want the smaller scope, or should I walk you through what the full one includes?\"*",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "If they still say no",
+     "body": "*\"No problem at all — if things change, I'm here. Want me to send over the smaller-scope details anyway, in case it's useful later?\"* Leave the door open. A graceful no often becomes a yes in 3 months.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "speaking-task",
+     "id": "sales-63",
+     "title": "Say your price on a call",
+     "prompt": "60 seconds of planning (3 bullets: scope recap, price, payment terms). Then 60 seconds of speaking: deliver your price for Sana's project as if she's on the call. Record it. Listen: did you apologize? Rush? Add \"but we can negotiate\"? Redo until the price lands flat and calm.",
+     "seconds": 60,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "xp": 25
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "sales-l4",
+   "title": "Selling your time (boundaries are the product)",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Your time is inventory. Every \"yes\" to free work is stock given away:\n\n- **Free samples:** never. Paid pilot instead (Module 5, scenario 6).\n- **\"One small change\" #5:** priced (Module 5, scenario 9).\n- **Cousin/friend discounts:** same quality, same price — or a smaller scope. A \"family rate\" teaches your whole network that your work is cheap.\n- **Urgency pricing:** *\"I can rush this — delivery in 3 days instead of 7 — with a 25% rush fee. Or standard timeline at the quoted price.\"* Urgency is a premium feature, not a favor.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The sentence that saves freelancers",
+     "body": "*\"Happy to do it — since that's outside our agreed scope, it's $X extra. Want me to add it?\"* Friendly. Firm. Final.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Ten things clients actually say, and the one-line move for each. Memorize the *moves*, not the scripts.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Client says · Your move\n\"Too expensive.\" · Agree → restate value → offer smaller scope (never a discount on the same work)\n\"Another guy is cheaper.\" · \"What I'd avoid is promising the full thing for $60 — that's how projects end up half-done.\"\n\"Can you do it faster?\" · \"I can rush it — 25% rush fee for 3-day delivery, or standard timeline at the quoted price.\"\n\"Just do a free sample first.\" · \"I don't do free samples — but I offer a $30 paid pilot, deducted from the full quote if you continue.\"\n\"I'll think about it.\" · \"Of course. Is it the price, the timeline, or something else you're unsure about?\" (diagnose, don't wait)\n\"Can you also add [big thing]?\" · \"Happy to — that's outside our scope, so it's $X extra. Or phase 2 next week. Which works better?\"\n\"My cousin wants it cheaper.\" · \"Same quality, same price — or I can scope a smaller version for him. I don't do family discounts on the same work.\"\n\"Guarantee the results?\" · \"I guarantee the work — [concrete deliverables]. What I can't guarantee is [outcome], because that depends on [their data/market]. Anyone who guarantees that is guessing.\"\n\"Why should I trust you?\" · \"Fair question. Here's a demo of real work: [link]. And we start with a small paid pilot — low risk for both of us.\"\nGoes silent for a week · One nudge (day 3) → clean pause (day 10) → stop chasing. Chasing destroys positioning.",
+     "example": "",
+     "tip": ""
+    }
+   ],
+   "xp": 30
+  },
+  {
+   "id": "sales-quiz",
+   "title": "Module quiz — 10 questions",
+   "minutes": 10,
+   "steps": [
+    {
+     "type": "drill",
+     "engine": "timed-quiz",
+     "id": "sales-64",
+     "title": "Quiz — Sales",
+     "seconds": 300,
+     "questions": [
+      {
+       "n": 1,
+       "kind": "self",
+       "prompt": "\"Dear sir, I am very interested in your job.\" (proposal opener)",
+       "sample": "Sample: \"Hi [Name] — I read your brief carefully, and the part about [specific detail] stood out…\"",
+       "explanation": "Sample: \"Hi [Name] — I read your brief carefully, and the part about [specific detail] stood out…\""
+      },
+      {
+       "n": 2,
+       "kind": "self",
+       "prompt": "Client: \"Too expensive.\"\n   You: \"___\"",
+       "sample": "Sample: \"I understand. Which part feels high? I can adjust the scope — here's a lighter version at your budget.\" (diagnose before discounting)",
+       "explanation": "Sample: \"I understand. Which part feels high? I can adjust the scope — here's a lighter version at your budget.\" (diagnose before discounting)"
+      },
+      {
+       "n": 3,
+       "kind": "mc",
+       "prompt": "\"I guarantee first-page ranking.\" Verdict?",
+       "options": [
+        "Strong selling.",
+        "DELETE — never guarantee results you don't control."
+       ],
+       "answer": 1,
+       "explanation": "DELETE — rewrite: \"I'll follow proven SEO practices and report progress weekly.\""
+      },
+      {
+       "n": 4,
+       "kind": "mc",
+       "prompt": "\"I have 5 years of experience.\" (untrue). Verdict?",
+       "options": [
+        "Fine if it wins the job.",
+        "DELETE — never fake experience; rewrite honestly."
+       ],
+       "answer": 1,
+       "explanation": "DELETE — rewrite honestly: \"I'm early-career with strong training in X — here's sample work.\""
+      },
+      {
+       "n": 5,
+       "kind": "self",
+       "prompt": "Client: \"Can you do a free sample?\"\n   You: \"___\"",
+       "sample": "Sample: \"I don't do free custom work, but I can show you similar past work — or we start with a small paid milestone.\"",
+       "explanation": "Sample: \"I don't do free custom work, but I can show you similar past work — or we start with a small paid milestone.\""
+      },
+      {
+       "n": 6,
+       "kind": "self",
+       "prompt": "A client went quiet 3 days after your proposal. Write the follow-up (3 lines max).",
+       "sample": "Sample: \"Hi [Name] — just checking in on the proposal. Happy to answer any questions or adjust the scope.\"",
+       "explanation": "Sample: \"Hi [Name] — just checking in on the proposal. Happy to answer any questions or adjust the scope.\""
+      },
+      {
+       "n": 7,
+       "kind": "mc",
+       "prompt": "Best trial close after presenting the price?",
+       "options": [
+        "\"So… do you want it?\"",
+        "\"Does that scope and timeline work for you? If yes, I can start tomorrow.\""
+       ],
+       "answer": 1,
+       "explanation": "price always rides with scope, and it ends on a clear next step"
+      },
+      {
+       "n": 8,
+       "kind": "self",
+       "prompt": "\"Please give me this job, I need money.\"",
+       "sample": "Sample: \"I'd like to earn this project — here's how I'd approach it…\" (clients buy outcomes, not your needs)",
+       "explanation": "Sample: \"I'd like to earn this project — here's how I'd approach it…\" (clients buy outcomes, not your needs)"
+      },
+      {
+       "n": 9,
+       "kind": "self",
+       "prompt": "After delivering great work, ask for a review (2 lines).",
+       "sample": "Sample: \"Glad you're happy with it! A short review would mean a lot — it helps me win more work like this.\"",
+       "explanation": "Sample: \"Glad you're happy with it! A short review would mean a lot — it helps me win more work like this.\""
+      },
+      {
+       "n": 10,
+       "kind": "mc",
+       "prompt": "Which line is an automatic client-safety fail?",
+       "options": [
+        "\"I guarantee #1 ranking in a month.\"",
+        "\"I reply within a few hours and deliver on agreed dates.\"",
+        "\"Here's a sample of similar work I did.\""
+       ],
+       "answer": 0,
+       "explanation": "guarantees are an instant client-safety fail, no matter how good the English is"
+      }
+     ],
+     "xp": 100,
+     "rule": "8/10 to move on. Answer first, then learn from the misses."
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "sales-checkpoint",
+   "title": "Checkpoint",
+   "minutes": 10,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": "Can-do statements",
+     "body": "- [ ] I can state my price flatly, without apology or unprompted discounting\n- [ ] I can run the full \"too expensive\" script: agree → value → smaller scope → risk of cheap → choice\n- [ ] I can write scope + 3-tier pricing for any small data project\n- [ ] I hold the silence after stating a price\n- [ ] I never do free work, never badmouth competitors, never guarantee results",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Mini-test (the final exam)",
+     "body": "Run a full 15-minute mock sales call with your AI tutor as a budget-conscious client: discovery → scope → price → handle \"too expensive\" → close with a next step. Record it. This is the single artifact that proves the course worked. Compare it against your Module 0 placement recording — play 60 seconds of each back-to-back. You'll hear the 90 days.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Re-entry note",
+     "body": "Sales is a practiced reflex. One mock price conversation per week (Drill 7.3) keeps it sharp forever.\n\n💰 **Badge earned: Closer** — all 8 badges collected. You are client-ready.\n\n---",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "speaking-task",
+     "id": "sales-65",
+     "title": "Checkpoint mini-test",
+     "prompt": "Run a full 15-minute mock sales call with your AI tutor as a budget-conscious client: discovery → scope → price → handle \"too expensive\" → close with a next step. Record it. This is the single artifact that proves the course worked. Compare it against your Module 0 placement recording — play 60 seconds of each back-to-back. You'll hear the 90 days.\n\nRe-entry note: Sales is a practiced reflex. One mock price conversation per week (Drill 7.3) keeps it sharp forever.\n\n💰 Badge earned: Closer — all 8 badges collected. You are client-ready.\n\n---",
+     "seconds": 120,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "xp": 30
+    }
+   ],
+   "xp": 38
+  }
+ ]
+}

@@ -1,0 +1,378 @@
+{
+ "id": "client-communication",
+ "title": "Client Communication",
+ "tagline": "Discovery Calls, Emails & Hard Conversations",
+ "icon": "🤝",
+ "color": "#a78bfa",
+ "description": "This is the module that earns money. A freelancer with B1 English and excellent client communication beats a C1 freelancer who goes silent when there's a delay. Clients d",
+ "lessons": [
+  {
+   "id": "client-communication-l1",
+   "title": "The discovery call (your 15-minute exam)",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "This is the module that earns money. A freelancer with B1 English and excellent client communication beats a C1 freelancer who goes silent when there's a delay. Clients don't need perfect grammar — they need four things: clarity, confidence, structure, and honesty. Those are the **4 lenses** you'll score everything against in this module: **Clarity** (understood first read?), **Tone** (confident, respectful — never begging, never arrogant?), **Structure** (organized, scannable?), **Client-safety** (zero promises you can't keep, zero fake claims?).",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "The honesty contract (pinned to this module)",
+     "body": "You are a 5th-semester data science student building real skill. Every script here teaches you to sound confident *about what you can actually do* — never to fake what you can't. If any drill tempts you to invent experience, you've misunderstood the drill.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "A discovery call has 5 phases. Learn the shape, and no call can surprise you:",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "1. **Open (2 min):** *\"Hi [Name], thanks for making time. Before we dive in — how did you hear about me?\"* (small talk + context)\n2. **Diagnose (6 min):** Ask the 5 scoping questions: *What problem should this solve? What data do you have, and where is it? Who'll use this daily? What does success look like — in numbers? What's your deadline and budget range?*\n3. **Reflect (2 min):** *\"So if I understood right — you need [X], the data is in [Y], and success means [Z]. Correct?\"* (This one sentence prevents 80% of misunderstandings.)\n4. **Propose next step (3 min):** *\"I'll send a fixed quote and timeline within 24 hours. To do that I just need [one sample file / one answer]. Fair?\"* Never price on the call.\n5. **Close (2 min):** *\"Great — I'll send that by [time] tomorrow. Anything else I should know?\"*",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "**Phrases that buy you time on a live call** (memorize as chunks): *\"That's a good question — let me think for a second.\"* / *\"Just to make sure I understood...\"* / *\"Could you say a bit more about that?\"* / *\"Let me note that down.\"*",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Read it twice: once for the *structure* (the 5 phases), once for the *language* (chunks, intonation, the moves). Then Drill 5.4 has you perform it.",
+     "example": "You: \"Hi Sana, thanks for making time. Before we dive in — how's business at the moment?\" (Phase 1: open. Warm, human, 30 seconds.)\nSana: \"Busy, alhamdulillah. But I can't tell which branch is actually profitable.\"\nYou: \"That's exactly the kind of problem I work on. So I can point you in the right direction — can I ask a few quick questions about your setup?\" (Permission to diagnose. Never interrogate without it.)\nSana: \"Sure.\"\nYou: \"First — where is your sales data right now? Excel, a POS system, somewhere else?\" (Q1: data.)\nSana: \"Excel files. Two branches, separate files.\"\nYou: \"Got it. And who would actually open this dashboard day to day — you, your managers?\" (Q2: user.)\nSana: \"Me and my brother.\"\nYou: \"Perfect. If this works well — what decision would it help you make? Like, what would you DO differently?\" (Q3: success, in action terms.)\nSana: \"I'd know which products to stock more in which branch.\"\nYou: \"Clear. And timing — when would you need this?\" (Q4: deadline.) \"And roughly, what budget range did you have in mind?\" (Q5: budget. Asked casually, at the end, after value is established.)\nSana: \"Ten days max. Budget... maybe $100–150?\"\nYou: \"Okay. So if I understood right — two Excel files, two branches, and you need to see which branch and which products perform best, so you can stock smarter. In about ten days. Correct?\" (Phase 3: reflect. The most important 20 seconds of the call.)\nSana: \"Exactly.\"\nYou: \"I can do that. I'll send you a fixed quote and timeline within 24 hours — I just need one thing: a sample of one Excel file, so I quote accurately. Can you share that today?\" (Phase 4: next step. Concrete, small, with a reason.)\nSana: \"Yes, I'll send it this evening.\"\nYou: \"Great — I'll send the quote by this time tomorrow. Anything else I should know before I look at the file?\" (Phase 5: close. Always ask — surprises after the call are expensive.)",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "What to steal",
+     "body": "the permission question before diagnosing · budget asked LAST · the reflect-back sentence · the tiny concrete ask (one sample file) · the 24-hour commitment. This call works at A2 grammar because the *structure* carries it.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "id": "client-communication-l1-call",
+     "type": "drill",
+     "engine": "shadowing",
+     "title": "Discovery call — listen & shadow (audio)",
+     "text": "Shadow a real discovery call opening",
+     "audio": "audio/03-discovery-call.mp3",
+     "tip": "Notice the questions the freelancer asks.",
+     "xp": 15
+    },
+    {
+     "type": "drill",
+     "engine": "speaking-task",
+     "id": "client-communication-46",
+     "title": "Mock discovery call",
+     "prompt": "Your AI tutor plays a client with this brief: \"Sana owns a clothing shop in Multan with 2 branches. Sales are in Excel. She wants to know which branch and products perform best. Budget-conscious. Needs it in 10 days.\" Run the full 5-phase call (15 min, voice mode). Rules: ask the 5 scoping questions, reflect back, never price on the call. After: AI gives you an error report card on the 4 lenses. Next day, re-run the same call (task repetition).",
+     "seconds": 900,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "xp": 25
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "client-communication-l2",
+   "title": "Client writing: the 5 templates",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Every client message: one clear point, one clear next step, under 150 words. Fill the [brackets], then read once before sending. Never send with brackets still in it.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "T1 — Reply to an inquiry",
+     "body": "*Hi [Name], thanks for reaching out — yes, I can help with that. To give you an accurate quote, I need to know: (1) Where is your data now? (2) What decisions should this help you make? (3) When do you need it? Once I have this, I'll send a fixed quote and timeline within 24 hours. Best, Tanqeel*",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "T2 — Status update (Done / Doing / Blocked)",
+     "body": "*[Project] — [date] update. Done: [2–3 items]. This week: [2–3 items]. Blocked: [blocker + what you need, or \"nothing\"]. [On track for Friday / new date].*",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "T3 — Delay notice (send the moment you know, never after)",
+     "body": "*Hi [Name], quick heads-up: [deliverable] will be ready [new date] instead of [old date] — [one short reason]. Everything else is on track. I'll send [a preview] by [earlier date] so you can see progress. Sorry for the shift. — Tanqeel*",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "T4 — Delivery / handover",
+     "body": "*Done! Here's [deliverable]: [link]. How to use it: [2–3 plain lines]. Walkthrough video: [link]. Support: [e.g. 14 days — any error on my side fixed free]. If anything looks off, reply here and I'll sort it.*",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "T5 — Kickoff (scope + timeline + payment — send before starting)",
+     "body": "*Here's the plan so we're aligned. Delivering: [concrete list]. Not included: [exclusions]. Timeline: [start] → [delivery], [1–2] revision rounds. Price: [fixed], [50% upfront, 50% on delivery]. Updates every [Mon/Thu]. Reply \"go\" and I'll start [date].*",
+     "example": "",
+     "tip": "Usage notes: proposals go out within 24 hours — speed is professionalism. Status updates go out even with \"nothing new\" (\"still on track, next milestone Thursday\") — silence makes clients nervous."
+    },
+    {
+     "id": "client-communication-l2-phrases",
+     "type": "drill",
+     "engine": "shadowing",
+     "title": "Client phrases (audio)",
+     "text": "Shadow the phrases clients actually say",
+     "audio": "audio/04-client-phrases.mp3",
+     "tip": "",
+     "xp": 15
+    },
+    {
+     "type": "drill",
+     "engine": "journal",
+     "id": "client-communication-47",
+     "prompt": "**The week's emails**\n\nFill all five templates (T1–T5) for Sana's project: inquiry reply → kickoff → status update → delay notice (invent a 2-day slip) → delivery. Each under 150 words. Then score each on the 4 lenses, 1–5. Any lens below 4 = rewrite.",
+     "xp": 15
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "client-communication-l3",
+   "title": "The hard conversations (saying no, scope creep, \"too expensive\")",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Ten scenarios, adapted from real freelance life. For each: read the scenario, cover the model, write yours, then compare. Score yourself on the 4 lenses.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "1. **The vague client** — *\"I want AI for my business. How much?\"* Don't price blind. → Ask the 5 scoping questions; promise a fixed quote within 24 hours.\n2. **Scope creep** — *\"Also add a mobile app? Same price, no?\"* Don't say yes to stay liked; don't snap. → *\"Happy to add it — it's outside our agreed scope, so I'd quote it separately at $X. Or we ship the dashboard first and add the app as phase 2. Which works better?\"*\n3. **Late delivery (your fault)** — *\"Is it ready?\"* Don't go silent; don't write an excuse paragraph. → Own it, one short reason, new date, show progress: *\"Not yet — honest update: data cleaning took longer than expected. Ready Thursday (2 days late, my fault). Preview Wednesday evening.\"*\n4. **\"Too expensive\"** — *\"Another guy will do it for $60.\"* Don't race to the bottom; don't insult the competitor. → *\"Totally understand. At $150 you get [X, Y, Z + 30 days support]. If $60 is the budget, I can do a smaller version for $70 — [reduced scope]. What I'd avoid is promising the full thing for $60; that's how projects end up half-done.\"*\n5. **Bad review threat** — *\"Do this free or I leave 1 star.\"* Don't cave; don't threaten back. → *\"I'll fix anything in our agreed scope free, today. The extra work is outside scope, so I can't do it free — but I can quote it fairly. Or we part cleanly: I hand over everything done so far. Your call.\"*\n6. **Free-work ask** — *\"Just do a small sample first.\"* Don't work free hoping. → *\"I don't do free samples — but I offer a small paid pilot ($30): [tiny scoped deliverable]. If you continue, I deduct the $30 from the quote.\"*\n7. **Client disappears** — 10 days of silence after you sent the draft. Don't send 5 messages; don't go angry. → Day 3: one polite nudge with a clear ask. Day 10: *\"I'll pause here and keep your files ready — one message and we continue. No rush.\"* Then stop chasing.\n8. **\"Can you do X?\" (you can't)** — Don't fake it. → *\"That's outside what I do — I won't pretend otherwise, because a bad result helps neither of us. What I can do is [your real offer]. Want me to focus on what I do best?\"*\n9. **Revision #5** — Endless \"one more small change.\" Don't suffer silently; don't snap. → *\"Happy to keep refining — our agreement included 2 rounds and we're on round 5. I'll do this one; further rounds are $X each, or we bundle the rest into one final round for $Y.\"*\n10. **The micromanager** — Daily *\"update?\"* messages. Don't get visibly annoyed. → Prevent it at kickoff: *\"I'll send a short update every Monday and Thursday — done, doing, next. Anything urgent, I'll message immediately. That way you always know where things stand.\"*",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Red lines (automatic client-safety failure)",
+     "body": "invented experience · guarantees you can't keep · badmouthing competitors · threatening the client · free work \"for exposure\" · sharing anyone's private data.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "journal",
+     "id": "client-communication-48",
+     "prompt": "**Hard-conversation gauntlet**\n\nWrite responses to all three, then compare with the models in Lesson 5.3:\n1. Sana: \"Can you also predict next month's sales? Same price, right?\" (Price the add-on; be honest that predictions are estimates, not guarantees.)\n2. You're 2 days behind. Write the delay email — send it BEFORE the deadline, not after.\n3. Sana's cousin wants the same dashboard \"cheaper, family rate.\" Hold your pricing with grace.",
+     "xp": 15
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "client-communication-l4",
+   "title": "The 30-question bank (your call-rehearsal arsenal)",
+   "minutes": 12,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "Rehearse answers to these with the 1-minute planning rule (Module 4). The first 10 are the highest-frequency on real calls:",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": null,
+     "body": "1. Tell me about yourself. 2. What do you do? 3. Tell me about a project you worked on. 4. How would you approach my project? 5. How long will it take? 6. What do you charge? 7. Why should I hire you over someone cheaper? 8. What's your process? 9. How do we communicate during the project? 10. What do you need from me to start? 11. Have you worked with [my industry] before? 12. What happens if there's a delay? 13. How many revisions are included? 14. Do you offer support after delivery? 15. Can you show me an example of your work? 16. What tools do you use? 17. How do you handle my data — is it private? 18. What if I don't like the first draft? 19. Can you also do [something outside your skill]? 20. Do you work alone? 21. What's your availability this month? 22. How do payments work? 23. What if the scope changes mid-project? 24. Can you predict/forecast [X]? 25. How accurate will the results be? (never promise 100% — client-safety) 26. Can you train me/my team to use this? 27. What does \"done\" look like for this project? 28. Why did you choose freelancing? 29. Where are you based? What's your timezone? 30. One last thing — why should I trust you with this?",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Model answers — the top 10, answered honestly (adapt to your real facts)",
+     "body": "1. *\"Tell me about yourself.\"* → \"I'm Tanqeel, a data science student in my 5th semester. Before my degree I spent three years as a sales supervisor, so I understand the business side of data. Right now I'm building real projects in Python — most recently a sales dashboard analyzing 6,000 retail orders — and I'm taking on small freelance projects in sales data analysis.\"\n2. *\"What do you do?\"* → \"I turn messy Excel sales data into clear reports and dashboards, so shop owners can see what's selling, where, and to whom — without building reports by hand.\"\n3. *\"Tell me about a project you worked on.\"* → \"I built a sales dashboard from 6,000 retail orders. The data was messy — duplicate rows, missing dates — so I cleaned it in Python, then built charts for sales by product, city, and month, plus a top-customers list. It runs in the browser from a single link. I can show you the demo.\"\n4. *\"How would you approach my project?\"* → \"First, I'd look at a sample of your data — that tells me what's possible. Then I'd clean it, build a first draft, and send it for your review. We'd do one or two revision rounds, then I deliver the final version with a short walkthrough video.\"\n5. *\"How long will it take?\"* → \"For a dashboard like this, about one week from when I have the data — including one revision round. I'll confirm the exact date after I see the file.\"\n6. *\"What do you charge?\"* → \"I price by project, not by hour. For this scope, the Standard package is $150 — dashboard, auto-update setup, two revision rounds, and 30 days of support. I can also scope a smaller version if the budget is tight.\"\n7. *\"Why should I hire you over someone cheaper?\"* → \"Honest answer: if budget is the only factor, the cheaper option might win. What I offer is reliability — clear weekly updates, a fixed quote with no surprises, and support after delivery. Here's a demo of my actual work so you can judge the quality yourself: [link].\"\n8. *\"What's your process?\"* → \"Four steps: I review your data, send a fixed quote and timeline, build in weekly milestones with updates every Monday and Thursday, then deliver with a walkthrough video and 14 days of support.\"\n9. *\"How do we communicate?\"* → \"Short written updates every Monday and Thursday — done, doing, blocked. And I'm reachable by message for anything urgent. You'll never have to chase me for a status.\"\n10. *\"What do you need from me to start?\"* → \"Two things: a sample of your data file, so I quote accurately — and a 'go' on the kickoff plan I'll send, which lists exactly what's included, the timeline, and the price.\"",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Async video method",
+     "body": "record 60–90 second video answers to 2 questions per week, send to your AI tutor for feedback, re-record. This simulates video-call pressure (eye contact, pacing, fillers) with no live partner needed.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "shadowing",
+     "id": "client-communication-49",
+     "title": "Read it like a call",
+     "text": "Read this model exchange ALOUD, playing both parts. Exaggerate the tone — warm, unhurried, in control:\nClient: \"Your quote is $150. Another guy will do it for $60.\"\nYou: \"Totally understand — budgets matter. At $150 you get the dashboard, two revision rounds, and 30 days of support. If $60 is the budget, I can build a smaller version — one branch instead of two — for $70. What I'd avoid is promising the full thing for $60. That's how projects end up half-done. Want the smaller scope, or should I walk you through the full one?\"\nClient: \"Hmm. What's the smaller version missing, exactly?\"\nYou: \"Good question. The smaller version covers one branch and monthly totals. The full version covers both branches, product-level detail, and the auto-updating setup. Same quality, smaller map. Which match",
+     "audio": "audio/03-discovery-call.mp3",
+     "tip": "Shadow 0.5–1 sec behind the speaker. Copy the music, not just the words.",
+     "xp": 15
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "client-communication-quiz",
+   "title": "Module quiz — 10 questions",
+   "minutes": 10,
+   "steps": [
+    {
+     "type": "drill",
+     "engine": "timed-quiz",
+     "id": "client-communication-50",
+     "title": "Quiz — Client Communication",
+     "seconds": 300,
+     "questions": [
+      {
+       "n": 1,
+       "kind": "self",
+       "prompt": "\"Your budget too low, increase it.\"",
+       "sample": "Sample: \"Thanks for sharing your budget — for this scope my rate would be higher. Can we adjust the scope to fit?\"",
+       "explanation": "Sample: \"Thanks for sharing your budget — for this scope my rate would be higher. Can we adjust the scope to fit?\""
+      },
+      {
+       "n": 2,
+       "kind": "self",
+       "prompt": "Client: \"This isn't what I asked for.\"\n   You: \"___\"",
+       "sample": "Sample: \"I'm sorry about that. Can you point out exactly what needs to change? I'll revise it today.\" (apologize once, ask for specifics, promise speed)",
+       "explanation": "Sample: \"I'm sorry about that. Can you point out exactly what needs to change? I'll revise it today.\" (apologize once, ask for specifics, promise speed)"
+      },
+      {
+       "n": 3,
+       "kind": "mc",
+       "prompt": "A delay email must include…",
+       "options": [
+        "an excuse and someone to blame",
+        "early warning + honest reason + what you're doing now + a new date",
+        "silence until it's done"
+       ],
+       "answer": 1,
+       "explanation": "never hide a delay; always end on the new date"
+      },
+      {
+       "n": 4,
+       "kind": "self",
+       "prompt": "Write a subject line for a 2-day delay email.",
+       "sample": "Sample: \"Quick update on your project timeline\" / \"Revised delivery date: Thursday\" (never just \"Sorry\")",
+       "explanation": "Sample: \"Quick update on your project timeline\" / \"Revised delivery date: Thursday\" (never just \"Sorry\")"
+      },
+      {
+       "n": 5,
+       "kind": "mc",
+       "prompt": "Client: \"Can you also do the logo?\" (free extra work). Best reply?",
+       "options": [
+        "\"No.\"",
+        "\"I can do the logo too — that would add $X. Shall I include it?\"",
+        "\"OK, free.\""
+       ],
+       "answer": 1,
+       "explanation": "yes + price + easy yes/no"
+      },
+      {
+       "n": 6,
+       "kind": "self",
+       "prompt": "\"I don't know this, but I try.\"",
+       "sample": "Sample: \"I haven't done exactly this before, but here's how I'd approach it…\" (honest AND capable)",
+       "explanation": "Sample: \"I haven't done exactly this before, but here's how I'd approach it…\" (honest AND capable)"
+      },
+      {
+       "n": 7,
+       "kind": "self",
+       "prompt": "Ask for the advance payment, politely: \"___\"",
+       "sample": "Sample: \"Before I start, I take a 30% advance — I'll send the payment details with the agreement.\"",
+       "explanation": "Sample: \"Before I start, I take a 30% advance — I'll send the payment details with the agreement.\""
+      },
+      {
+       "n": 8,
+       "kind": "mc",
+       "prompt": "After a price disagreement, the professional closing line is…",
+       "options": [
+        "\"Fine, your loss.\"",
+        "\"Thanks for your time — think it over, and I'm here if you want to adjust the scope.\""
+       ],
+       "answer": 1,
+       "explanation": "door open, dignity intact"
+      },
+      {
+       "n": 9,
+       "kind": "self",
+       "prompt": "\"Send me details fast I start work.\"",
+       "sample": "Sample: \"Please send the details — I'll start as soon as I have them.\"",
+       "explanation": "Sample: \"Please send the details — I'll start as soon as I have them.\""
+      },
+      {
+       "n": 10,
+       "kind": "self",
+       "prompt": "End a first call warmly, in one line.\n---",
+       "sample": "Sample: \"Great speaking with you — I'll send the proposal tonight.\"",
+       "explanation": "Sample: \"Great speaking with you — I'll send the proposal tonight.\""
+      }
+     ],
+     "xp": 100,
+     "rule": "8/10 to move on. Answer first, then learn from the misses."
+    }
+   ],
+   "xp": 38
+  },
+  {
+   "id": "client-communication-checkpoint",
+   "title": "Checkpoint",
+   "minutes": 10,
+   "steps": [
+    {
+     "type": "teach",
+     "heading": "Can-do statements",
+     "body": "- [ ] I can run a 15-minute discovery call: open → 5 questions → reflect → next step → close\n- [ ] I can write inquiry replies, status updates, delay notices, and delivery emails under 150 words\n- [ ] I can handle scope creep, \"too expensive,\" and revision #5 without caving or snapping\n- [ ] I never price before scoping, never invent experience, never promise guarantees\n- [ ] I can answer 20 of the 30 bank questions with 1-minute planning",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Mini-test",
+     "body": "Record yourself handling Drill 5.4's dialogue as \"you\" (improvise the client's follow-ups). Then write the delay email for a real or imaginary 2-day slip. Score both on the 4 lenses.",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "teach",
+     "heading": "Re-entry note",
+     "body": "Client skills are the last to decay. Back after a break? Re-run Drill 5.1's mock call once — it's the fastest full-system check.\n\n📞 **Badge earned: Call-Ready** — you can now survive a real client conversation. Next: making them remember you.\n\n---",
+     "example": "",
+     "tip": ""
+    },
+    {
+     "type": "drill",
+     "engine": "speaking-task",
+     "id": "client-communication-51",
+     "title": "Checkpoint mini-test",
+     "prompt": "Record yourself handling Drill 5.4's dialogue as \"you\" (improvise the client's follow-ups). Then write the delay email for a real or imaginary 2-day slip. Score both on the 4 lenses.\n\nRe-entry note: Client skills are the last to decay. Back after a break? Re-run Drill 5.1's mock call once — it's the fastest full-system check.\n\n📞 Badge earned: Call-Ready — you can now survive a real client conversation. Next: making them remember you.\n\n---",
+     "seconds": 120,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "xp": 30
+    }
+   ],
+   "xp": 38
+  }
+ ]
+}

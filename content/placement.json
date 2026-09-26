@@ -1,0 +1,347 @@
+{
+ "title": "Placement Test",
+ "blurb": "30 items · ~40 minutes · 100 points. One sitting, no dictionary, no AI help. Cheating it only cheats you.",
+ "parts": [
+  {
+   "id": "A",
+   "title": "Fix the sentence",
+   "kind": "fix",
+   "blurb": "Each sentence has at least one error. Rewrite it correctly. 2 points each.",
+   "items": [
+    {
+     "n": 1,
+     "kind": "fix",
+     "wrong": "I was working pastly in 2021 2024.",
+     "answer": "I worked as a sales supervisor from 2021 to 2024.",
+     "points": 2
+    },
+    {
+     "n": 2,
+     "kind": "fix",
+     "wrong": "I am in 5rlth semester of BS Data Science.",
+     "answer": "I am in my 5th semester of BS Data Science.",
+     "points": 2
+    },
+    {
+     "n": 3,
+     "kind": "fix",
+     "wrong": "I gona learn Python this month.",
+     "answer": "I am going to learn Python this month.",
+     "points": 2
+    },
+    {
+     "n": 4,
+     "kind": "fix",
+     "wrong": "What is best methos to learn freelancing?",
+     "answer": "What is the best method to learn freelancing?",
+     "points": 2
+    },
+    {
+     "n": 5,
+     "kind": "fix",
+     "wrong": "I have a question regrading your project.",
+     "answer": "I have a question regarding your project.",
+     "points": 2
+    },
+    {
+     "n": 6,
+     "kind": "fix",
+     "wrong": "Can you make a n Etsy account for me?",
+     "answer": "Can you make an Etsy account for me?",
+     "points": 2
+    },
+    {
+     "n": 7,
+     "kind": "fix",
+     "wrong": "I hope you gone find me some good clients.",
+     "answer": "I hope you will find me some good clients.",
+     "points": 2
+    },
+    {
+     "n": 8,
+     "kind": "fix",
+     "wrong": "He don't have time for meeting today.",
+     "answer": "He doesn't have time for a meeting today.",
+     "points": 2
+    },
+    {
+     "n": 9,
+     "kind": "fix",
+     "wrong": "I have saw your portfolio video.",
+     "answer": "I have seen your portfolio video.",
+     "points": 2
+    },
+    {
+     "n": 10,
+     "kind": "fix",
+     "wrong": "Please give me some advices about pricing.",
+     "answer": "Please give me some advice about pricing.",
+     "points": 2
+    },
+    {
+     "n": 11,
+     "kind": "fix",
+     "wrong": "I am agree with your timeline.",
+     "answer": "I agree with your timeline.",
+     "points": 2
+    },
+    {
+     "n": 12,
+     "kind": "fix",
+     "wrong": "She is married with Ahmed since 2020.",
+     "answer": "She has been married to Ahmed since 2020.",
+     "points": 2
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "title": "Choose the right word",
+   "kind": "choice",
+   "blurb": "Pick the word that fits. 2 points each.",
+   "items": [
+    {
+     "n": 13,
+     "kind": "choice",
+     "text": "I have worked here ___ 2021.",
+     "options": [
+      "I have worked here ___ 2021.",
+      "since",
+      "for"
+     ],
+     "answer": "I have worked here since 2021.",
+     "explanation": "",
+     "points": 2
+    },
+    {
+     "n": 14,
+     "kind": "choice",
+     "text": "She is good ___ mathematics.",
+     "options": [
+      "She is good ___ mathematics.",
+      "at",
+      "in"
+     ],
+     "answer": "She is good at mathematics.",
+     "explanation": "",
+     "points": 2
+    },
+    {
+     "n": 15,
+     "kind": "choice",
+     "text": "I am waiting ___ your reply.",
+     "options": [
+      "I am waiting ___ your reply.",
+      "for",
+      "to"
+     ],
+     "answer": "I am waiting for your reply.",
+     "explanation": "",
+     "points": 2
+    },
+    {
+     "n": 16,
+     "kind": "choice",
+     "text": "He is interested ___ data science.",
+     "options": [
+      "He is interested ___ data science.",
+      "in",
+      "on"
+     ],
+     "answer": "He is interested in data science.",
+     "explanation": "",
+     "points": 2
+    },
+    {
+     "n": 17,
+     "kind": "choice",
+     "text": "___ client sent the file yesterday.",
+     "options": [
+      "___ client sent the file yesterday.",
+      "A",
+      "The",
+      {
+       "t": "∅ (nothing)",
+       "v": ""
+      }
+     ],
+     "answer": "The client sent the file yesterday.",
+     "explanation": "",
+     "points": 2
+    },
+    {
+     "n": 18,
+     "kind": "choice",
+     "text": "I need ___ information about your pricing.",
+     "options": [
+      "I need ___ information about your pricing.",
+      "an",
+      "some",
+      "the"
+     ],
+     "answer": "I need some information about your pricing.",
+     "explanation": "",
+     "points": 2
+    },
+    {
+     "n": 19,
+     "kind": "choice",
+     "text": "We discussed ___ the project on Monday.",
+     "options": [
+      "We discussed ___ the project on Monday.",
+      "about",
+      {
+       "t": "∅ (nothing)",
+       "v": ""
+      },
+      "on"
+     ],
+     "answer": "We discussed the project on Monday.",
+     "explanation": "no preposition: \"discussed the project\"",
+     "points": 2
+    },
+    {
+     "n": 20,
+     "kind": "choice",
+     "text": "I have been learning English ___ six months.",
+     "options": [
+      "I have been learning English ___ six months.",
+      "since",
+      "for"
+     ],
+     "answer": "I have been learning English for. six months.",
+     "explanation": "",
+     "points": 2
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "title": "Listening & shadowing self-check",
+   "kind": "selfscore",
+   "blurb": "Do each task honestly, then score yourself 1 / 3 / 5. 5 points each.",
+   "items": [
+    {
+     "n": 21,
+     "kind": "selfscore",
+     "prompt": "Shadow the first 30 seconds (repeat 0.5–1 sec behind the speaker). Could you stay with the speaker without long pauses? (5 = yes, smoothly; 3 = mostly, some gaps; 1 = kept losing them)",
+     "max": 5,
+     "scale": "5 = yes, smoothly · 3 = mostly · 1 = struggled",
+     "points": 5
+    },
+    {
+     "n": 22,
+     "kind": "selfscore",
+     "prompt": "Transcribe the first full sentence you hear, then check against the transcript or subtitles. What % of words did you get right? (5 = 90%+, 3 = 70–89%, 1 = below 70%)",
+     "max": 5,
+     "scale": "5 = yes, smoothly · 3 = mostly · 1 = struggled",
+     "points": 5
+    },
+    {
+     "n": 23,
+     "kind": "selfscore",
+     "prompt": "Say these pairs aloud and record yourself: thin/tin, very/wary, west/vest, day/deh. Listen back. Do the two words in each pair sound clearly different? (5 = all four pairs distinct; 3 = two or three; 1 = they sound the same)",
+     "max": 5,
+     "scale": "5 = yes, smoothly · 3 = mostly · 1 = struggled",
+     "points": 5
+    },
+    {
+     "n": 24,
+     "kind": "selfscore",
+     "prompt": "Read this paragraph aloud at natural speed and record it: \"I usually start my day with tea and revision. Last month I built a small dashboard for practice, and I have learned a lot since then. The client I want to work with needs clear weekly updates.\" Listen back. Count your slips (dropped articles, wrong word stress, swallowed endings). (5 = 0–2 slips; 3 = 3–5 slips; 1 = 6+)",
+     "max": 5,
+     "scale": "5 = yes, smoothly · 3 = mostly · 1 = struggled",
+     "points": 5
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "title": "Speaking",
+   "kind": "speak",
+   "blurb": "Record both on your phone. Then score yourself honestly, 2–10 each.",
+   "items": [
+    {
+     "n": 25,
+     "kind": "speak",
+     "title": "2-minute introduction:",
+     "prompt": "Who are you, what do you study, what work do you want to do next? Speak for the full 2 minutes — no reading.",
+     "seconds": 120,
+     "max": 10,
+     "scale": "Score 2–10 with the 4 lenses (clarity/tone/structure/client-safety). Be strict.",
+     "points": 10
+    },
+    {
+     "n": 26,
+     "kind": "speak",
+     "title": "90-second client answer:",
+     "prompt": "A client asks, \"Tell me about a project you worked on.\" Answer as yourself, honestly (coursework and practice projects count — real ones only).",
+     "seconds": 90,
+     "max": 10,
+     "scale": "Score 2–10 with the 4 lenses (clarity/tone/structure/client-safety). Be strict.",
+     "points": 10
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "title": "Writing",
+   "kind": "write",
+   "blurb": "Write your answers, then score yourself 1–5 each.",
+   "items": [
+    {
+     "n": 27,
+     "kind": "write",
+     "prompt": "Write 3 sentences about what you did yesterday (past tense).",
+     "max": 5,
+     "scale": "5 = clean and client-safe · 3 = understandable with slips · 1 = hard to follow",
+     "points": 5
+    },
+    {
+     "n": 28,
+     "kind": "write",
+     "prompt": "Write 3 sentences about what you have done this week (present perfect).",
+     "max": 5,
+     "scale": "5 = clean and client-safe · 3 = understandable with slips · 1 = hard to follow",
+     "points": 5
+    },
+    {
+     "n": 29,
+     "kind": "write",
+     "prompt": "A client writes: \"Can you build a sales dashboard? What do you charge?\" Reply in under 60 words. (No price yet — never price before scope.)",
+     "max": 5,
+     "scale": "5 = clean and client-safe · 3 = understandable with slips · 1 = hard to follow",
+     "points": 5
+    },
+    {
+     "n": 30,
+     "kind": "write",
+     "prompt": "Describe your typical day in 5 English sentences.",
+     "max": 5,
+     "scale": "5 = clean and client-safe · 3 = understandable with slips · 1 = hard to follow",
+     "points": 5
+    }
+   ]
+  }
+ ],
+ "bands": [
+  {
+   "min": 0,
+   "max": 39,
+   "band": "A2",
+   "note": "You can handle simple, familiar topics. Client calls are not yet safe — that is exactly what this course fixes."
+  },
+  {
+   "min": 40,
+   "max": 69,
+   "band": "B1",
+   "note": "You survive everyday English. The course takes you to B2: independent, client-ready."
+  },
+  {
+   "min": 70,
+   "max": 100,
+   "band": "B2",
+   "note": "You are closer than you think — use the course as a tune-up, especially Modules 5–7."
+  }
+ ]
+}
