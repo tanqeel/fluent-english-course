@@ -1,5 +1,5 @@
 /* Fluent service worker — offline-first. All URLs relative: safe under any subpath. */
-const CACHE='fluent-v4';
+const CACHE='fluent-v5';
 const PRECACHE=[
   'index.html','manifest.webmanifest',
   'css/styles.css',

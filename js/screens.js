@@ -58,7 +58,7 @@ function home(root){
     <h2 class="sec">Quick hits</h2>
     <div class="row" style="gap:8px">
       <button class="btn ghost" data-go="#/practice" style="flex:1">⚔️ Drills</button>
-      <button class="btn ghost" data-go="#/coach" style="flex:1">🤖 AI Coach</button>
+      <button class="btn ghost" data-go="#/coach" style="flex:1">🤖 AI Coach · free</button>
       <button class="btn ghost" data-go="#/progress" style="flex:1">📊 Progress</button>
     </div>
     <p class="small dim center mt">Chalo — ek chhota step roz. ${due?'Pehle Review clear karo, phir naya seekho.':''}</p>`;

@@ -1,13 +1,17 @@
-/* Fluent AI Coach — bring-your-own-key Gemini coaching, 100% client-side.
-   The key lives ONLY in localStorage on this device and is sent ONLY to
-   Google's generativelanguage API. Nothing else ever sees it. */
+/* Fluent AI Coach — 100% client-side.
+   DEFAULT: "Free AI" (Pollinations text API) — free, no key, no signup, zero setup.
+   OPTIONAL UPGRADE: your own free Gemini key for smarter feedback (esp. speaking).
+   The Gemini key, when set, lives ONLY in localStorage on this device and is sent
+   ONLY to Google's generativelanguage API. Nothing else ever sees it. */
 (function(){
 'use strict';
 const {el,esc,md,toast,modal,xpToast}=UI;
 const KEY_LS='fluent_gemini_key';      // the API key — device only
 const STORE_LS='fluent_coach_v1';       // chat history + xp caps — device only
-const API='https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+const GEMINI_API='https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
 const MODEL_LABEL='Gemini 2.0 Flash';
+const FREE_API='https://text.pollinations.ai/';
+const FREE_MODEL='openai';
 
 function getKey(){try{return localStorage.getItem(KEY_LS)||'';}catch(e){return '';}}
 function setKey(k){try{localStorage.setItem(KEY_LS,k.trim());}catch(e){}}
@@ -54,7 +58,7 @@ async function callGemini(key,systemInstruction,parts,opts){
   opts=opts||{};
   let res;
   try{
-    res=await fetch(API+'?key='+encodeURIComponent(key),{
+    res=await fetch(GEMINI_API+'?key='+encodeURIComponent(key),{
       method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
         system_instruction:{parts:[{text:systemInstruction}]},
@@ -82,36 +86,138 @@ async function callGemini(key,systemInstruction,parts,opts){
   if(!text)throw {friendly:'The coach came back empty. Try again.'};
   return text;
 }
-function needKey(){
-  return `<div class="card center" style="border:1.5px solid var(--vio)">
-    <div style="font-size:44px">🤖</div><h3>Meet your AI Coach</h3>
-    <p class="mut small">Conversation practice, writing feedback, and speaking feedback —
-    right here in the app, powered by your own <b>free</b> Gemini key.</p>
-    <button class="btn vio" id="coach-setup">Set up AI Coach · 2 min</button>
-    <p class="small dim">Your key stays on this device only. Everything else in Fluent works fully offline.</p></div>`;
+/* ---------- Free AI — no key, no signup ----------
+   Provider chain (first success wins):
+   1) Pollinations text API — POST {messages, model:"openai"}
+   2) Pollinations GET fallback (prompt in URL)
+   3) Puter.js (lazy-loaded SDK, keyless) — model gpt-5-nano
+   All need internet; everything else in the app works offline. */
+function isOfflineErr(e){return e instanceof TypeError||(e&&/failed to fetch|networkerror|load failed/i.test(e.message||''));}
+async function fetchTimeout(url,init,ms){
+  const ctrl=new AbortController();init=init||{};init.signal=ctrl.signal;
+  const t=setTimeout(()=>ctrl.abort(),ms||60000);
+  try{return await fetch(url,init);}finally{clearTimeout(t);}
+}
+async function pollinationsPOST(payload){
+  const res=await fetchTimeout(FREE_API,{method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({messages:payload,model:FREE_MODEL})},45000);
+  const txt=await res.text();
+  let j=null;try{j=JSON.parse(txt);}catch(e){}
+  if(j&&j.error){
+    if(res.status===429||/rate|limit/i.test(j.error||''))
+      throw {friendly:'busy',retryable:true};
+    throw {friendly:'Free AI had a hiccup ('+(j.status||res.status)+').',retryable:true};
+  }
+  if(!res.ok)throw {friendly:'Free AI had a hiccup ('+res.status+').',retryable:true};
+  const t=(j&&typeof j==='string'?j:txt).trim();
+  if(!t)throw {friendly:'The coach came back empty.',retryable:true};
+  return t;
+}
+async function pollinationsGET(system,messages){
+  const convo=messages.slice(-8).map(m=>(m.role==='user'?'You: ':'Coach: ')+m.content).join('\n');
+  const prompt=(system+'\n\n'+convo).slice(0,3200);
+  const res=await fetchTimeout(FREE_API+encodeURIComponent(prompt)+'?model='+FREE_MODEL,{},45000);
+  const txt=await res.text();
+  let j=null;try{j=JSON.parse(txt);}catch(e){}
+  if(j&&j.error)throw {friendly:'Free AI had a hiccup.',retryable:true};
+  if(!res.ok)throw {friendly:'Free AI had a hiccup ('+res.status+').',retryable:true};
+  const t=txt.trim();
+  if(!t)throw {friendly:'The coach came back empty.',retryable:true};
+  return t;
+}
+function loadPuter(){
+  return new Promise((res,rej)=>{
+    if(window.puter&&window.puter.ai)return res(window.puter);
+    const s=document.createElement('script');
+    s.src='https://js.puter.com/v2/';s.async=true;
+    const to=setTimeout(()=>rej(new Error('timeout')),25000);
+    s.onload=()=>{clearTimeout(to);
+      (window.puter&&window.puter.ai)?res(window.puter):rej(new Error('no-ai'));};
+    s.onerror=()=>{clearTimeout(to);rej(new Error('sdk'));};
+    document.head.appendChild(s);
+  });
+}
+async function puterChat(payload){
+  const puter=await loadPuter();
+  const r=await puter.ai.chat(payload,{model:'gpt-5-nano',max_tokens:600,temperature:0.7});
+  let t='';
+  if(r){
+    if(typeof r==='string')t=r;
+    else if(r.message){
+      const c=r.message.content;
+      t=typeof c==='string'?c:(Array.isArray(c)?c.map(x=>x.text||'').join(''):'');
+    }
+    else t=r.text||r.output_text||'';
+  }
+  t=String(t||'').trim();
+  if(!t)throw {friendly:'The coach came back empty.',retryable:true};
+  return t;
+}
+async function callFreeAI(system,messages,opts){
+  opts=opts||{};
+  const payload=[{role:'system',content:system}].concat(messages);
+  const tries=[()=>pollinationsPOST(payload),()=>pollinationsGET(system,messages),()=>puterChat(payload)];
+  let last=null;
+  for(const fn of tries){
+    try{const t=await fn();if(t)return t;}
+    catch(e){
+      if(isOfflineErr(e))throw {friendly:'No internet connection. AI Coach needs internet — the rest of the app works offline. 🌐'};
+      if(e&&e.name==='AbortError'){last={friendly:'Free AI took too long.',retryable:true};continue;}
+      if(e&&e.friendly){last=e;continue;}
+      last={friendly:'Free AI had a hiccup.',retryable:true};
+    }
+  }
+  if(last&&last.friendly==='busy')
+    throw {friendly:'Free AI is busy right now (rate limit). Wait a minute and try again — or add a free Gemini key in ⚙️ settings for the smarter coach. ⏳'};
+  throw {friendly:'Free AI is having trouble right now. Try again in a bit — or add a free Gemini key in ⚙️ settings for the smarter coach. 🤖'};
+}
+
+/* ---------- unified dispatcher: Gemini key when set, else Free AI ---------- */
+function activeProvider(){return getKey()?'gemini':'free';}
+async function askCoach(system,messages,opts){
+  if(getKey()){
+    // adapt [{role:'user'|'assistant',content}] to Gemini contents
+    const contents=messages.map(m=>({role:m.role==='assistant'?'model':'user',parts:[{text:m.content}]}));
+    return callGemini(getKey(),system,contents,opts);
+  }
+  return callFreeAI(system,messages,opts);
 }
 
 /* ---------- setup screen ---------- */
 function setupView(root,back){
   root.innerHTML=`
   <div class="step-tag">AI Coach · setup</div>
-  <div class="greet">Get your free key 🔑</div>
-  <p class="sub">Once. Two minutes. Then the coach lives in your pocket.</p>
-  <div class="card"><div class="kicker">Step 1</div>
-    <p style="margin:8px 0">Open <b>Google AI Studio</b> — Google's free site for Gemini keys.</p>
-    <button class="btn ghost" id="s-open">Open aistudio.google.com ↗</button></div>
-  <div class="card"><div class="kicker">Step 2</div>
-    <p style="margin:8px 0 0">Sign in with your Google account, tap <b>"Get API key"</b>, then <b>"Create API key"</b>. It's free — no card needed.</p></div>
-  <div class="card"><div class="kicker">Step 3</div>
-    <p style="margin:8px 0">Copy the key and paste it here:</p>
-    <input class="field" id="s-key" type="password" placeholder="Paste your Gemini API key" autocomplete="off" spellcheck="false">
-    <button class="btn" id="s-save">Save & test connection</button>
-    <p class="small dim" id="s-status" style="margin:8px 0 0"></p></div>
-  <div class="card"><div class="kicker" style="color:var(--acc)">🔒 Your privacy</div>
-    <p class="small mut" style="margin:8px 0 0">The key is stored <b>only</b> in this browser's localStorage on your device.
-    It is sent <b>only</b> to Google's API when you use the coach. Never logged, never shared, never in any file.
-    You can remove it anytime from Coach → ⚙️.</p></div>
+  <div class="greet">Start coaching ✨</div>
+  <p class="sub">Free AI works instantly — no key, no signup.</p>
+  <div class="card center" style="border:1.5px solid var(--acc)">
+    <div class="kicker" style="color:var(--acc)">Recommended</div>
+    <p style="margin:8px 0"><b>Free AI</b> — conversation practice + writing feedback, right now.</p>
+    <button class="btn" id="s-free">✨ Start with Free AI</button>
+    <p class="small dim" style="margin:8px 0 0">Free AI sends your messages to a public free service to generate replies — don't paste passwords or private info.</p></div>
+  <div class="card">
+    <div class="kicker" style="color:var(--vio)">🔑 Optional upgrade</div>
+    <p style="margin:8px 0"><b>Smarter coach</b> — add a free Gemini key for better feedback,
+    including <b>speaking feedback on your recordings</b>.</p>
+    <button class="btn ghost" id="s-showkey" style="width:auto;padding:10px 18px">Add a free Gemini key · 2 min</button>
+    <div id="s-keyflow" style="display:none">
+      <div class="kicker mt">Step 1</div>
+      <p style="margin:8px 0">Open <b>Google AI Studio</b> — Google's free site for Gemini keys.</p>
+      <button class="btn ghost" id="s-open">Open aistudio.google.com ↗</button>
+      <div class="kicker mt">Step 2</div>
+      <p style="margin:8px 0">Sign in, tap <b>"Get API key"</b> → <b>"Create API key"</b>. Free, no card.</p>
+      <div class="kicker mt">Step 3</div>
+      <p style="margin:8px 0">Copy the key and paste it here:</p>
+      <input class="field" id="s-key" type="password" placeholder="Paste your Gemini API key" autocomplete="off" spellcheck="false">
+      <button class="btn vio" id="s-save">Save & test connection</button>
+      <p class="small dim" id="s-status" style="margin:8px 0 0"></p>
+      <p class="small dim" style="margin:8px 0 0">🔒 The key is stored <b>only</b> in this browser on your device, sent <b>only</b> to Google's API. Remove it anytime from Coach → ⚙️.</p>
+    </div></div>
   <button class="btn ghost mt" id="s-back">← Back</button>`;
+  root.querySelector('#s-free').onclick=()=>{toast('Free AI is on — happy practicing! ✨');back();};
+  root.querySelector('#s-showkey').onclick=e=>{const f=root.querySelector('#s-keyflow');
+    const open=f.style.display!=='none';f.style.display=open?'none':'block';
+    e.target.textContent=open?'Add a free Gemini key · 2 min':'Hide key setup';};
   root.querySelector('#s-open').onclick=()=>window.open('https://aistudio.google.com/apikey','_blank','noopener');
   root.querySelector('#s-back').onclick=back;
   root.querySelector('#s-save').onclick=async()=>{
@@ -121,7 +227,7 @@ function setupView(root,back){
     st.innerHTML='<span class="dim">Testing…</span>';
     try{
       await callGemini(k,'You are a test. Reply with exactly: OK',{text:'Say OK'},{maxTokens:5,temp:0});
-      setKey(k);st.innerHTML='<b style="color:var(--acc)">✅ Connected! AI Coach is live.</b>';confetti(80);
+      setKey(k);st.innerHTML='<b style="color:var(--acc)">✅ Connected! Smarter coach is live.</b>';confetti(80);
       setTimeout(back,900);
     }catch(e){st.innerHTML='<b style="color:#f87171">'+esc(e.friendly||'Connection failed.')+'</b>';}
   };
@@ -145,44 +251,56 @@ function bubble(who,text){
   return `<div class="msg ${who}">${who==='ai'?'<span class="ai-badge">🤖 AI</span>':''}<div class="msg-b">${md(text)}</div></div>`;
 }
 function keySettings(root){
-  root.innerHTML=`<div class="step-tag">AI Coach · key settings</div>
-  <div class="greet">Key settings ⚙️</div>
-  <div class="card"><div class="kicker">Status</div>
-    <p style="margin:8px 0">${getKey()?'<b style="color:var(--acc)">✅ Key saved on this device</b><br><span class="small dim">Model: '+esc(MODEL_LABEL)+' · free tier</span>':'<b style="color:#f87171">No key saved</b>'}</p>
-    ${getKey()?`<button class="btn" id="k-remove" style="background:linear-gradient(135deg,#f87171,#dc2626);color:#fff">Remove my key</button>
-    <p class="small dim">Removes the key from this device immediately. Chat history stays.</p>`:''}</div>
+  const prov=activeProvider();
+  root.innerHTML=`<div class="step-tag">AI Coach · settings</div>
+  <div class="greet">Coach settings ⚙️</div>
+  <div class="card"><div class="kicker">Active provider</div>
+    <p style="margin:8px 0">${prov==='gemini'
+      ?'<b style="color:var(--acc)">🔑 Gemini key</b><br><span class="small dim">Model: '+esc(MODEL_LABEL)+' · free tier · speaking feedback ON</span>'
+      :'<b style="color:var(--acc)">✨ Free AI</b><br><span class="small dim">No key · conversation + writing work now · speaking feedback needs a Gemini key</span>'}</p>
+    ${prov==='gemini'
+      ?`<button class="btn" id="k-remove" style="background:linear-gradient(135deg,#f87171,#dc2626);color:#fff">Remove my key</button>
+        <p class="small dim">Removes the key from this device immediately. The coach falls back to Free AI. Chat history and progress stay.</p>`
+      :`<button class="btn vio" id="k-upgrade">Upgrade: add a free Gemini key ↗</button>
+        <p class="small dim">For smarter feedback and speaking feedback on your recordings. Still free — takes 2 minutes.</p>`}</div>
   <button class="btn ghost mt" id="k-back">← Coach home</button>`;
   root.querySelector('#k-back').onclick=()=>coachHome(root);
+  const up=root.querySelector('#k-upgrade');
+  if(up)up.onclick=()=>setupView(root,()=>coachHome(root));
   const rm=root.querySelector('#k-remove');
-  if(rm)rm.onclick=()=>{const m=modal(`<h3>Remove your API key?</h3><p class="mut small">The coach will stop working until you add a key again. Your progress is untouched.</p>
+  if(rm)rm.onclick=()=>{const m=modal(`<h3>Remove your API key?</h3><p class="mut small">The coach falls back to Free AI. Your progress is untouched.</p>
     <button class="btn" id="rk-yes" style="background:linear-gradient(135deg,#f87171,#dc2626);color:#fff">Remove it</button>
     <button class="btn ghost mt" id="rk-no">Keep it</button>`);
-    m.querySelector('#rk-yes').onclick=()=>{clearKey();m.remove();toast('Key removed 🔒');coachHome(root);};
+    m.querySelector('#rk-yes').onclick=()=>{clearKey();m.remove();toast('Key removed — back to Free AI 🔒');coachHome(root);};
     m.querySelector('#rk-no').onclick=()=>m.remove();};
 }
 
 /* ---------- coach home ---------- */
 function coachHome(root){
-  const has=getKey();
-  let html=`<div class="step-tag">AI Coach <span class="ai-badge">🤖 AI</span></div>
+  const prov=activeProvider();
+  const provLine=prov==='gemini'
+    ?'<p class="small dim" style="margin:0 0 10px">🔑 Smarter coach active · <a href="javascript:void(0)" id="c-prov" style="color:var(--vio)">settings</a></p>'
+    :'<p class="small dim" style="margin:0 0 10px">✨ Free AI active — no key needed · <a href="javascript:void(0)" id="c-prov" style="color:var(--vio)">settings / upgrade</a></p>';
+  let html=`<div class="step-tag">AI Coach <span class="ai-badge">🤖 AI</span> · needs internet</div>
   <div class="greet">AI Coach 🤖</div>
   <p class="sub">Your strict tutor, inside the app. Corrects everything — never empty praise.</p>
-  ${has?'':needKey()}
+  ${provLine}
   <div class="card" style="cursor:pointer" data-c="chat"><div class="kicker">💬 Conversation practice</div>
     <p style="margin:8px 0"><b>Talk with the strict tutor</b></p>
     <p class="small dim" style="margin:0">One question at a time · every mistake corrected · say "roleplay" for a client scenario.</p></div>
   <div class="card" style="cursor:pointer" data-c="write"><div class="kicker">✍️ Writing feedback</div>
     <p style="margin:8px 0"><b>Paste your writing, get scored</b></p>
     <p class="small dim" style="margin:0">Clarity / Tone / Structure / Client-safety + corrected version + every fix explained.</p></div>
-  <div class="card" style="cursor:pointer" data-c="speak"><div class="kicker">🎙️ Speaking feedback</div>
-    <p style="margin:8px 0"><b>Record yourself, get pronunciation notes</b></p>
-    <p class="small dim" style="margin:0">Needs internet · specific words to fix, tuned for Urdu speakers.</p></div>
-  ${has?`<button class="btn ghost" id="c-key2">⚙️ Key settings</button>`:''}`;
+  <div class="card" style="cursor:pointer" data-c="speak"><div class="kicker">🎙️ Speaking ${prov==='gemini'?'feedback':'practice'}</div>
+    <p style="margin:8px 0"><b>${prov==='gemini'?'Record yourself, get pronunciation notes':'Record yourself + self-check'}</b></p>
+    <p class="small dim" style="margin:0">${prov==='gemini'
+      ?'AI pronunciation + fluency notes, tuned for Urdu speakers.'
+      :'Without a Gemini key I can\'t hear you — but your recording stays on this device and you get a self-check checklist. <b>Free Gemini key unlocks AI feedback.</b>'}</p></div>
+  <button class="btn ghost" id="c-key2">⚙️ Coach settings</button>`;
   root.innerHTML=html;
-  const go=c=>{ if(!getKey()){setupView(root,()=>coachHome(root));return;}
-    if(c==='chat')chatView(root);else if(c==='write')writeView(root);else speakView(root);};
+  const go=c=>{if(c==='chat')chatView(root);else if(c==='write')writeView(root);else speakView(root);};
   root.querySelectorAll('[data-c]').forEach(c=>c.onclick=()=>go(c.dataset.c));
-  const s=root.querySelector('#coach-setup');if(s)s.onclick=()=>setupView(root,()=>coachHome(root));
+  const pv=root.querySelector('#c-prov');if(pv)pv.onclick=()=>keySettings(root);
   const k2=root.querySelector('#c-key2');if(k2)k2.onclick=()=>keySettings(root);
 }
 
@@ -207,9 +325,9 @@ function chatView(root){
       busy=true;inp.value='';
       push('you',txt);xpToday(5);
       const typing=el('<div class="msg ai"><div class="msg-b dim">typing…</div></div>');log.appendChild(typing);log.scrollTop=log.scrollHeight;
-      const history=s.chat.slice(-12).flatMap(m=>[{role:m.w==='you'?'user':'model',parts:[{text:m.t}]}]);
+      const history=s.chat.slice(-12).map(m=>({role:m.w==='you'?'user':'assistant',content:m.t}));
       try{
-        const reply=await callGemini(getKey(),SYS_CHAT,history.slice(0,-1).concat([{role:'user',parts:[{text:txt}]}]));
+        const reply=await askCoach(SYS_CHAT,history.slice(0,-1).concat([{role:'user',content:txt}]));
         typing.remove();push('ai',reply);
       }catch(e){typing.remove();push('ai','⚠️ '+e.friendly);}
       busy=false;inp.focus();
@@ -233,7 +351,7 @@ function writeView(root){
       if(!navigator.onLine){toast('No internet — AI Coach needs it. 🌐');return;}
       busy=true;out.innerHTML='<div class="card"><p class="dim small">Scoring… the coach reads every line.</p></div>';
       try{
-        const reply=await callGemini(getKey(),SYS_WRITE,[{text:'Score and correct this writing:\n\n'+txt}],{maxTokens:700});
+        const reply=await askCoach(SYS_WRITE,[{role:'user',content:'Score and correct this writing:\n\n'+txt}],{maxTokens:700});
         out.innerHTML=`<div class="card"><span class="ai-badge">🤖 AI feedback</span><div class="mt" style="font-size:14.5px;line-height:1.65">${md(reply)}</div></div>`;
         xpToday(15);Store.S.speakingDone++;Store.save();
       }catch(e){out.innerHTML=`<div class="card"><p style="color:#f87171">${esc(e.friendly)}</p></div>`;}
@@ -242,9 +360,24 @@ function writeView(root){
   });
 }
 
-/* ---------- 3. speaking feedback ---------- */
+/* ---------- 3. speaking ----------
+   With a Gemini key: AI pronunciation + fluency feedback (needs internet).
+   Without a key: record locally, play it back, and run the self-check checklist.
+   Recording is on-device — it never leaves this phone. */
+const SELF_CHECK=[
+  'Did I stress the RIGHT syllable in the long words? (e.g. pro-JECT, not PRO-ject)',
+  'Did my "th" sound like <i>th</i> (think, this) — not "t", "d", or "s"?',
+  'Did I say "v" (very) differently from "w" (were)?',
+  'Did I pronounce the -ed endings? (worked, started, wanted)',
+  'Was my pace steady — no rushing, no long "ummm" gaps?',
+  'Did I sound like I meant it — or like I was reading a robot?'];
 function speakView(root){
-  shell(root,'Speaking 🎙️','Record yourself. Get pronunciation + fluency notes. <b>Needs internet.</b>',body=>{
+  const prov=activeProvider();
+  shell(root,'Speaking 🎙️',
+    prov==='gemini'
+      ?'Record yourself. Get AI pronunciation + fluency notes. <b>Needs internet.</b>'
+      :'Record yourself on this device, play it back, and self-check. <b>Add a free Gemini key in ⚙️ settings for AI pronunciation feedback.</b>',
+    body=>{
     body.innerHTML=`
       <div class="card center">
         <p class="mut small">Read this out loud, then tap record:</p>
@@ -252,6 +385,9 @@ function speakView(root){
         <button class="btn ghost" id="sp-new" style="width:auto;padding:10px 18px">🎲 New line</button></div>
       <div class="row" style="justify-content:center"><button class="rec-btn" id="sp-rec">🎙️</button></div>
       <p class="center small dim" id="sp-status">Tap 🎙️ and read the line</p>
+      <audio id="sp-play" controls style="width:100%;display:none"></audio>
+      ${prov==='gemini'?'':'<div class="card mt"><div class="kicker">✅ Self-check (no key)</div><div class="small" style="line-height:1.7">'
+        +SELF_CHECK.map((c,i)=>'<p style="margin:6px 0"><b>'+(i+1)+'.</b> '+c+'</p>').join('')+'</div></div>'}
       <div id="sp-out" class="mt"></div>`;
     const LINES=[
       'I would like to schedule a call to discuss the project timeline and the next steps.',
@@ -260,14 +396,15 @@ function speakView(root){
       'I think this approach will work better for your customers.',
       'Thank you for your patience while I fix these issues.'];
     body.querySelector('#sp-new').onclick=()=>{body.querySelector('#sp-line').textContent='“'+LINES[Math.floor(Math.random()*LINES.length)]+'”';};
-    const recBtn=body.querySelector('#sp-rec'),status=body.querySelector('#sp-status'),out=body.querySelector('#sp-out');
+    const recBtn=body.querySelector('#sp-rec'),status=body.querySelector('#sp-status'),
+          out=body.querySelector('#sp-out'),player=body.querySelector('#sp-play');
     let rec=null,chunks=[],recording=false,busy=false;
     function blobToB64(blob){return new Promise((res,rej)=>{const r=new FileReader();
       r.onload=()=>res(String(r.result).split(',')[1]);r.onerror=rej;r.readAsDataURL(blob);});}
     recBtn.onclick=async()=>{
       if(busy)return;
       if(!recording){
-        if(!navigator.onLine){toast('Recording needs internet for AI feedback. 🌐');return;}
+        // recording is local — no internet needed to capture audio
         try{
           const stream=await navigator.mediaDevices.getUserMedia({audio:true});
           rec=new MediaRecorder(stream);chunks=[];
@@ -277,12 +414,23 @@ function speakView(root){
         }catch(e){toast('Microphone blocked. Allow mic access in your browser settings. 🎙️');}
         return;
       }
-      recording=false;recBtn.classList.remove('live');status.textContent='Analyzing…';
+      recording=false;recBtn.classList.remove('live');status.textContent='Working…';
       const stream=rec._stream;
       await new Promise(res=>{rec.onstop=res;rec.stop();});
       stream.getTracks().forEach(t=>t.stop());
       const blob=new Blob(chunks,{type:rec.mimeType||'audio/webm'});
       if(blob.size<2000){status.textContent='Too short — tap 🎙️ and try again.';return;}
+      const url=URL.createObjectURL(blob);
+      player.src=url;player.style.display='block';
+      if(prov!=='gemini'){
+        // Free AI path: honest local self-check — audio stays on the device
+        status.innerHTML='Saved on this device ✅ — press play and run the self-check above.';
+        out.innerHTML='<div class="card"><p class="mut small">🎧 Listen to yourself above. Without a Gemini key I can\'t hear you — but comparing your recording to the line is already real practice. For AI pronunciation feedback, add a <b>free Gemini key</b> in ⚙️ Coach settings.</p></div>';
+        xpToday(10);Store.S.speakingDone++;Store.save();
+        return;
+      }
+      // Gemini path: send for AI feedback
+      if(!navigator.onLine){toast('AI feedback needs internet — your recording is saved on this device. 🌐');status.textContent='No internet — recording kept on this device.';return;}
       busy=true;out.innerHTML='<div class="card"><p class="dim small">Listening… the coach hears every sound.</p></div>';
       try{
         const b64=await blobToB64(blob);
@@ -300,13 +448,9 @@ function speakView(root){
 
 /* ---------- entry ---------- */
 function coach(root){
-  if(!getKey()){
-    root.innerHTML=`<div class="step-tag">AI Coach <span class="ai-badge">🤖 AI</span></div>`;
-    const host=el('<div></div>');root.appendChild(host);coachHome(host);return;
-  }
   const host=el('<div></div>');root.appendChild(host);coachHome(host);
 }
 
 window.Screens.coach=coach;
-window.AICoach={getKey,clearKey,callGemini};
+window.AICoach={getKey,clearKey,callGemini,askCoach,activeProvider};
 })();
