@@ -36,8 +36,51 @@ function route(){
     root.innerHTML='<div class="empty">Something broke loading this screen. <a href="#/home">Go home</a></div>';
   }
   UI.refreshHud();
+  maybeInstallBanner();
   window.scrollTo({top:0});
 }
+
+/* ---------- install prompt ---------- */
+let deferredInstall=null;
+function isStandalone(){
+  return (window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||window.navigator.standalone===true;
+}
+function hideInstallBanner(){const b=document.getElementById('install-banner');if(b)b.remove();}
+function dismissInstall(){try{localStorage.setItem('fluent_install_dismissed','1');}catch(e){}hideInstallBanner();}
+function maybeInstallBanner(){
+  hideInstallBanner();
+  if(!Store.S.name)return;                       // after onboarding only
+  if(isStandalone())return;                      // already installed
+  try{if(localStorage.getItem('fluent_install_dismissed'))return;}catch(e){}
+  const hash=location.hash||'#/home';
+  if(!/^#\/home$/.test(hash))return;             // home only — never interrupt lessons/tests
+  const hasNative=!!deferredInstall;
+  const b=document.createElement('div');
+  b.id='install-banner';b.className='install-banner';
+  b.innerHTML=`
+    <div style="font-size:34px">📲</div>
+    <div style="flex:1"><b>Install Speak Fluently</b>
+      <div class="small dim">${hasNative?'One tap — lessons, AI coach and streaks on your home screen, works offline.':'Add it to your home screen for the full app feel.'}</div></div>
+    <button class="btn" id="ib-go" style="width:auto;padding:10px 16px">${hasNative?'Install':'How'}</button>
+    <button class="btn ghost" id="ib-no" style="width:auto;padding:10px 12px" aria-label="Dismiss">✕</button>`;
+  document.body.appendChild(b);
+  b.querySelector('#ib-no').onclick=dismissInstall;
+  b.querySelector('#ib-go').onclick=async()=>{
+    if(deferredInstall){
+      deferredInstall.prompt();
+      try{await deferredInstall.userChoice;}catch(e){}
+      deferredInstall=null;dismissInstall();
+    }else{
+      const m=UI.modal(`<h3>📲 Add to Home Screen</h3>
+        <p class="mut small"><b>iPhone (Safari):</b> tap <b>Share</b> → <b>Add to Home Screen</b>.<br>
+        <b>Android (Chrome):</b> tap the <b>⋮ menu</b> → <b>Add to Home screen</b> / <b>Install app</b>.</p>
+        <button class="btn" id="ib-ok">Got it</button>`);
+      m.querySelector('#ib-ok').onclick=()=>m.remove();
+    }
+  };
+}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;maybeInstallBanner();});
+window.addEventListener('appinstalled',()=>{try{localStorage.setItem('fluent_install_dismissed','1');}catch(e){}hideInstallBanner();});
 async function boot(){
   try{
     await Content.loadAll();
