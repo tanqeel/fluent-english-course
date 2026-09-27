@@ -449,6 +449,7 @@ function speakView(root){
 
 /* ---------- entry ---------- */
 function coach(root){
+  root.innerHTML='';
   const host=el('<div></div>');root.appendChild(host);coachHome(host);
 }
 
