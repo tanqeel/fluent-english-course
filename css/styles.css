@@ -162,7 +162,7 @@ h2.sec{font-size:15px;margin:var(--sp-6) 0 var(--sp-1);letter-spacing:.4px;font-
 .btn.ghost:hover{border-color:var(--acc)}
 .btn.vio{background:linear-gradient(135deg,var(--vio1),var(--vio2));color:#fff;box-shadow:0 6px 20px var(--vio-soft)}
 .btn.danger{background:linear-gradient(135deg,var(--dgr1),var(--dgr2));color:#fff;
-  box-shadow:0 6px 20px rgba(220,38,38,.25)}
+  box-shadow:0 6px 20px color-mix(in srgb,var(--dgr2) 25%,transparent)}
 .btn:disabled{opacity:.45;cursor:not-allowed;filter:none}
 .opt{display:block;width:100%;text-align:left;background:var(--card);border:1.5px solid var(--line);color:var(--txt);
   border-radius:14px;padding:14px 15px;margin:9px 0;font-size:15.5px;cursor:pointer;min-height:52px;
@@ -206,7 +206,7 @@ textarea.field{resize:vertical;min-height:110px;line-height:1.6}
 
 /* ---------- lesson progress ---------- */
 .lprog{height:8px;background:var(--bg2);border-radius:99px;overflow:hidden;border:1px solid var(--line);margin:12px 0}
-.lprog>i{display:block;height:100%;background:linear-gradient(90deg,var(--vio1),var(--blue));transition:width .4s var(--ease)}
+.lprog>i{display:block;height:100%;background:linear-gradient(90deg,var(--btn2),var(--btn1));transition:width .4s var(--ease)}
 .step-tag{font-size:12px;font-weight:800;color:var(--dim);letter-spacing:1px;text-transform:uppercase}
 
 /* ---------- module cards ---------- */
@@ -216,7 +216,7 @@ textarea.field{resize:vertical;min-height:110px;line-height:1.6}
 .mod:hover{border-color:var(--acc)}
 .mod:active{transform:scale(.98)}
 .mod .ic{font-size:30px;width:58px;height:58px;border-radius:16px;display:grid;place-items:center;flex-shrink:0;
-  background:rgba(148,163,184,.08);
+  
   background:color-mix(in srgb,var(--mc,var(--acc)) 13%,transparent);
   border:1px solid var(--line);
   border-color:color-mix(in srgb,var(--mc,var(--acc)) 32%,transparent)}
@@ -225,7 +225,8 @@ textarea.field{resize:vertical;min-height:110px;line-height:1.6}
 .mod .pct{margin-left:auto;text-align:right;flex-shrink:0}
 .pct-num{font-size:15px;font-weight:800}
 .mod .bar{width:74px;height:7px;background:var(--bg2);border-radius:99px;overflow:hidden;margin-top:6px}
-.mod .bar>i{display:block;height:100%;border-radius:99px;transition:width .5s var(--ease)}
+.mod .bar>i{display:block;height:100%;border-radius:99px;transition:width .5s var(--ease);
+  background:linear-gradient(90deg,var(--btn2),var(--btn1))}
 .done-tag{font-size:11px;font-weight:800;color:var(--acc-ink);letter-spacing:.6px}
 
 /* ---------- shadowing / recording ---------- */
@@ -234,10 +235,10 @@ textarea.field{resize:vertical;min-height:110px;line-height:1.6}
 .rec-btn{width:76px;height:76px;border-radius:50%;border:0;font-size:30px;cursor:pointer;margin:6px auto;
   display:flex;align-items:center;justify-content:center;
   background:linear-gradient(135deg,var(--dgr1),var(--dgr2));color:#fff;
-  box-shadow:0 8px 24px rgba(220,38,38,.35);transition:transform .15s}
+  box-shadow:0 8px 24px color-mix(in srgb,var(--dgr2) 35%,transparent);transition:transform .15s}
 .rec-btn:active{transform:scale(.94)}
 .rec-btn.live{animation:pulse 1.1s infinite}
-@keyframes pulse{50%{transform:scale(1.08);box-shadow:0 0 0 14px rgba(220,38,38,.15)}}
+@keyframes pulse{50%{transform:scale(1.08);box-shadow:0 0 0 14px color-mix(in srgb,var(--dgr2) 15%,transparent)}}
 audio{width:100%;margin:8px 0;display:block}
 :root[data-theme="dark"] audio{filter:invert(.92) hue-rotate(180deg)}
 @media (prefers-color-scheme:dark){
@@ -342,7 +343,7 @@ button.chip:active{transform:scale(.94)}
 /* skeleton shimmer (loading states) */
 .skel{position:relative;overflow:hidden;background:var(--bg2);border-radius:var(--r-sm);min-height:18px}
 .skel::after{content:"";position:absolute;inset:0;
-  background:linear-gradient(90deg,transparent,rgba(148,163,184,.28),transparent);
+  background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--dim) 28%,transparent),transparent);
   animation:shimmer 1.4s infinite}
 @keyframes shimmer{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
 
@@ -439,7 +440,7 @@ nav.bottom a .lb{font-size:10px;font-weight:700;white-space:nowrap;max-width:100
 /* ---------- profile ---------- */
 .p-head{display:flex;align-items:center;gap:var(--sp-4);padding:var(--sp-5) 0 var(--sp-3)}
 .avatar{width:76px;height:76px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;
-  font-size:30px;font-weight:800;color:#0b0f1a;background:linear-gradient(135deg,var(--acc),#2dd4bf);
+  font-size:30px;font-weight:800;color:var(--on-btn);background:linear-gradient(135deg,var(--btn1),var(--btn2));
   box-shadow:var(--shadow-sm)}
 .p-name{font-size:var(--fs-xl);font-weight:800;margin:0;display:flex;align-items:center;gap:6px}
 .p-name .edit-hint{font-size:var(--fs-xs);color:var(--dim);font-weight:600}

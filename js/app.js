@@ -189,4 +189,10 @@ if('serviceWorker' in navigator){
 document.readyState==='loading'
   ?document.addEventListener('DOMContentLoaded',boot)
   :boot();
+
+/* ---------- global install API (Profile tab button) ---------- */
+window.AppInstall={
+  show(){showInstallPopup();},
+  installed(){return lsGet(LS_DONE)||isStandalone();}
+};
 })();

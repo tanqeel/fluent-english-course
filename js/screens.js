@@ -143,10 +143,10 @@ function learn(root){
     const total=(m.lessons||[]).length,done=(m.lessons||[]).filter(l=>S.lessonsDone[l.id]).length;
     const pct=total?Math.round(done/total*100):0;
     html+=`<div class="mod" data-mod="${mid}">
-      <div class="ic" style="--mc:${m.color}">${m.icon||'📦'}</div>
+      <div class="ic">${m.icon||'📦'}</div>
       <div><h3>${esc(m.title)}</h3><p>${esc(m.tagline||'')}</p>
       ${m.phase2Note?`<p class="small" style="color:var(--amber)">⏳ ${esc(m.phase2Note)}</p>`:''}</div>
-      <div class="pct"><span class="pct-num">${pct}%</span><div class="bar"><i style="width:${pct}%;background:${m.color}"></i></div>
+      <div class="pct"><span class="pct-num">${pct}%</span><div class="bar"><i style="width:${pct}%"></i></div>
       <div class="small dim">${done}/${total}</div></div></div>`;
   }
   root.innerHTML=html;
@@ -397,7 +397,7 @@ function startPlacement(root){
         const it=part.items[qi];
         host.innerHTML='';
         const w=el(`<div><p class="mut small">Item ${qi+1}/${part.items.length}</p>
-          <div class="shad-text" style="border-color:rgba(248,113,113,.4)">❌ ${esc(it.wrong)}</div>
+          <div class="shad-text" style="border-color:color-mix(in srgb,var(--red) 40%,transparent)">❌ ${esc(it.wrong)}</div>
           <input class="field" id="pl-in" placeholder="Type the corrected sentence…" autocomplete="off">
           <button class="btn mt" id="pl-go">Check ✓</button></div>`);
         host.appendChild(w);
@@ -659,7 +659,8 @@ function profile(root){
       <div class="kv" style="border:0"><span>Total XP earned</span><b>⭐ ${S.xp}</b></div></div>
     <h2 class="p-sec">Actions</h2>
     <div class="p-actions">
-      <button class="btn" id="p-share"><span class="ic-20">📤</span>&nbsp; Share Speak Fluently</button>
+      <button class="btn" id="p-install"><span class="ic-20">📲</span>&nbsp; Install app</button>
+      <button class="btn ghost" id="p-share"><span class="ic-20">📤</span>&nbsp; Share Speak Fluently</button>
       <button class="btn ghost" id="p-edit2"><span class="ic-20">✏️</span>&nbsp; Edit name &amp; daily goal</button>
       <button class="btn ghost" id="p-theme"><span class="ic-20">${themeIcon}</span>&nbsp; Theme: ${themeMode==='system'?'System (follows phone)':themeMode==='light'?'Light':'Dark'}</button>
       <button class="btn danger" id="p-reset"><span class="ic-20">🔄</span>&nbsp; Start over from Day 1</button>
@@ -670,6 +671,13 @@ function profile(root){
   root.querySelector('#p-edit').onclick=edit;
   root.querySelector('#p-edit2').onclick=edit;
   root.querySelector('#p-share').onclick=shareApp;
+  const pInstall=root.querySelector('#p-install');
+  if(window.AppInstall&&window.AppInstall.installed()){
+    pInstall.disabled=true;
+    pInstall.innerHTML='<span class="ic-20">✅</span>&nbsp; App installed';
+  }else if(window.AppInstall){
+    pInstall.onclick=()=>window.AppInstall.show();
+  }else{pInstall.style.display='none';}
   root.querySelector('#p-theme').onclick=()=>{if(window.Theme){Theme.cycle();}profile(root);};
   root.querySelector('#p-reset').onclick=confirmReset;
 }

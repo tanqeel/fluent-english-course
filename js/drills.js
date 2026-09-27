@@ -54,7 +54,7 @@ function mc(step,host,api){
 function fixSentence(step,host,api){
   const wrap=el(`<div>
     <p class="mut small">Fix this sentence:</p>
-    <div class="shad-text" style="border-color:rgba(248,113,113,.4)">❌ ${esc(step.wrong)}</div>
+    <div class="shad-text" style="border-color:color-mix(in srgb,var(--red) 40%,transparent)">❌ ${esc(step.wrong)}</div>
     <input class="field" id="fx-in" placeholder="Type the corrected sentence…" autocomplete="off">
     <div class="row" style="gap:8px"><button class="btn" id="fx-go" style="flex:3">Check ✓</button>
     <button class="btn ghost" id="fx-hint" style="flex:1">💡</button></div></div>`);
@@ -413,7 +413,7 @@ function timedQuiz(step,host,api){
         body.appendChild(b);
       });
     }else if(q.kind==='fix'){
-      body.appendChild(el(`<div class="shad-text" style="border-color:rgba(248,113,113,.4)">❌ ${esc(q.wrong||'')}</div>`));
+      body.appendChild(el(`<div class="shad-text" style="border-color:color-mix(in srgb,var(--red) 40%,transparent)">❌ ${esc(q.wrong||'')}</div>`));
       const inp=el(`<input class="field" placeholder="Type the corrected version…" autocomplete="off">`);
       const go=el(`<button class="btn mt">Check ✓</button>`);
       body.append(inp,go);
