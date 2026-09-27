@@ -1,0 +1,1206 @@
+{
+ "dict": {
+  "absolutely": {
+   "d": "completely; totally",
+   "ex": "“Are you sure?” “Absolutely!”"
+  },
+  "achieve": {
+   "d": "to reach a goal successfully",
+   "ex": "She achieved her dream of studying abroad."
+  },
+  "admit": {
+   "d": "to say something true, often unwillingly",
+   "ex": "He admitted he was nervous."
+  },
+  "ambitious": {
+   "d": "wanting success strongly",
+   "ex": "An ambitious student studies every day."
+  },
+  "announcement": {
+   "d": "a public statement",
+   "ex": "They made an announcement about the delay."
+  },
+  "apologize": {
+   "d": "to say sorry",
+   "ex": "He apologized for being late."
+  },
+  "appointment": {
+   "d": "a planned meeting",
+   "ex": "I have a doctor's appointment at 5."
+  },
+  "argue": {
+   "d": "to disagree strongly in words",
+   "ex": "They argued about the bill."
+  },
+  "arrange": {
+   "d": "to plan or organize",
+   "ex": "We arranged a meeting for Monday."
+  },
+  "attend": {
+   "d": "to go to an event",
+   "ex": "She attends every class."
+  },
+  "audience": {
+   "d": "people watching a show",
+   "ex": "The audience clapped loudly."
+  },
+  "bargain": {
+   "d": "a good cheap price; to negotiate",
+   "ex": "It was a bargain at half price."
+  },
+  "brilliant": {
+   "d": "very smart; excellent",
+   "ex": "What a brilliant idea!"
+  },
+  "calm": {
+   "d": "peaceful; not nervous",
+   "ex": "Stay calm and speak slowly."
+  },
+  "career": {
+   "d": "your working life / profession",
+   "ex": "He wants a career in data science."
+  },
+  "celebrate": {
+   "d": "to enjoy a happy event",
+   "ex": "We celebrated with dinner."
+  },
+  "chance": {
+   "d": "an opportunity",
+   "ex": "Give me one more chance."
+  },
+  "charge": {
+   "d": "to ask for money; electrical power",
+   "ex": "My phone has no charge left."
+  },
+  "chase": {
+   "d": "to run after",
+   "ex": "The dog chased the ball."
+  },
+  "cheer": {
+   "d": "to shout happily",
+   "ex": "The crowd cheered for the team."
+  },
+  "client": {
+   "d": "a customer of a professional",
+   "ex": "The client wants the report tomorrow."
+  },
+  "comfortable": {
+   "d": "relaxed; not painful",
+   "ex": "These shoes are very comfortable."
+  },
+  "commit": {
+   "d": "to promise seriously",
+   "ex": "She committed to studying daily."
+  },
+  "compete": {
+   "d": "to try to win against others",
+   "ex": "Two teams competed in the final."
+  },
+  "complain": {
+   "d": "to say you are unhappy",
+   "ex": "He complained about the noise."
+  },
+  "concentrate": {
+   "d": "to focus your mind",
+   "ex": "I can't concentrate with music on."
+  },
+  "confidence": {
+   "d": "belief in yourself",
+   "ex": "Speaking daily builds confidence."
+  },
+  "confident": {
+   "d": "sure of yourself",
+   "ex": "She gave a confident answer."
+  },
+  "confirm": {
+   "d": "to say something is true/certain",
+   "ex": "Just to confirm — Friday, right?"
+  },
+  "confused": {
+   "d": "not understanding",
+   "ex": "I was confused by the instructions."
+  },
+  "consider": {
+   "d": "to think about carefully",
+   "ex": "Consider all options first."
+  },
+  "courage": {
+   "d": "bravery",
+   "ex": "It took courage to speak up."
+  },
+  "crowd": {
+   "d": "many people together",
+   "ex": "A crowd gathered at the gate."
+  },
+  "curious": {
+   "d": "wanting to know",
+   "ex": "The kids were curious about the guest."
+  },
+  "deadline": {
+   "d": "the last date to finish",
+   "ex": "The deadline is Friday."
+  },
+  "decide": {
+   "d": "to make a choice",
+   "ex": "We decided to leave early."
+  },
+  "declare": {
+   "d": "to announce officially",
+   "ex": "The umpire declared him out."
+  },
+  "delay": {
+   "d": "late; to make late",
+   "ex": "The flight was delayed."
+  },
+  "deliver": {
+   "d": "to bring; to give a speech",
+   "ex": "He delivered a great presentation."
+  },
+  "deserve": {
+   "d": "to have earned something",
+   "ex": "You deserve a break."
+  },
+  "desperate": {
+   "d": "needing badly; hopeless",
+   "ex": "He was desperate for a job."
+  },
+  "determine": {
+   "d": "to decide firmly",
+   "ex": "She is determined to win."
+  },
+  "discount": {
+   "d": "a price reduction",
+   "ex": "Students get a 10% discount."
+  },
+  "discover": {
+   "d": "to find something new",
+   "ex": "We discovered a great café."
+  },
+  "discuss": {
+   "d": "to talk about",
+   "ex": "Let's discuss the plan."
+  },
+  "doubt": {
+   "d": "uncertainty",
+   "ex": "No doubt — you can do it."
+  },
+  "eager": {
+   "d": "excited to do something",
+   "ex": "He was eager to start."
+  },
+  "embarrassed": {
+   "d": "feeling shy/ashamed",
+   "ex": "I was embarrassed by my mistake."
+  },
+  "encourage": {
+   "d": "to give support",
+   "ex": "She encouraged me to try."
+  },
+  "exhausted": {
+   "d": "very tired",
+   "ex": "After the match, we were exhausted."
+  },
+  "expect": {
+   "d": "to think something will happen",
+   "ex": "I expect good results."
+  },
+  "experience": {
+   "d": "knowledge from doing; an event",
+   "ex": "It was a great experience."
+  },
+  "explain": {
+   "d": "to make clear",
+   "ex": "Can you explain this again?"
+  },
+  "fair": {
+   "d": "just; equal",
+   "ex": "That's not fair!"
+  },
+  "familiar": {
+   "d": "known; not strange",
+   "ex": "Her voice sounded familiar."
+  },
+  "fantastic": {
+   "d": "wonderful",
+   "ex": "The food was fantastic."
+  },
+  "fascinating": {
+   "d": "very interesting",
+   "ex": "A fascinating story."
+  },
+  "fever": {
+   "d": "high body temperature",
+   "ex": "He has a fever of 102."
+  },
+  "fluent": {
+   "d": "speaking smoothly",
+   "ex": "She is fluent in English."
+  },
+  "focus": {
+   "d": "to concentrate",
+   "ex": "Focus on your goal."
+  },
+  "forgive": {
+   "d": "to stop being angry",
+   "ex": "I forgive you."
+  },
+  "generous": {
+   "d": "giving freely",
+   "ex": "A generous tip for the waiter."
+  },
+  "gentle": {
+   "d": "soft; kind",
+   "ex": "A gentle reminder."
+  },
+  "glimpse": {
+   "d": "a quick look",
+   "ex": "I caught a glimpse of the sea."
+  },
+  "grateful": {
+   "d": "thankful",
+   "ex": "I'm grateful for your help."
+  },
+  "greet": {
+   "d": "to say hello",
+   "ex": "She greeted us warmly."
+  },
+  "hesitate": {
+   "d": "to pause before acting",
+   "ex": "Don't hesitate to ask."
+  },
+  "honest": {
+   "d": "truthful",
+   "ex": "Be honest with yourself."
+  },
+  "huge": {
+   "d": "very big",
+   "ex": "A huge crowd."
+  },
+  "impatient": {
+   "d": "not wanting to wait",
+   "ex": "Don't be impatient."
+  },
+  "impress": {
+   "d": "to make someone admire you",
+   "ex": "He impressed the interviewer."
+  },
+  "improve": {
+   "d": "to get better",
+   "ex": "Practice improves fluency."
+  },
+  "insist": {
+   "d": "to demand firmly",
+   "ex": "She insisted on paying."
+  },
+  "interview": {
+   "d": "a formal meeting for a job",
+   "ex": "My interview is tomorrow."
+  },
+  "introduce": {
+   "d": "to present someone",
+   "ex": "Let me introduce myself."
+  },
+  "nervous": {
+   "d": "worried; anxious",
+   "ex": "I was nervous before the call."
+  },
+  "opportunity": {
+   "d": "a good chance",
+   "ex": "A great opportunity."
+  },
+  "patient": {
+   "d": "able to wait calmly; a sick person",
+   "ex": "Be patient with yourself."
+  },
+  "politely": {
+   "d": "in a respectful way",
+   "ex": "He politely refused."
+  },
+  "practice": {
+   "d": "to train by repeating",
+   "ex": "Practice makes progress."
+  },
+  "prepare": {
+   "d": "to get ready",
+   "ex": "Prepare your questions."
+  },
+  "pressure": {
+   "d": "stress",
+   "ex": "He works well under pressure."
+  },
+  "pride": {
+   "d": "a feeling of worth",
+   "ex": "She takes pride in her work."
+  },
+  "progress": {
+   "d": "improvement over time",
+   "ex": "Your progress is amazing."
+  },
+  "proud": {
+   "d": "feeling pride",
+   "ex": "I'm proud of you."
+  },
+  "punctual": {
+   "d": "on time",
+   "ex": "Always be punctual."
+  },
+  "realize": {
+   "d": "to understand suddenly",
+   "ex": "I realized my mistake."
+  },
+  "recommend": {
+   "d": "to suggest",
+   "ex": "I recommend this book."
+  },
+  "recover": {
+   "d": "to get better",
+   "ex": "He recovered quickly."
+  },
+  "regret": {
+   "d": "to feel sorry about",
+   "ex": "No regrets — keep going."
+  },
+  "reliable": {
+   "d": "can be trusted",
+   "ex": "A reliable friend."
+  },
+  "relieved": {
+   "d": "feeling calm after worry",
+   "ex": "I was relieved to hear the news."
+  },
+  "remarkable": {
+   "d": "amazing; worth noticing",
+   "ex": "A remarkable improvement."
+  },
+  "remind": {
+   "d": "to help remember",
+   "ex": "Remind me to call him."
+  },
+  "reply": {
+   "d": "to answer",
+   "ex": "She replied politely."
+  },
+  "request": {
+   "d": "to ask politely",
+   "ex": "May I request a window seat?"
+  },
+  "respect": {
+   "d": "admiration; politeness",
+   "ex": "Show respect to everyone."
+  },
+  "respond": {
+   "d": "to answer",
+   "ex": "He responded calmly."
+  },
+  "responsible": {
+   "d": "in charge; trustworthy",
+   "ex": "A responsible worker."
+  },
+  "result": {
+   "d": "outcome",
+   "ex": "Hard work brings results."
+  },
+  "reward": {
+   "d": "a prize for effort",
+   "ex": "Success is the best reward."
+  },
+  "rude": {
+   "d": "impolite",
+   "ex": "That was rude."
+  },
+  "satisfied": {
+   "d": "happy with something",
+   "ex": "The client was satisfied."
+  },
+  "schedule": {
+   "d": "a plan of times",
+   "ex": "Check the bus schedule."
+  },
+  "score": {
+   "d": "points in a game",
+   "ex": "The final score was 180."
+  },
+  "secret": {
+   "d": "hidden information",
+   "ex": "Can you keep a secret?"
+  },
+  "serious": {
+   "d": "not joking; important",
+   "ex": "A serious discussion."
+  },
+  "settle": {
+   "d": "to calm down; to resolve",
+   "ex": "Let's settle this peacefully."
+  },
+  "shocked": {
+   "d": "very surprised",
+   "ex": "I was shocked by the news."
+  },
+  "sincere": {
+   "d": "honest; real",
+   "ex": "A sincere apology."
+  },
+  "skilled": {
+   "d": "having ability",
+   "ex": "A skilled speaker."
+  },
+  "smart": {
+   "d": "clever",
+   "ex": "A smart question."
+  },
+  "smoothly": {
+   "d": "without problems",
+   "ex": "The call went smoothly."
+  },
+  "solve": {
+   "d": "to find an answer",
+   "ex": "We solved the problem."
+  },
+  "sorry": {
+   "d": "feeling regret",
+   "ex": "I'm sorry I'm late."
+  },
+  "specific": {
+   "d": "exact; detailed",
+   "ex": "Be specific about the time."
+  },
+  "stage": {
+   "d": "a platform; a phase",
+   "ex": "He walked onto the stage."
+  },
+  "stare": {
+   "d": "to look fixedly",
+   "ex": "Don't stare at people."
+  },
+  "stranger": {
+   "d": "an unknown person",
+   "ex": "A stranger helped me."
+  },
+  "stress": {
+   "d": "pressure; worry",
+   "ex": "Exams cause stress."
+  },
+  "struggle": {
+   "d": "to fight hard; difficulty",
+   "ex": "She struggled but didn't quit."
+  },
+  "stunning": {
+   "d": "amazingly beautiful",
+   "ex": "A stunning view."
+  },
+  "succeed": {
+   "d": "to achieve success",
+   "ex": "You will succeed."
+  },
+  "suggest": {
+   "d": "to propose an idea",
+   "ex": "I suggest we leave early."
+  },
+  "support": {
+   "d": "help",
+   "ex": "Thank you for your support."
+  },
+  "surprised": {
+   "d": "feeling wonder",
+   "ex": "I was pleasantly surprised."
+  },
+  "symptom": {
+   "d": "a sign of illness",
+   "ex": "Fever is a symptom."
+  },
+  "tension": {
+   "d": "stress; tightness",
+   "ex": "The tension in the room was high."
+  },
+  "terrific": {
+   "d": "great",
+   "ex": "A terrific performance."
+  },
+  "thrilled": {
+   "d": "very excited",
+   "ex": "I was thrilled to hear it."
+  },
+  "tremble": {
+   "d": "to shake with fear",
+   "ex": "His hands trembled."
+  },
+  "trust": {
+   "d": "belief in someone",
+   "ex": "Trust takes time."
+  },
+  "unique": {
+   "d": "one of a kind",
+   "ex": "A unique opportunity."
+  },
+  "upset": {
+   "d": "sad or angry",
+   "ex": "Don't be upset."
+  },
+  "urgent": {
+   "d": "needing quick action",
+   "ex": "An urgent message."
+  },
+  "valuable": {
+   "d": "worth a lot",
+   "ex": "Valuable advice."
+  },
+  "victory": {
+   "d": "a win",
+   "ex": "A sweet victory."
+  },
+  "volunteer": {
+   "d": "to offer freely",
+   "ex": "She volunteered to help."
+  },
+  "whisper": {
+   "d": "to speak very softly",
+   "ex": "“Don't be late,” she whispered."
+  },
+  "wise": {
+   "d": "having good judgment",
+   "ex": "A wise decision."
+  },
+  "witness": {
+   "d": "to see an event",
+   "ex": "We witnessed history."
+  },
+  "worried": {
+   "d": "anxious",
+   "ex": "She looked worried."
+  },
+  "worth": {
+   "d": "having value",
+   "ex": "It was worth the wait."
+  },
+  "shout": {
+   "d": "to speak very loudly",
+   "ex": "He shouted my name across the street."
+  },
+  "grab": {
+   "d": "to take hold of quickly",
+   "ex": "She grabbed her bag and ran."
+  },
+  "breathe": {
+   "d": "to take air in and out",
+   "ex": "Breathe slowly and stay calm."
+  },
+  "lean": {
+   "d": "to bend toward something",
+   "ex": "He leaned forward to listen."
+  },
+  "attention": {
+   "d": "careful focus",
+   "ex": "Now you have my attention."
+  },
+  "explode": {
+   "d": "to burst loudly",
+   "ex": "The crowd exploded with joy."
+  },
+  "brave": {
+   "d": "not afraid; courageous",
+   "ex": "Brave people try anyway."
+  },
+  "fireworks": {
+   "d": "bright explosives for celebration",
+   "ex": "Fireworks lit up the sky."
+  },
+  "prescription": {
+   "d": "a doctor's written order for medicine",
+   "ex": "Take this prescription to the pharmacy."
+  },
+  "intern": {
+   "d": "a trainee worker",
+   "ex": "She started as an intern."
+  },
+  "aboard": {
+   "d": "on a ship/plane; joining a team",
+   "ex": "Welcome aboard!"
+  },
+  "upgrade": {
+   "d": "to move to a better class/level",
+   "ex": "We got an upgrade to business class."
+  },
+  "lounge": {
+   "d": "a comfortable waiting room",
+   "ex": "We waited in the airport lounge."
+  },
+  "attendant": {
+   "d": "a person who serves passengers",
+   "ex": "The flight attendant offered juice."
+  },
+  "honestly": {
+   "d": "in a truthful way",
+   "ex": "Honestly, I was nervous."
+  },
+  "calmly": {
+   "d": "in a peaceful, controlled way",
+   "ex": "“Orange, please,” he said calmly."
+  },
+  "sharp": {
+   "d": "exactly on time",
+   "ex": "The bus leaves at 7:30 sharp."
+  },
+  "promise": {
+   "d": "to say you will do something",
+   "ex": "I promise I'll be on time."
+  },
+  "wave": {
+   "d": "to move your hand in greeting",
+   "ex": "He waved goodbye."
+  },
+  "kiss": {
+   "d": "to touch with the lips",
+   "ex": "She kissed her mother's hand."
+  },
+  "stairs": {
+   "d": "steps inside a building",
+   "ex": "He ran down the stairs."
+  },
+  "driver": {
+   "d": "a person who drives",
+   "ex": "The bus driver smiled."
+  },
+  "laugh": {
+   "d": "to show happiness with sound",
+   "ex": "The whole bus laughed."
+  },
+  "cafe": {
+   "d": "a small restaurant for coffee",
+   "ex": "We met at a quiet café."
+  },
+  "owner": {
+   "d": "a person who owns something",
+   "ex": "The shop owner thanked her."
+  },
+  "dashboard": {
+   "d": "a screen showing data visually",
+   "ex": "The sales dashboard was clear."
+  },
+  "street": {
+   "d": "a road in a town",
+   "ex": "The whole street was silent."
+  },
+  "neighbour": {
+   "d": "a person living nearby",
+   "ex": "Our neighbours cheered."
+  },
+  "silence": {
+   "d": "no sound",
+   "ex": "Silence fell over the crowd."
+  },
+  "jump": {
+   "d": "to push yourself into the air",
+   "ex": "He jumped with joy."
+  },
+  "counter": {
+   "d": "a long table in a shop",
+   "ex": "He waited at the check-in counter."
+  },
+  "officer": {
+   "d": "a person in authority",
+   "ex": "The officer checked my ticket."
+  },
+  "seat": {
+   "d": "a place to sit",
+   "ex": "The seat was huge."
+  },
+  "wife": {
+   "d": "a married woman",
+   "ex": "He called his wife."
+  },
+  "believe": {
+   "d": "to think something is true",
+   "ex": "I couldn't believe it."
+  },
+  "manager": {
+   "d": "a person who leads a team",
+   "ex": "The manager welcomed her."
+  },
+  "desk": {
+   "d": "a table for work",
+   "ex": "This is your desk."
+  },
+  "team": {
+   "d": "a group working together",
+   "ex": "The team clapped."
+  },
+  "beat": {
+   "d": "to thump (heart)",
+   "ex": "Her heart was beating fast."
+  },
+  "pharmacist": {
+   "d": "a person who prepares and sells medicine",
+   "ex": "The pharmacist was very helpful."
+  },
+  "formula": {
+   "d": "the exact recipe/composition",
+   "ex": "Same formula, different brand."
+  }
+ },
+ "stories": [
+  {
+   "icon": "🚌",
+   "id": "the-late-bus",
+   "level": "A2",
+   "lines": [
+    {
+     "text": "Bilal was already late. The university bus leaves at 7:30 sharp, and his watch showed 7:28.",
+     "who": "Narrator"
+    },
+    {
+     "text": "“Ammi! Have you seen my bag?” he shouted, running down the stairs.",
+     "who": "Bilal"
+    },
+    {
+     "text": "“Behind the door, beta. And take a banana — you need energy!”",
+     "who": "Ammi"
+    },
+    {
+     "text": "He grabbed the bag, kissed his mother's hand, and ran. The bus was just closing its doors.",
+     "who": "Narrator"
+    },
+    {
+     "text": "“Bhai, please! One minute!” Bilal waved his arms.",
+     "who": "Bilal"
+    },
+    {
+     "text": "The driver smiled and opened the door. “Running again, Bilal? One day this bus will teach you punctuality.”",
+     "who": "Driver"
+    },
+    {
+     "text": "The whole bus laughed. Bilal sat down, breathing hard, and promised himself: tomorrow, 7:15.",
+     "who": "Narrator"
+    }
+   ],
+   "quiz": [
+    {
+     "answer": 1,
+     "options": [
+      "7:15",
+      "7:30",
+      "8:00"
+     ],
+     "q": "What time does the university bus leave?",
+     "why": "The story says the bus leaves at 7:30 sharp."
+    },
+    {
+     "answer": 0,
+     "options": [
+      "behind the door",
+      "in the kitchen",
+      "on the bus"
+     ],
+     "q": "Where was Bilal's bag?",
+     "why": "Ammi says: “Behind the door, beta.”"
+    },
+    {
+     "answer": 2,
+     "options": [
+      "He was angry",
+      "He drove away",
+      "He opened the door and joked"
+     ],
+     "q": "How did the driver react?",
+     "why": "He smiled, opened the door, and joked about punctuality."
+    }
+   ],
+   "title": "The Late Bus",
+   "vocab": [
+    "punctual",
+    "shouted",
+    "grabbed",
+    "breathing"
+   ]
+  },
+  {
+   "icon": "💼",
+   "id": "coffee-with-a-client",
+   "level": "B1",
+   "lines": [
+    {
+     "text": "Ayesha arrived ten minutes early at the café. Her first real client meeting — and her hands were shaking.",
+     "who": "Narrator"
+    },
+    {
+     "text": "“Ayesha? I'm Daniyal. Great to finally meet you in person!”",
+     "who": "Daniyal"
+    },
+    {
+     "text": "“Great to meet you too! Thanks for making time. Can I get you a coffee?”",
+     "who": "Ayesha"
+    },
+    {
+     "text": "“Sure — black coffee, please.” He sat down. “So, tell me about your work.”",
+     "who": "Daniyal"
+    },
+    {
+     "text": "Ayesha took a deep breath. “I help small businesses understand their sales data. Last month I built a dashboard that saved a shop owner six hours every week.”",
+     "who": "Ayesha"
+    },
+    {
+     "text": "Daniyal leaned forward. “Six hours a week? Now you have my attention.”",
+     "who": "Narrator"
+    },
+    {
+     "text": "“I like numbers that speak,” Daniyal smiled. “Send me a proposal by Friday?”",
+     "who": "Daniyal"
+    },
+    {
+     "text": "“Absolutely. You'll have it by Thursday.” Ayesha smiled back — her hands had stopped shaking.",
+     "who": "Ayesha"
+    }
+   ],
+   "quiz": [
+    {
+     "answer": 1,
+     "options": [
+      "She was late",
+      "Her hands were shaking",
+      "She forgot her bag"
+     ],
+     "q": "Why was Ayesha nervous?",
+     "why": "Her first real client meeting — her hands were shaking."
+    },
+    {
+     "answer": 0,
+     "options": [
+      "six hours every week",
+      "six hours every month",
+      "one hour every week"
+     ],
+     "q": "How much time did her dashboard save?",
+     "why": "“saved a shop owner six hours every week.”"
+    },
+    {
+     "answer": 2,
+     "options": [
+      "Monday",
+      "Friday",
+      "Thursday"
+     ],
+     "q": "When will she send the proposal?",
+     "why": "“You'll have it by Thursday.” — under-promising on Friday, over-delivering."
+    }
+   ],
+   "title": "Coffee with a Client",
+   "vocab": [
+    "client",
+    "absolutely",
+    "leaned",
+    "attention"
+   ]
+  },
+  {
+   "icon": "🏏",
+   "id": "the-cricket-match",
+   "level": "A2",
+   "lines": [
+    {
+     "text": "It was the last over. Pakistan needed 12 runs. The whole street was silent.",
+     "who": "Narrator"
+    },
+    {
+     "text": "“Come on, come on!” whispered Hamza, holding his father's hand tightly.",
+     "who": "Hamza"
+    },
+    {
+     "text": "First ball — SIX! The street exploded. “Wow!” shouted the neighbours.",
+     "who": "Narrator"
+    },
+    {
+     "text": "Second ball — dot ball. Silence again. Hamza closed his eyes.",
+     "who": "Narrator"
+    },
+    {
+     "text": "“Baba, I can't watch,” he said.",
+     "who": "Hamza"
+    },
+    {
+     "text": "“Watch, beta. Brave people watch till the end,” his father smiled.",
+     "who": "Baba"
+    },
+    {
+     "text": "Third ball — FOUR! Fourth ball — SIX! Pakistan won! Fireworks lit up the sky.",
+     "who": "Narrator"
+    },
+    {
+     "text": "Hamza jumped into his father's arms. “Did you see that? Did you see that?”",
+     "who": "Hamza"
+    }
+   ],
+   "quiz": [
+    {
+     "answer": 0,
+     "options": [
+      "12 runs",
+      "6 runs",
+      "20 runs"
+     ],
+     "q": "How many runs were needed in the last over?",
+     "why": "“Pakistan needed 12 runs.”"
+    },
+    {
+     "answer": 1,
+     "options": [
+      "a six",
+      "a dot ball",
+      "a four"
+     ],
+     "q": "What happened on the second ball?",
+     "why": "“Second ball — dot ball.”"
+    },
+    {
+     "answer": 2,
+     "options": [
+      "“Go to sleep”",
+      "“Brave people watch till the end”",
+      "“Close your eyes”"
+     ],
+     "q": "What did Baba tell Hamza?",
+     "why": "“Watch, beta. Brave people watch till the end.”"
+    }
+   ],
+   "title": "The Cricket Match",
+   "vocab": [
+    "whispered",
+    "exploded",
+    "brave",
+    "fireworks"
+   ]
+  },
+  {
+   "icon": "💊",
+   "id": "at-the-pharmacy",
+   "level": "A2",
+   "lines": [
+    {
+     "text": "After the clinic, Tanqeel took his prescription to the pharmacy near the hospital.",
+     "who": "Narrator"
+    },
+    {
+     "text": "“Assalam-o-Alaikum. I need these medicines, please.” He handed over the paper.",
+     "who": "Tanqeel"
+    },
+    {
+     "text": "“Walaikum-Assalam. One minute…” The pharmacist checked the shelves. “We have everything except this syrup — but this one is the same formula.”",
+     "who": "Pharmacist"
+    },
+    {
+     "text": "“Is it safe to take the different brand?” Tanqeel asked.",
+     "who": "Tanqeel"
+    },
+    {
+     "text": "“Same formula, same company standard — completely safe. Many customers use it.”",
+     "who": "Pharmacist"
+    },
+    {
+     "text": "“Okay. And how many times a day for the tablets?”",
+     "who": "Tanqeel"
+    },
+    {
+     "text": "“Twice a day, after food. Drink lots of water. Get well soon!”",
+     "who": "Pharmacist"
+    },
+    {
+     "text": "Tanqeel paid, said Khuda Hafiz, and walked home feeling relieved — being able to ask in English felt like a small victory.",
+     "who": "Narrator"
+    }
+   ],
+   "quiz": [
+    {
+     "answer": 0,
+     "options": [
+      "the syrup",
+      "the tablets",
+      "everything"
+     ],
+     "q": "Which medicine was NOT available?",
+     "why": "“We have everything except this syrup.”"
+    },
+    {
+     "answer": 1,
+     "options": [
+      "a different shop",
+      "the same formula, different brand",
+      "no medicine"
+     ],
+     "q": "What did the pharmacist offer instead?",
+     "why": "“this one is the same formula.”"
+    },
+    {
+     "answer": 2,
+     "options": [
+      "before food",
+      "with tea",
+      "after food"
+     ],
+     "q": "When should he take the tablets?",
+     "why": "“Twice a day, after food.”"
+    }
+   ],
+   "title": "At the Pharmacy",
+   "vocab": [
+    "prescription",
+    "pharmacist",
+    "formula",
+    "relieved"
+   ]
+  },
+  {
+   "icon": "🏢",
+   "id": "first-day-at-work",
+   "level": "B1",
+   "lines": [
+    {
+     "text": "Sana's first day as an intern. New office, new people, new English-only rule in meetings.",
+     "who": "Narrator"
+    },
+    {
+     "text": "“Morning! You must be Sana. I'm Fariha — I'll show you around.”",
+     "who": "Fariha"
+    },
+    {
+     "text": "“Thank you so much. I'm a little nervous, honestly.”",
+     "who": "Sana"
+    },
+    {
+     "text": "“Everyone is, on day one. Come — this is your desk. The team standup is at 10.”",
+     "who": "Fariha"
+    },
+    {
+     "text": "At 10, the manager asked Sana to introduce herself. Her heart was beating fast.",
+     "who": "Narrator"
+    },
+    {
+     "text": "“Hi everyone, I'm Sana. I'm a data science student, and I'll be helping with the weekly reports. I'm excited to learn from all of you.”",
+     "who": "Sana"
+    },
+    {
+     "text": "The team clapped. “Welcome aboard, Sana!”",
+     "who": "Team"
+    },
+    {
+     "text": "By lunch, Sana realized something: nobody cared about perfect English. They cared that she tried.",
+     "who": "Narrator"
+    }
+   ],
+   "quiz": [
+    {
+     "answer": 1,
+     "options": [
+      "English-only in meetings",
+      "no phones",
+      "no lunch breaks"
+     ],
+     "q": "What was the new rule Sana noticed?",
+     "why": "“new English-only rule in meetings.”"
+    },
+    {
+     "answer": 0,
+     "options": [
+      "10 o'clock",
+      "9 o'clock",
+      "11 o'clock"
+     ],
+     "q": "When was the team standup?",
+     "why": "“The team standup is at 10.”"
+    },
+    {
+     "answer": 2,
+     "options": [
+      "perfect English",
+      "trying and communicating",
+      "silence"
+     ],
+     "q": "What did the team actually care about?",
+     "why": "“nobody cared about perfect English. They cared that she tried.”"
+    }
+   ],
+   "title": "First Day at Work",
+   "vocab": [
+    "intern",
+    "nervous",
+    "honestly",
+    "aboard"
+   ]
+  },
+  {
+   "icon": "✈️",
+   "id": "the-upgrade",
+   "level": "B1",
+   "lines": [
+    {
+     "text": "At the check-in counter, the officer looked at Usman's ticket, then at him, and smiled.",
+     "who": "Narrator"
+    },
+    {
+     "text": "“Mr. Usman, you've been upgraded to business class. Congratulations!”",
+     "who": "Officer"
+    },
+    {
+     "text": "“Sorry — did you say upgraded? Are you sure?” Usman couldn't believe it.",
+     "who": "Usman"
+    },
+    {
+     "text": "“Quite sure. Enjoy the lounge — boarding is at gate 7.”",
+     "who": "Officer"
+    },
+    {
+     "text": "In the lounge, Usman called his wife. “You won't believe this — business class!”",
+     "who": "Narrator"
+    },
+    {
+     "text": "“No way! Take a photo of the seat!” she laughed.",
+     "who": "Wife"
+    },
+    {
+     "text": "On the plane, the seat was huge. A flight attendant offered juice. “Orange or apple?”",
+     "who": "Narrator"
+    },
+    {
+     "text": "“Orange, please,” Usman said calmly — like a man who flies business class every week.",
+     "who": "Usman"
+    }
+   ],
+   "quiz": [
+    {
+     "answer": 0,
+     "options": [
+      "business class",
+      "first class",
+      "economy plus"
+     ],
+     "q": "What upgrade did Usman get?",
+     "why": "“you've been upgraded to business class.”"
+    },
+    {
+     "answer": 1,
+     "options": [
+      "gate 4",
+      "gate 7",
+      "gate 9"
+     ],
+     "q": "Which gate was the boarding at?",
+     "why": "“boarding is at gate 7.”"
+    },
+    {
+     "answer": 2,
+     "options": [
+      "apple",
+      "mango",
+      "orange"
+     ],
+     "q": "Which juice did he choose?",
+     "why": "“Orange, please.”"
+    }
+   ],
+   "title": "The Upgrade",
+   "vocab": [
+    "upgraded",
+    "lounge",
+    "attendant",
+    "calmly"
+   ]
+  }
+ ]
+}

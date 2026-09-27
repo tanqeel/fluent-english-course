@@ -23,6 +23,19 @@ function home(root){
   const plan=Content.cache.plan,week=plan.weeks[Math.min(11,Math.floor((dn-1)/7))];
   const due=Store.dueCards().length;
   const cont=S.lastLesson?Content.findLesson(S.lastLesson):null;
+  let dailyCard='';
+  try{
+    if(window.Speak&&window.Speak.dailyState){
+      const ds=window.Speak.dailyState();
+      const dn2=ds.st.items.filter(Boolean).length;
+      if(!ds.st.bonus){
+        dailyCard=`<div class="card" style="border:1.5px dashed var(--acc);cursor:pointer" data-go="#/speak/daily">
+          <div class="kicker" style="color:var(--acc)">📅 DAILY CHALLENGE</div>
+          <p style="margin:8px 0"><b>${dn2}/${ds.plan.items.length} done</b> — finish all for <b>+50 XP</b> bonus</p>
+          <div class="lprog"><i style="width:${ds.plan.items.length?dn2/ds.plan.items.length*100:0}%"></i></div></div>`;
+      }
+    }
+  }catch(e){}
   root.innerHTML=`
     <div class="greet">${greet()}, ${esc(S.name||'friend')} 👋</div>
     <p class="sub">Day ${dn} of your 90-day path · ${esc(st.msg)}</p>
@@ -55,8 +68,10 @@ function home(root){
         <button class="btn" data-go="#/learn" style="flex:1">Learn →</button>
         ${due?`<button class="btn vio" data-go="#/review" style="flex:1">Review ${due} cards</button>`:''}
       </div></div>
+    ${dailyCard}
     <h2 class="sec">Quick hits</h2>
     <div class="row" style="gap:8px">
+      <button class="btn ghost" data-go="#/speak" style="flex:1">🗣️ Speak</button>
       <button class="btn ghost" data-go="#/practice" style="flex:1">⚔️ Drills</button>
       <button class="btn ghost" data-go="#/coach" style="flex:1">🤖 AI Coach · free</button>
       <button class="btn ghost" data-go="#/progress" style="flex:1">📊 Progress</button>
@@ -223,6 +238,10 @@ const ENGINES=[
 function practice(root,engine){
   if(!engine){
     let html=`<div class="greet">Drill arena ⚔️</div><p class="sub">Pick a drill type — or go random. Every rep counts.</p>
+      <div class="card" style="border:1.5px solid var(--acc);cursor:pointer" data-go="#/speak">
+        <div class="kicker" style="color:var(--acc)">🗣️ NEW · SPEAK STUDIO</div>
+        <p style="margin:8px 0"><b>Pronunciation Lab · Roleplays · Stories · Daily Challenge</b></p>
+        <p class="small dim" style="margin:0">The speaking gym — word-level feedback, offline conversations, mistake repair.</p></div>
       <div class="card"><button class="btn" data-e="random">🎲 Surprise me (mixed)</button></div><div class="badge-grid">`;
     for(const [e,ic,name] of ENGINES)html+=`<div class="bdg" data-e="${e}" style="cursor:pointer"><span class="e">${ic}</span>${name}</div>`;
     html+=`</div>
@@ -232,6 +251,7 @@ function practice(root,engine){
       </div>`;
     root.innerHTML=html;
     root.querySelectorAll('[data-e]').forEach(c=>c.onclick=()=>location.hash='#/practice/'+c.dataset.e);
+    root.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>location.hash=b.dataset.go);
     root.querySelector('#tab-quiz').onclick=()=>quizList(root);
     root.querySelector('#tab-task').onclick=()=>taskList(root);
     return;
@@ -586,5 +606,11 @@ function progress(root){
   };
 }
 
-window.Screens={home,learn,moduleView,lessonView,practice,practiceArena:practice,review,progress,placement,quizList,taskList,onboarding,shareApp};
+/* ================= SPEAK STUDIO (js/speak.js owns the views) ================= */
+function speak(root,arg){
+  if(window.Speak&&window.Speak.speak){window.Speak.speak(root,arg);return;}
+  root.innerHTML='<div class="empty">Speak Studio failed to load. Reload the app.</div>';
+}
+
+window.Screens={home,learn,moduleView,lessonView,practice,practiceArena:practice,review,progress,placement,quizList,taskList,onboarding,shareApp,speak};
 })();

@@ -181,6 +181,48 @@
    "icon": "🎓",
    "id": "band-hunter",
    "name": "Band Hunter"
+  },
+  {
+   "check": "pron_sessions >= 1",
+   "desc": "Try the Pronunciation Lab and get your first word-level score.",
+   "icon": "🎯",
+   "id": "first-echo",
+   "name": "First Echo"
+  },
+  {
+   "check": "pron_best >= 85",
+   "desc": "Score 85%+ on any pronunciation set.",
+   "icon": "👅",
+   "id": "tongue-master",
+   "name": "Tongue Master"
+  },
+  {
+   "check": "roleplays_done >= 3",
+   "desc": "Finish 3 different roleplay scenarios.",
+   "icon": "🎭",
+   "id": "roleplayer",
+   "name": "Roleplayer"
+  },
+  {
+   "check": "stories_read >= 3",
+   "desc": "Finish 3 interactive stories.",
+   "icon": "📖",
+   "id": "story-seeker",
+   "name": "Story Seeker"
+  },
+  {
+   "check": "daily_done >= 7",
+   "desc": "Complete 7 daily challenges.",
+   "icon": "📅",
+   "id": "daily-hero",
+   "name": "Daily Hero"
+  },
+  {
+   "check": "repair_done >= 3",
+   "desc": "Run 3 mistake-repair rounds.",
+   "icon": "🔧",
+   "id": "mistake-surgeon",
+   "name": "Mistake Surgeon"
   }
  ]
 }

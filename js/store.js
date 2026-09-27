@@ -16,8 +16,10 @@ function fresh(){return {
   errorLog:[],                             // {id,ts,module,engine,prompt,yours,correct,explanation,reviewed}
   modulesCompleted:{},                     // moduleId -> ts
   srs:{},                                  // cardId -> {ef,interval,reps,due,front,back,example}
-  lastLesson:null, lastRoute:'#/home'
-};}
+  lastLesson:null, lastRoute:'#/home',
+  // Speak Studio (v12)
+  speakStats:[], pronBest:{}, scenariosDone:{}, storiesRead:{}, dailyDone:{},
+  repairDone:0, intensity:'balanced'};}
 
 let S;
 try{S=JSON.parse(localStorage.getItem(KEY))||fresh();}catch(e){S=fresh();}
@@ -120,7 +122,14 @@ function checkBadges(extra){
     sales_done:!!(S.modulesCompleted||{}).sales,
     everyday_social_done:!!(S.modulesCompleted||{})['everyday-social'],
     workplace_done:!!(S.modulesCompleted||{}).workplace,
-    ielts_done:!!(S.modulesCompleted||{}).ielts
+    ielts_done:!!(S.modulesCompleted||{}).ielts,
+    // Speak Studio
+    pron_sessions:(S.speakStats||[]).filter(s=>s.kind==='pron'||s.kind==='pron-self').length,
+    pron_best:Math.max(0,...Object.values(S.pronBest||{}).map(Number)),
+    roleplays_done:Object.keys(S.scenariosDone||{}).length,
+    stories_read:Object.keys(S.storiesRead||{}).length,
+    daily_done:Object.keys(S.dailyDone||{}).filter(k=>S.dailyDone[k]&&S.dailyDone[k].bonus).length,
+    repair_done:S.repairDone||0
   },extra||{});
   for(const b of badgeDefs){
     if(S.badges.includes(b.id))continue;

@@ -1,7 +1,7 @@
 /* Content loader — all lesson/drill content lives in content/*.json (relative paths, subpath-safe) */
 (function(){
 const MODULES=['foundations','accuracy','pronunciation','fluency','client-communication','self-presentation','sales','everyday-social','workplace','ielts'];
-const cache={modules:{},practice:null,plan:null,badges:null,quizzes:null,taskcards:null,placement:null};
+const cache={modules:{},practice:null,plan:null,badges:null,quizzes:null,taskcards:null,placement:null,pron:null,scenarios:null,stories:null};
 async function j(p){const r=await fetch(p);if(!r.ok)throw new Error('missing '+p);return r.json();}
 async function loadAll(){
   for(const m of MODULES)cache.modules[m]=await j('content/module-'+m+'.json');
@@ -11,6 +11,9 @@ async function loadAll(){
   try{cache.quizzes=await j('content/quizzes.json');}catch(e){cache.quizzes=[];}
   try{cache.taskcards=await j('content/taskcards.json');}catch(e){cache.taskcards=[];}
   try{cache.placement=await j('content/placement.json');}catch(e){cache.placement=null;}
+  try{cache.pron=await j('content/pronunciation.json');}catch(e){cache.pron={sets:[]};}
+  try{cache.scenarios=await j('content/scenarios.json');}catch(e){cache.scenarios={scenarios:[]};}
+  try{cache.stories=await j('content/stories.json');}catch(e){cache.stories={stories:[],dict:{}};}
   Store.setBadgeDefs(cache.badges.badges||cache.badges);
   return cache;
 }

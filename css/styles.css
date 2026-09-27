@@ -370,3 +370,24 @@ button.chip:active{transform:scale(.94)}
   box-shadow:var(--shadow);padding:14px;display:flex;gap:12px;align-items:center;max-width:576px;margin:0 auto;
   animation:ib-in .3s var(--ease)}
 @keyframes ib-in{from{transform:translateY(12px);opacity:0}to{transform:none;opacity:1}}
+
+/* ---------- Speak Studio (v12) ---------- */
+.pron-line{font-size:18px;line-height:2.1;margin:12px 0}
+.pw{padding:3px 7px;border-radius:8px;margin:1px}
+.pw.ok{background:var(--acc-soft);color:var(--acc-ink);border:1px solid var(--acc)}
+.pw.miss{background:color-mix(in srgb,var(--red) 12%,transparent);color:var(--red);border:1px solid var(--red)}
+.chat{display:flex;flex-direction:column;gap:10px;margin:12px 0}
+.msg{max-width:92%;display:flex;flex-direction:column;gap:4px}
+.msg.them{align-self:flex-start}
+.msg.you{align-self:flex-end;align-items:flex-end}
+.msg .who{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--dim)}
+.msg .bub{background:var(--card2);border:1px solid var(--line);border-radius:16px;padding:12px 14px;font-size:15.5px;line-height:1.6;box-shadow:var(--shadow-sm)}
+.msg.you .bub{background:var(--acc-soft);border-color:var(--acc)}
+.msg.them .bub{border-top-left-radius:6px}
+.msg.you .bub{border-top-right-radius:6px}
+.opt.say{margin-top:8px;font-size:15px;line-height:1.5}
+.w{border-bottom:1.5px dotted var(--acc);cursor:pointer;padding:0 1px;border-radius:4px}
+.w:active{background:var(--acc-soft)}
+.btn.sm{width:auto;padding:7px 12px;font-size:13px;border-radius:10px;margin-top:4px}
+.bars .b.cur{outline:2px solid var(--acc);outline-offset:1px}
+.msg .bub.story{line-height:2;letter-spacing:.2px}

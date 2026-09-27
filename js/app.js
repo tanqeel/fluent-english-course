@@ -1,4 +1,4 @@
-/*/* Speak Fluently — hash router + PWA boot. All paths relative: works under any subpath. */
+/* Speak Fluently — hash router + PWA boot. All paths relative: works under any subpath. */
 (function(){
 'use strict';
 const TABS=[
@@ -21,6 +21,7 @@ function route(){
       case 'module': drawTabs('#/learn'); Screens.moduleView(root,arg); break;
       case 'lesson': drawTabs('#/learn'); Screens.lessonView(root,arg); break;
       case 'practice': drawTabs('#/practice'); Screens.practice(root,arg); break;
+      case 'speak': drawTabs('#/practice'); Screens.speak(root,arg); break;
       case 'quizzes': drawTabs('#/practice'); Screens.quizList(root); break;
       case 'taskcards': drawTabs('#/practice'); Screens.taskList(root); break;
       case 'placement': drawTabs('#/learn'); Screens.placement(root); break;

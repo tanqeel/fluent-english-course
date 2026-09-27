@@ -1,15 +1,16 @@
 /* Speak Fluently service worker — offline-first. All URLs relative: safe under any subpath. */
-const CACHE='fluent-v11';
+const CACHE='fluent-v12';
 const PRECACHE=[
   'index.html','manifest.webmanifest',
   'css/styles.css',
-  'js/store.js','js/sm2.js','js/theme.js','js/ui.js','js/content.js','js/drills.js','js/screens.js','js/aicoach.js','js/app.js',
+  'js/store.js','js/sm2.js','js/theme.js','js/ui.js','js/content.js','js/drills.js','js/screens.js','js/speak.js','js/aicoach.js','js/app.js',
   'content/module-foundations.json','content/module-accuracy.json','content/module-pronunciation.json',
   'content/module-fluency.json','content/module-client-communication.json',
   'content/module-self-presentation.json','content/module-sales.json',
   'content/module-everyday-social.json','content/module-workplace.json','content/module-ielts.json',
   'content/practice.json','content/plan.json','content/badges.json',
   'content/quizzes.json','content/taskcards.json','content/placement.json',
+  'content/pronunciation.json','content/scenarios.json','content/stories.json',
   'icons/icon-192.png','icons/icon-512.png'
 ];
 self.addEventListener('install',e=>{
