@@ -71,12 +71,12 @@ function home(root){
     ${dailyCard}
     <h2 class="sec">Quick hits</h2>
     <div class="row" style="gap:8px">
-      <button class="btn ghost" data-go="#/speak" style="flex:1">🗣️ Speak</button>
-      <button class="btn ghost" data-go="#/practice" style="flex:1">⚔️ Drills</button>
-      <button class="btn ghost" data-go="#/coach" style="flex:1">🤖 AI Coach · free</button>
-      <button class="btn ghost" data-go="#/progress" style="flex:1">📊 Progress</button>
+      <button class="btn ghost" data-go="#/speak" style="flex:1"><span class="ic-20">🗣️</span> Speak</button>
+      <button class="btn ghost" data-go="#/practice" style="flex:1"><span class="ic-20">⚔️</span> Drills</button>
+      <button class="btn ghost" data-go="#/coach" style="flex:1"><span class="ic-20">🤖</span> AI Coach · free</button>
+      <button class="btn ghost" data-go="#/progress" style="flex:1"><span class="ic-20">📊</span> Progress</button>
     </div>
-    <button class="btn ghost mt" id="share-app" style="width:100%">📤 Share Speak Fluently with a friend</button>
+    <button class="btn ghost mt" id="share-app" style="width:100%"><span class="ic-20">📤</span> Share Speak Fluently with a friend</button>
     <p class="small dim center mt">Chalo — ek chhota step roz. ${due?'Pehle Review clear karo, phir naya seekho.':''}</p>`;
   root.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>location.hash=b.dataset.go);
   root.querySelector('#share-app').onclick=shareApp;
@@ -565,45 +565,113 @@ function progress(root){
       <div class="kv"><span>Speaking tasks</span><b>${S.speakingDone}</b></div>
       <div class="kv"><span>SRS reviews</span><b>${S.srsReviews}</b></div>
       <div class="kv" style="border:0"><span>Mistakes reviewed</span><b>${S.errorReviews}</b></div></div>
-    <div class="card"><div class="kicker">Your profile</div>
-      <div class="kv"><span>Name</span><b>${esc(S.name||'friend')}</b></div>
-      <div class="kv" style="border:0"><span>Daily goal</span><b>${S.dailyMinutes||30} min</b></div>
-      <div class="row mt" style="gap:8px">
-        <button class="btn ghost" id="edit-name" style="flex:1">✏️ Change name</button>
-        <button class="btn ghost" id="share-app2" style="flex:1">📤 Share app</button>
-      </div></div>
-    <button class="btn ghost mt" id="reset">🔄 Start over from Day 1</button>
-    <p class="small dim center">Progress is stored on this device only. It works fully offline.</p>`;
+    <p class="small dim center">Charts &amp; checklist live here — your name, sharing and reset moved to the <a href="#/profile">👤 Profile</a> tab.</p>`;
   root.querySelectorAll('#plan-list .check').forEach(c=>c.onclick=()=>{
     const w=+c.dataset.w;S.planDone=S.planDone||{};
     if(S.planDone[w])delete S.planDone[w];else{S.planDone[w]=Date.now();confetti(40);}
     Store.save();progress(root);
   });
-  root.querySelector('#reset').onclick=()=>{
-    const m=modal(`<h3>🔄 Start over from Day 1?</h3><p class="mut small">XP, streak, lessons, badges, error log, review cards, placement result — everything is wiped and you begin again from Day 1. Your theme and AI Coach settings are kept. This can't be undone.</p>
-      <button class="btn danger" id="r-yes">Yes, start over</button>
-      <button class="btn ghost mt" id="r-no">Keep my progress</button>`);
-    m.querySelector('#r-yes').onclick=()=>Store.reset();
-    m.querySelector('#r-no').onclick=()=>m.remove();
+}
+
+/* ---------- shared: edit name + daily goal modal ---------- */
+function openNameGoalModal(onSave){
+  const S=Store.S;
+  const m=modal(`<h3>✏️ Your name</h3>
+    <input id="nm-in" class="field" type="text" maxlength="30" value="${esc(S.name||'')}" placeholder="Your name">
+    <div class="row mt" style="gap:8px">
+      ${[15,30,45,60].map(x=>`<button class="btn ghost nm-min${(S.dailyMinutes||30)===x?' sel':''}" data-m="${x}" style="flex:1">${x}</button>`).join('')}
+    </div>
+    <p class="small dim" style="margin:8px 0">Daily goal (minutes)</p>
+    <button class="btn" id="nm-ok">Save</button>`);
+  let mins=S.dailyMinutes||30;
+  const btns=m.querySelectorAll('.nm-min');
+  btns.forEach(b=>b.onclick=()=>{mins=+b.dataset.m;btns.forEach(x=>x.classList.toggle('sel',x===b));});
+  m.querySelector('#nm-ok').onclick=()=>{
+    const v=m.querySelector('#nm-in').value.trim().slice(0,30);
+    if(v){S.name=v;S.dailyMinutes=mins;Store.save();toast('Saved ✅');}
+    m.remove();onSave&&onSave();
   };
-  root.querySelector('#share-app2').onclick=shareApp;
-  root.querySelector('#edit-name').onclick=()=>{
-    const m=modal(`<h3>✏️ Your name</h3>
-      <input id="nm-in" class="field" type="text" maxlength="30" value="${esc(S.name||'')}" placeholder="Your name">
-      <div class="row mt" style="gap:8px">
-        ${[15,30,45,60].map(x=>`<button class="btn ghost nm-min${(S.dailyMinutes||30)===x?' sel':''}" data-m="${x}" style="flex:1">${x}</button>`).join('')}
+}
+
+/* ---------- shared: start-over confirmation ---------- */
+function confirmReset(){
+  const m=modal(`<h3>🔄 Start over from Day 1?</h3><p class="mut small">XP, streak, lessons, badges, error log, review cards, placement result — everything is wiped and you begin again from Day 1. Your theme and AI Coach settings are kept. This can't be undone.</p>
+    <button class="btn danger" id="r-yes">Yes, start over</button>
+    <button class="btn ghost mt" id="r-no">Keep my progress</button>`);
+  m.querySelector('#r-yes').onclick=()=>Store.reset();
+  m.querySelector('#r-no').onclick=()=>m.remove();
+}
+
+/* ================= PROFILE ================= */
+function profile(root){
+  const S=Store.S,L=Store.level(),dn=dayNum();
+  const name=S.name||'friend';
+  const initial=(S.name||'F').trim().charAt(0).toUpperCase()||'F';
+  const day1=new Date(S.created).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+  const daysActive=Object.keys(S.streak.totalDays||{}).length;
+  // totals
+  let totalLessons=0;for(const mid of Content.MODULES){const m=Content.cache.modules[mid];if(m)totalLessons+=(m.lessons||[]).length;}
+  const quizzes=Content.cache.quizzes||[];
+  const badges=Content.cache.badges.badges||Content.cache.badges||[];
+  const lessons=Object.keys(S.lessonsDone).length;
+  const quizPassed=Object.values(S.quizBest||{}).filter(v=>v>=80).length;
+  const speaking=S.speakingDone+(S.speakStats||[]).length;
+  const prons=(S.speakStats||[]).filter(s=>s.kind==='pron'&&typeof s.accuracy==='number');
+  const avgPron=prons.length?Math.round(prons.reduce((a,s)=>a+s.accuracy,0)/prons.length):null;
+  let mins=0;
+  for(const lid of Object.keys(S.lessonsDone)){const f=Content.findLesson(lid);if(f&&f.lesson)mins+=f.lesson.minutes||10;}
+  mins+=Math.round((S.speakStats||[]).reduce((a,s)=>a+(s.secs||0),0)/60);
+  const themeMode=window.Theme?Theme.get():'system';
+  const themeIcon=themeMode==='light'?'☀️':themeMode==='dark'?'🌙':'📱';
+  const stats=[
+    ['🔥',S.streak.current+'d','Streak · best '+S.streak.best+'d'],
+    ['⭐',String(S.xp),'XP · Level '+L.n+' '+L.name],
+    ['📚',lessons+'/'+totalLessons,'Lessons done'],
+    ['🎯',quizPassed+'/'+quizzes.length,'Quizzes passed (80%+)'],
+    ['🗣️',String(speaking),'Speaking sessions'],
+    ['🏅',S.badges.length+'/'+badges.length,'Badges earned'],
+    ['📊',avgPron===null?'—':avgPron+'%','Avg pronunciation'],
+    ['⏱️',String(mins),'Practice minutes'],
+  ];
+  root.innerHTML=`
+    <div class="p-head">
+      <div class="avatar" aria-hidden="true">${esc(initial)}</div>
+      <div style="min-width:0">
+        <h2 class="p-name" id="p-edit" style="cursor:pointer">${esc(name)} <span class="edit-hint">✏️</span></h2>
+        <p class="p-sub">Day ${dn} of your 90-day path</p>
+        <div>${S.placement?`<span class="chip">${esc(S.placement.band)} · ${S.placement.score}/100</span>`:`<span class="chip ghost" data-go="#/placement" style="cursor:pointer">🧭 Take placement test</span>`}<span class="chip ghost">🎯 ${S.dailyMinutes||30} min/day</span></div>
       </div>
-      <p class="small dim" style="margin:8px 0">Daily goal (minutes)</p>
-      <button class="btn" id="nm-ok">Save</button>`);
-    let mins=S.dailyMinutes||30;
-    const btns=m.querySelectorAll('.nm-min');
-    btns.forEach(b=>b.onclick=()=>{mins=+b.dataset.m;btns.forEach(x=>x.classList.toggle('sel',x===b));});
-    m.querySelector('#nm-ok').onclick=()=>{
-      const v=m.querySelector('#nm-in').value.trim().slice(0,30);
-      if(v){S.name=v;S.dailyMinutes=mins;Store.save();toast('Saved ✅');}
-      m.remove();progress(root);
-    };
-  };
+    </div>
+    <h2 class="p-sec">Your stats</h2>
+    <div class="stat-grid">${stats.map(([ic,v,lb])=>`
+      <div class="stat-card"><span class="ic-28">${ic}</span>
+        <div style="min-width:0"><div class="stat-val">${esc(v)}</div><div class="stat-lb">${esc(lb)}</div></div>
+      </div>`).join('')}</div>
+    <h2 class="p-sec">From Day 1</h2>
+    <div class="journey">
+      <div class="j-stop"><div class="t">Day 1</div><div class="v" style="font-size:15px">${esc(day1)}</div></div>
+      <div class="j-arrow">→</div>
+      <div class="j-stop"><div class="t">Today</div><div class="v">Day ${dn}</div></div>
+    </div>
+    <div class="card" style="margin-top:var(--sp-3)"><div class="kicker">Journey so far</div>
+      <div class="kv"><span>Days active</span><b>${daysActive}</b></div>
+      <div class="kv"><span>Best streak</span><b>🔥 ${S.streak.best} days</b></div>
+      <div class="kv" style="border:0"><span>Total XP earned</span><b>⭐ ${S.xp}</b></div></div>
+    <h2 class="p-sec">Actions</h2>
+    <div class="p-actions">
+      <button class="btn" id="p-share"><span class="ic-20">📤</span>&nbsp; Share Speak Fluently</button>
+      <button class="btn ghost" id="p-edit2"><span class="ic-20">✏️</span>&nbsp; Edit name &amp; daily goal</button>
+      <button class="btn ghost" id="p-theme"><span class="ic-20">${themeIcon}</span>&nbsp; Theme: ${themeMode==='system'?'System (follows phone)':themeMode==='light'?'Light':'Dark'}</button>
+      <button class="btn danger" id="p-reset"><span class="ic-20">🔄</span>&nbsp; Start over from Day 1</button>
+    </div>
+    <p class="small dim center">Progress is stored on this device only · works fully offline</p>`;
+  root.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>location.hash=b.dataset.go);
+  const edit=()=>openNameGoalModal(()=>profile(root));
+  root.querySelector('#p-edit').onclick=edit;
+  root.querySelector('#p-edit2').onclick=edit;
+  root.querySelector('#p-share').onclick=shareApp;
+  root.querySelector('#p-theme').onclick=()=>{if(window.Theme){Theme.cycle();}profile(root);};
+  root.querySelector('#p-reset').onclick=confirmReset;
 }
 
 /* ================= SPEAK STUDIO (js/speak.js owns the views) ================= */
@@ -612,5 +680,5 @@ function speak(root,arg){
   root.innerHTML='<div class="empty">Speak Studio failed to load. Reload the app.</div>';
 }
 
-window.Screens={home,learn,moduleView,lessonView,practice,practiceArena:practice,review,progress,placement,quizList,taskList,onboarding,shareApp,speak};
+window.Screens={home,learn,moduleView,lessonView,practice,practiceArena:practice,review,progress,placement,quizList,taskList,onboarding,shareApp,speak,profile};
 })();

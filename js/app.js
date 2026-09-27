@@ -3,12 +3,13 @@
 'use strict';
 const TABS=[
   ['#/home','🏠','Home'],['#/learn','📚','Learn'],['#/practice','⚔️','Practice'],
-  ['#/review','📇','Review'],['#/progress','📊','Progress'],['#/coach','🤖','Coach']
+  ['#/review','📇','Review'],['#/progress','📊','Progress'],['#/coach','🤖','Coach'],
+  ['#/profile','👤','Profile']
 ];
 function drawTabs(active){
   const bar=document.getElementById('tabbar');
   bar.innerHTML=TABS.map(([h,ic,label])=>
-    `<a href="${h}" class="${active===h?'on':''}"><span class="ic">${ic}</span>${label}</a>`).join('');
+    `<a href="${h}" class="${active===h?'on':''}"><span class="ic">${ic}</span><span class="lb">${label}</span></a>`).join('');
 }
 function route(){
   const hash=location.hash||'#/home';
@@ -28,6 +29,7 @@ function route(){
       case 'review': drawTabs('#/review'); Screens.review(root,arg); break;
       case 'progress': drawTabs('#/progress'); Screens.progress(root); break;
       case 'coach': drawTabs('#/coach'); Screens.coach(root); break;
+      case 'profile': drawTabs('#/profile'); Screens.profile(root); break;
       case 'onboarding': drawTabs(''); Screens.onboarding(root); break;
       default: location.hash='#/home'; return;
     }
