@@ -70,11 +70,11 @@ function home(root){
       </div></div>
     ${dailyCard}
     <h2 class="sec">Quick hits</h2>
-    <div class="row" style="gap:8px">
-      <button class="btn ghost" data-go="#/speak" style="flex:1"><span class="ic-20">🗣️</span> Speak</button>
-      <button class="btn ghost" data-go="#/practice" style="flex:1"><span class="ic-20">⚔️</span> Drills</button>
-      <button class="btn ghost" data-go="#/coach" style="flex:1"><span class="ic-20">🤖</span> AI Coach · free</button>
-      <button class="btn ghost" data-go="#/progress" style="flex:1"><span class="ic-20">📊</span> Progress</button>
+    <div class="qh-grid">
+      <button class="qh" data-go="#/speak"><span class="ic-28">🗣️</span><span>Speak<small>Pronunciation lab</small></span></button>
+      <button class="qh" data-go="#/practice"><span class="ic-28">⚔️</span><span>Drills<small>Practice arena</small></span></button>
+      <button class="qh" data-go="#/coach"><span class="ic-28">🤖</span><span>AI Coach<small>Free · no key needed</small></span></button>
+      <button class="qh" data-go="#/progress"><span class="ic-28">📊</span><span>Progress<small>Stats & badges</small></span></button>
     </div>
     <button class="btn ghost mt" id="share-app" style="width:100%"><span class="ic-20">📤</span> Share Speak Fluently with a friend</button>
     <p class="small dim center mt">Chalo — ek chhota step roz. ${due?'Pehle Review clear karo, phir naya seekho.':''}</p>`;
