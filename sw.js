@@ -1,5 +1,5 @@
 /* Speak Fluently service worker — offline-first. All URLs relative: safe under any subpath. */
-const CACHE='fluent-v21';
+const CACHE='fluent-v22';
 const PRECACHE=[
   'index.html','manifest.webmanifest',
   'css/styles.css',

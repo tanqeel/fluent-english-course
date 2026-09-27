@@ -84,8 +84,9 @@ function showManualInstall(w){
   w.querySelector('#ip-ok').onclick=()=>dismissInstallPopup();
   setTimeout(()=>{try{w.querySelector('#ip-ok').focus();}catch(e){}},60);
 }
-function showInstallPopup(){
-  if(lsGet(LS_DONE)||document.getElementById('install-popup'))return;
+function showInstallPopup(force){
+  if(document.getElementById('install-popup'))return;
+  if(!force&&lsGet(LS_DONE))return;
   const hasNative=!!deferredInstall;
   const w=document.createElement('div');
   w.id='install-popup';w.className='install-popup';
@@ -192,7 +193,7 @@ document.readyState==='loading'
 
 /* ---------- global install API (Profile tab button) ---------- */
 window.AppInstall={
-  show(){showInstallPopup();},
+  show(force){showInstallPopup(!!force);},
   installed(){return lsGet(LS_DONE)||isStandalone();}
 };
 })();

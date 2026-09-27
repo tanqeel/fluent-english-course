@@ -672,12 +672,10 @@ function profile(root){
   root.querySelector('#p-edit2').onclick=edit;
   root.querySelector('#p-share').onclick=shareApp;
   const pInstall=root.querySelector('#p-install');
-  if(window.AppInstall&&window.AppInstall.installed()){
-    pInstall.disabled=true;
-    pInstall.innerHTML='<span class="ic-20">✅</span>&nbsp; App installed';
-  }else if(window.AppInstall){
-    pInstall.onclick=()=>window.AppInstall.show();
-  }else{pInstall.style.display='none';}
+  /* always available in Profile: the installed-detection can be wrong,
+     so the button stays permanent and always opens the install flow */
+  if(window.AppInstall){pInstall.onclick=()=>window.AppInstall.show(true);}
+  else{pInstall.style.display='none';}
   root.querySelector('#p-theme').onclick=()=>{if(window.Theme){Theme.cycle();}profile(root);};
   root.querySelector('#p-reset').onclick=confirmReset;
 }
