@@ -24,7 +24,7 @@ function home(root){
   const due=Store.dueCards().length;
   const cont=S.lastLesson?Content.findLesson(S.lastLesson):null;
   root.innerHTML=`
-    <div class="greet">${greet()}, Tanqeel 👋</div>
+    <div class="greet">${greet()}, ${esc(S.name||'friend')} 👋</div>
     <p class="sub">Day ${dn} of your 90-day path · ${esc(st.msg)}</p>
     ${!S.placement?`<div class="card" style="border:1.5px solid var(--acc);cursor:pointer" data-go="#/placement">
       <div class="kicker" style="color:var(--acc)">🧭 START HERE</div>
@@ -50,7 +50,7 @@ function home(root){
     <div class="card"><div class="kicker">Today's plan · Week ${week.week}</div>
       <p style="margin:8px 0"><b>${esc(week.focus)}</b></p>
       <p class="small mut" style="margin:0">🎯 Milestone: ${esc(week.milestone)}</p>
-      <p class="small dim" style="margin:6px 0 0">~${plan.dailyMinutes} min · ${due?`📇 <b style="color:var(--acc)">${due} cards due</b> in Review`:'📇 Review deck clear — nice!'}</p>
+      <p class="small dim" style="margin:6px 0 0">~${S.dailyMinutes||plan.dailyMinutes} min · ${due?`📇 <b style="color:var(--acc)">${due} cards due</b> in Review`:'📇 Review deck clear — nice!'}</p>
       <div class="row mt" style="gap:8px">
         <button class="btn" data-go="#/learn" style="flex:1">Learn →</button>
         ${due?`<button class="btn vio" data-go="#/review" style="flex:1">Review ${due} cards</button>`:''}
@@ -61,8 +61,58 @@ function home(root){
       <button class="btn ghost" data-go="#/coach" style="flex:1">🤖 AI Coach · free</button>
       <button class="btn ghost" data-go="#/progress" style="flex:1">📊 Progress</button>
     </div>
+    <button class="btn ghost mt" id="share-app" style="width:100%">📤 Share Speak Fluently with a friend</button>
     <p class="small dim center mt">Chalo — ek chhota step roz. ${due?'Pehle Review clear karo, phir naya seekho.':''}</p>`;
   root.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>location.hash=b.dataset.go);
+  root.querySelector('#share-app').onclick=shareApp;
+}
+
+/* ---------- share the app ---------- */
+function shareApp(){
+  const url=location.origin+location.pathname;
+  const text='Speak Fluently — free English course app: lessons, speaking practice, AI coach. '+url;
+  if(navigator.share){
+    navigator.share({title:'Speak Fluently',text,url}).catch(()=>{});
+  }else if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(
+      ()=>toast('Link copied — send it to your friends! 📤'),
+      ()=>toast('Copy this link: '+url));
+  }else{
+    toast('Copy this link: '+url);
+  }
+}
+
+/* ================= ONBOARDING (first run) ================= */
+function onboarding(root){
+  root.innerHTML=`
+    <div class="card center" style="margin-top:36px">
+      <div style="font-size:54px">🗣️</div>
+      <h2 style="margin:8px 0 4px">Speak Fluently</h2>
+      <p class="mut" style="margin:0 0 16px">Your free English course — lessons, speaking practice, AI coach, IELTS prep. Fully offline.</p>
+      <div style="text-align:left;margin-bottom:14px">
+        <label class="small dim" for="ob-name">What should I call you?</label>
+        <input id="ob-name" class="field" type="text" maxlength="30" placeholder="Your name" autocomplete="name" style="margin-top:6px">
+      </div>
+      <div style="text-align:left;margin-bottom:18px">
+        <div class="small dim" style="margin-bottom:6px">How many minutes a day can you give?</div>
+        <div class="row" id="ob-mins" style="gap:8px">
+          ${[15,30,45,60].map(m=>`<button class="btn ghost ob-min${m===30?' sel':''}" data-m="${m}" style="flex:1">${m}</button>`).join('')}
+        </div>
+      </div>
+      <button class="btn" id="ob-start" style="width:100%">Start →</button>
+      <p class="small dim" style="margin:12px 0 0">Next: a short placement test sets your level (A2 / B1 / B2) so the course starts right for you.</p>
+    </div>`;
+  let mins=30;
+  const btns=root.querySelectorAll('.ob-min');
+  btns.forEach(b=>b.onclick=()=>{mins=+b.dataset.m;btns.forEach(x=>x.classList.toggle('sel',x===b));});
+  root.querySelector('#ob-start').onclick=()=>{
+    const nm=root.querySelector('#ob-name').value.trim().slice(0,30)||'friend';
+    Store.S.name=nm;Store.S.dailyMinutes=mins;Store.save();
+    location.hash='#/placement';
+  };
+  const inp=root.querySelector('#ob-name');
+  inp.addEventListener('keydown',e=>{if(e.key==='Enter')root.querySelector('#ob-start').click();});
+  setTimeout(()=>inp.focus(),300);
 }
 
 /* ================= LEARN ================= */
@@ -495,6 +545,13 @@ function progress(root){
       <div class="kv"><span>Speaking tasks</span><b>${S.speakingDone}</b></div>
       <div class="kv"><span>SRS reviews</span><b>${S.srsReviews}</b></div>
       <div class="kv" style="border:0"><span>Mistakes reviewed</span><b>${S.errorReviews}</b></div></div>
+    <div class="card"><div class="kicker">Your profile</div>
+      <div class="kv"><span>Name</span><b>${esc(S.name||'friend')}</b></div>
+      <div class="kv" style="border:0"><span>Daily goal</span><b>${S.dailyMinutes||30} min</b></div>
+      <div class="row mt" style="gap:8px">
+        <button class="btn ghost" id="edit-name" style="flex:1">✏️ Change name</button>
+        <button class="btn ghost" id="share-app2" style="flex:1">📤 Share app</button>
+      </div></div>
     <button class="btn ghost mt" id="reset">🔄 Start over from Day 1</button>
     <p class="small dim center">Progress is stored on this device only. It works fully offline.</p>`;
   root.querySelectorAll('#plan-list .check').forEach(c=>c.onclick=()=>{
@@ -509,7 +566,25 @@ function progress(root){
     m.querySelector('#r-yes').onclick=()=>Store.reset();
     m.querySelector('#r-no').onclick=()=>m.remove();
   };
+  root.querySelector('#share-app2').onclick=shareApp;
+  root.querySelector('#edit-name').onclick=()=>{
+    const m=modal(`<h3>✏️ Your name</h3>
+      <input id="nm-in" class="field" type="text" maxlength="30" value="${esc(S.name||'')}" placeholder="Your name">
+      <div class="row mt" style="gap:8px">
+        ${[15,30,45,60].map(x=>`<button class="btn ghost nm-min${(S.dailyMinutes||30)===x?' sel':''}" data-m="${x}" style="flex:1">${x}</button>`).join('')}
+      </div>
+      <p class="small dim" style="margin:8px 0">Daily goal (minutes)</p>
+      <button class="btn" id="nm-ok">Save</button>`);
+    let mins=S.dailyMinutes||30;
+    const btns=m.querySelectorAll('.nm-min');
+    btns.forEach(b=>b.onclick=()=>{mins=+b.dataset.m;btns.forEach(x=>x.classList.toggle('sel',x===b));});
+    m.querySelector('#nm-ok').onclick=()=>{
+      const v=m.querySelector('#nm-in').value.trim().slice(0,30);
+      if(v){S.name=v;S.dailyMinutes=mins;Store.save();toast('Saved ✅');}
+      m.remove();progress(root);
+    };
+  };
 }
 
-window.Screens={home,learn,moduleView,lessonView,practice,practiceArena:practice,review,progress,placement,quizList,taskList};
+window.Screens={home,learn,moduleView,lessonView,practice,practiceArena:practice,review,progress,placement,quizList,taskList,onboarding,shareApp};
 })();

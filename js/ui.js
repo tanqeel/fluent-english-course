@@ -77,7 +77,7 @@ function refreshHud(){
     setTimeout(()=>{const m=modal(`<div style="font-size:52px">${b.icon}</div><h3 style="margin:8px 0">Badge earned: ${esc(b.name)}</h3><p class="mut small">${esc(b.desc)}</p><button class="btn" id="m-ok">Nice! 🎉</button>`);
       m.querySelector('#m-ok').onclick=()=>m.remove();},350);
   }
-  if(window.__comeback){window.__comeback=false;setTimeout(()=>toast('Welcome back, Tanqeel. Restarting is the hard part — you did it. 💪',3400),600);}
+  if(window.__comeback){window.__comeback=false;setTimeout(()=>toast(`Welcome back, ${esc(Store.S.name||'friend')}. Restarting is the hard part — you did it. 💪`,3400),600);}
   if(window.__freezeEarned){window.__freezeEarned=false;setTimeout(()=>toast('🛡️ Streak Freeze earned! One missed day won\'t break your streak.',3200),600);}
 }
 

@@ -5,7 +5,7 @@ const todayStr=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMo
 const ydayStr=()=>{const d=new Date();d.setDate(d.getDate()-1);return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');};
 
 function fresh(){return {
-  v:1, created:Date.now(), name:'Tanqeel',
+  v:1, created:Date.now(), name:'', dailyMinutes:30,
   xp:0, xpByDay:{},                       // 'YYYY-MM-DD' -> xp
   lessonsDone:{},                          // lessonId -> {ts,xp}
   drillsDone:{}, drillsCorrect:{},         // engine -> count

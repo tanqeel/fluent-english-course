@@ -30,7 +30,8 @@ function xpToday(n){ // small daily-capped XP for coach work
 }
 
 /* ---------- strict-tutor personas (from the course's master prompt) ---------- */
-const SYS_CHAT=`You are Tanqeel's English speaking coach inside the Fluent app. He is a Pakistani university student at A2/B1 level, preparing for freelance client calls, IELTS, and professional life abroad.
+const uname=()=>(Store.S.name||'friend');
+const SYS_CHAT=()=>`You are ${uname()}'s English speaking coach inside the Speak Fluently app. ${uname()} is a university student at A2/B1 level, preparing for freelance client calls, IELTS, and professional life abroad.
 Rules:
 (1) Keep every reply under 80 words, mobile-friendly, simple natural English.
 (2) Ask him ONE question at a time. Keep the conversation moving.
@@ -40,14 +41,14 @@ Rules:
 (6) Roman Urdu explanations are welcome when a rule is hard.
 (7) When he says "roleplay", become the client in the scenario he gives, stay in character for 10 minutes, then give an error report card: Clarity / Tone / Structure / Client-safety, 1-5 each.`;
 
-const SYS_WRITE=`You are Tanqeel's writing coach inside the Fluent app. He is a Pakistani university student at A2/B1 level, writing for freelance clients and IELTS.
+const SYS_WRITE=()=>`You are ${uname()}'s writing coach inside the Speak Fluently app. ${uname()} is a university student at A2/B1 level, writing for freelance clients and IELTS.
 For the text he pastes, reply in this exact structure:
 **Scores** — Clarity /5, Tone /5, Structure /5, Client-safety /5 (no fake claims, no promises he can't keep).
 **Corrected version** — the full text rewritten correctly.
 **Fixes** — each fix as: wrong → right → one-line rule.
 Keep it concise and mobile-friendly. Never praise errors.`;
 
-const SYS_SPEAK=`You are Tanqeel's pronunciation coach inside the Fluent app. He is a Pakistani (Urdu-speaking) English learner at A2/B1 level. Listen to his recorded English speech and reply in this structure:
+const SYS_SPEAK=()=>`You are ${uname()}'s pronunciation coach inside the Speak Fluently app. ${uname()} is an Urdu-speaking English learner at A2/B1 level. Listen to ${uname()}'s recorded English speech and reply in this structure:
 **Heard** — what you understood him saying (1-2 lines).
 **Fix these** — 3-5 specific words/phrases: what he said → correct form, focusing on Urdu-speaker patterns (/th/ sounds, v/w, word stress, -ed endings, dropped articles).
 **Fluency tip** — one tip on pace, fillers, or pauses.
@@ -317,7 +318,7 @@ function chatView(root){
     const draw=()=>{log.innerHTML=s.chat.map(m=>bubble(m.w,m.t)).join('');log.scrollTop=log.scrollHeight;};
     const push=(w,t)=>{s.chat.push({w,t});if(s.chat.length>40)s.chat=s.chat.slice(-40);csSave(s);draw();};
     draw();
-    if(!s.chat.length)push('ai',"Assalam-o-Alaikum, Tanqeel! I'm your strict coach. I'll correct *every* mistake — that's how you get fluent. Let's start simple: **what did you do today?**");
+    if(!s.chat.length)push('ai',"Assalam-o-Alaikum, "+uname()+"! I'm your strict coach. I'll correct *every* mistake — that's how you get fluent. Let's start simple: **what did you do today?**");
     let busy=false;
     async function send(){
       if(busy)return;const txt=inp.value.trim();if(!txt)return;
@@ -327,7 +328,7 @@ function chatView(root){
       const typing=el('<div class="msg ai"><div class="msg-b typing"><span></span><span></span><span></span></div></div>');log.appendChild(typing);log.scrollTop=log.scrollHeight;
       const history=s.chat.slice(-12).map(m=>({role:m.w==='you'?'user':'assistant',content:m.t}));
       try{
-        const reply=await askCoach(SYS_CHAT,history.slice(0,-1).concat([{role:'user',content:txt}]));
+        const reply=await askCoach(SYS_CHAT(),history.slice(0,-1).concat([{role:'user',content:txt}]));
         typing.remove();push('ai',reply);
       }catch(e){typing.remove();push('ai','⚠️ '+e.friendly);}
       busy=false;inp.focus();
@@ -351,7 +352,7 @@ function writeView(root){
       if(!navigator.onLine){toast('No internet — AI Coach needs it. 🌐');return;}
       busy=true;out.innerHTML='<div class="card"><p class="dim small">Scoring… the coach reads every line.</p></div>';
       try{
-        const reply=await askCoach(SYS_WRITE,[{role:'user',content:'Score and correct this writing:\n\n'+txt}],{maxTokens:700});
+        const reply=await askCoach(SYS_WRITE(),[{role:'user',content:'Score and correct this writing:\n\n'+txt}],{maxTokens:700});
         out.innerHTML=`<div class="card"><span class="ai-badge">🤖 AI feedback</span><div class="mt" style="font-size:14.5px;line-height:1.65">${md(reply)}</div></div>`;
         xpToday(15);Store.S.speakingDone++;Store.save();
       }catch(e){out.innerHTML=`<div class="card"><p style="color:var(--red)">${esc(e.friendly)}</p></div>`;}
@@ -434,7 +435,7 @@ function speakView(root){
       busy=true;out.innerHTML='<div class="card"><p class="dim small">Listening… the coach hears every sound.</p></div>';
       try{
         const b64=await blobToB64(blob);
-        const reply=await callGemini(getKey(),SYS_SPEAK,[
+        const reply=await callGemini(getKey(),SYS_SPEAK(),[
           {text:'Give me pronunciation + fluency feedback on this recording. The line I read was: '+body.querySelector('#sp-line').textContent},
           {inlineData:{mimeType:blob.type||'audio/webm',data:b64}}
         ],{maxTokens:600});

@@ -360,3 +360,6 @@ button.chip:active{transform:scale(.94)}
   *,*::before,*::after{animation:none!important;transition:none!important}
   html{scroll-behavior:auto}
 }
+
+/* ---------- onboarding ---------- */
+.btn.sel{border-color:var(--acc);box-shadow:0 0 0 3px var(--acc-soft);color:var(--txt)}

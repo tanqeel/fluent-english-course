@@ -27,6 +27,7 @@ function route(){
       case 'review': drawTabs('#/review'); Screens.review(root,arg); break;
       case 'progress': drawTabs('#/progress'); Screens.progress(root); break;
       case 'coach': drawTabs('#/coach'); Screens.coach(root); break;
+      case 'onboarding': drawTabs(''); Screens.onboarding(root); break;
       default: location.hash='#/home'; return;
     }
     Store.S.lastRoute=hash; Store.save();
@@ -48,7 +49,8 @@ async function boot(){
   Store.touchDay();
   if(window.Theme)Theme.init();
   window.addEventListener('hashchange',route);
-  if(!location.hash)location.hash=Store.S.lastRoute||'#/home';
+  if(!Store.S.name)location.hash='#/onboarding';
+  else if(!location.hash)location.hash=Store.S.lastRoute||'#/home';
   route();
   if('serviceWorker' in navigator){
     window.addEventListener('load',()=>{
