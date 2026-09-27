@@ -364,12 +364,27 @@ button.chip:active{transform:scale(.94)}
 /* ---------- onboarding ---------- */
 .btn.sel{border-color:var(--acc);box-shadow:0 0 0 3px var(--acc-soft);color:var(--txt)}
 
-/* ---------- install banner ---------- */
-.install-banner{position:fixed;left:12px;right:12px;bottom:calc(var(--nav-h) + env(safe-area-inset-bottom,0px) + 10px);z-index:40;
-  background:linear-gradient(180deg,var(--card),var(--card2));border:1.5px solid var(--acc);border-radius:var(--r-lg);
-  box-shadow:var(--shadow);padding:14px;display:flex;gap:12px;align-items:center;max-width:576px;margin:0 auto;
-  animation:ib-in .3s var(--ease)}
-@keyframes ib-in{from{transform:translateY(12px);opacity:0}to{transform:none;opacity:1}}
+/* ---------- install prompt (v12): medium popup once, then a quiet corner pill ---------- */
+.install-popup{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;
+  padding:20px;background:var(--scrim);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+  animation:ip-in .22s var(--ease)}
+@keyframes ip-in{from{opacity:0}to{opacity:1}}
+.ip-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);
+  box-shadow:var(--shadow);max-width:340px;width:100%;padding:26px 22px 22px;text-align:center;
+  animation:ip-pop .26s var(--ease)}
+@keyframes ip-pop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+.ip-card h3{margin:10px 0 6px;font-size:20px}
+.ip-icon{font-size:46px;line-height:1}
+.ip-x{position:absolute;top:8px;right:8px;width:36px;height:36px;border-radius:10px;border:0;
+  background:transparent;color:var(--dim);font-size:16px;cursor:pointer}
+.ip-x:hover{background:var(--bg2);color:var(--txt)}
+.install-pill{position:fixed;top:calc(var(--head-h) + env(safe-area-inset-top,0px) + 8px);
+  right:max(12px,calc(50% - 300px + 12px));z-index:30;
+  display:flex;align-items:center;gap:6px;background:var(--card);border:1px solid var(--acc);
+  color:var(--txt);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:800;cursor:pointer;
+  box-shadow:var(--shadow-sm);white-space:nowrap}
+.install-pill:hover{border-color:var(--acc-ink)}
+@media(prefers-reduced-motion:reduce){.install-popup,.ip-card{animation:none}}
 
 /* ---------- Speak Studio (v12) ---------- */
 .pron-line{font-size:18px;line-height:2.1;margin:12px 0}

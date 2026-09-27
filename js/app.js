@@ -37,51 +37,98 @@ function route(){
     root.innerHTML='<div class="empty">Something broke loading this screen. <a href="#/home">Go home</a></div>';
   }
   UI.refreshHud();
-  maybeInstallBanner();
+  maybeInstallUI();
   window.scrollTo({top:0});
 }
 
-/* ---------- install prompt ---------- */
-let deferredInstall=null;
+/* ---------- install prompt (v12): medium popup once, then a quiet corner pill ---------- */
+let deferredInstall=null, installTimer=null;
+const LS_DONE='fluent_install_done', LS_DISMISSED='fluent_install_dismissed';
 function isStandalone(){
   return (window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||window.navigator.standalone===true;
 }
-function hideInstallBanner(){const b=document.getElementById('install-banner');if(b)b.remove();}
-function dismissInstall(){try{localStorage.setItem('fluent_install_dismissed','1');}catch(e){}hideInstallBanner();}
-function maybeInstallBanner(){
-  hideInstallBanner();
-  if(!Store.S.name)return;                       // after onboarding only
-  if(isStandalone())return;                      // already installed
-  try{if(localStorage.getItem('fluent_install_dismissed'))return;}catch(e){}
-  const hash=location.hash||'#/home';
-  if(!/^#\/home$/.test(hash))return;             // home only — never interrupt lessons/tests
+function lsGet(k){try{return localStorage.getItem(k)==='1';}catch(e){return false;}}
+function lsSet(k){try{localStorage.setItem(k,'1');}catch(e){}}
+function clearInstallUI(){
+  const p=document.getElementById('install-popup');if(p){if(p._esc)document.removeEventListener('keydown',p._esc);p.remove();}
+  const pill=document.getElementById('install-pill');if(pill)pill.remove();
+}
+/* small persistent pill, pinned top-right on every screen until installed */
+function ensurePill(){
+  if(lsGet(LS_DONE)||!Store.S.name||document.getElementById('install-pill'))return;
+  const p=document.createElement('button');
+  p.id='install-pill';p.className='install-pill';
+  p.innerHTML='📲 Install app';
+  p.setAttribute('aria-label','Install the Speak Fluently app');
+  p.onclick=()=>showInstallPopup();          // user-initiated: reopening is fine, not nagging
+  document.body.appendChild(p);
+}
+function dismissInstallPopup(silent){
+  const w=document.getElementById('install-popup');
+  if(w){if(w._esc)document.removeEventListener('keydown',w._esc);w.remove();}
+  if(!silent){lsSet(LS_DISMISSED);ensurePill();}
+}
+function showManualInstall(w){
+  const card=w.querySelector('.ip-card');
+  card.innerHTML=`
+    <button class="ip-x" id="ip-x2" aria-label="Close">✕</button>
+    <div class="ip-icon">📲</div>
+    <h3>Add to Home Screen</h3>
+    <p class="mut small" style="text-align:left;margin:10px 0 16px"><b>iPhone (Safari):</b> tap <b>Share</b> → <b>Add to Home Screen</b>.<br><br>
+    <b>Android (Chrome):</b> tap the <b>⋮ menu</b> → <b>Add to Home screen</b> / <b>Install app</b>.<br><br>
+    <b>Other browsers:</b> look for an install option in the browser menu.</p>
+    <button class="btn" id="ip-ok">Got it</button>`;
+  w.querySelector('#ip-x2').onclick=()=>dismissInstallPopup();
+  w.querySelector('#ip-ok').onclick=()=>dismissInstallPopup();
+  setTimeout(()=>{try{w.querySelector('#ip-ok').focus();}catch(e){}},60);
+}
+function showInstallPopup(){
+  if(lsGet(LS_DONE)||document.getElementById('install-popup'))return;
   const hasNative=!!deferredInstall;
-  const b=document.createElement('div');
-  b.id='install-banner';b.className='install-banner';
-  b.innerHTML=`
-    <div style="font-size:34px">📲</div>
-    <div style="flex:1"><b>Install Speak Fluently</b>
-      <div class="small dim">${hasNative?'One tap — lessons, AI coach and streaks on your home screen, works offline.':'Add it to your home screen for the full app feel.'}</div></div>
-    <button class="btn" id="ib-go" style="width:auto;padding:10px 16px">${hasNative?'Install':'How'}</button>
-    <button class="btn ghost" id="ib-no" style="width:auto;padding:10px 12px" aria-label="Dismiss">✕</button>`;
-  document.body.appendChild(b);
-  b.querySelector('#ib-no').onclick=dismissInstall;
-  b.querySelector('#ib-go').onclick=async()=>{
+  const w=document.createElement('div');
+  w.id='install-popup';w.className='install-popup';
+  w.setAttribute('role','dialog');w.setAttribute('aria-modal','true');w.setAttribute('aria-labelledby','ip-title');
+  w.innerHTML=`
+    <div class="ip-card">
+      <button class="ip-x" id="ip-x" aria-label="Not now">✕</button>
+      <div class="ip-icon">📲</div>
+      <h3 id="ip-title">Install Speak Fluently</h3>
+      <p class="mut small" style="margin:6px 0 18px">Lessons, Speak Studio, AI coach & streaks on your home screen — and it works fully offline.</p>
+      <button class="btn" id="ip-go">${hasNative?'Install app':'How to install'}</button>
+      <button class="btn ghost mt" id="ip-no">Not now</button>
+    </div>`;
+  w.addEventListener('click',e=>{if(e.target===w)dismissInstallPopup();});   // backdrop = not now
+  const escH=e=>{if(e.key==='Escape')dismissInstallPopup();};
+  w._esc=escH;document.addEventListener('keydown',escH);
+  document.body.appendChild(w);
+  w.querySelector('#ip-x').onclick=()=>dismissInstallPopup();
+  w.querySelector('#ip-no').onclick=()=>dismissInstallPopup();
+  const go=w.querySelector('#ip-go');
+  go.onclick=async()=>{
     if(deferredInstall){
-      deferredInstall.prompt();
-      try{await deferredInstall.userChoice;}catch(e){}
-      deferredInstall=null;dismissInstall();
+      try{deferredInstall.prompt();await deferredInstall.userChoice;}catch(e){}
+      deferredInstall=null;
+      dismissInstallPopup(true);   // silent: installed→appinstalled finalizes; cancelled→ask again next home visit
     }else{
-      const m=UI.modal(`<h3>📲 Add to Home Screen</h3>
-        <p class="mut small"><b>iPhone (Safari):</b> tap <b>Share</b> → <b>Add to Home Screen</b>.<br>
-        <b>Android (Chrome):</b> tap the <b>⋮ menu</b> → <b>Add to Home screen</b> / <b>Install app</b>.</p>
-        <button class="btn" id="ib-ok">Got it</button>`);
-      m.querySelector('#ib-ok').onclick=()=>m.remove();
+      showManualInstall(w);
     }
   };
+  setTimeout(()=>{try{go.focus({preventScroll:true});}catch(e){try{go.focus();}catch(e2){}}},60);
 }
-window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;maybeInstallBanner();});
-window.addEventListener('appinstalled',()=>{try{localStorage.setItem('fluent_install_dismissed','1');}catch(e){}hideInstallBanner();});
+function maybeInstallUI(){
+  clearTimeout(installTimer);
+  const pop=document.getElementById('install-popup');
+  if(pop){if(pop._esc)document.removeEventListener('keydown',pop._esc);pop.remove();}  // never carry across routes
+  if(lsGet(LS_DONE)){clearInstallUI();return;}                       // installed: gone permanently
+  if(isStandalone()){lsSet(LS_DONE);clearInstallUI();return;}        // launched as installed app
+  if(!Store.S.name)return;                                           // onboarding not complete
+  if(lsGet(LS_DISMISSED)){ensurePill();return;}                      // dismissed: quiet pill everywhere
+  const pill=document.getElementById('install-pill');if(pill)pill.remove();
+  if(!/^#\/home$/.test(location.hash||'#/home'))return;               // home only — never interrupt lessons
+  installTimer=setTimeout(()=>{showInstallPopup();},2500);           // small delay, not aggressive
+}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstall=e;maybeInstallUI();});
+window.addEventListener('appinstalled',()=>{lsSet(LS_DONE);clearInstallUI();});
 async function boot(){
   try{
     await Content.loadAll();
