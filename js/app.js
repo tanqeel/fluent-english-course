@@ -145,11 +145,46 @@ async function boot(){
   if(!Store.S.name)location.hash='#/onboarding';
   else if(!location.hash)location.hash=Store.S.lastRoute||'#/home';
   route();
-  if('serviceWorker' in navigator){
-    window.addEventListener('load',()=>{
-      navigator.serviceWorker.register('sw.js').catch(err=>console.warn('SW:',err));
+  /* ---------- seamless updates: refresh brings new versions live, no reinstall ---------- */
+let swReg=null, updateToastShown=false;
+function showUpdateToast(){
+  if(updateToastShown||document.getElementById('update-toast'))return;
+  updateToastShown=true;
+  const t=document.createElement('div');
+  t.id='update-toast';t.className='update-toast';t.setAttribute('role','status');
+  t.innerHTML=`<span>✨ New version available</span><button class="btn" id="ut-go">Refresh</button><button class="ut-x" id="ut-x" aria-label="Dismiss">✕</button>`;
+  document.body.appendChild(t);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>t.classList.add('show')));
+  t.querySelector('#ut-go').onclick=()=>{try{window.location.reload();}catch(e){}};
+  t.querySelector('#ut-x').onclick=()=>{t.classList.remove('show');setTimeout(()=>t.remove(),350);};
+}
+function watchForUpdates(reg){
+  swReg=reg;
+  const check=()=>{ // re-check for updates; silent when offline
+    try{const p=reg.update();if(p&&p.catch)p.catch(()=>{});}catch(e){}
+  };
+  reg.addEventListener('updatefound',()=>{
+    const w=reg.installing;if(!w)return;
+    w.addEventListener('statechange',()=>{
+      if(w.state==='installed'&&navigator.serviceWorker.controller)showUpdateToast();
     });
-  }
+  });
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)check();});
+  check(); // check on every app start
+}
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('sw.js')
+      .then(reg=>watchForUpdates(reg))
+      .catch(err=>console.warn('SW:',err));
+    // a new worker that activated + claimed while the app was open -> offer refresh
+    let hadController=!!navigator.serviceWorker.controller;
+    navigator.serviceWorker.addEventListener('controllerchange',()=>{
+      if(hadController)showUpdateToast();
+      hadController=true;
+    });
+  });
+}
 }
 document.readyState==='loading'
   ?document.addEventListener('DOMContentLoaded',boot)

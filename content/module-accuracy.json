@@ -507,7 +507,7 @@
   },
   {
    "id": "accuracy-quiz",
-   "title": "Module quiz — 10 questions",
+   "title": "📝 Accuracy quiz — 10 questions",
    "minutes": 10,
    "steps": [
     {
@@ -626,7 +626,7 @@
   },
   {
    "id": "accuracy-checkpoint",
-   "title": "Checkpoint",
+   "title": "🏁 Accuracy checkpoint",
    "minutes": 10,
    "steps": [
     {

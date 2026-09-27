@@ -136,7 +136,7 @@
   },
   {
    "id": "foundations-quiz",
-   "title": "Module quiz — 10 questions",
+   "title": "📝 Foundations quiz — 10 questions",
    "minutes": 10,
    "steps": [
     {
@@ -253,7 +253,7 @@
   },
   {
    "id": "foundations-checkpoint",
-   "title": "Checkpoint",
+   "title": "🏁 Foundations checkpoint",
    "minutes": 10,
    "steps": [
     {

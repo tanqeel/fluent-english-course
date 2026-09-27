@@ -179,7 +179,7 @@
   },
   {
    "id": "pronunciation-quiz",
-   "title": "Module quiz — 10 questions",
+   "title": "📝 Pronunciation quiz — 10 questions",
    "minutes": 10,
    "steps": [
     {
@@ -299,7 +299,7 @@
   },
   {
    "id": "pronunciation-checkpoint",
-   "title": "Checkpoint",
+   "title": "🏁 Pronunciation checkpoint",
    "minutes": 10,
    "steps": [
     {

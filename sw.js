@@ -1,5 +1,5 @@
 /* Speak Fluently service worker — offline-first. All URLs relative: safe under any subpath. */
-const CACHE='fluent-v14';
+const CACHE='fluent-v15';
 const PRECACHE=[
   'index.html','manifest.webmanifest',
   'css/styles.css',
@@ -15,6 +15,9 @@ const PRECACHE=[
 ];
 self.addEventListener('install',e=>{
   e.waitUntil(caches.open(CACHE).then(c=>c.addAll(PRECACHE)).then(()=>self.skipWaiting()));
+});
+self.addEventListener('message',e=>{ // manual activation path (kept for robustness)
+  if(e.data&&e.data.type==='SKIP_WAITING')self.skipWaiting();
 });
 self.addEventListener('activate',e=>{
   e.waitUntil(caches.keys()

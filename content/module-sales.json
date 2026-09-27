@@ -147,7 +147,7 @@
   },
   {
    "id": "sales-quiz",
-   "title": "Module quiz — 10 questions",
+   "title": "📝 Sales quiz — 10 questions",
    "minutes": 10,
    "steps": [
     {
@@ -253,7 +253,7 @@
   },
   {
    "id": "sales-checkpoint",
-   "title": "Checkpoint",
+   "title": "🏁 Sales checkpoint",
    "minutes": 10,
    "steps": [
     {

@@ -234,7 +234,7 @@
   },
   {
    "id": "client-communication-quiz",
-   "title": "Module quiz — 10 questions",
+   "title": "📝 Client Communication quiz — 10 questions",
    "minutes": 10,
    "steps": [
     {
@@ -337,7 +337,7 @@
   },
   {
    "id": "client-communication-checkpoint",
-   "title": "Checkpoint",
+   "title": "🏁 Client Communication checkpoint",
    "minutes": 10,
    "steps": [
     {

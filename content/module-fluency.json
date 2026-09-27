@@ -150,7 +150,7 @@
   },
   {
    "id": "fluency-quiz",
-   "title": "Module quiz — 10 questions",
+   "title": "📝 Fluency quiz — 10 questions",
    "minutes": 10,
    "steps": [
     {
@@ -253,7 +253,7 @@
   },
   {
    "id": "fluency-checkpoint",
-   "title": "Checkpoint",
+   "title": "🏁 Fluency checkpoint",
    "minutes": 10,
    "steps": [
     {

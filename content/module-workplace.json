@@ -1,1 +1,392 @@
-{"color":"#f87171","description":"The English of rooms where careers are decided. Participate in meetings without freezing, lead one without rambling, present like someone worth listening to, write emails people actually read, give and take feedback like a professional — and walk into job interviews as the candidate they remember.","icon":"🏢","id":"workplace","lessons":[{"id":"workplace-l1","minutes":12,"steps":[{"body":"Dear Tanqeel — meetings are not exams. Nobody expects you to be the smartest person in the room; they expect you to be **present and useful**. Three moves cover 90% of meeting participation: **1. Agree and add:** *\"That's a good point — especially the part about [X].\"* (agreeing with a *detail* shows you listened) / *\"I agree, and I'd add that...\"* **2. Interrupt politely:** never barge in — use the soft entry: *\"Sorry, can I jump in for a second?\"* / *\"Can I just add something there?\"* Then make your point in under 20 seconds. The apology buys you the floor; brevity keeps it. **3. Ask for clarification:** the strongest move a junior can make — *\"Sorry, could you go over that last point again?\"* / *\"Just to check I understood — you mean [X]?\"* Asking to clarify is not weakness; it's the thing that stops the whole team building on a misunderstanding.","example":"","heading":null,"tip":"","type":"teach"},{"body":"*Meeting mein teen chaal: **(1) Agree + add** — \"That's a good point, especially the part about...\" **(2) Politely interrupt** — \"Sorry, can I jump in for a second?\" phir 20 second mein baat khatam. **(3) Clarify** — \"Just to check I understood — you mean...?\" Sawal puchna kamzori nahi; ghalat-fehmi par poori team ka kaam rukna asal nuksaan hai.*","example":"","heading":"Roman Urdu version","tip":"","type":"teach"},{"body":"**Buying thinking time:** *\"That's a good question — let me think for a second.\"* / *\"Can I come back to that in a minute?\"* **Soft disagreement:** *\"I see it slightly differently — what if we...?\"* / *\"That's one option. Another way could be...\"* (never *\"you're wrong\"* in a meeting) **Checking understanding:** *\"So the takeaway is [X] — correct?\"* **When you're lost:** *\"Sorry, I'm still catching up on this part — could you give me the short version?\"* — this sentence is a superpower for a student or junior. Honest + engaged beats silent + confused, every time.","example":"","heading":"The survival phrases","tip":"","type":"teach"},{"answer":2,"engine":"multiple-choice","explanation":"soft entry + short point. Barging in costs you the room's goodwill.","id":"workplace-91","options":["Wait silently — juniors shouldn't speak.","\"That's wrong. Here's the real answer.\"","\"Sorry, can I jump in for a second?\" — then the point in under 20 seconds."],"prompt":"You have a useful point but someone senior is mid-flow. Best move?","type":"drill","xp":10},{"engine":"speaking-task","id":"workplace-92","prompt":"AI tutor runs a 3-person meeting about next week's deadline. Your mission: use all three moves once each — agree-and-add, one polite interruption, one clarification question. 60 seconds. You're a 5th-semester student in the room: the 'still catching up' line is allowed and encouraged. Record it; check you stayed under 20 seconds per turn.","seconds":60,"tip":"Fluency mode: no stopping, no mid-sentence correcting.","title":"Three moves, one meeting","type":"drill","xp":25}],"title":"In meetings: agree, interrupt, clarify","xp":40},{"id":"workplace-l2","minutes":12,"steps":[{"body":"Leading a meeting is not about talking the most — it's about **making 20 minutes produce a decision**. The kit: **1. Agenda (send before, state at start):** *\"Thanks everyone — 20 minutes, three items: the deadline, the data issue, and next steps. Let's start with the deadline.\"* Three items max. Every item needs an owner. **2. Time-boxing:** *\"We have five minutes left on this — let's park it and come back if there's time.\"* / *\"Good discussion — can we decide this today or do we need more info?\"* Parking is a skill: it kills rabbit holes without killing people. **3. Action items — the real product of any meeting:** who does what by when, said aloud: *\"So — Ali will send the cleaned file by Thursday. Correct?\"* Then **close with the recap**: *\"To sum up: Ali sends the file Thursday, I update the dashboard Friday, we review Monday. Thanks all.\"* A meeting with no recap didn't happen.","example":"","heading":null,"tip":"","type":"teach"},{"body":"*Meeting lead karna matlab sab se zyada bolna nahi — **20 minute mein faisla nikalna** hai. Agenda pehle bhejo, shuru mein dohrao: \"20 minutes, three items.\" Time khatam ho to: \"Let's park this and come back.\" Aur akhir mein **action items zor se dohrao** — kaun, kya, kab. Bina recap ke meeting hui hi nahi.*","example":"","heading":"Roman Urdu version","tip":"","type":"teach"},{"engine":"journal","id":"workplace-93","prompt":"**Write the agenda**\n\nYou're leading a 20-minute team meeting about a delayed data project. Write: (1) the opening line (time + items), (2) three agenda items with an owner each, (3) two time-boxing lines for when discussion drifts, (4) the closing recap with action items (who / what / by when). Under 200 words total — agendas are short by design.","type":"drill","xp":15}],"title":"Leading a meeting: agenda, time, action","xp":40},{"id":"workplace-l3","minutes":12,"steps":[{"body":"Every good presentation is **Hook → 3 points → Close**. **Hook (30 seconds):** a question, a number, or a story. *\"What if you could see which of your products is quietly losing you money?\"* (question) / *\"Six thousand orders. Three clicks. One dashboard.\"* (numbers) / *\"Last month a shop owner told me she guesses her stock every Monday...\"* (story). **3 points — signposted:** *\"First, the problem... Second, what I built... Finally, what it changes...\"* Signposts are handrails for the audience — and for you; they make forgetting your place nearly impossible. **Close:** *\"So to sum up: [one sentence]. Happy to take questions.\"* Never end with *\"that's it\"* — end with the takeaway. **Delivery:** slower than feels natural, pause after numbers, eye contact with one person per point. Content gets you invited; delivery gets you remembered.","example":"","heading":null,"tip":"","type":"teach"},{"audio":"audio/10-presentation-delivery.mp3","engine":"shadowing","id":"workplace-94","text":"Shadow a full presentation opening — hook, pace, and pauses","tip":"Shadow 0.5–1 sec behind the speaker. Copy the music, not just the words.","title":"Presentation delivery (audio)","type":"drill","xp":15},{"engine":"speaking-task","id":"workplace-95","prompt":"Deliver a 2-minute presentation about a REAL project of yours (your sales dashboard, a university project — real facts only, per the honesty contract). Structure: one hook (question, number, or story) → 3 signposted points (\"First... Second... Finally...\") → one-sentence close + \"Happy to take questions.\" Record it. Listen back: did you rush the numbers? Was there a pause before the close? Redo once, slower.","seconds":120,"tip":"Fluency mode: no stopping, no mid-sentence correcting.","title":"Your 2-minute presentation","type":"drill","xp":25}],"title":"Presentations: hook → 3 points → close","xp":40},{"id":"workplace-l4","minutes":12,"steps":[{"body":"Email and Slack are **two different languages** — using email-register in Slack makes you sound like a robot; using Slack-register in email makes you sound careless. **Email:** subject line that says the ask (*\"Approval needed: dashboard draft by Friday\"* — never *\"Hi\"*), greeting, ONE point per email, clear ask with a date, sign-off. *\"Hi Ahmed — the dashboard draft is ready for review: [link]. Could you approve or comment by Friday? Thanks, Tanqeel\"* **Slack/message:** short, scannable, one idea per message, threads for side-topics. *\"Dashboard draft is ready 🎯 [link] — comments by Friday please\"* **The register test:** if your message needs a subject line, it's an email. If it fits in two lines, it's a message. **Never write angry** — draft it, wait 30 minutes, then delete half the adjectives. The rule that saves careers: *don't send the first draft of a frustrated message.*","example":"","heading":null,"tip":"","type":"teach"},{"body":"*Email aur Slack **do alag zubanein** hain. Email: subject line mein maqsad, ek email mein ek point, tareekh ke saath clear guzarish. Slack: chhota, do line, emoji theek hai. Aur ghusse mein likha **pehla draft kabhi mat bhejo** — 30 minute ruko, aadhe alfaaz kaat do, phir bhejo. Ye usool careers bachata hai.*","example":"","heading":"Roman Urdu version","tip":"","type":"teach"},{"answer":1,"engine":"multiple-choice","explanation":"email carries the record; Slack carries the nudge. Match the channel to the weight.","id":"workplace-96","options":["Slack: \"btw dashboard delayed lol\"","Email with a clear subject + new date + short reason","Both — email your manager, Slack everyone else"],"prompt":"You need to tell your manager the deadline moved by 2 days. Best channel + form?","type":"drill","xp":10},{"answer":"Could you please review the dashboard draft by Friday?","engine":"fix-sentence","explanation":"'Could you please review' (request, not command); article 'the'; preposition 'by Friday'.","hint":"Workplace writing is requests, not commands. Soften it.","id":"workplace-97","type":"drill","wrong":"Review dashboard draft till Friday.","xp":10}],"title":"Workplace writing: email vs Slack","xp":40},{"id":"workplace-l5","minutes":12,"steps":[{"body":"Giving feedback without creating an enemy: use **SBI + R** — **S**ituation, **B**ehavior, **I**mpact, **R**equest. *\"In yesterday's standup (S), you interrupted twice while I was presenting (B) — it broke my flow and I lost the thread (I). Could you hold questions till the end? (R)\"* Notice: behavior, not character. *\"You interrupted twice\"* (fact) vs *\"you're disrespectful\"* (verdict). Facts can be discussed; verdicts start wars. **Receiving feedback without defensiveness** — the harder half. The script: *\"Thanks for telling me.\"* (yes, even if it stings) → *\"Can you give me one example?\"* (specifics, not vibes) → *\"Let me think about that.\"* (never defend in the moment). Defending instantly tells them the feedback was wasted. Sleeping on it tells them you're professional. You can disagree tomorrow, calmly, with specifics.","example":"","heading":null,"tip":"","type":"teach"},{"body":"*Feedback ka formula **SBI + R**: Situation, Behavior, Impact, Request. Shakhsiyat par nahi, **kaam par** baat karo — \"you're disrespectful\" (faisla) nahi, \"you interrupted twice\" (haqeeqat). Aur jab feedback mile: fauran difaa mat karo. \"Thanks for telling me — can you give me one example?\" Kal araam se ikhtilaaf kar lena; usi waqt behas karna sab se bari ghalti hai.*","example":"","heading":"Roman Urdu version","tip":"","type":"teach"},{"engine":"speaking-task","id":"workplace-98","prompt":"AI tutor gives you critical feedback: your presentation was too fast and the slides were hard to read. Your job: receive it like a professional — thank them, ask for one specific example, say you'll think about it. No defending, no explaining, no \"but...\" — 90 seconds. Record it and count your 'but's. Zero is the target. This is the drill that separates juniors from professionals.","seconds":90,"tip":"Fluency mode: no stopping, no mid-sentence correcting.","title":"Take the hit gracefully","type":"drill","xp":25}],"title":"Feedback: give it (SBI), take it calm","xp":40},{"id":"workplace-l6","minutes":14,"steps":[{"body":"**Office culture abroad — the unwritten rules:** small talk at work is ritual, not optional — *\"How was your weekend?\"* gets asked every Monday; have a 20-second answer ready (*\"Quiet one — caught the match, visited family. You?\"*). **Boundaries:** don't ask about salary, religion, or politics in the first months. Lunch: watch what others do first — some offices eat together, some at desks; match the room. **\"Thank you\" economy:** abroad, small courtesies are currency — thank people for small things, by name. It costs nothing and buys everything.","example":"","heading":null,"tip":"","type":"teach"},{"body":"**Job interviews — your two weapons:** **1. \"Tell me about yourself\" (60 seconds, Present → Past → Future):** *\"I'm a data science student in my 5th semester (present). Before my degree I spent three years as a sales supervisor, so I understand the business side of data (past). Right now I'm building real projects in Python and looking for roles where I can turn messy data into decisions (future).\"* Real facts only — the honesty contract applies double here. **2. STAR stories (have 3 ready):** **S**ituation, **T**ask, **A**ction, **R**esult. *\"In my sales job (S), our branch reports took two days by hand (T). I rebuilt them in Excel with formulas (A) — reporting dropped to two hours (R).\"* Numbers make STAR stick. **3 questions to ask THEM** (always ask — it shows you're choosing, not begging): *\"What does success look like in the first 3 months?\"* / *\"What's the biggest challenge the team is facing right now?\"* / *\"How will my work be measured?\"*","example":"","heading":null,"tip":"","type":"teach"},{"engine":"journal","id":"workplace-99","prompt":"**Your interview kit (write it, then speak it)**\n\n1. Your 60-second \"tell me about yourself\" — Present → Past → Future, real facts only.\n2. Two STAR stories from your real life: one from your sales supervisor years, one from university (a project, a group assignment, a problem you solved). Situation → Task → Action → Result, with at least one number in each.\n3. Your 3 questions to ask them at the end.\nThen read all of it aloud twice. This page is your interview cheat sheet — memorize the stories, not the script.","type":"drill","xp":15}],"title":"Office culture abroad + job interviews","xp":40},{"id":"workplace-quiz","minutes":10,"steps":[{"engine":"timed-quiz","id":"workplace-100","questions":[{"answer":0,"explanation":"agree with a detail + add. Shows you listened and thought.","kind":"mc","n":1,"options":["\"That's a good point — especially the part about the timeline. I'd add...\"","\"Interesting. Anyway, moving on.\"","\"I agree with everything.\""],"prompt":"Best agree-and-add in a meeting?"},{"explanation":"Sample: \"Sorry, can I jump in for a second?\" (then the point in under 20 seconds)","kind":"self","n":2,"prompt":"Write the polite-interruption line.","sample":"Sample: \"Sorry, can I jump in for a second?\" (then the point in under 20 seconds)"},{"answer":"Could you please review the dashboard draft by Friday?","explanation":"requests, not commands; article + preposition fixed.","kind":"fix","n":3,"prompt":"Fix the error:","wrong":"Review dashboard draft till Friday."},{"answer":1,"explanation":"who + what + by when, said aloud and confirmed.","kind":"mc","n":4,"options":["\"Someone should handle the file.\"","\"So — Ali will send the cleaned file by Thursday. Correct?\"","\"Let's all try to be faster.\""],"prompt":"Best action-item close to a meeting?"},{"answer":"First, the problem. Second, what I built. Finally, what it changes.","explanation":"First, the problem. Second, what I built. Finally, what it changes.","kind":"order","n":5,"prompt":"Put the words in order:","words":["the problem.","First,","what I built.","Second,","what it changes.","Finally,"]},{"explanation":"Sample: \"Thanks for telling me — can you give me one example? I'll think about it.\" (no defending in the moment)","kind":"self","n":6,"prompt":"Your manager says your slides were hard to read. Your first response: \"___\"","sample":"Sample: \"Thanks for telling me — can you give me one example? I'll think about it.\" (no defending in the moment)"},{"answer":2,"explanation":"email carries the official record; delay news deserves a subject line.","kind":"mc","n":7,"options":["A voice note in the team group","A two-line Slack message","An email with a clear subject + new date + short reason"],"prompt":"Deadline moved 2 days. Official channel?"},{"explanation":"Sample: \"In yesterday's standup, you interrupted twice while I was presenting — it broke my flow. Could you hold questions till the end?\" (Situation, Behavior, Impact, Request)","kind":"self","n":8,"prompt":"Give SBI+R feedback to a teammate who keeps interrupting you.","sample":"Sample: \"In yesterday's standup, you interrupted twice while I was presenting — it broke my flow. Could you hold questions till the end?\" (Situation, Behavior, Impact, Request)"},{"answer":"I'm a data science student in my 5th semester.","explanation":"present-tense fact. 'student in my 5th semester' — article + ordinal.","kind":"fix","n":9,"prompt":"Fix the error:","wrong":"I am student in 5th semester."},{"answer":0,"explanation":"Present → Past → Future. Real facts, 60 seconds.","kind":"mc","n":10,"options":["Present → Past → Future","Childhood → hobbies → dreams","Apology → excuses → promises"],"prompt":"\"Tell me about yourself\" follows…"}],"rule":"8/10 to move on. Answer first, then learn from the misses.","seconds":300,"title":"Quiz — Workplace","type":"drill","xp":100}],"title":"Module quiz — 10 questions","xp":40},{"id":"workplace-checkpoint","minutes":10,"steps":[{"body":"- [ ] I can participate in a meeting: agree-and-add, polite interruption, clarification question\n- [ ] I can lead a 20-minute meeting: agenda, time-boxing, action items + recap\n- [ ] I can deliver a 2-minute presentation: hook → 3 signposted points → one-sentence close\n- [ ] I write emails with a subject line that says the ask — and keep Slack messages to two lines\n- [ ] I give feedback with SBI+R and receive it with \"thanks, give me an example, I'll think about it\"\n- [ ] I have a 60-second self-intro, 2 STAR stories, and 3 questions to ask in interviews","example":"","heading":"Can-do statements","tip":"","type":"teach"},{"body":"Record yourself leading a 5-minute mock meeting with your AI tutor as two colleagues: open with the agenda, handle one interruption politely, park one rabbit hole, close with action items. Then deliver your 60-second \"tell me about yourself.\" Six and a half minutes that prove you're workplace-ready.","example":"","heading":"Mini-test","tip":"","type":"teach"},{"body":"Missed a few days? Don't restart — **start HERE**: re-run the three meeting moves (Drill 9.1) once and read your interview kit (Drill 9.6) aloud. Fifteen minutes and your professional English is back online. The 2–3-day drop is normal; the comeback is the skill.\n\n🏢 **Badge earned: Meeting Pro** — you can now hold your own in any professional room.\n\n---","example":"","heading":"Re-entry note","tip":"","type":"teach"},{"engine":"speaking-task","id":"workplace-101","prompt":"Record yourself leading a 5-minute mock meeting with your AI tutor as two colleagues: open with the agenda, handle one interruption politely, park one rabbit hole, close with action items. Then deliver your 60-second \"tell me about yourself.\" Six and a half minutes that prove you're workplace-ready.\n\nRe-entry note: Missed a few days? Don't restart — start HERE: re-run the three meeting moves (Drill 9.1) once and read your interview kit (Drill 9.6) aloud. Fifteen minutes and your professional English is back online. The 2–3-day drop is normal; the comeback is the skill.\n\n🏢 Badge earned: Meeting Pro — you can now hold your own in any professional room.\n\n---","seconds":120,"tip":"Fluency mode: no stopping, no mid-sentence correcting.","title":"Checkpoint mini-test","type":"drill","xp":30}],"title":"Checkpoint","xp":40}],"tagline":"Meetings, Presentations & Interviews","title":"Professional Workplace English"}
+{
+ "color": "#f87171",
+ "description": "The English of rooms where careers are decided. Participate in meetings without freezing, lead one without rambling, present like someone worth listening to, write emails people actually read, give and take feedback like a professional — and walk into job interviews as the candidate they remember.",
+ "icon": "🏢",
+ "id": "workplace",
+ "lessons": [
+  {
+   "id": "workplace-l1",
+   "minutes": 12,
+   "steps": [
+    {
+     "body": "Dear Tanqeel — meetings are not exams. Nobody expects you to be the smartest person in the room; they expect you to be **present and useful**. Three moves cover 90% of meeting participation: **1. Agree and add:** *\"That's a good point — especially the part about [X].\"* (agreeing with a *detail* shows you listened) / *\"I agree, and I'd add that...\"* **2. Interrupt politely:** never barge in — use the soft entry: *\"Sorry, can I jump in for a second?\"* / *\"Can I just add something there?\"* Then make your point in under 20 seconds. The apology buys you the floor; brevity keeps it. **3. Ask for clarification:** the strongest move a junior can make — *\"Sorry, could you go over that last point again?\"* / *\"Just to check I understood — you mean [X]?\"* Asking to clarify is not weakness; it's the thing that stops the whole team building on a misunderstanding.",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "*Meeting mein teen chaal: **(1) Agree + add** — \"That's a good point, especially the part about...\" **(2) Politely interrupt** — \"Sorry, can I jump in for a second?\" phir 20 second mein baat khatam. **(3) Clarify** — \"Just to check I understood — you mean...?\" Sawal puchna kamzori nahi; ghalat-fehmi par poori team ka kaam rukna asal nuksaan hai.*",
+     "example": "",
+     "heading": "Roman Urdu version",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "**Buying thinking time:** *\"That's a good question — let me think for a second.\"* / *\"Can I come back to that in a minute?\"* **Soft disagreement:** *\"I see it slightly differently — what if we...?\"* / *\"That's one option. Another way could be...\"* (never *\"you're wrong\"* in a meeting) **Checking understanding:** *\"So the takeaway is [X] — correct?\"* **When you're lost:** *\"Sorry, I'm still catching up on this part — could you give me the short version?\"* — this sentence is a superpower for a student or junior. Honest + engaged beats silent + confused, every time.",
+     "example": "",
+     "heading": "The survival phrases",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "answer": 2,
+     "engine": "multiple-choice",
+     "explanation": "soft entry + short point. Barging in costs you the room's goodwill.",
+     "id": "workplace-91",
+     "options": [
+      "Wait silently — juniors shouldn't speak.",
+      "\"That's wrong. Here's the real answer.\"",
+      "\"Sorry, can I jump in for a second?\" — then the point in under 20 seconds."
+     ],
+     "prompt": "You have a useful point but someone senior is mid-flow. Best move?",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "engine": "speaking-task",
+     "id": "workplace-92",
+     "prompt": "AI tutor runs a 3-person meeting about next week's deadline. Your mission: use all three moves once each — agree-and-add, one polite interruption, one clarification question. 60 seconds. You're a 5th-semester student in the room: the 'still catching up' line is allowed and encouraged. Record it; check you stayed under 20 seconds per turn.",
+     "seconds": 60,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "title": "Three moves, one meeting",
+     "type": "drill",
+     "xp": 25
+    }
+   ],
+   "title": "In meetings: agree, interrupt, clarify",
+   "xp": 40
+  },
+  {
+   "id": "workplace-l2",
+   "minutes": 12,
+   "steps": [
+    {
+     "body": "Leading a meeting is not about talking the most — it's about **making 20 minutes produce a decision**. The kit: **1. Agenda (send before, state at start):** *\"Thanks everyone — 20 minutes, three items: the deadline, the data issue, and next steps. Let's start with the deadline.\"* Three items max. Every item needs an owner. **2. Time-boxing:** *\"We have five minutes left on this — let's park it and come back if there's time.\"* / *\"Good discussion — can we decide this today or do we need more info?\"* Parking is a skill: it kills rabbit holes without killing people. **3. Action items — the real product of any meeting:** who does what by when, said aloud: *\"So — Ali will send the cleaned file by Thursday. Correct?\"* Then **close with the recap**: *\"To sum up: Ali sends the file Thursday, I update the dashboard Friday, we review Monday. Thanks all.\"* A meeting with no recap didn't happen.",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "*Meeting lead karna matlab sab se zyada bolna nahi — **20 minute mein faisla nikalna** hai. Agenda pehle bhejo, shuru mein dohrao: \"20 minutes, three items.\" Time khatam ho to: \"Let's park this and come back.\" Aur akhir mein **action items zor se dohrao** — kaun, kya, kab. Bina recap ke meeting hui hi nahi.*",
+     "example": "",
+     "heading": "Roman Urdu version",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "engine": "journal",
+     "id": "workplace-93",
+     "prompt": "**Write the agenda**\n\nYou're leading a 20-minute team meeting about a delayed data project. Write: (1) the opening line (time + items), (2) three agenda items with an owner each, (3) two time-boxing lines for when discussion drifts, (4) the closing recap with action items (who / what / by when). Under 200 words total — agendas are short by design.",
+     "type": "drill",
+     "xp": 15
+    }
+   ],
+   "title": "Leading a meeting: agenda, time, action",
+   "xp": 40
+  },
+  {
+   "id": "workplace-l3",
+   "minutes": 12,
+   "steps": [
+    {
+     "body": "Every good presentation is **Hook → 3 points → Close**. **Hook (30 seconds):** a question, a number, or a story. *\"What if you could see which of your products is quietly losing you money?\"* (question) / *\"Six thousand orders. Three clicks. One dashboard.\"* (numbers) / *\"Last month a shop owner told me she guesses her stock every Monday...\"* (story). **3 points — signposted:** *\"First, the problem... Second, what I built... Finally, what it changes...\"* Signposts are handrails for the audience — and for you; they make forgetting your place nearly impossible. **Close:** *\"So to sum up: [one sentence]. Happy to take questions.\"* Never end with *\"that's it\"* — end with the takeaway. **Delivery:** slower than feels natural, pause after numbers, eye contact with one person per point. Content gets you invited; delivery gets you remembered.",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "audio": "audio/10-presentation-delivery.mp3",
+     "engine": "shadowing",
+     "id": "workplace-94",
+     "text": "Shadow a full presentation opening — hook, pace, and pauses",
+     "tip": "Shadow 0.5–1 sec behind the speaker. Copy the music, not just the words.",
+     "title": "Presentation delivery (audio)",
+     "type": "drill",
+     "xp": 15
+    },
+    {
+     "engine": "speaking-task",
+     "id": "workplace-95",
+     "prompt": "Deliver a 2-minute presentation about a REAL project of yours (your sales dashboard, a university project — real facts only, per the honesty contract). Structure: one hook (question, number, or story) → 3 signposted points (\"First... Second... Finally...\") → one-sentence close + \"Happy to take questions.\" Record it. Listen back: did you rush the numbers? Was there a pause before the close? Redo once, slower.",
+     "seconds": 120,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "title": "Your 2-minute presentation",
+     "type": "drill",
+     "xp": 25
+    }
+   ],
+   "title": "Presentations: hook → 3 points → close",
+   "xp": 40
+  },
+  {
+   "id": "workplace-l4",
+   "minutes": 12,
+   "steps": [
+    {
+     "body": "Email and Slack are **two different languages** — using email-register in Slack makes you sound like a robot; using Slack-register in email makes you sound careless. **Email:** subject line that says the ask (*\"Approval needed: dashboard draft by Friday\"* — never *\"Hi\"*), greeting, ONE point per email, clear ask with a date, sign-off. *\"Hi Ahmed — the dashboard draft is ready for review: [link]. Could you approve or comment by Friday? Thanks, Tanqeel\"* **Slack/message:** short, scannable, one idea per message, threads for side-topics. *\"Dashboard draft is ready 🎯 [link] — comments by Friday please\"* **The register test:** if your message needs a subject line, it's an email. If it fits in two lines, it's a message. **Never write angry** — draft it, wait 30 minutes, then delete half the adjectives. The rule that saves careers: *don't send the first draft of a frustrated message.*",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "*Email aur Slack **do alag zubanein** hain. Email: subject line mein maqsad, ek email mein ek point, tareekh ke saath clear guzarish. Slack: chhota, do line, emoji theek hai. Aur ghusse mein likha **pehla draft kabhi mat bhejo** — 30 minute ruko, aadhe alfaaz kaat do, phir bhejo. Ye usool careers bachata hai.*",
+     "example": "",
+     "heading": "Roman Urdu version",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "answer": 1,
+     "engine": "multiple-choice",
+     "explanation": "email carries the record; Slack carries the nudge. Match the channel to the weight.",
+     "id": "workplace-96",
+     "options": [
+      "Slack: \"btw dashboard delayed lol\"",
+      "Email with a clear subject + new date + short reason",
+      "Both — email your manager, Slack everyone else"
+     ],
+     "prompt": "You need to tell your manager the deadline moved by 2 days. Best channel + form?",
+     "type": "drill",
+     "xp": 10
+    },
+    {
+     "answer": "Could you please review the dashboard draft by Friday?",
+     "engine": "fix-sentence",
+     "explanation": "'Could you please review' (request, not command); article 'the'; preposition 'by Friday'.",
+     "hint": "Workplace writing is requests, not commands. Soften it.",
+     "id": "workplace-97",
+     "type": "drill",
+     "wrong": "Review dashboard draft till Friday.",
+     "xp": 10
+    }
+   ],
+   "title": "Workplace writing: email vs Slack",
+   "xp": 40
+  },
+  {
+   "id": "workplace-l5",
+   "minutes": 12,
+   "steps": [
+    {
+     "body": "Giving feedback without creating an enemy: use **SBI + R** — **S**ituation, **B**ehavior, **I**mpact, **R**equest. *\"In yesterday's standup (S), you interrupted twice while I was presenting (B) — it broke my flow and I lost the thread (I). Could you hold questions till the end? (R)\"* Notice: behavior, not character. *\"You interrupted twice\"* (fact) vs *\"you're disrespectful\"* (verdict). Facts can be discussed; verdicts start wars. **Receiving feedback without defensiveness** — the harder half. The script: *\"Thanks for telling me.\"* (yes, even if it stings) → *\"Can you give me one example?\"* (specifics, not vibes) → *\"Let me think about that.\"* (never defend in the moment). Defending instantly tells them the feedback was wasted. Sleeping on it tells them you're professional. You can disagree tomorrow, calmly, with specifics.",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "*Feedback ka formula **SBI + R**: Situation, Behavior, Impact, Request. Shakhsiyat par nahi, **kaam par** baat karo — \"you're disrespectful\" (faisla) nahi, \"you interrupted twice\" (haqeeqat). Aur jab feedback mile: fauran difaa mat karo. \"Thanks for telling me — can you give me one example?\" Kal araam se ikhtilaaf kar lena; usi waqt behas karna sab se bari ghalti hai.*",
+     "example": "",
+     "heading": "Roman Urdu version",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "engine": "speaking-task",
+     "id": "workplace-98",
+     "prompt": "AI tutor gives you critical feedback: your presentation was too fast and the slides were hard to read. Your job: receive it like a professional — thank them, ask for one specific example, say you'll think about it. No defending, no explaining, no \"but...\" — 90 seconds. Record it and count your 'but's. Zero is the target. This is the drill that separates juniors from professionals.",
+     "seconds": 90,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "title": "Take the hit gracefully",
+     "type": "drill",
+     "xp": 25
+    }
+   ],
+   "title": "Feedback: give it (SBI), take it calm",
+   "xp": 40
+  },
+  {
+   "id": "workplace-l6",
+   "minutes": 14,
+   "steps": [
+    {
+     "body": "**Office culture abroad — the unwritten rules:** small talk at work is ritual, not optional — *\"How was your weekend?\"* gets asked every Monday; have a 20-second answer ready (*\"Quiet one — caught the match, visited family. You?\"*). **Boundaries:** don't ask about salary, religion, or politics in the first months. Lunch: watch what others do first — some offices eat together, some at desks; match the room. **\"Thank you\" economy:** abroad, small courtesies are currency — thank people for small things, by name. It costs nothing and buys everything.",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "**Job interviews — your two weapons:** **1. \"Tell me about yourself\" (60 seconds, Present → Past → Future):** *\"I'm a data science student in my 5th semester (present). Before my degree I spent three years as a sales supervisor, so I understand the business side of data (past). Right now I'm building real projects in Python and looking for roles where I can turn messy data into decisions (future).\"* Real facts only — the honesty contract applies double here. **2. STAR stories (have 3 ready):** **S**ituation, **T**ask, **A**ction, **R**esult. *\"In my sales job (S), our branch reports took two days by hand (T). I rebuilt them in Excel with formulas (A) — reporting dropped to two hours (R).\"* Numbers make STAR stick. **3 questions to ask THEM** (always ask — it shows you're choosing, not begging): *\"What does success look like in the first 3 months?\"* / *\"What's the biggest challenge the team is facing right now?\"* / *\"How will my work be measured?\"*",
+     "example": "",
+     "heading": null,
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "engine": "journal",
+     "id": "workplace-99",
+     "prompt": "**Your interview kit (write it, then speak it)**\n\n1. Your 60-second \"tell me about yourself\" — Present → Past → Future, real facts only.\n2. Two STAR stories from your real life: one from your sales supervisor years, one from university (a project, a group assignment, a problem you solved). Situation → Task → Action → Result, with at least one number in each.\n3. Your 3 questions to ask them at the end.\nThen read all of it aloud twice. This page is your interview cheat sheet — memorize the stories, not the script.",
+     "type": "drill",
+     "xp": 15
+    }
+   ],
+   "title": "Office culture abroad + job interviews",
+   "xp": 40
+  },
+  {
+   "id": "workplace-quiz",
+   "minutes": 10,
+   "steps": [
+    {
+     "engine": "timed-quiz",
+     "id": "workplace-100",
+     "questions": [
+      {
+       "answer": 0,
+       "explanation": "agree with a detail + add. Shows you listened and thought.",
+       "kind": "mc",
+       "n": 1,
+       "options": [
+        "\"That's a good point — especially the part about the timeline. I'd add...\"",
+        "\"Interesting. Anyway, moving on.\"",
+        "\"I agree with everything.\""
+       ],
+       "prompt": "Best agree-and-add in a meeting?"
+      },
+      {
+       "explanation": "Sample: \"Sorry, can I jump in for a second?\" (then the point in under 20 seconds)",
+       "kind": "self",
+       "n": 2,
+       "prompt": "Write the polite-interruption line.",
+       "sample": "Sample: \"Sorry, can I jump in for a second?\" (then the point in under 20 seconds)"
+      },
+      {
+       "answer": "Could you please review the dashboard draft by Friday?",
+       "explanation": "requests, not commands; article + preposition fixed.",
+       "kind": "fix",
+       "n": 3,
+       "prompt": "Fix the error:",
+       "wrong": "Review dashboard draft till Friday."
+      },
+      {
+       "answer": 1,
+       "explanation": "who + what + by when, said aloud and confirmed.",
+       "kind": "mc",
+       "n": 4,
+       "options": [
+        "\"Someone should handle the file.\"",
+        "\"So — Ali will send the cleaned file by Thursday. Correct?\"",
+        "\"Let's all try to be faster.\""
+       ],
+       "prompt": "Best action-item close to a meeting?"
+      },
+      {
+       "answer": "First, the problem. Second, what I built. Finally, what it changes.",
+       "explanation": "First, the problem. Second, what I built. Finally, what it changes.",
+       "kind": "order",
+       "n": 5,
+       "prompt": "Put the words in order:",
+       "words": [
+        "the problem.",
+        "First,",
+        "what I built.",
+        "Second,",
+        "what it changes.",
+        "Finally,"
+       ]
+      },
+      {
+       "explanation": "Sample: \"Thanks for telling me — can you give me one example? I'll think about it.\" (no defending in the moment)",
+       "kind": "self",
+       "n": 6,
+       "prompt": "Your manager says your slides were hard to read. Your first response: \"___\"",
+       "sample": "Sample: \"Thanks for telling me — can you give me one example? I'll think about it.\" (no defending in the moment)"
+      },
+      {
+       "answer": 2,
+       "explanation": "email carries the official record; delay news deserves a subject line.",
+       "kind": "mc",
+       "n": 7,
+       "options": [
+        "A voice note in the team group",
+        "A two-line Slack message",
+        "An email with a clear subject + new date + short reason"
+       ],
+       "prompt": "Deadline moved 2 days. Official channel?"
+      },
+      {
+       "explanation": "Sample: \"In yesterday's standup, you interrupted twice while I was presenting — it broke my flow. Could you hold questions till the end?\" (Situation, Behavior, Impact, Request)",
+       "kind": "self",
+       "n": 8,
+       "prompt": "Give SBI+R feedback to a teammate who keeps interrupting you.",
+       "sample": "Sample: \"In yesterday's standup, you interrupted twice while I was presenting — it broke my flow. Could you hold questions till the end?\" (Situation, Behavior, Impact, Request)"
+      },
+      {
+       "answer": "I'm a data science student in my 5th semester.",
+       "explanation": "present-tense fact. 'student in my 5th semester' — article + ordinal.",
+       "kind": "fix",
+       "n": 9,
+       "prompt": "Fix the error:",
+       "wrong": "I am student in 5th semester."
+      },
+      {
+       "answer": 0,
+       "explanation": "Present → Past → Future. Real facts, 60 seconds.",
+       "kind": "mc",
+       "n": 10,
+       "options": [
+        "Present → Past → Future",
+        "Childhood → hobbies → dreams",
+        "Apology → excuses → promises"
+       ],
+       "prompt": "\"Tell me about yourself\" follows…"
+      }
+     ],
+     "rule": "8/10 to move on. Answer first, then learn from the misses.",
+     "seconds": 300,
+     "title": "Quiz — Workplace",
+     "type": "drill",
+     "xp": 100
+    }
+   ],
+   "title": "📝 Professional Workplace English quiz — 10 questions",
+   "xp": 40
+  },
+  {
+   "id": "workplace-checkpoint",
+   "minutes": 10,
+   "steps": [
+    {
+     "body": "- [ ] I can participate in a meeting: agree-and-add, polite interruption, clarification question\n- [ ] I can lead a 20-minute meeting: agenda, time-boxing, action items + recap\n- [ ] I can deliver a 2-minute presentation: hook → 3 signposted points → one-sentence close\n- [ ] I write emails with a subject line that says the ask — and keep Slack messages to two lines\n- [ ] I give feedback with SBI+R and receive it with \"thanks, give me an example, I'll think about it\"\n- [ ] I have a 60-second self-intro, 2 STAR stories, and 3 questions to ask in interviews",
+     "example": "",
+     "heading": "Can-do statements",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "Record yourself leading a 5-minute mock meeting with your AI tutor as two colleagues: open with the agenda, handle one interruption politely, park one rabbit hole, close with action items. Then deliver your 60-second \"tell me about yourself.\" Six and a half minutes that prove you're workplace-ready.",
+     "example": "",
+     "heading": "Mini-test",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "body": "Missed a few days? Don't restart — **start HERE**: re-run the three meeting moves (Drill 9.1) once and read your interview kit (Drill 9.6) aloud. Fifteen minutes and your professional English is back online. The 2–3-day drop is normal; the comeback is the skill.\n\n🏢 **Badge earned: Meeting Pro** — you can now hold your own in any professional room.\n\n---",
+     "example": "",
+     "heading": "Re-entry note",
+     "tip": "",
+     "type": "teach"
+    },
+    {
+     "engine": "speaking-task",
+     "id": "workplace-101",
+     "prompt": "Record yourself leading a 5-minute mock meeting with your AI tutor as two colleagues: open with the agenda, handle one interruption politely, park one rabbit hole, close with action items. Then deliver your 60-second \"tell me about yourself.\" Six and a half minutes that prove you're workplace-ready.\n\nRe-entry note: Missed a few days? Don't restart — start HERE: re-run the three meeting moves (Drill 9.1) once and read your interview kit (Drill 9.6) aloud. Fifteen minutes and your professional English is back online. The 2–3-day drop is normal; the comeback is the skill.\n\n🏢 Badge earned: Meeting Pro — you can now hold your own in any professional room.\n\n---",
+     "seconds": 120,
+     "tip": "Fluency mode: no stopping, no mid-sentence correcting.",
+     "title": "Checkpoint mini-test",
+     "type": "drill",
+     "xp": 30
+    }
+   ],
+   "title": "🏁 Professional Workplace English checkpoint",
+   "xp": 40
+  }
+ ],
+ "tagline": "Meetings, Presentations & Interviews",
+ "title": "Professional Workplace English"
+}
