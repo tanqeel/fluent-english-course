@@ -305,7 +305,7 @@ function placement(root){
   root.innerHTML=`<div class="card center" style="margin-top:26px">
     <div style="font-size:52px">🧭</div><h2>START HERE: Placement test</h2>
     <p class="mut">30 items · ~25 minutes · scored out of 100.<br>Finds your real level so Day 1 starts at the right place.</p>
-    <p class="small dim">Parts A–B are checked automatically. Parts C–E are self-checked against the key — be honest, nobody sees this but you.</p>
+    <p class="small dim">Parts A–B are checked automatically. Parts C–E are self-scored — be strict and honest, nobody sees this but you.</p>
     <button class="btn mt" id="pl-start">Start placement test →</button></div>`;
   root.querySelector('#pl-start').onclick=()=>startPlacement(root);
 }
@@ -315,71 +315,80 @@ function startPlacement(root){
   function render(){
     if(partIdx>=P.parts.length){finish();return;}
     const part=P.parts[partIdx];
-    root.innerHTML=`<div class="step-tag">Placement · Part ${part.part} of E · ${esc(part.title)}</div>
+    const pid=part.id||part.part;
+    root.innerHTML=`<div class="step-tag">Placement · Part ${pid} of E · ${esc(part.title)}</div>
       <div class="lprog"><i style="width:${partIdx/P.parts.length*100}%"></i></div>
       <div class="card teach"><div>${UI.md(part.instructions)}</div></div><div id="pl-q"></div>`;
     const host=root.querySelector('#pl-q');
-    if(part.kind==='fix'||part.kind==='mc'){
-      let qi=0;
-      (function one(){
-        if(qi>=part.items.length){partIdx++;render();return;}
-        const it=part.items[qi];
-        host.innerHTML='';
-        if(part.kind==='fix'){
-          const w=el(`<div><p class="mut small">Item ${qi+1}/${part.items.length}</p>
-            <div class="shad-text" style="border-color:rgba(248,113,113,.4)">❌ ${esc(it.wrong)}</div>
-            <input class="field" id="pl-in" placeholder="Type the corrected sentence…" autocomplete="off">
-            <button class="btn mt" id="pl-go">Check ✓</button></div>`);
-          host.appendChild(w);
-          w.querySelector('#pl-go').onclick=()=>{
-            const v=w.querySelector('#pl-in').value;
-            if(!v.trim()){toast('Type something first ✍️');return;}
-            const ok=norm(v)===norm(it.answer);
-            if(ok){score+=it.points;toast('✅');}
-            else toast('❌ → '+it.answer,3000);
-            answers.push({part:part.part,n:it.n,ok});
-            qi++;one();
-          };
-        }else{
-          const w=el(`<div><p class="mut small">Item ${qi+1}/${part.items.length}</p>
-            <div class="shad-text">${UI.md(it.prompt)}</div><div class="opts" id="pl-opts"></div></div>`);
-          host.appendChild(w);
-          const ob=w.querySelector('#pl-opts');
-          it.options.forEach(o=>{
-            const b=el(`<button class="opt">${esc(o.t)}</button>`);
-            b.onclick=()=>{
-              const ok=o.v===it.answer;
-              if(ok){score+=it.points;toast('✅');}
-              else toast('❌ → '+it.full,3000);
-              answers.push({part:part.part,n:it.n,ok});
-              qi++;one();
-            };
-            ob.appendChild(b);
-          });
-        }
-        window.scrollTo({top:0});
-      })();
-    }else{
-      // self-graded parts: answer then compare with key
+    if(part.kind==='fix'){
       let qi=0;
       (function one(){
         if(qi>=part.items.length){partIdx++;render();return;}
         const it=part.items[qi];
         host.innerHTML='';
         const w=el(`<div><p class="mut small">Item ${qi+1}/${part.items.length}</p>
-          <div class="card" style="margin:0 0 10px"><div>${UI.md(it.prompt)}</div></div>
-          <textarea class="field" id="pl-ta" rows="3" placeholder="Write your answer…"></textarea>
-          <button class="btn mt" id="pl-show">Show answer key</button><div id="pl-key"></div></div>`);
+          <div class="shad-text" style="border-color:rgba(248,113,113,.4)">❌ ${esc(it.wrong)}</div>
+          <input class="field" id="pl-in" placeholder="Type the corrected sentence…" autocomplete="off">
+          <button class="btn mt" id="pl-go">Check ✓</button></div>`);
         host.appendChild(w);
-        w.querySelector('#pl-show').onclick=()=>{
-          w.querySelector('#pl-show').remove();
-          w.querySelector('#pl-key').innerHTML=
-            `<div class="explain"><b>Answer key:</b><br>${UI.md(it.key)}${it.sample?'<br><br><b>Sample:</b><br>'+UI.md(it.sample):''}</div>
-             <div class="grade-row"><button class="grade g4" id="pl-g">✓ I got it right</button>
-             <button class="grade g1" id="pl-b">✗ I missed it</button></div>`;
-          w.querySelector('#pl-g').onclick=()=>{score+=it.points;answers.push({part:part.part,n:it.n,ok:true});qi++;one();};
-          w.querySelector('#pl-b').onclick=()=>{answers.push({part:part.part,n:it.n,ok:false});qi++;one();};
+        w.querySelector('#pl-go').onclick=()=>{
+          const v=w.querySelector('#pl-in').value;
+          if(!v.trim()){toast('Type something first ✍️');return;}
+          const ok=Drills.norm(v)===Drills.norm(it.answer);
+          if(ok){score+=it.points;toast('✅');}
+          else toast('❌ → '+it.answer,3000);
+          answers.push({part:pid,n:it.n,ok});
+          qi++;one();
         };
+        window.scrollTo({top:0});
+      })();
+    }else if(part.kind==='choice'){
+      let qi=0;
+      (function one(){
+        if(qi>=part.items.length){partIdx++;render();return;}
+        const it=part.items[qi];
+        host.innerHTML='';
+        const w=el(`<div><p class="mut small">Item ${qi+1}/${part.items.length}</p>
+          <div class="shad-text">${UI.md(it.text)}</div><div class="opts" id="pl-opts"></div></div>`);
+        host.appendChild(w);
+        const ob=w.querySelector('#pl-opts');
+        (it.options||[]).slice(1).forEach(o=>{
+          const val=(o&&typeof o==='object')?(o.v!==undefined?o.v:o.t):o;
+          const b=el(`<button class="opt">${esc((o&&typeof o==='object')?o.t:o)}</button>`);
+          b.onclick=()=>{
+            const ok=Drills.norm(String(it.text).replace('___',val))===Drills.norm(it.answer);
+            if(ok){score+=it.points;toast('✅');}
+            else toast('❌ → '+it.answer,3000);
+            answers.push({part:pid,n:it.n,ok});
+            qi++;one();
+          };
+          ob.appendChild(b);
+        });
+        window.scrollTo({top:0});
+      })();
+    }else{
+      // self-scored parts (selfscore / speak / write): do the task, then score yourself honestly
+      let qi=0;
+      (function one(){
+        if(qi>=part.items.length){partIdx++;render();return;}
+        const it=part.items[qi];
+        const mx=it.max||5;
+        const steps=mx>=10?[2,4,6,8,10]:[1,2,3,4,5];
+        host.innerHTML='';
+        const w=el(`<div><p class="mut small">Item ${qi+1}/${part.items.length}</p>
+          <div class="card" style="margin:0 0 10px"><div>${it.title?'<b>'+esc(it.title)+'</b><br>':''}${UI.md(it.prompt||'')}</div>
+          ${part.kind==='speak'?'<p class="small dim">🎙️ Record on your phone\'s voice recorder, then listen back before you score.</p>':''}</div>
+          ${part.kind==='write'?'<textarea class="field" id="pl-ta" rows="3" placeholder="Write your answer here…"></textarea>':''}
+          <p class="small dim">Score yourself honestly — max ${mx}.</p>
+          <p class="small dim" style="margin-top:-6px">${esc(it.scale||'')}</p>
+          <div class="grade-row" id="pl-scale"></div></div>`);
+        host.appendChild(w);
+        const sr=w.querySelector('#pl-scale');
+        steps.forEach(s=>{
+          const b=el(`<button class="grade ${s>=mx*0.8?'g4':'g1'}">${s}</button>`);
+          b.onclick=()=>{const got=Math.min(s,it.points);score+=got;answers.push({part:pid,n:it.n,score:got});qi++;one();};
+          sr.appendChild(b);
+        });
         window.scrollTo({top:0});
       })();
     }
@@ -486,7 +495,7 @@ function progress(root){
       <div class="kv"><span>Speaking tasks</span><b>${S.speakingDone}</b></div>
       <div class="kv"><span>SRS reviews</span><b>${S.srsReviews}</b></div>
       <div class="kv" style="border:0"><span>Mistakes reviewed</span><b>${S.errorReviews}</b></div></div>
-    <button class="btn ghost mt" id="reset">Reset all progress</button>
+    <button class="btn ghost mt" id="reset">🔄 Start over from Day 1</button>
     <p class="small dim center">Progress is stored on this device only. It works fully offline.</p>`;
   root.querySelectorAll('#plan-list .check').forEach(c=>c.onclick=()=>{
     const w=+c.dataset.w;S.planDone=S.planDone||{};
@@ -494,8 +503,8 @@ function progress(root){
     Store.save();progress(root);
   });
   root.querySelector('#reset').onclick=()=>{
-    const m=modal(`<h3>Reset everything?</h3><p class="mut small">XP, streak, badges, error log — all gone. This can't be undone.</p>
-      <button class="btn danger" id="r-yes">Yes, reset</button>
+    const m=modal(`<h3>🔄 Start over from Day 1?</h3><p class="mut small">XP, streak, lessons, badges, error log, review cards, placement result — everything is wiped and you begin again from Day 1. Your theme and AI Coach settings are kept. This can't be undone.</p>
+      <button class="btn danger" id="r-yes">Yes, start over</button>
       <button class="btn ghost mt" id="r-no">Keep my progress</button>`);
     m.querySelector('#r-yes').onclick=()=>Store.reset();
     m.querySelector('#r-no').onclick=()=>m.remove();
