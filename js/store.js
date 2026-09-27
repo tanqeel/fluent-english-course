@@ -117,7 +117,10 @@ function checkBadges(extra){
     fluency_done:!!(S.modulesCompleted||{}).fluency,
     client_communication_done:!!(S.modulesCompleted||{})['client-communication'],
     self_presentation_done:!!(S.modulesCompleted||{})['self-presentation'],
-    sales_done:!!(S.modulesCompleted||{}).sales
+    sales_done:!!(S.modulesCompleted||{}).sales,
+    everyday_social_done:!!(S.modulesCompleted||{})['everyday-social'],
+    workplace_done:!!(S.modulesCompleted||{}).workplace,
+    ielts_done:!!(S.modulesCompleted||{}).ielts
   },extra||{});
   for(const b of badgeDefs){
     if(S.badges.includes(b.id))continue;
