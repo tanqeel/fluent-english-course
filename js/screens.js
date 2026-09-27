@@ -101,7 +101,7 @@ function shareApp(){
 function onboarding(root){
   root.innerHTML=`
     <div class="card center" style="margin-top:36px">
-      <div style="font-size:54px">🗣️</div>
+      <img class="onboard-logo" src="icons/icon-64.png" alt="Speak Fluently logo">
       <h2 style="margin:8px 0 4px">Speak Fluently</h2>
       <p class="mut" style="margin:0 0 16px">Your free English course — lessons, speaking practice, AI coach, IELTS prep. Fully offline.</p>
       <div style="text-align:left;margin-bottom:14px">

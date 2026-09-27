@@ -1,5 +1,5 @@
 /* Speak Fluently service worker — offline-first. All URLs relative: safe under any subpath. */
-const CACHE='fluent-v15';
+const CACHE='fluent-v16';
 const PRECACHE=[
   'index.html','manifest.webmanifest',
   'css/styles.css',
@@ -11,7 +11,8 @@ const PRECACHE=[
   'content/practice.json','content/plan.json','content/badges.json',
   'content/quizzes.json','content/taskcards.json','content/placement.json',
   'content/pronunciation.json','content/scenarios.json','content/stories.json',
-  'icons/icon-192.png','icons/icon-512.png'
+  'icons/icon-192.png','icons/icon-512.png','icons/icon-64.png','icons/apple-touch-icon.png',
+  'icons/favicon-32.png','icons/favicon-16.png','icons/maskable-192.png','icons/maskable-512.png'
 ];
 self.addEventListener('install',e=>{
   e.waitUntil(caches.open(CACHE).then(c=>c.addAll(PRECACHE)).then(()=>self.skipWaiting()));
