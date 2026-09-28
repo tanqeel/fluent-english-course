@@ -1,7 +1,7 @@
 /* Speak Fluently — hash router + PWA boot. All paths relative: works under any subpath. */
 (function(){
 'use strict';
-const APP_V=25; // must match version.json — bump both on every release
+const APP_V=26; // must match version.json — bump both on every release
 const TABS=[
   ['#/home','🏠','Home'],['#/learn','📚','Learn'],['#/practice','⚔️','Practice'],
   ['#/review','📇','Review'],['#/progress','📊','Progress'],['#/coach','🤖','Coach'],
