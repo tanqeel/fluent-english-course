@@ -57,14 +57,14 @@ function fixSentence(step,host,api){
     <div class="shad-text" style="border-color:color-mix(in srgb,var(--red) 40%,transparent)">❌ ${esc(step.wrong)}</div>
     <input class="field" id="fx-in" placeholder="Type the corrected sentence…" autocomplete="off">
     <div class="row" style="gap:8px"><button class="btn" id="fx-go" style="flex:3">Check ✓</button>
-    <button class="btn ghost" id="fx-hint" style="flex:1">💡</button></div></div>`);
+    <button class="btn ghost" id="fx-hint" style="flex:1">${UI.icon('tip','in-tx')}</button></div></div>`);
   host.appendChild(wrap);
   let done=false,tried=false;
-  wrap.querySelector('#fx-hint').onclick=()=>toast('💡 '+step.hint,3200);
+  wrap.querySelector('#fx-hint').onclick=()=>toast(UI.icon('tip','in-tx')+' '+step.hint,3200);
   wrap.querySelector('#fx-go').onclick=()=>{
     if(done)return;
     const v=wrap.querySelector('#fx-in').value;
-    if(!v.trim()){toast('Type your fix first ✍️');return;}
+    if(!v.trim()){toast('Type your fix first '+UI.icon('write','in-tx'));return;}
     const okAns=[step.answer].concat(step.accept||[]);
     if(okAns.some(a=>norm(v)===norm(a))){
       done=true;wrap.querySelector('#fx-in').disabled=true;
@@ -111,7 +111,7 @@ function fillBlank(step,host,api){
     const go=el(`<button class="btn mt">Check ✓</button>`);
     box.append(inp,go);
     go.onclick=()=>{
-      if(done)return;const v=inp.value;if(!v.trim()){toast('Type something first ✍️');return;}
+      if(done)return;const v=inp.value;if(!v.trim()){toast('Type something first '+UI.icon('write','in-tx'));return;}
       const full=(parts[0]+v+(parts[1]||'')).trim();
       const ok=(step.accept||[step.answer]).some(a=>norm(full)===norm(a));
       if(ok){done=true;feedback(host,true,`✅ <b>${esc(step.answer)}</b>${explainBlock(step)}`);markDrill('fill-blank',true);api.award(step.xp||10);continueBtn(host,api);}
@@ -123,14 +123,14 @@ function fillBlank(step,host,api){
 
 /* ---------- complete the dialogue ---------- */
 function dialogue(step,host,api){
-  const wrap=el(`<div><p class="mut small">🎭 ${esc(step.scene)}</p><div class="lines"></div></div>`);
+  const wrap=el(`<div><p class="mut small">${UI.icon('roleplay','in-tx')} ${esc(step.scene)}</p><div class="lines"></div></div>`);
   host.appendChild(wrap);
   const lines=wrap.querySelector('.lines');
   const turns=step.turns||[];
   let ti=0,score=0;
   function showTurn(){
     if(ti>=turns.length){
-      feedback(host,true,`🎉 Dialogue complete! ${explainBlock(step)}`);
+      feedback(host,true,`${UI.icon('party','in-tx')} Dialogue complete! ${explainBlock(step)}`);
       markDrill('dialogue',score===turns.length);api.award(score===turns.length?(step.xp||15):Math.ceil((step.xp||15)/2));continueBtn(host,api);return;
     }
     const t=turns[ti];
@@ -183,15 +183,15 @@ function speak(text){
 /* ---------- shadowing ---------- */
 function shadowing(step,host,api){
   const wrap=el(`<div>
-    <p class="mut small">🎧 <b style="color:var(--txt)">${esc(step.title||'Shadowing')}</b> — listen, then copy the rhythm.</p>
+    <p class="mut small">${UI.icon('listen','in-tx')} <b style="color:var(--txt)">${esc(step.title||'Shadowing')}</b> — listen, then copy the rhythm.</p>
     <div class="shad-text">“${esc(step.text)}”</div>
     <div class="row" style="justify-content:center;gap:10px;margin:10px 0">
       <button class="btn ghost" id="sh-play" style="width:auto;padding:12px 20px">▶ Model</button>
     </div>
-    <div class="row" style="justify-content:center"><button class="rec-btn" id="sh-rec">🎙️</button></div>
-    <p class="center small dim" id="sh-status">Tap 🎙️ and shadow the line out loud</p>
+    <div class="row" style="justify-content:center"><button class="rec-btn" id="sh-rec">${UI.icon('mic','in-tx')}</button></div>
+    <p class="center small dim" id="sh-status">Tap ${UI.icon('mic','in-tx')} and shadow the line out loud</p>
     <div id="sh-back"></div>
-    ${step.tip?`<div class="tip">💡 ${esc(step.tip)}</div>`:''}
+    ${step.tip?`<div class="tip">${UI.icon('tip','in-tx')} ${esc(step.tip)}</div>`:''}
   </div>`);
   host.appendChild(wrap);
   const R=makeRecorder();let recURL=null,started=false;
@@ -206,7 +206,7 @@ function shadowing(step,host,api){
         await R.start();started=true;recBtn.classList.add('live');recBtn.textContent='⏹️';
         status.textContent='Recording… speak now!';
       }else{
-        recURL=await R.stop();recBtn.classList.remove('live');recBtn.textContent='🎙️';
+        recURL=await R.stop();recBtn.classList.remove('live');recBtn.innerHTML=UI.icon('mic','in-tx');
         status.textContent='Nice! Listen to yourself:';
         back.innerHTML='';
         const a=document.createElement('audio');a.controls=true;a.src=recURL;back.appendChild(a);
@@ -215,14 +215,14 @@ function shadowing(step,host,api){
           d.onclick=()=>{
             Store.S.shadowingDone++;Store.save();
             markDrill('shadowing',true);api.award(step.xp||15);
-            toast('🎙️ Rep logged! Shadowing builds muscle memory.');
+            toast(UI.icon('mic','in-tx')+' Rep logged! Shadowing builds muscle memory.');
             continueBtn(host,api);
             d.remove();
           };
           back.appendChild(d);
         }
       }
-    }catch(e){toast('🎙️ Mic blocked — allow microphone access to record.');}
+    }catch(e){toast(UI.icon('mic','in-tx')+' Mic blocked — allow microphone access to record.');}
   };
 }
 
@@ -248,7 +248,7 @@ function flashcard(step,host,api,mode){
           const st=SM2.review(Store.S.srs[step.cardId]||{},q);
           Store.S.srs[step.cardId]={...st,front:step.front,back:step.back,example:step.example||''};
           Store.S.srsReviews++;Store.save();Store.checkBadges();
-          UI.toast(q>=3?`Scheduled in ${st.interval} day${st.interval>1?'s':''} 📅`:'Back tomorrow — no stress 📅');
+          UI.toast(q>=3?`Scheduled in ${st.interval} day${st.interval>1?'s':''} ${UI.icon('calendar','in-tx')}`:'Back tomorrow — no stress '+UI.icon('calendar','in-tx'));
           api.done&&api.done();
         };
         row.appendChild(b);
@@ -262,7 +262,7 @@ function flashcard(step,host,api,mode){
         const cid='srs_lesson_'+(step.uid||step.id||Date.now());
         if(!Store.S.srs[cid])Store.S.srs[cid]={ef:2.5,interval:0,reps:0,due:Date.now(),front:step.front,back:step.back,example:step.example||''};
         Store.save();markDrill('flashcard',false);
-        toast('Added to your Review deck 📇');continueBtn(host,api);row.style.display='none';
+        toast('Added to your Review deck '+UI.icon('review','in-tx'));continueBtn(host,api);row.style.display='none';
       };
       row.append(knew,not);
     }
@@ -276,7 +276,7 @@ function flashcard(step,host,api,mode){
 let jSeq=Date.now();
 function journal(step,host,api){
   const wrap=el(`<div>
-    <p class="mut small">✍️ <b style="color:var(--txt)">Writing</b> — be honest, write it properly.</p>
+    <p class="mut small">${UI.icon('write','in-tx')} <b style="color:var(--txt)">Writing</b> — be honest, write it properly.</p>
     <div class="card" style="margin:10px 0"><div style="font-size:15px">${UI.md(step.prompt||'')}</div></div>
     <textarea class="field" id="j-t" rows="5" placeholder="Write here…"></textarea>
     <button class="btn" id="j-save">Save entry ✓</button>
@@ -287,7 +287,7 @@ function journal(step,host,api){
   wrap.querySelector('#j-save').onclick=()=>{
     if(done)return;
     const v=wrap.querySelector('#j-t').value.trim();
-    if(v.length<3){toast('Write a little more first ✍️');return;}
+    if(v.length<3){toast('Write a little more first '+UI.icon('write','in-tx'));return;}
     done=true;
     const S=Store.S;S.journal=S.journal||[];
     S.journal.unshift({id:'j'+(jSeq++),ts:Date.now(),prompt:String(step.prompt||'').slice(0,120),text:v.slice(0,2000)});
@@ -419,7 +419,7 @@ function timedQuiz(step,host,api){
       body.append(inp,go);
       go.onclick=()=>{
         if(locked)return;
-        const v=inp.value;if(!v.trim()){toast('Type something first ✍️');return;}
+        const v=inp.value;if(!v.trim()){toast('Type something first '+UI.icon('write','in-tx'));return;}
         locked=true;
         const okAns=[q.answer].concat(q.accept||[]);
         if(okAns.some(a=>norm(v)===norm(a))){toast('✅');next(true);}
@@ -456,7 +456,7 @@ function timedQuiz(step,host,api){
     qEl.innerHTML='';
     wrap.querySelector('#tq-p').style.width='100%';
     const great=pct>=80;
-    feedback(host,great,`🎯 <b>${score}/${qs.length} — ${pct}%</b><br>${great?'Excellent! 8/10+ — you may move on. 🎉':pct>=50?'Good effort — your misses are in the Error Log. Hit 8/10 to move on.':'Tough round. Review the Error Log, redo the lesson, and try again.'}`);
+    feedback(host,great,`${UI.icon('target','in-tx')} <b>${score}/${qs.length} — ${pct}%</b><br>${great?'Excellent! 8/10+ — you may move on. '+UI.icon('party','in-tx'):pct>=50?'Good effort — your misses are in the Error Log. Hit 8/10 to move on.':'Tough round. Review the Error Log, redo the lesson, and try again.'}`);
     markDrill('timed-quiz',great);
     api.award(Math.round((step.xp||100)*score/qs.length));
     continueBtn(host,api,great?'Continue →':'Review & continue →');
@@ -505,18 +505,18 @@ function speakingTask(step,host,api){
   const total=step.seconds||90;
   let left=total,timer=null,done=false;
   const wrap=el(`<div>
-    <p class="mut small">🎙️ <b style="color:var(--txt)">${esc(step.title||'Speaking task')}</b></p>
+    <p class="mut small">${UI.icon('mic','in-tx')} <b style="color:var(--txt)">${esc(step.title||'Speaking task')}</b></p>
     <div class="shad-text">${UI.md(step.prompt)}</div>
-    ${step.model?`<details class="explain"><summary>📖 <b>Model script</b> — tap to read</summary><div class="mt">${UI.md(step.model)}</div><button class="btn ghost mt" id="sp-model-audio">🔊 Hear the model</button></details>`:''}
+    ${step.model?`<details class="explain"><summary>${UI.icon('read','in-tx')} <b>Model script</b> — tap to read</summary><div class="mt">${UI.md(step.model)}</div><button class="btn ghost mt" id="sp-model-audio">🔊 Hear the model</button></details>`:''}
     ${(step.checklist||[]).map(c=>`<div class="check"><div class="box"></div><span class="txt small">${esc(c)}</span></div>`).join('')}
     <div class="timer" id="sp-t">${Math.floor(total/60)}:${String(total%60).padStart(2,'0')}</div>
     <div class="row" style="justify-content:center;gap:8px">
       <button class="btn ghost" id="sp-start" style="width:auto;padding:12px 22px">▶ Start timer</button>
-      <button class="rec-btn" id="sp-rec" style="margin:0">🎙️</button>
+      <button class="rec-btn" id="sp-rec" style="margin:0">${UI.icon('mic','in-tx')}</button>
     </div>
     <p class="center small dim" id="sp-status">Record yourself, then listen back.</p>
     <div id="sp-back"></div>
-    ${step.tip?`<div class="tip">💡 ${esc(step.tip)}</div>`:''}
+    ${step.tip?`<div class="tip">${UI.icon('tip','in-tx')} ${esc(step.tip)}</div>`:''}
   </div>`);
   host.appendChild(wrap);
   const modelBtn=wrap.querySelector('#sp-model-audio');
@@ -535,20 +535,20 @@ function speakingTask(step,host,api){
     try{
       if(!R.live){await R.start();recBtn.classList.add('live');recBtn.textContent='⏹️';status.textContent='Recording… keep going in English!';}
       else{
-        const url=await R.stop();recBtn.classList.remove('live');recBtn.textContent='🎙️';status.textContent='Listen back — be your own coach:';
+        const url=await R.stop();recBtn.classList.remove('live');recBtn.innerHTML=UI.icon('mic','in-tx');status.textContent='Listen back — be your own coach:';
         back.innerHTML='';const a=document.createElement('audio');a.controls=true;a.src=url;back.appendChild(a);
         if(!wrap.querySelector('#sp-done')){
           const d=el(`<button class="btn mt" id="sp-done">Mark complete ✓</button>`);
           d.onclick=()=>{
             done=true;Store.S.speakingDone++;Store.save();
             markDrill('speaking-task',true);api.award(step.xp||25);
-            feedback(host,true,`🎉 Speaking task done!<br><span class="why">Want feedback? In the Muse chat, say <b>"speaking task"</b> and share what you said — you'll get corrections and a better version.</span>`);
+            feedback(host,true,`${UI.icon('party','in-tx')} Speaking task done!<br><span class="why">Want feedback? In the Muse chat, say <b>"speaking task"</b> and share what you said — you'll get corrections and a better version.</span>`);
             continueBtn(host,api);d.remove();
           };
           back.appendChild(d);
         }
       }
-    }catch(e){toast('🎙️ Mic blocked — allow microphone access to record.');}
+    }catch(e){toast(UI.icon('mic','in-tx')+' Mic blocked — allow microphone access to record.');}
   };
   // checklist toggles
   wrap.querySelectorAll('.check').forEach(c=>c.onclick=()=>c.classList.toggle('done'));

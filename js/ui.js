@@ -74,11 +74,11 @@ function refreshHud(){
     window.__newBadges=[];
     confetti(110);
     const b=nb[0];
-    setTimeout(()=>{const m=modal(`<div style="font-size:52px">${b.icon}</div><h3 style="margin:8px 0">Badge earned: ${esc(b.name)}</h3><p class="mut small">${esc(b.desc)}</p><button class="btn" id="m-ok">Nice! 🎉</button>`);
+    setTimeout(()=>{const m=modal(`<div>${icon(b.icon,'in-badge-lg')}</div><h3 style="margin:8px 0">Badge earned: ${esc(b.name)}</h3><p class="mut small">${esc(b.desc)}</p><button class="btn" id="m-ok">Nice! ${icon('party','in-tx')}</button>`);
       m.querySelector('#m-ok').onclick=()=>m.remove();},350);
   }
-  if(window.__comeback){window.__comeback=false;setTimeout(()=>toast(`Welcome back, ${esc(Store.S.name||'friend')}. Restarting is the hard part — you did it. 💪`,3400),600);}
-  if(window.__freezeEarned){window.__freezeEarned=false;setTimeout(()=>toast('🛡️ Streak Freeze earned! One missed day won\'t break your streak.',3200),600);}
+  if(window.__comeback){window.__comeback=false;setTimeout(()=>toast(`Welcome back, ${esc(Store.S.name||'friend')}. Restarting is the hard part — you did it. ${icon('muscle','in-tx')}`,3400),600);}
+  if(window.__freezeEarned){window.__freezeEarned=false;setTimeout(()=>toast(UI.icon('shield','in-tx')+' Streak Freeze earned! One missed day won\'t break your streak.',3200),600);}
 }
 
 function icon(n,cls){return '<img class="ic3d '+(cls||'')+'" src="icons/ui/'+n+'.png" alt="">';}

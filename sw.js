@@ -1,6 +1,6 @@
 /* Speak Fluently service worker — offline-first. All URLs relative: safe under any subpath. */
-const CACHE='fluent-v32';
-const APP_VERSION=32; // informational: matches version.json; bump both together
+const CACHE='fluent-v41';
+const APP_VERSION=41; // informational: matches version.json; bump both together
 const PRECACHE=[
   'index.html','manifest.webmanifest','version.json',
   'css/styles.css',
@@ -14,6 +14,8 @@ const PRECACHE=[
   'content/pronunciation.json','content/scenarios.json','content/stories.json',
   'icons/icon-192.png','icons/icon-512.png','icons/icon-64.png','icons/apple-touch-icon.png',
   'icons/ui/home.png','icons/ui/learn.png','icons/ui/practice.png','icons/ui/review.png','icons/ui/progress.png','icons/ui/coach.png','icons/ui/profile.png','icons/ui/streak.png','icons/ui/xp.png',
+  'icons/ui/mic.png','icons/ui/listen.png','icons/ui/roleplay.png','icons/ui/target.png','icons/ui/trophy.png','icons/ui/medal.png','icons/ui/star.png','icons/ui/read.png','icons/ui/write.png','icons/ui/calendar.png',
+  'icons/ui/tip.png','icons/ui/chat.png','icons/ui/brain.png','icons/ui/compass.png','icons/ui/key.png','icons/ui/dice.png','icons/ui/share.png','icons/ui/party.png','icons/ui/muscle.png','icons/ui/shield.png','icons/ui/logo-tile.png','icons/ui/timer.png','icons/ui/refresh.png','icons/ui/download.png','icons/ui/reset.png',
   'icons/favicon-32.png','icons/favicon-16.png','icons/maskable-192.png','icons/maskable-512.png'
 ];
 self.addEventListener('install',e=>{

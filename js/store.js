@@ -55,7 +55,7 @@ function touchDay(){ // call after awarding XP
 function daysBetween(a,b){const d1=new Date(a+'T12:00'),d2=new Date(b+'T12:00');return Math.round((d2-d1)/864e5);}
 function streakStatus(){
   const t=todayStr(),st=S.streak;
-  if(st.lastDate===t)return{state:'active',msg:'Streak safe for today. 🔥'};
+  if(st.lastDate===t)return{state:'active',msg:'Streak safe for today.'};
   if(st.lastDate===ydayStr())return{state:'pending',msg:'One lesson today keeps the streak alive.'};
   if(!st.lastDate)return{state:'new',msg:'Start your first streak today — one lesson is enough.'};
   return{state:'broken',msg:'Streak paused — welcome back. One lesson restarts it. No shame in restarting; shame is in quitting.'};

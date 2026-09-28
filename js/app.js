@@ -1,7 +1,7 @@
 /* Speak Fluently — hash router + PWA boot. All paths relative: works under any subpath. */
 (function(){
 'use strict';
-const APP_V=32; // must match version.json — bump both on every release
+const APP_V=41; // must match version.json — bump both on every release
 window.SF_VERSION=APP_V; // readable by screens (Profile shows it)
 const TABS=[
   ['#/home','home','Home'],['#/learn','learn','Learn'],['#/practice','practice','Practice'],
@@ -42,6 +42,7 @@ function route(){
   }
   UI.refreshHud();
   maybeInstallUI();
+  syncPillVisibility();
   window.scrollTo({top:0});
 }
 
@@ -57,7 +58,14 @@ function clearInstallUI(){
   const p=document.getElementById('install-popup');if(p){if(p._esc)document.removeEventListener('keydown',p._esc);p.remove();}
   const pill=document.getElementById('install-pill');if(pill)pill.remove();
 }
-/* small persistent pill, pinned top-right on every screen until installed */
+/* small persistent pill, pinned top-right on tab screens until installed.
+   Hidden on detail screens (lesson / drill / etc.) so it never covers
+   their top-right buttons (e.g. Skip on the drill screen). */
+function syncPillVisibility(){
+  const pill=document.getElementById('install-pill');if(!pill)return;
+  const m=(location.hash||'#/home').match(/^#\/([a-z]+)(?:\/(.+))?$/);
+  pill.style.display=(m&&m[2])?'none':'';
+}
 function ensurePill(){
   if(lsGet(LS_DONE)||!Store.S.name||document.getElementById('install-pill'))return;
   const p=document.createElement('button');
@@ -66,6 +74,7 @@ function ensurePill(){
   p.setAttribute('aria-label','Install the Speak Fluently app');
   p.onclick=()=>showInstallPopup();          // user-initiated: reopening is fine, not nagging
   document.body.appendChild(p);
+  syncPillVisibility();
 }
 function dismissInstallPopup(silent){
   const w=document.getElementById('install-popup');
@@ -155,7 +164,7 @@ function showUpdateToast(){
   updateToastShown=true;
   const t=document.createElement('div');
   t.id='update-toast';t.className='update-toast';t.setAttribute('role','status');
-  t.innerHTML=`<span>✨ New version available</span><button class="btn" id="ut-go">Refresh</button><button class="ut-x" id="ut-x" aria-label="Dismiss">✕</button>`;
+  t.innerHTML=`<span>${UI.icon('party','in-tx')} New version available</span><button class="btn" id="ut-go">Refresh</button><button class="ut-x" id="ut-x" aria-label="Dismiss">✕</button>`;
   document.body.appendChild(t);
   requestAnimationFrame(()=>requestAnimationFrame(()=>t.classList.add('show')));
   t.querySelector('#ut-go').onclick=()=>{try{window.location.reload();}catch(e){}};

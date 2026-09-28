@@ -3,224 +3,224 @@
   {
    "check": "lessons_done >= 1",
    "desc": "Finish your very first lesson.",
-   "icon": "🌱",
+   "icon": "star",
    "id": "first-steps",
    "name": "First Steps"
   },
   {
    "check": "streak >= 3",
    "desc": "Keep a 3-day streak.",
-   "icon": "🔥",
+   "icon": "streak",
    "id": "on-fire-3",
    "name": "Warming Up"
   },
   {
    "check": "streak >= 7",
    "desc": "Keep a 7-day streak.",
-   "icon": "🚀",
+   "icon": "streak",
    "id": "on-fire-7",
    "name": "One Week Strong"
   },
   {
    "check": "streak >= 30",
    "desc": "Keep a 30-day streak.",
-   "icon": "⚡",
+   "icon": "xp",
    "id": "on-fire-30",
    "name": "Unstoppable"
   },
   {
    "check": "xp >= 500",
    "desc": "Earn 500 total XP.",
-   "icon": "💎",
+   "icon": "xp",
    "id": "xp-500",
    "name": "Point Collector"
   },
   {
    "check": "xp >= 2000",
    "desc": "Earn 2,000 total XP.",
-   "icon": "🏆",
+   "icon": "trophy",
    "id": "xp-2000",
    "name": "XP Machine"
   },
   {
    "check": "drills_fix_sentence >= 10",
    "desc": "Fix 10 broken sentences.",
-   "icon": "🔍",
+   "icon": "tip",
    "id": "sharp-eyes",
    "name": "Sharp Eyes"
   },
   {
    "check": "quiz_80 == true",
    "desc": "Score 80%+ on any timed quiz.",
-   "icon": "🎯",
+   "icon": "target",
    "id": "quiz-master",
    "name": "Quiz Master"
   },
   {
    "check": "shadowing_done >= 5",
    "desc": "Complete 5 shadowing reps.",
-   "icon": "🎙️",
+   "icon": "mic",
    "id": "echo",
    "name": "Echo"
   },
   {
    "check": "speaking_done >= 3",
    "desc": "Finish 3 speaking tasks.",
-   "icon": "🗣️",
+   "icon": "mic",
    "id": "voice-up",
    "name": "Voice Up"
   },
   {
    "check": "error_reviews >= 10",
    "desc": "Review 10 cards from your error log.",
-   "icon": "🧠",
+   "icon": "brain",
    "id": "mistake-hunter",
    "name": "Mistake Hunter"
   },
   {
    "check": "srs_reviews >= 25",
    "desc": "Review 25 SRS flashcards.",
-   "icon": "🗂️",
+   "icon": "brain",
    "id": "memory-keeper",
    "name": "Memory Keeper"
   },
   {
    "check": "comebacks >= 1",
    "desc": "Restart your streak after a break. No shame — that's the hard part.",
-   "icon": "💪",
+   "icon": "muscle",
    "id": "comeback",
    "name": "Comeback"
   },
   {
    "check": "module_complete == true",
    "desc": "Finish every lesson in any module.",
-   "icon": "🧱",
+   "icon": "medal",
    "id": "module-complete",
    "name": "Module Crusher"
   },
   {
    "check": "late_study == true",
    "desc": "Study after 10 PM. Hostel grind counts.",
-   "icon": "🦉",
+   "icon": "star",
    "id": "night-owl",
    "name": "Night Owl"
   },
   {
    "id": "placed-planned",
    "name": "Placed & Planned",
-   "icon": "🧭",
+   "icon": "compass",
    "desc": "Finish the placement test and know your level.",
    "check": "placement_done == true"
   },
   {
    "id": "habit-locked",
    "name": "Habit Locked",
-   "icon": "🔒",
+   "icon": "key",
    "desc": "Keep a 21-day streak — the habit is yours now.",
    "check": "streak >= 21"
   },
   {
    "id": "article-ace",
    "name": "Article Ace",
-   "icon": "🅰️",
+   "icon": "write",
    "desc": "Complete the Accuracy module — articles & prepositions mastered.",
    "check": "accuracy_done == true"
   },
   {
    "id": "clear-speaker",
    "name": "Clear Speaker",
-   "icon": "🔊",
+   "icon": "mic",
    "desc": "Complete the Pronunciation module — your mouth knows the moves.",
    "check": "pronunciation_done == true"
   },
   {
    "id": "flow-state",
    "name": "Flow State",
-   "icon": "🌊",
+   "icon": "chat",
    "desc": "Complete the Fluency module — stop translating, start talking.",
    "check": "fluency_done == true"
   },
   {
    "id": "call-ready",
    "name": "Call-Ready",
-   "icon": "📞",
+   "icon": "mic",
    "desc": "Complete the Client Communication module — ready for real calls.",
    "check": "client_communication_done == true"
   },
   {
    "id": "brand-voice",
    "name": "Brand Voice",
-   "icon": "🎤",
+   "icon": "mic",
    "desc": "Complete the Self-Presentation module — introduce yourself with confidence.",
    "check": "self_presentation_done == true"
   },
   {
    "id": "closer",
    "name": "Closer",
-   "icon": "🤝",
+   "icon": "chat",
    "desc": "Complete the Sales module — the full 90-day path is done.",
    "check": "sales_done == true"
   },
   {
    "id": "social-butterfly",
    "name": "Social Butterfly",
-   "icon": "🦋",
+   "icon": "chat",
    "desc": "Complete the Everyday & Social module — walk into any room abroad and belong in it.",
    "check": "everyday_social_done == true"
   },
   {
    "id": "meeting-pro",
    "name": "Meeting Pro",
-   "icon": "🏢",
+   "icon": "profile",
    "desc": "Complete the Workplace module — hold your own in any professional room.",
    "check": "workplace_done == true"
   },
   {
    "check": "ielts_done == true",
    "desc": "Complete the IELTS Mastery module — Band 7+ technique across all four sections.",
-   "icon": "🎓",
+   "icon": "medal",
    "id": "band-hunter",
    "name": "Band Hunter"
   },
   {
    "check": "pron_sessions >= 1",
    "desc": "Try the Pronunciation Lab and get your first word-level score.",
-   "icon": "🎯",
+   "icon": "mic",
    "id": "first-echo",
    "name": "First Echo"
   },
   {
    "check": "pron_best >= 85",
    "desc": "Score 85%+ on any pronunciation set.",
-   "icon": "👅",
+   "icon": "mic",
    "id": "tongue-master",
    "name": "Tongue Master"
   },
   {
    "check": "roleplays_done >= 3",
    "desc": "Finish 3 different roleplay scenarios.",
-   "icon": "🎭",
+   "icon": "roleplay",
    "id": "roleplayer",
    "name": "Roleplayer"
   },
   {
    "check": "stories_read >= 3",
    "desc": "Finish 3 interactive stories.",
-   "icon": "📖",
+   "icon": "read",
    "id": "story-seeker",
    "name": "Story Seeker"
   },
   {
    "check": "daily_done >= 7",
    "desc": "Complete 7 daily challenges.",
-   "icon": "📅",
+   "icon": "calendar",
    "id": "daily-hero",
    "name": "Daily Hero"
   },
   {
    "check": "repair_done >= 3",
    "desc": "Run 3 mistake-repair rounds.",
-   "icon": "🔧",
+   "icon": "tip",
    "id": "mistake-surgeon",
    "name": "Mistake Surgeon"
   }

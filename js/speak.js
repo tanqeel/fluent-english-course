@@ -53,7 +53,7 @@ function saveSpeakStat(st){
   Store.save();
 }
 function srNote(){
-  return `<p class="small dim">🎙️ Speech check uses your browser's built-in voice typing — on some phones it needs internet. No internet? Use the record + self-check option instead. Your audio never leaves this device except for the transcription itself.</p>`;
+  return `<p class="small dim">${UI.icon('mic','in-tx')} Speech check uses your browser's built-in voice typing — on some phones it needs internet. No internet? Use the record + self-check option instead. Your audio never leaves this device except for the transcription itself.</p>`;
 }
 
 /* ================= deterministic daily challenge ================= */
@@ -71,12 +71,12 @@ function dailyPlan(){
   const pronSets=(Content.cache.pron&&Content.cache.pron.sets)||[];
   const tasks=(Content.cache.taskcards||[]).filter(t=>t.kind!=='journal');
   const items=[];
-  const f1=pick(poolOf('fix-sentence'));if(f1)items.push({kind:'drill',engine:'fix-sentence',label:'🔧 Fix the sentence',step:f1});
-  const f2=pick(poolOf('fix-sentence'));if(f2&&f2!==f1)items.push({kind:'drill',engine:'fix-sentence',label:'🔧 Fix the sentence',step:f2});
-  const fb=pick(poolOf('fill-blank'));if(fb)items.push({kind:'drill',engine:'fill-blank',label:'✏️ Fill the blank',step:fb});
-  const mc=pick(poolOf('multiple-choice'));if(mc)items.push({kind:'drill',engine:'multiple-choice',label:'✅ Multiple choice',step:mc});
-  if(pronSets.length){const ps=pronSets[Math.floor(r()*pronSets.length)];items.push({kind:'pron',label:'🎯 Pronunciation: '+ps.title,setId:ps.id});}
-  const tk=pick(tasks.length?tasks:aliasSpeak);if(tk)items.push({kind:'task',label:'🎙️ Speaking task',task:tk});
+  const f1=pick(poolOf('fix-sentence'));if(f1)items.push({kind:'drill',engine:'fix-sentence',icon:'write',label:'Fix the sentence',step:f1});
+  const f2=pick(poolOf('fix-sentence'));if(f2&&f2!==f1)items.push({kind:'drill',engine:'fix-sentence',icon:'write',label:'Fix the sentence',step:f2});
+  const fb=pick(poolOf('fill-blank'));if(fb)items.push({kind:'drill',engine:'fill-blank',icon:'write',label:'Fill the blank',step:fb});
+  const mc=pick(poolOf('multiple-choice'));if(mc)items.push({kind:'drill',engine:'multiple-choice',icon:'target',label:'Multiple choice',step:mc});
+  if(pronSets.length){const ps=pronSets[Math.floor(r()*pronSets.length)];items.push({kind:'pron',icon:'target',label:'Pronunciation: '+ps.title,setId:ps.id});}
+  const tk=pick(tasks.length?tasks:aliasSpeak);if(tk)items.push({kind:'task',icon:'mic',label:'Speaking task',task:tk});
   return{date,items:items.slice(0,6)};
 }
 function dailyState(){
@@ -106,19 +106,19 @@ function home(root){
   const scenCount=(Content.cache.scenarios&&Content.cache.scenarios.scenarios||[]).length;
   const storyCount=(Content.cache.stories&&Content.cache.stories.stories||[]).length;
   root.innerHTML=`
-    <div class="greet">Speak Studio 🗣️</div>
+    <div class="greet">Speak Studio ${UI.icon('mic','in-tx')}</div>
     <p class="sub">Pronunciation, real conversations, stories — the speaking gym.</p>
-    ${hubCard('📅','Daily Challenge',st.bonus?'✅ Done for today — see you tomorrow!':`${doneCount}/${plan.items.length} done today · +50 XP bonus`, '#/speak/daily',
+    ${hubCard(UI.icon('calendar','in-tx'),'Daily Challenge',st.bonus?'✅ Done for today — see you tomorrow!':`${doneCount}/${plan.items.length} done today · +50 XP bonus`, '#/speak/daily',
       st.bonus?'':'<div class="lprog" style="margin-top:10px"><i style="width:'+(doneCount/plan.items.length*100)+'%"></i></div>')}
-    ${hubCard('🎯','Pronunciation Lab',pronSets+' sets · word-level feedback · retry until it clicks','#/speak/pron')}
-    ${hubCard('🎭','Roleplay Scenarios',scenCount+' offline conversations · job, travel, clients, IELTS','#/speak/roleplay')}
-    ${hubCard('📖','Interactive Stories',storyCount+' stories · tap any word · save expressions','#/speak/stories')}
-    ${hubCard('🔧','Mistake Repair',errs?errs+' mistakes waiting to be fixed':'All clear — mistakes you make land here','#/speak/repair')}
-    ${hubCard('📊','Speaking Stats','WPM · accuracy · your weekly self-league','#/speak/stats')}
+    ${hubCard(UI.icon('target','in-tx'),'Pronunciation Lab',pronSets+' sets · word-level feedback · retry until it clicks','#/speak/pron')}
+    ${hubCard(UI.icon('roleplay','in-tx'),'Roleplay Scenarios',scenCount+' offline conversations · job, travel, clients, IELTS','#/speak/roleplay')}
+    ${hubCard(UI.icon('read','in-tx'),'Interactive Stories',storyCount+' stories · tap any word · save expressions','#/speak/stories')}
+    ${hubCard(UI.icon('write','in-tx'),'Mistake Repair',errs?errs+' mistakes waiting to be fixed':'All clear — mistakes you make land here','#/speak/repair')}
+    ${hubCard(UI.icon('progress','in-tx'),'Speaking Stats','WPM · accuracy · your weekly self-league','#/speak/stats')}
     <div class="card"><div class="kicker">Roleplay feedback style</div>
       <p class="small dim" style="margin:6px 0 10px">How direct should the coach be in roleplays? (Praktika-style)</p>
       <div class="row" style="gap:8px">
-        ${[['soft','🌱 Soft'],['balanced','⚖️ Balanced'],['strict','🎯 Strict']].map(([v,l])=>
+        ${[['soft',UI.icon('star','in-tx')+' Soft'],['balanced','⚖️ Balanced'],['strict',UI.icon('target','in-tx')+' Strict']].map(([v,l])=>
           `<button class="btn ghost intens${intens===v?' sel':''}" data-i="${v}" style="flex:1">${l}</button>`).join('')}
       </div></div>
     <button class="btn ghost mt" data-go="#/practice" style="width:100%">← Back to Drill Arena</button>`;
@@ -133,7 +133,7 @@ function daily(root){
   const {plan,st}=dailyState();
   const allDone=st.items.every(Boolean);
   function render(){
-    let html=`<div class="greet">Daily Challenge 📅</div>
+    let html=`<div class="greet">Daily Challenge ${UI.icon('calendar','in-tx')}</div>
       <p class="sub">${plan.date} · finish all ${plan.items.length} for <b>+50 XP bonus</b>.</p>
       <div class="lprog"><i style="width:${st.items.filter(Boolean).length/plan.items.length*100}%"></i></div>
       <div class="small dim" style="margin:6px 0 14px">${st.items.filter(Boolean).length}/${plan.items.length} complete${st.bonus?' · ✅ bonus claimed':''}</div>
@@ -145,7 +145,7 @@ function daily(root){
     plan.items.forEach((it,i)=>{
       const done=st.items[i];
       const row=el(`<div class="card" style="display:flex;justify-content:space-between;align-items:center;gap:10px;${done?'opacity:.65':''}">
-        <div><b>${done?'✅ ':''}${esc(it.label)}</b>
+        <div><b>${UI.icon(it.icon||'star','in-tx')} ${done?'✅ ':''}${esc(it.label)}</b>
         <div class="small dim">${it.kind==='drill'?'quick drill':it.kind==='pron'?'5 lines · speak aloud':it.kind==='task'?'record yourself':''}</div></div>
         ${done?'':`<button class="btn" style="width:auto;padding:10px 18px" data-i="${i}">Start →</button>`}</div>`);
       box.appendChild(row);
@@ -153,10 +153,10 @@ function daily(root){
     box.querySelectorAll('[data-i]').forEach(b=>b.onclick=()=>startItem(+b.dataset.i));
     if(allDone&&!st.bonus){
       st.bonus=true;Store.save();Store.addXP(50);Store.checkBadges();confetti(130);
-      toast('📅 Daily Challenge complete! +50 XP bonus 🎉',3400);render();return;
+      toast(UI.icon('calendar','in-tx')+' Daily Challenge complete! +50 XP bonus '+UI.icon('party','in-tx'),3400);render();return;
     }
     if(allDone&&st.bonus){
-      const c=el(`<div class="card center" style="border:1.5px solid var(--acc)"><div style="font-size:40px">🏆</div>
+      const c=el(`<div class="card center" style="border:1.5px solid var(--acc)"><div style="font-size:40px">${UI.icon('trophy','in-tx')}</div>
         <b>Challenge complete!</b><p class="small dim">Come back tomorrow for a fresh set.</p></div>`);
       root.querySelector('#d-stage').appendChild(c);
     }
@@ -166,7 +166,7 @@ function daily(root){
     const it=plan.items[i],stage=root.querySelector('#d-stage');
     stage.innerHTML='';window.scrollTo({top:0});
     if(it.kind==='drill'){
-      stage.appendChild(el(`<div class="step-tag">Daily · ${esc(it.label)}</div><div id="dd"></div>`));
+      stage.appendChild(el(`<div class="step-tag">Daily · ${UI.icon(it.icon||'star','in-tx')} ${esc(it.label)}</div><div id="dd"></div>`));
       const api={award:n=>{Store.addXP(n||10);xpToast(n||10);},
         logError:e=>Store.logError({module:'daily',lesson:'',...e}),
         done:()=>markDone(i)};
@@ -192,7 +192,7 @@ function daily(root){
 function pronList(root){
   const sets=(Content.cache.pron&&Content.cache.pron.sets)||[];
   const best=Store.S.pronBest||{};
-  root.innerHTML=`<div class="greet">Pronunciation Lab 🎯</div>
+  root.innerHTML=`<div class="greet">Pronunciation Lab ${UI.icon('target','in-tx')}</div>
     <p class="sub">Hear the model → say it → get word-level feedback → retry. Built for Urdu/Punjabi speakers.</p>
     ${srAvailable()?'':`<div class="card" style="border:1.5px solid var(--amber)"><b>⚠️ No speech check on this device</b><p class="small dim" style="margin:6px 0 0">Your browser doesn't support voice typing here — the lab still works with <b>record + self-check</b>.</p></div>`}
     <div>${sets.map(s=>{const b=best[s.id];
@@ -230,10 +230,10 @@ function pronView(root,setId){
       <div class="shad-text" style="font-size:19px">“${esc(L.text)}”</div>
       <div class="row" style="justify-content:center;gap:10px;margin:12px 0">
         <button class="btn ghost" id="pl-model" style="width:auto;padding:12px 20px">🔊 Model</button>
-        ${srAvailable()?`<button class="btn" id="pl-say" style="width:auto;padding:12px 22px">🎙️ Say it</button>`:''}
-        <button class="btn vio" id="pl-self" style="width:auto;padding:12px 20px">🎧 Record + self-check</button>
+        ${srAvailable()?`<button class="btn" id="pl-say" style="width:auto;padding:12px 22px">${UI.icon('mic','in-tx')} Say it</button>`:''}
+        <button class="btn vio" id="pl-self" style="width:auto;padding:12px 20px">${UI.icon('listen','in-tx')} Record + self-check</button>
       </div>
-      ${L.tip?`<div class="tip">💡 ${esc(L.tip)}</div>`:''}
+      ${L.tip?`<div class="tip">${UI.icon('tip','in-tx')} ${esc(L.tip)}</div>`:''}
       <div id="pl-out"></div>
       <div id="pl-nav" class="row mt" style="gap:8px;justify-content:space-between">
         <button class="btn ghost" id="pl-back" style="width:auto;padding:10px 16px">← Sets</button>
@@ -248,7 +248,7 @@ function pronView(root,setId){
   }
   async function runCheck(L){
     const out=root.querySelector('#pl-out');
-    out.innerHTML=`<div class="card center"><div style="font-size:34px">🎙️</div><p class="mut">Listening… say the line now.</p></div>`;
+    out.innerHTML=`<div class="card center"><div style="font-size:34px">${UI.icon('mic','in-tx')}</div><p class="mut">Listening… say the line now.</p></div>`;
     try{
       const {best:heard,secs}=await runSR();
       const d=wordDiff(L.text,heard);
@@ -266,21 +266,21 @@ function pronView(root,setId){
         ${d.extra.length?`<div class="small dim">Extra words heard: ${d.extra.map(esc).join(', ')}</div>`:''}
         <div class="small dim" style="margin-top:6px">Heard: “${esc(d.heard)}”</div>
         <p class="small" style="margin:10px 0 0">${ok
-          ?(d.score===100?'Flawless. Next line? 🎉':'Solid! The red words need one more rep.')
+          ?(d.score===100?'Flawless. Next line? '+UI.icon('party','in-tx'):'Solid! The red words need one more rep.')
           :'Listen to the model once more, then retry — slow down on the <b style="color:var(--red)">red</b> words.'}</p>
         <div class="row mt" style="gap:8px">
           <button class="btn ghost" id="pl-retry" style="flex:1">🔁 Retry</button>
-          <button class="btn" id="pl-next" style="flex:1">${li<set.lines.length-1?'Next line →':'Finish set 🎉'}</button>
+          <button class="btn" id="pl-next" style="flex:1">${li<set.lines.length-1?'Next line →':'Finish set '+UI.icon('party','in-tx')}</button>
         </div></div>`;
       out.querySelector('#pl-retry').onclick=()=>runCheck(L);
       out.querySelector('#pl-next').onclick=next;
     }catch(e){
       const msg=e.message==='no-speech'?'I didn\'t catch that — speak a little louder and try again.':
-        e.message==='not-allowed'?'🎙️ Mic blocked — allow microphone access, or use record + self-check.':
+        e.message==='not-allowed'?'Mic blocked — allow microphone access, or use record + self-check.':
         'Speech check hiccup — try again, or use record + self-check.';
       out.innerHTML=`<div class="card"><p class="mut">${esc(msg)}</p>
         <div class="row" style="gap:8px"><button class="btn ghost" id="pl-re2" style="flex:1">🔁 Try again</button>
-        <button class="btn vio" id="pl-self2" style="flex:1">🎧 Record + self-check</button></div></div>`;
+        <button class="btn vio" id="pl-self2" style="flex:1">${UI.icon('listen','in-tx')} Record + self-check</button></div></div>`;
       out.querySelector('#pl-re2').onclick=()=>runCheck(L);
       out.querySelector('#pl-self2').onclick=()=>selfCheck(L);
     }
@@ -288,8 +288,8 @@ function pronView(root,setId){
   async function selfCheck(L){
     const out=root.querySelector('#pl-out');
     out.innerHTML=`<div class="card"><div class="kicker">Record + honest self-check</div>
-      <div class="row" style="justify-content:center"><button class="rec-btn" id="sc-rec">🎙️</button></div>
-      <p class="center small dim" id="sc-st">Tap 🎙️, say the line, then listen back.</p>
+      <div class="row" style="justify-content:center"><button class="rec-btn" id="sc-rec">${UI.icon('mic','in-tx')}</button></div>
+      <p class="center small dim" id="sc-st">Tap ${UI.icon('mic','in-tx')}, say the line, then listen back.</p>
       <div id="sc-back"></div></div>`;
     const R=Drills.makeRecorder();
     const recBtn=out.querySelector('#sc-rec'),st=out.querySelector('#sc-st'),back=out.querySelector('#sc-back');
@@ -297,7 +297,7 @@ function pronView(root,setId){
       try{
         if(!R.live){await R.start();recBtn.classList.add('live');recBtn.textContent='⏹️';st.textContent='Recording… say the line!';}
         else{
-          const url=await R.stop();recBtn.classList.remove('live');recBtn.textContent='🎙️';
+          const url=await R.stop();recBtn.classList.remove('live');recBtn.innerHTML=UI.icon('mic','in-tx');
           st.textContent='Listen back — be your own coach:';
           back.innerHTML='';
           const a=document.createElement('audio');a.controls=true;a.src=url;back.appendChild(a);
@@ -311,12 +311,12 @@ function pronView(root,setId){
             lineScore[li]=Math.max(lineScore[li],n*25+25);
             if(!lineDone[li])lineDone[li]=true;
             saveSpeakStat({kind:'pron-self',label:set.title+' · self-check',accuracy:n*25+25,wpm:0,fillers:0,secs:0});
-            toast(n>=2?'Honest practice logged 🧠':'Logged — be strict with yourself next time 🙂');
+            toast(n>=2?'Honest practice logged '+UI.icon('brain','in-tx'):'Logged — be strict with yourself next time');
             next();
           };
           back.appendChild(b);
         }
-      }catch(e){toast('🎙️ Mic blocked — allow microphone access to record.');}
+      }catch(e){toast(UI.icon('mic','in-tx')+' Mic blocked — allow microphone access to record.');}
     };
   }
   function next(){
@@ -333,7 +333,7 @@ function pronView(root,setId){
     if(first){Store.addXP(30);}else{Store.addXP(10);}
     Store.checkBadges();confetti(110);
     root.innerHTML=`<div class="card center" style="margin-top:30px">
-      <div style="font-size:52px">🎯</div><h2>Set complete!</h2>
+      <div style="font-size:52px">${UI.icon('target','in-tx')}</div><h2>Set complete!</h2>
       <p class="mut">Average score: <b style="color:var(--acc)">${avg}%</b> · best: ${best[setId]}%</p>
       <p class="small dim">${avg>=85?'Outstanding — these sounds are yours now.':avg>=70?'Strong. Revisit in a few days to lock it in.':'Good reps. Come back tomorrow — pronunciation is built in layers.'}</p>
       <div class="row" style="gap:8px;justify-content:center">
@@ -351,7 +351,7 @@ function pronView(root,setId){
 function scenarioList(root){
   const list=(Content.cache.scenarios&&Content.cache.scenarios.scenarios)||[];
   const done=Store.S.scenariosDone||{};
-  root.innerHTML=`<div class="greet">Roleplay Scenarios 🎭</div>
+  root.innerHTML=`<div class="greet">Roleplay Scenarios ${UI.icon('roleplay','in-tx')}</div>
     <p class="sub">Real conversations, fully offline. Each has goals — hit them like a mission. Stuck? Freestyle with the AI Coach after.</p>
     <div>${list.map(s=>`<div class="card" style="cursor:pointer" data-s="${s.id}">
       <div class="row" style="justify-content:space-between;align-items:center">
@@ -374,7 +374,7 @@ function scenarioPlay(root,scId){
       <div style="font-size:40px">${sc.icon}</div>
       <h2 style="margin:8px 0">${esc(sc.title)}</h2>
       <p class="mut">${esc(sc.scene)}</p>
-      <div class="kicker" style="margin-top:12px">🎯 Your goals</div>
+      <div class="kicker" style="margin-top:12px">${UI.icon('target','in-tx')} Your goals</div>
       <div style="margin:8px 0">${sc.goals.map(g=>`<div class="small" style="margin:6px 0">• ${esc(g)}</div>`).join('')}</div>
       <p class="small dim">Feedback style: <b>${esc(intens)}</b> <span class="dim">(change it in Speak Studio)</span></p>
       <div class="row" style="gap:8px">
@@ -396,17 +396,17 @@ function scenarioPlay(root,scId){
       root.innerHTML=chatShell(`
         <div class="chat"><div class="msg them"><div class="bub">${esc(t.say)}</div>
           <button class="btn ghost sm" id="t-hear">🔊 Hear it</button></div></div>
-        ${t.coach?`<div class="tip">🧠 Coach: ${esc(t.coach)}</div>`:''}
-        <button class="btn mt" id="t-next">${t.end?'Finish 🎉':'Your turn →'}</button>`);
+        ${t.coach?`<div class="tip">${UI.icon('brain','in-tx')} Coach: ${esc(t.coach)}</div>`:''}
+        <button class="btn mt" id="t-next">${t.end?'Finish '+UI.icon('party','in-tx'):'Your turn →'}</button>`);
       root.querySelector('#t-hear').onclick=()=>Drills.speak(t.say);
       root.querySelector('#t-next').onclick=()=>{ti++;renderTurn();};
     }else{
       // your turn: choices + freestyle
       root.innerHTML=chatShell(`
-        <div class="card" style="border:1.5px solid var(--acc)"><div class="kicker">🎯 Your move</div>
+        <div class="card" style="border:1.5px solid var(--acc)"><div class="kicker">${UI.icon('target','in-tx')} Your move</div>
           <p style="margin:8px 0"><b>${esc(t.prompt)}</b></p></div>
-        <div id="opts">${t.options.map((o,i)=>`<button class="opt say" data-o="${i}">💬 ${esc(o.label)}</button>`).join('')}</div>
-        <button class="btn vio mt" id="t-free">🎙️ Freestyle — say it my own way</button>
+        <div id="opts">${t.options.map((o,i)=>`<button class="opt say" data-o="${i}">${UI.icon('chat','in-tx')} ${esc(o.label)}</button>`).join('')}</div>
+        <button class="btn vio mt" id="t-free">${UI.icon('mic','in-tx')} Freestyle — say it my own way</button>
         <div id="t-note"></div>`);
       root.querySelectorAll('[data-o]').forEach(b=>b.onclick=()=>choose(+b.dataset.o));
       root.querySelector('#t-free').onclick=()=>freestyle(t);
@@ -419,7 +419,7 @@ function scenarioPlay(root,scId){
     const box=root.querySelector('#t-note');
     box.innerHTML=`<div class="card" style="margin-top:12px;border:1.5px solid var(--line)">
       <div class="small dim">You said:</div><p style="margin:6px 0"><i>“${esc(o.label.replace(/^“|”$/g,''))}”</i></p>
-      <div class="tip">🧠 Coach (${esc(intens)}): ${esc(note)}</div>
+      <div class="tip">${UI.icon('brain','in-tx')} Coach (${esc(intens)}): ${esc(note)}</div>
       <div class="row" style="gap:8px">
         <button class="btn ghost" id="n-retry" style="flex:1">↩ Try another</button>
         <button class="btn" id="n-go" style="flex:1">Continue →</button></div></div>`;
@@ -433,8 +433,8 @@ function scenarioPlay(root,scId){
   }
   async function freestyle(t){
     const box=root.querySelector('#t-note');
-    box.innerHTML=`<div class="card" style="margin-top:12px"><div class="kicker">🎙️ Freestyle — record yourself</div>
-      <div class="row" style="justify-content:center"><button class="rec-btn" id="f-rec">🎙️</button></div>
+    box.innerHTML=`<div class="card" style="margin-top:12px"><div class="kicker">${UI.icon('mic','in-tx')} Freestyle — record yourself</div>
+      <div class="row" style="justify-content:center"><button class="rec-btn" id="f-rec">${UI.icon('mic','in-tx')}</button></div>
       <p class="center small dim" id="f-st">Say your own version of: ${esc(t.prompt)}</p>
       <div id="f-back"></div></div>`;
     const R=Drills.makeRecorder();
@@ -443,16 +443,16 @@ function scenarioPlay(root,scId){
       try{
         if(!R.live){await R.start();recBtn.classList.add('live');recBtn.textContent='⏹️';st.textContent='Recording… go!';}
         else{
-          const url=await R.stop();recBtn.classList.remove('live');recBtn.textContent='🎙️';
+          const url=await R.stop();recBtn.classList.remove('live');recBtn.innerHTML=UI.icon('mic','in-tx');
           st.textContent='Listen back, then continue:';
           back.innerHTML='';const a=document.createElement('audio');a.controls=true;a.src=url;back.appendChild(a);
-          back.insertAdjacentHTML('beforeend',`<div class="tip">💡 Compare with the scripted options above — steal their best phrases.</div>
+          back.insertAdjacentHTML('beforeend',`<div class="tip">${UI.icon('tip','in-tx')} Compare with the scripted options above — steal their best phrases.</div>
             <div class="row" style="gap:8px"><button class="btn ghost" id="f-retry" style="flex:1">↩ Back to options</button>
             <button class="btn" id="f-go" style="flex:1">Continue →</button></div>`);
           back.querySelector('#f-retry').onclick=()=>renderTurn();
           back.querySelector('#f-go').onclick=()=>{ti=(t.options[0].next!=null?t.options[0].next:ti+1);renderTurn();};
         }
-      }catch(e){toast('🎙️ Mic blocked — allow microphone access to record.');}
+      }catch(e){toast(UI.icon('mic','in-tx')+' Mic blocked — allow microphone access to record.');}
     };
   }
   function finish(){
@@ -464,13 +464,13 @@ function scenarioPlay(root,scId){
     root.innerHTML=`<div class="card center" style="margin-top:24px">
       <div style="font-size:52px">${sc.icon}</div><h2>Scenario complete!</h2>
       <p class="mut small">~${mins} min · ${sc.turns.length} turns · feedback: ${esc(intens)}</p>
-      <div class="kicker" style="margin-top:10px">🎯 Which goals did you hit? Be honest.</div>
+      <div class="kicker" style="margin-top:10px">${UI.icon('target','in-tx')} Which goals did you hit? Be honest.</div>
       <div id="g-list" style="text-align:left;margin:10px 0">
         ${sc.goals.map((g,i)=>`<div class="check" data-g="${i}"><div class="box"></div><span class="txt small">${esc(g)}</span></div>`).join('')}
       </div>
       <button class="btn" id="f-done">Claim XP →</button>
       <div class="row mt" style="gap:8px;justify-content:center">
-        <button class="btn ghost" id="f-open" style="width:auto">🤖 Continue free-talk with AI Coach</button>
+        <button class="btn ghost" id="f-open" style="width:auto">${UI.icon('coach','in-tx')} Continue free-talk with AI Coach</button>
       </div>
       <button class="btn ghost mt" id="f-back2" style="width:auto">← All scenarios</button></div>`;
     root.querySelectorAll('#g-list .check').forEach(c=>c.onclick=()=>{
@@ -483,7 +483,7 @@ function scenarioPlay(root,scId){
     root.querySelector('#f-done').onclick=()=>{
       const xp=30+goalsHit.length*10;
       Store.addXP(xp);xpToast(xp);Store.checkBadges();confetti(100);
-      toast(`🎭 ${goalsHit.length}/${sc.goals.length} goals · +${xp} XP`);
+      toast(`${UI.icon('roleplay','in-tx')} ${goalsHit.length}/${sc.goals.length} goals · +${xp} XP`);
       location.hash='#/speak/roleplay';
     };
     UI.refreshHud();
@@ -495,7 +495,7 @@ function scenarioPlay(root,scId){
 function storyList(root){
   const list=(Content.cache.stories&&Content.cache.stories.stories)||[];
   const read=Store.S.storiesRead||{};
-  root.innerHTML=`<div class="greet">Interactive Stories 📖</div>
+  root.innerHTML=`<div class="greet">Interactive Stories ${UI.icon('read','in-tx')}</div>
     <p class="sub">Read the dialogue, <b>tap any word</b> for its meaning, save expressions, then ace the quiz.</p>
     <div>${list.map(s=>`<div class="card" style="cursor:pointer" data-s="${s.id}">
       <div class="row" style="justify-content:space-between;align-items:center">
@@ -538,7 +538,7 @@ function storyView(root,stId){
     }).join('');
   }
   function renderRead(){
-    root.innerHTML=`<div class="step-tag">📖 ${esc(st.title)} · ${esc(st.level)}</div>
+    root.innerHTML=`<div class="step-tag">${UI.icon('read','in-tx')} ${esc(st.title)} · ${esc(st.level)}</div>
       <p class="small dim">👆 Tap any word for its meaning · 🔊 hear each line</p>
       <div class="chat" id="story-lines">
         ${st.lines.map(l=>`<div class="msg ${l.who==='Narrator'?'them':'you'}">
@@ -546,9 +546,9 @@ function storyView(root,stId){
           <div class="bub story">${wordify(l.text)}</div>
           <button class="btn ghost sm" data-hear="${esc(l.text)}">🔊</button></div>`).join('')}
       </div>
-      <div class="card"><div class="kicker">🔑 Key words in this story</div>
+      <div class="card"><div class="kicker">${UI.icon('key','in-tx')} Key words in this story</div>
         <div class="row" style="gap:6px;flex-wrap:wrap;margin-top:8px" id="story-vocab">
-          ${(st.vocab||[]).map(v=>`<button class="chip" data-vw="${esc(v)}" style="cursor:pointer">🔑 ${esc(v)}</button>`).join('')}
+          ${(st.vocab||[]).map(v=>`<button class="chip" data-vw="${esc(v)}" style="cursor:pointer">${UI.icon('key','in-tx')} ${esc(v)}</button>`).join('')}
         </div>
         <p class="small dim" style="margin:8px 0 0">Tap a key word — or any word in the story — for its meaning. Save it to your Review deck.</p></div>
       <button class="btn mt" id="st-quiz">✅ I've read it — quiz me!</button>
@@ -565,13 +565,13 @@ function storyView(root,stId){
   }
   function showWord(raw){
     const hit=lookupWord(raw);
-    const m=modal(`<div class="center"><div style="font-size:34px">📖</div>
+    const m=modal(`<div class="center"><div style="font-size:34px">${UI.icon('read','in-tx')}</div>
       <h3 style="margin:8px 0">${esc(raw)}</h3>
       ${hit?`<p style="font-size:16px"><b>${esc(hit.d)}</b></p>
         <p class="mut"><i>“${esc(hit.ex)}”</i></p>
         <div class="row" style="gap:8px;justify-content:center">
           <button class="btn ghost" id="w-hear" style="width:auto">🔊 Hear it</button>
-          <button class="btn" id="w-save" style="width:auto">💾 Save to Review</button>
+          <button class="btn" id="w-save" style="width:auto">${UI.icon('review','in-tx')} Save to Review</button>
         </div>`
       :`<p class="mut small">Not in the story dictionary yet.</p>
         <button class="btn ghost" id="w-hear" style="width:auto">🔊 Hear it</button>`}
@@ -582,7 +582,7 @@ function storyView(root,stId){
     if(sv)sv.onclick=()=>{
       const cid='srs_story_'+raw.replace(/[^a-z]/g,'');
       Store.S.srs[cid]=Store.S.srs[cid]||{ef:2.5,interval:0,reps:0,due:Date.now(),front:hit.word,back:hit.d,example:hit.ex};
-      Store.save();toast(`💾 “${hit.word}” saved to Review 📇`);m.remove();
+      Store.save();toast(`“${hit.word}” saved to Review ${UI.icon('review','in-tx')}`);m.remove();
     };
   }
   function renderQuiz(){
@@ -590,7 +590,7 @@ function storyView(root,stId){
     function ask(){
       if(qi>=st.quiz.length){finishQuiz();return;}
       const q=st.quiz[qi];
-      root.innerHTML=`<div class="step-tag">📖 ${esc(st.title)} · question ${qi+1}/${st.quiz.length}</div>
+      root.innerHTML=`<div class="step-tag">${UI.icon('read','in-tx')} ${esc(st.title)} · question ${qi+1}/${st.quiz.length}</div>
         <div class="lprog"><i style="width:${qi/st.quiz.length*100}%"></i></div>
         <div class="card"><p style="font-size:17px;font-weight:700">${esc(q.q)}</p><div class="opts" id="q-opts"></div></div>
         <div id="q-fb"></div>`;
@@ -603,7 +603,7 @@ function storyView(root,stId){
           else{b.classList.add('wrong');box.children[q.answer].classList.add('right');}
           [...box.children].forEach(x=>x.style.pointerEvents='none');
           root.querySelector('#q-fb').innerHTML=`<div class="feedback ${ok?'good':'bad'}">${ok?'✅ Correct!':'❌ '+esc(q.why)}</div>
-            <button class="btn mt" id="q-n">${qi<st.quiz.length-1?'Next →':'Finish 🎉'}</button>`;
+            <button class="btn mt" id="q-n">${qi<st.quiz.length-1?'Next →':'Finish '+UI.icon('party','in-tx')}</button>`;
           root.querySelector('#q-n').onclick=()=>{qi++;ask();};
         };
         box.appendChild(b);
@@ -617,11 +617,11 @@ function storyView(root,stId){
       Store.checkBadges();confetti(pct>=67?110:40);
       saveSpeakStat({kind:'story',label:st.title,accuracy:pct,wpm:0,fillers:0,secs:0});
       root.innerHTML=`<div class="card center" style="margin-top:30px">
-        <div style="font-size:52px">📖</div><h2>Story complete!</h2>
+        <div style="font-size:52px">${UI.icon('read','in-tx')}</div><h2>Story complete!</h2>
         <p class="mut">Comprehension: <b style="color:var(--acc)">${score}/${st.quiz.length} (${pct}%)</b></p>
         <p class="small dim">${pct===100?'Perfect understanding!':pct>=67?'Well understood.':'Read it once more — stories reward re-reading.'}</p>
         <div class="row" style="gap:8px;justify-content:center">
-          <button class="btn ghost" id="s-reread" style="width:auto">📖 Re-read</button>
+          <button class="btn ghost" id="s-reread" style="width:auto">${UI.icon('read','in-tx')} Re-read</button>
           <button class="btn" id="s-back" style="width:auto">← All stories</button>
         </div></div>`;
       root.querySelector('#s-reread').onclick=renderRead;
@@ -663,25 +663,25 @@ function stats(root){
   const verdict=diff>0?`▲ ${diff} XP more than last week — you're climbing.`:
     diff<0?`▼ ${-diff} XP less than last week. Small step today beats zero.`:
     `Even with last week. Consistency is the whole game.`;
-  root.innerHTML=`<div class="greet">Speaking Stats 📊</div>
+  root.innerHTML=`<div class="greet">Speaking Stats ${UI.icon('progress','in-tx')}</div>
     <p class="sub">Your only competitor is past-you. Honest numbers, no fake opponents.</p>
-    <div class="card"><div class="kicker">🏆 Weekly self-league · last 8 weeks</div>
+    <div class="card"><div class="kicker">${UI.icon('trophy','in-tx')} Weekly self-league · last 8 weeks</div>
       <div class="bars">${weeks.map(w=>`<div class="b${w.xp?'':' zero'}${w.current?' cur':''}" style="height:${Math.max(4,w.xp/mxW*100)}%" title="${w.label}: ${w.xp} XP"></div>`).join('')}</div>
       <div class="row" style="justify-content:space-between"><span class="small dim">${weeks[0].label}</span><span class="small dim"><b>this week</b></span></div>
       <p class="small" style="margin:10px 0 0">${verdict}</p>
       <p class="small dim" style="margin:4px 0 0">Best week: <b>${Math.max(...weeks.map(w=>w.xp))} XP</b></p></div>
-    <div class="card"><div class="kicker">🎯 Pronunciation accuracy · recent sessions</div>
+    <div class="card"><div class="kicker">${UI.icon('target','in-tx')} Pronunciation accuracy · recent sessions</div>
       ${sessions.length?`<div class="bars">${sessions.slice(0,14).reverse().map(s=>`<div class="b${s.accuracy?'':' zero'}" style="height:${Math.max(4,(s.accuracy||0)/Math.max(100,mxAcc)*100)}%" title="${esc(s.label)}: ${s.accuracy}%"></div>`).join('')}</div>
       <p class="small" style="margin:8px 0 0">Average: <b>${avgAcc}%</b> · sessions: <b>${sessions.length}</b></p>`
-      :'<p class="mut small">No pronunciation sessions yet — the Lab is waiting. 🎯</p>'}</div>
-    <div class="card"><div class="kicker">⚡ Speaking pace (WPM) · recent</div>
+      :'<p class="mut small">No pronunciation sessions yet — the Lab is waiting. '+UI.icon('target','in-tx')+'</p>'}</div>
+    <div class="card"><div class="kicker">${UI.icon('xp','in-tx')} Speaking pace (WPM) · recent</div>
       ${last10.length?`<div class="bars">${last10.map(s=>`<div class="b${s.wpm?'':' zero'}" style="height:${Math.max(4,(s.wpm||0)/mxWpm*100)}%" title="${Math.round(s.wpm)} WPM"></div>`).join('')}</div>
       <p class="small dim" style="margin:8px 0 0">Natural conversation ≈ 120–150 WPM. Don't chase speed — chase clarity.</p>`
       :'<p class="mut small">WPM appears after pronunciation sessions with speech check.</p>'}</div>
     <div class="card"><div class="kicker">Lifetime speaking</div>
-      <div class="kv"><span>Roleplay scenarios played</span><b>🎭 ${roleplays}</b></div>
-      <div class="kv"><span>Stories finished</span><b>📖 ${stories}</b></div>
-      <div class="kv"><span>Pronunciation sessions</span><b>🎯 ${sessions.length}</b></div>
+      <div class="kv"><span>Roleplay scenarios played</span><b>${UI.icon('roleplay','in-tx')} ${roleplays}</b></div>
+      <div class="kv"><span>Stories finished</span><b>${UI.icon('read','in-tx')} ${stories}</b></div>
+      <div class="kv"><span>Pronunciation sessions</span><b>${UI.icon('target','in-tx')} ${sessions.length}</b></div>
       <div class="kv" style="border:0"><span>Avg accuracy</span><b>${avgAcc}%</b></div></div>
     <button class="btn ghost mt" data-go="#/speak" style="width:auto;padding:9px 16px">← Speak Studio</button>`;
   root.querySelector('[data-go]').onclick=e=>location.hash='#/speak';
@@ -691,8 +691,8 @@ function stats(root){
 function repair(root){
   const errs=(Store.S.errorLog||[]).filter(e=>!e.reviewed).slice(0,12);
   if(!errs.length){
-    root.innerHTML=`<div class="greet">Mistake Repair 🔧</div>
-      <div class="card center" style="margin-top:16px"><div style="font-size:48px">🎉</div>
+    root.innerHTML=`<div class="greet">Mistake Repair ${UI.icon('write','in-tx')}</div>
+      <div class="card center" style="margin-top:16px"><div style="font-size:48px">${UI.icon('party','in-tx')}</div>
       <h3>All clear!</h3><p class="mut small">Mistakes you make in drills land here for a repair round.</p>
       <button class="btn" data-go="#/practice" style="width:auto">Go make some mistakes →</button></div>
       <button class="btn ghost mt" data-go2="#/speak" style="width:auto;padding:9px 16px">← Speak Studio</button>`;
@@ -714,7 +714,7 @@ function repair(root){
   function render(){
     if(i>=errs.length){finish();return;}
     const e=errs[i],step=rebuild(e);
-    root.innerHTML=`<div class="step-tag">Mistake Repair 🔧 · ${i+1}/${errs.length}</div>
+    root.innerHTML=`<div class="step-tag">Mistake Repair ${UI.icon('write','in-tx')} · ${i+1}/${errs.length}</div>
       <div class="lprog"><i style="width:${i/errs.length*100}%"></i></div>
       <div class="card" style="border:1.5px solid var(--amber)">
         <div class="kicker">Earlier you got this wrong — fix it now</div>
@@ -731,7 +731,7 @@ function repair(root){
           <button class="btn ghost" id="rp-no" style="flex:1">🔁 Still tricky</button>
           <button class="btn" id="rp-yes" style="flex:1">✓ Got it now</button></div>`;
       host.querySelector('#rp-yes').onclick=()=>{fixed++;Store.reviewError(e.id);i++;render();};
-      host.querySelector('#rp-no').onclick=()=>{toast('Kept in your log — it will come back 📇');i++;render();};
+      host.querySelector('#rp-no').onclick=()=>{toast('Kept in your log — it will come back '+UI.icon('review','in-tx'));i++;render();};
     }else{
       const api={award:n=>{Store.addXP(n||10);xpToast(n||10);},
         logError:()=>{},
@@ -744,7 +744,7 @@ function repair(root){
     Store.S.repairDone=(Store.S.repairDone||0)+1;Store.save();
     Store.addXP(20);Store.checkBadges();confetti(90);
     root.innerHTML=`<div class="card center" style="margin-top:30px">
-      <div style="font-size:52px">🔧</div><h2>Repair round done!</h2>
+      <div style="font-size:52px">${UI.icon('write','in-tx')}</div><h2>Repair round done!</h2>
       <p class="mut">Fixed <b style="color:var(--acc)">${fixed}/${errs.length}</b> · +20 XP</p>
       <p class="small dim">Repaired mistakes stick 3× better than new lessons. Science-ish. Probably true.</p>
       <button class="btn" id="rp-home">← Speak Studio</button></div>`;

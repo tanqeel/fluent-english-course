@@ -2,7 +2,7 @@
  "id": "fluency",
  "title": "Fluency",
  "tagline": "Speak Smoothly Without Freezing",
- "icon": "💬",
+ "icon": "mic",
  "color": "#fbbf24",
  "description": "Accuracy is saying it right. Fluency is saying it without stopping to build every sentence from scratch. On a client call, nobody waits while you mentally conjugate verbs",
  "lessons": [

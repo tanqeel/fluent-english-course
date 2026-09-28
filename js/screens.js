@@ -30,30 +30,30 @@ function home(root){
       const dn2=ds.st.items.filter(Boolean).length;
       if(!ds.st.bonus){
         dailyCard=`<div class="card" style="border:1.5px dashed var(--acc);cursor:pointer" data-go="#/speak/daily">
-          <div class="kicker" style="color:var(--acc)">📅 DAILY CHALLENGE</div>
+          <div class="kicker" style="color:var(--acc)">${icon('calendar','in-tx')} DAILY CHALLENGE</div>
           <p style="margin:8px 0"><b>${dn2}/${ds.plan.items.length} done</b> — finish all for <b>+50 XP</b> bonus</p>
           <div class="lprog"><i style="width:${ds.plan.items.length?dn2/ds.plan.items.length*100:0}%"></i></div></div>`;
       }
     }
   }catch(e){}
   root.innerHTML=`
-    <div class="greet">${greet()}, ${esc(S.name||'friend')} 👋</div>
+    <div class="greet">${greet()}, ${esc(S.name||'friend')}</div>
     <p class="sub">Day ${dn} of your 90-day path · ${esc(st.msg)}</p>
     ${!S.placement?`<div class="card" style="border:1.5px solid var(--acc);cursor:pointer" data-go="#/placement">
-      <div class="kicker" style="color:var(--acc)">🧭 START HERE</div>
+      <div class="kicker" style="color:var(--acc)">${icon('compass','in-tx')} START HERE</div>
       <p style="margin:8px 0"><b>Take the 30-item placement test</b></p>
       <p class="small dim" style="margin:0">~25 min · finds your real level (A2 / B1 / B2) so Day 1 starts right.</p></div>`:''}
     <div class="hero">
       <div class="row">
-        <div class="flame">${S.streak.current>0?'🔥':'🕯️'}</div>
+        <div class="flame">${S.streak.current>0?icon('streak','in-hero'):icon('streak','in-hero off')}</div>
         <div><div style="font-size:26px;font-weight:800">${S.streak.current} day streak</div>
-        <div class="small mut">Best: ${S.streak.best} · 🛡️ ${S.streak.freezes} freeze${S.streak.freezes===1?'':'s'}</div></div>
+        <div class="small mut">Best: ${S.streak.best} · ${icon('shield','in-tx')} ${S.streak.freezes} freeze${S.streak.freezes===1?'':'s'}</div></div>
       </div>
       <div class="row mt" style="justify-content:space-between">
         <span class="small"><b>Level ${L.n}</b> · ${esc(L.name)}</span><span class="small dim">${S.xp} XP</span>
       </div>
       <div class="xpbar"><i style="width:${L.pct}%"></i></div>
-      <div class="small dim mt">${L.nxt-S.xp>0?`${L.nxt-S.xp} XP to Level ${L.n+1}`:'Max level — legend status 🏆'}</div>
+      <div class="small dim mt">${L.nxt-S.xp>0?`${L.nxt-S.xp} XP to Level ${L.n+1}`:'Max level — legend status '+icon('trophy','in-tx')}</div>
     </div>
     ${cont?`<div class="card"><div class="kicker">Continue</div>
       <div class="row" style="justify-content:space-between;margin-top:6px">
@@ -62,7 +62,7 @@ function home(root){
       </div></div>`:''}
     <div class="card"><div class="kicker">Today's plan · Week ${week.week}</div>
       <p style="margin:8px 0"><b>${esc(week.focus)}</b></p>
-      <p class="small mut" style="margin:0">🎯 Milestone: ${esc(week.milestone)}</p>
+      <p class="small mut" style="margin:0">${icon('target','in-tx')} Milestone: ${esc(week.milestone)}</p>
       <p class="small dim" style="margin:6px 0 0">~${S.dailyMinutes||plan.dailyMinutes} min · ${due?`${icon('review','in-greet')} <b style="color:var(--acc)">${due} cards due</b> in Review`:`${icon('review','in-greet')} Review deck clear — nice!`}</p>
       <div class="row mt" style="gap:8px">
         <button class="btn" data-go="#/learn" style="flex:1">Learn →</button>
@@ -71,12 +71,12 @@ function home(root){
     ${dailyCard}
     <h2 class="sec">Quick hits</h2>
     <div class="qh-grid">
-      <button class="qh" data-go="#/speak"><span class="ic-28">🗣️</span><span>Speak<small>Pronunciation lab</small></span></button>
+      <button class="qh" data-go="#/speak"><span class="ic-28">${icon('mic')}</span><span>Speak<small>Pronunciation lab</small></span></button>
       <button class="qh" data-go="#/practice"><span class="ic-28">${icon('practice','in-qh')}</span><span>Drills<small>Practice arena</small></span></button>
       <button class="qh" data-go="#/coach"><span class="ic-28">${icon('coach','in-qh')}</span><span>AI Coach<small>Free · no key needed</small></span></button>
       <button class="qh" data-go="#/progress"><span class="ic-28">${icon('progress','in-qh')}</span><span>Progress<small>Stats & badges</small></span></button>
     </div>
-    <button class="btn ghost mt" id="share-app" style="width:100%"><span class="ic-20">📤</span> Share Speak Fluently with a friend</button>
+    <button class="btn ghost mt" id="share-app" style="width:100%"><span class="ic-20">${icon('share')}</span> Share Speak Fluently with a friend</button>
     <p class="small dim center mt">Chalo — ek chhota step roz. ${due?'Pehle Review clear karo, phir naya seekho.':''}</p>`;
   root.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>location.hash=b.dataset.go);
   root.querySelector('#share-app').onclick=shareApp;
@@ -90,7 +90,7 @@ function shareApp(){
     navigator.share({title:'Speak Fluently',text,url}).catch(()=>{});
   }else if(navigator.clipboard&&navigator.clipboard.writeText){
     navigator.clipboard.writeText(text).then(
-      ()=>toast('Link copied — send it to your friends! 📤'),
+      ()=>toast('Link copied — send it to your friends! '+icon('share','in-tx')),
       ()=>toast('Copy this link: '+url));
   }else{
     toast('Copy this link: '+url);
@@ -135,7 +135,7 @@ function learn(root){
   const S=Store.S;
   let html=`<div class="greet">Learn ${icon('learn','in-greet')}</div><p class="sub">${Content.MODULES.length} modules · bite-sized lessons · everyday, work & exam English</p>
   ${!S.placement?`<div class="card" style="border:1.5px solid var(--acc);cursor:pointer" data-go="#/placement">
-    <div class="kicker" style="color:var(--acc)">🧭 START HERE</div>
+    <div class="kicker" style="color:var(--acc)">${icon('compass','in-tx')} START HERE</div>
     <p style="margin:8px 0"><b>Placement test</b> <span class="small dim">· not taken yet</span></p>
     <p class="small dim" style="margin:0">30 items · finds your level so the path fits you.</p></div>`:''}`;
   for(const mid of Content.MODULES){
@@ -143,7 +143,7 @@ function learn(root){
     const total=(m.lessons||[]).length,done=(m.lessons||[]).filter(l=>S.lessonsDone[l.id]).length;
     const pct=total?Math.round(done/total*100):0;
     html+=`<div class="mod" data-mod="${mid}">
-      <div class="ic">${m.icon||'📦'}</div>
+      <div class="ic">${icon(m.icon||'learn','in-mod')}</div>
       <div><h3>${esc(m.title)}</h3><p>${esc(m.tagline||'')}</p>
       ${m.phase2Note?`<p class="small" style="color:var(--amber)">⏳ ${esc(m.phase2Note)}</p>`:''}</div>
       <div class="pct"><span class="pct-num">${pct}%</span><div class="bar"><i style="width:${pct}%"></i></div>
@@ -157,7 +157,7 @@ function learn(root){
 function moduleView(root,mid){
   const m=Content.cache.modules[mid];if(!m){root.innerHTML='<div class="empty">Module not found.</div>';return;}
   const S=Store.S;
-  let html=`<div class="greet">${m.icon||''} ${esc(m.title)}</div><p class="sub">${esc(m.description||'')}</p>`;
+  let html=`<div class="greet">${m.icon?icon(m.icon,'in-greet'):''} ${esc(m.title)}</div><p class="sub">${esc(m.description||'')}</p>`;
   (m.lessons||[]).forEach((l,i)=>{
     const d=S.lessonsDone[l.id];
     html+=`<div class="mod" data-l="${l.id}">
@@ -190,10 +190,10 @@ function lessonView(root,lid){
     const next=mod.lessons[idx+1];
     confetti(120);
     root.innerHTML=`<div class="card center" style="margin-top:30px">
-      <div style="font-size:56px">🎉</div><h2>${first?'Lesson complete!':'Replay complete!'}</h2>
+      <div style="font-size:56px">${icon('party','in-tx')}</div><h2>${first?'Lesson complete!':'Replay complete!'}</h2>
       ${first?`<p class="mut">Lesson bonus: <b style="color:var(--acc)">+${bonus} XP</b></p>`
              :`<p class="mut small">No bonus this time — but every rep still sharpens you.</p>`}
-      ${allDone?`<p>🏆 <b>Module "${esc(mod.title)}" complete!</b> Badge check done.</p>`:''}
+      ${allDone?`<p>${icon('trophy','in-tx')} <b>Module "${esc(mod.title)}" complete!</b> Badge check done.</p>`:''}
       <p class="small dim">${next?'Next up: <b>'+esc(next.title)+'</b>':'You finished every lesson in this module. Legend.'}</p>
       ${next?`<button class="btn" id="f-next">Next lesson →</button>`:''}
       <button class="btn ghost mt" id="f-home">Home</button></div>`;
@@ -221,8 +221,8 @@ function lessonView(root,lid){
       <div style="font-size:15px;line-height:1.65">${UI.md(step.body||'')}</div>
       ${step.example?`<div class="ex">${UI.md(step.example)}</div>`:''}
       ${step.roman?`<div class="roman">🇵🇰 ${esc(step.roman)}</div>`:''}
-      ${step.tip?`<div class="tip">💡 ${UI.md(step.tip)}</div>`:''}
-      <button class="btn mt" id="t-next">${i>=lesson.steps.length-1?'Finish lesson 🎉':'Got it →'}</button></div>`));
+      ${step.tip?`<div class="tip">${icon('tip','in-tx')} ${UI.md(step.tip)}</div>`:''}
+      <button class="btn mt" id="t-next">${i>=lesson.steps.length-1?'Finish lesson '+icon('party','in-tx'):'Got it →'}</button></div>`));
     host.querySelector('#t-next').onclick=advance;
   }
   S.lastLesson=lesson.id;Store.save();
@@ -231,23 +231,23 @@ function lessonView(root,lid){
 
 /* ================= PRACTICE ================= */
 const ENGINES=[
-  ['fix-sentence','🔧','Fix the sentence'],['multiple-choice','✅','Multiple choice'],
-  ['fill-blank','✏️','Fill the blank'],['dialogue','🎭','Complete the dialogue'],
-  ['shadowing','🎧','Shadowing'],['flashcard','🃏','Flashcards'],
-  ['timed-quiz','⏱️','Timed quiz'],['speaking-task','🎙️','Speaking task']];
+  ['fix-sentence',icon('write'),'Fix the sentence'],['multiple-choice',icon('target'),'Multiple choice'],
+  ['fill-blank',icon('write'),'Fill the blank'],['dialogue',icon('roleplay'),'Complete the dialogue'],
+  ['shadowing',icon('listen'),'Shadowing'],['flashcard',icon('read'),'Flashcards'],
+  ['timed-quiz',icon('xp'),'Timed quiz'],['speaking-task',icon('mic'),'Speaking task']];
 function practice(root,engine){
   if(!engine){
     let html=`<div class="greet">Drill arena ${icon('practice','in-greet')}</div><p class="sub">Pick a drill type — or go random. Every rep counts.</p>
       <div class="card" style="border:1.5px solid var(--acc);cursor:pointer" data-go="#/speak">
-        <div class="kicker" style="color:var(--acc)">🗣️ NEW · SPEAK STUDIO</div>
+        <div class="kicker" style="color:var(--acc)">${icon('mic','in-tx')} NEW · SPEAK STUDIO</div>
         <p style="margin:8px 0"><b>Pronunciation Lab · Roleplays · Stories · Daily Challenge</b></p>
         <p class="small dim" style="margin:0">The speaking gym — word-level feedback, offline conversations, mistake repair.</p></div>
-      <div class="card"><button class="btn" data-e="random">🎲 Surprise me (mixed)</button></div><div class="badge-grid">`;
+      <div class="card"><button class="btn" data-e="random">${icon('dice','in-tx')} Surprise me (mixed)</button></div><div class="badge-grid">`;
     for(const [e,ic,name] of ENGINES)html+=`<div class="bdg" data-e="${e}" style="cursor:pointer"><span class="e">${ic}</span>${name}</div>`;
     html+=`</div>
       <div class="row mt" style="gap:8px">
-        <button class="btn vio" id="tab-quiz" style="flex:1">📝 Module quizzes</button>
-        <button class="btn ghost" id="tab-task" style="flex:1">🎙️ Speaking tasks</button>
+        <button class="btn vio" id="tab-quiz" style="flex:1">${icon('write','in-tx')} Module quizzes</button>
+        <button class="btn ghost" id="tab-task" style="flex:1">${icon('mic','in-tx')} Speaking tasks</button>
       </div>`;
     root.innerHTML=html;
     root.querySelectorAll('[data-e]').forEach(c=>c.onclick=()=>location.hash='#/practice/'+c.dataset.e);
@@ -289,7 +289,7 @@ function practice(root,engine){
 /* ================= QUIZZES ================= */
 function quizList(root){
   const qs=Content.cache.quizzes||[];
-  let html=`<div class="greet">Module quizzes 📝</div>
+  let html=`<div class="greet">Module quizzes ${icon('write','in-tx')}</div>
     <p class="sub">One quiz per module — 10 questions each. <b>8/10 to move on.</b></p>
     <button class="btn ghost" style="width:auto;padding:9px 16px" id="q-back">← Arena</button><div class="mt">`;
   for(const qz of qs){
@@ -319,7 +319,7 @@ function quizView(root,qid){
 function taskList(root,moduleFilter){
   const ts=Content.cache.taskcards||[];
   const mods=[...new Set(ts.map(t=>t.module))];
-  let html=`<div class="greet">Speaking task cards 🎙️</div>
+  let html=`<div class="greet">Speaking task cards ${icon('mic','in-tx')}</div>
     <p class="sub">Real call situations. Record yourself, listen back, repeat. Model scripts included.</p>
     <button class="btn ghost" style="width:auto;padding:9px 16px" id="t-back">← Arena</button>
     <div class="row mt" style="gap:6px;flex-wrap:wrap" id="t-mods">
@@ -363,7 +363,7 @@ function placement(root){
   if(!P){root.innerHTML='<div class="empty">Placement test not loaded.</div>';return;}
   if(done){
     root.innerHTML=`<div class="card center" style="margin-top:30px">
-      <div style="font-size:52px">📍</div><h2>Your level: ${done.band}</h2>
+      <div style="font-size:52px">${icon('compass','in-tx')}</div><h2>Your level: ${done.band}</h2>
       <p class="mut">Placement score: <b style="color:var(--acc)">${done.score}/100</b> · taken ${new Date(done.ts).toLocaleDateString()}</p>
       <p class="small dim">Band A2: 0–39 · B1: 40–69 · B2: 70–100</p>
       <button class="btn mt" id="pl-re">Retake placement ↻</button>
@@ -373,7 +373,7 @@ function placement(root){
     return;
   }
   root.innerHTML=`<div class="card center" style="margin-top:26px">
-    <div style="font-size:52px">🧭</div><h2>START HERE: Placement test</h2>
+    <div style="font-size:52px">${icon('compass','in-tx')}</div><h2>START HERE: Placement test</h2>
     <p class="mut">30 items · ~25 minutes · scored out of 100.<br>Finds your real level so Day 1 starts at the right place.</p>
     <p class="small dim">Parts A–B are checked automatically. Parts C–E are self-scored — be strict and honest, nobody sees this but you.</p>
     <button class="btn mt" id="pl-start">Start placement test →</button></div>`;
@@ -403,7 +403,7 @@ function startPlacement(root){
         host.appendChild(w);
         w.querySelector('#pl-go').onclick=()=>{
           const v=w.querySelector('#pl-in').value;
-          if(!v.trim()){toast('Type something first ✍️');return;}
+          if(!v.trim()){toast('Type something first '+icon('write','in-tx'));return;}
           const ok=Drills.norm(v)===Drills.norm(it.answer);
           if(ok){score+=it.points;toast('✅');}
           else toast('❌ → '+it.answer,3000);
@@ -447,7 +447,7 @@ function startPlacement(root){
         host.innerHTML='';
         const w=el(`<div><p class="mut small">Item ${qi+1}/${part.items.length}</p>
           <div class="card" style="margin:0 0 10px"><div>${it.title?'<b>'+esc(it.title)+'</b><br>':''}${UI.md(it.prompt||'')}</div>
-          ${part.kind==='speak'?'<p class="small dim">🎙️ Record on your phone\'s voice recorder, then listen back before you score.</p>':''}</div>
+          ${part.kind==='speak'?'<p class="small dim">'+icon('mic','in-tx')+' Record on your phone\'s voice recorder, then listen back before you score.</p>':''}</div>
           ${part.kind==='write'?'<textarea class="field" id="pl-ta" rows="3" placeholder="Write your answer here…"></textarea>':''}
           <p class="small dim">Score yourself honestly — max ${mx}.</p>
           <p class="small dim" style="margin-top:-6px">${esc(it.scale||'')}</p>
@@ -469,7 +469,7 @@ function startPlacement(root){
     Store.save();Store.addXP(100);Store.checkBadges({placement_done:true});
     confetti(140);
     root.innerHTML=`<div class="card center" style="margin-top:30px">
-      <div style="font-size:56px">🎯</div><h2>Your level: ${band}</h2>
+      <div style="font-size:56px">${icon('target','in-tx')}</div><h2>Your level: ${band}</h2>
       <p class="mut">Score: <b style="color:var(--acc)">${score}/100</b></p>
       <p class="small">${score<40?'Solid foundation. We build up from here — small daily wins.':score<70?'Right in the sweet spot. Time to push toward B2.':'Strong! Let us polish you to full client-call confidence.'}</p>
       <button class="btn mt" id="pl-go2">Start my 90-day path →</button></div>`;
@@ -487,17 +487,17 @@ function review(root,tab){
     <p class="sub">Spaced repetition + your personal mistake log. This is where fluency is actually built.</p>
     <div class="tabs">
       <button class="tab ${tab==='cards'?'on':''}" data-t="cards">🃏 Flashcards (${due.length} due)</button>
-      <button class="tab ${tab==='errors'?'on':''}" data-t="errors">📝 Error log (${errs.length})</button>
+      <button class="tab ${tab==='errors'?'on':''}" data-t="errors">${icon('write','in-tx')} Error log (${errs.length})</button>
     </div><div id="tab-body"></div>`;
   root.querySelectorAll('.tab').forEach(t=>t.onclick=()=>review(root,t.dataset.t));
   const body=root.querySelector('#tab-body');
   if(tab==='cards')reviewCards(body,due);else reviewErrors(body,errs);
 }
 function reviewCards(body,due){
-  if(!due.length){body.innerHTML=`<div class="empty">🎉 All clear! No cards due.<br><span class="small">Cards you miss get rescheduled automatically (SM-2).</span></div>`;return;}
+  if(!due.length){body.innerHTML=`<div class="empty">${icon('party','in-tx')} All clear! No cards due.<br><span class="small">Cards you miss get rescheduled automatically (SM-2).</span></div>`;return;}
   let i=0;
   function show(){
-    if(i>=due.length){body.innerHTML=`<div class="card center"><div style="font-size:48px">✅</div><h3>Session complete!</h3><p class="mut small">Cards rescheduled by SM-2. Come back tomorrow for the next batch.</p><button class="btn" id="rc-home">Done</button></div>`;
+    if(i>=due.length){body.innerHTML=`<div class="card center"><div style="font-size:48px">${icon('party','in-badge-lg')}</div><h3>Session complete!</h3><p class="mut small">Cards rescheduled by SM-2. Come back tomorrow for the next batch.</p><button class="btn" id="rc-home">Done</button></div>`;
       body.querySelector('#rc-home').onclick=()=>location.hash='#/home';UI.refreshHud();return;}
     const c=due[i];
     body.innerHTML=`<div class="step-tag">Card ${i+1} of ${due.length}</div><div class="lprog"><i style="width:${i/due.length*100}%"></i></div><div id="fc"></div>`;
@@ -507,7 +507,7 @@ function reviewCards(body,due){
   show();
 }
 function reviewErrors(body,errs){
-  if(!errs.length){body.innerHTML=`<div class="empty">📝 No mistakes logged yet.<br><span class="small">Every wrong drill answer lands here automatically — your personal hit-list.</span></div>`;return;}
+  if(!errs.length){body.innerHTML=`<div class="empty">${icon('write','in-tx')} No mistakes logged yet.<br><span class="small">Every wrong drill answer lands here automatically — your personal hit-list.</span></div>`;return;}
   let html=`<p class="small mut">Tap <b>Got it</b> when you've truly absorbed the fix. Be honest — this list is for you, not for showing off.</p>`;
   errs.slice(0,50).forEach(e=>{
     html+=`<div class="err"><div class="small dim">${esc(e.engine.replace(/-/g,' '))} · ${new Date(e.ts).toLocaleDateString()} ${e.reviewed?`· ✓×${e.reviewed}`:''}</div>
@@ -522,7 +522,7 @@ function reviewErrors(body,errs){
   });
   body.innerHTML=html;
   const rerender=()=>reviewErrors(body,Store.S.errorLog);
-  body.querySelectorAll('[data-r]').forEach(b=>b.onclick=()=>{Store.reviewError(b.dataset.r);toast('Logged as reviewed 🧠');UI.refreshHud();rerender();});
+  body.querySelectorAll('[data-r]').forEach(b=>b.onclick=()=>{Store.reviewError(b.dataset.r);toast('Logged as reviewed '+icon('brain','in-tx'));UI.refreshHud();rerender();});
   body.querySelectorAll('[data-d]').forEach(b=>b.onclick=()=>{
     Store.S.errorLog=Store.S.errorLog.filter(x=>x.id!==b.dataset.d);Store.save();rerender();});
 }
@@ -547,25 +547,24 @@ function progress(root){
       <div class="bars">${days.map(d=>`<div class="b${d.xp?'':' zero'}" style="height:${Math.max(4,d.xp/mx*100)}%" title="${d.key}: ${d.xp} XP"></div>`).join('')}</div>
       <div class="row" style="justify-content:space-between"><span class="small dim">${days[0].key.slice(5)}</span><span class="small dim">${days[13].key.slice(5)}</span></div></div>
     <div class="card"><div class="kicker">Streak calendar · 35 days</div><div class="cal">${cal}</div>
-      <div class="kv"><span>Current streak</span><b>🔥 ${S.streak.current} days</b></div>
+      <div class="kv"><span>Current streak</span><b>${icon('streak','in-tx')} ${S.streak.current} days</b></div>
       <div class="kv"><span>Best streak</span><b>${S.streak.best} days</b></div>
-      <div class="kv"><span>Streak freezes</span><b>🛡️ ${S.streak.freezes}</b></div>
-      <div class="kv" style="border:0"><span>Comebacks</span><b>💪 ${S.comebacks}</b></div></div>
+      <div class="kv"><span>Streak freezes</span><b>${icon('shield','in-tx')} ${S.streak.freezes}</b></div>
+      <div class="kv" style="border:0"><span>Comebacks</span><b>${icon('muscle','in-tx')} ${S.comebacks}</b></div></div>
     <h2 class="sec">Badges (${S.badges.length}/${defs.length})</h2>
     <div class="badge-grid">${defs.map(b=>{const got=S.badges.includes(b.id);
-      return `<div class="bdg${got?'':' locked'}"><span class="e">${b.icon}</span><b>${esc(b.name)}</b><small>${esc(b.desc)}</small></div>`;}).join('')}</div>
+      return `<div class="bdg${got?'':' locked'}"><span class="e">${icon(b.icon,'in-badge')}</span><b>${esc(b.name)}</b><small>${esc(b.desc)}</small></div>`;}).join('')}</div>
     <h2 class="sec">90-day checklist</h2>
     <div class="card" id="plan-list">${plan.weeks.map(w=>`
       <div class="check${planDone[w.week]?' done':''}" data-w="${w.week}"><div class="box">${planDone[w.week]?'✓':''}</div>
-      <span class="txt"><b>Week ${w.week}:</b> ${esc(w.focus)}<br><span class="small dim">🎯 ${esc(w.milestone)}</span></span></div>`).join('')}</div>
+      <span class="txt"><b>Week ${w.week}:</b> ${esc(w.focus)}<br><span class="small dim">${icon('target','in-tx')} ${esc(w.milestone)}</span></span></div>`).join('')}</div>
     <div class="card"><div class="kicker">Lifetime stats</div>
       <div class="kv"><span>Lessons completed</span><b>${Object.keys(S.lessonsDone).length}</b></div>
       <div class="kv"><span>Drills attempted</span><b>${Object.values(S.drillsDone).reduce((a,b)=>a+b,0)}</b></div>
       <div class="kv"><span>Shadowing reps</span><b>${S.shadowingDone}</b></div>
       <div class="kv"><span>Speaking tasks</span><b>${S.speakingDone}</b></div>
       <div class="kv"><span>SRS reviews</span><b>${S.srsReviews}</b></div>
-      <div class="kv" style="border:0"><span>Mistakes reviewed</span><b>${S.errorReviews}</b></div></div>
-    <p class="small dim center">Charts &amp; checklist live here — your name, sharing and reset moved to the <a href="#/profile">${icon('profile','in-greet')} Profile</a> tab.</p>`;
+      <div class="kv" style="border:0"><span>Mistakes reviewed</span><b>${S.errorReviews}</b></div></div>`;
   root.querySelectorAll('#plan-list .check').forEach(c=>c.onclick=()=>{
     const w=+c.dataset.w;S.planDone=S.planDone||{};
     if(S.planDone[w])delete S.planDone[w];else{S.planDone[w]=Date.now();confetti(40);}
@@ -576,7 +575,7 @@ function progress(root){
 /* ---------- shared: edit name + daily goal modal ---------- */
 function openNameGoalModal(onSave){
   const S=Store.S;
-  const m=modal(`<h3>✏️ Your name</h3>
+  const m=modal(`<h3>${icon('write','in-tx')} Your name</h3>
     <input id="nm-in" class="field" type="text" maxlength="30" value="${esc(S.name||'')}" placeholder="Your name">
     <div class="row mt" style="gap:8px">
       ${[15,30,45,60].map(x=>`<button class="btn ghost nm-min${(S.dailyMinutes||30)===x?' sel':''}" data-m="${x}" style="flex:1">${x}</button>`).join('')}
@@ -622,22 +621,22 @@ function profile(root){
   for(const lid of Object.keys(S.lessonsDone)){const f=Content.findLesson(lid);if(f&&f.lesson)mins+=f.lesson.minutes||10;}
   mins+=Math.round((S.speakStats||[]).reduce((a,s)=>a+(s.secs||0),0)/60);
   const stats=[
-    ['🔥',S.streak.current+'d','Streak · best '+S.streak.best+'d'],
-    ['⭐',String(S.xp),'XP · Level '+L.n+' '+L.name],
-    ['📚',lessons+'/'+totalLessons,'Lessons done'],
-    ['🎯',quizPassed+'/'+quizzes.length,'Quizzes passed (80%+)'],
-    ['🗣️',String(speaking),'Speaking sessions'],
-    ['🏅',S.badges.length+'/'+badges.length,'Badges earned'],
-    ['📊',avgPron===null?'—':avgPron+'%','Avg pronunciation'],
-    ['⏱️',String(mins),'Practice minutes'],
+    [icon('streak'),S.streak.current+'d','Streak · best '+S.streak.best+'d'],
+    [icon('star'),String(S.xp),'XP · Level '+L.n+' '+L.name],
+    [icon('learn'),lessons+'/'+totalLessons,'Lessons done'],
+    [icon('target'),quizPassed+'/'+quizzes.length,'Quizzes passed (80%+)'],
+    [icon('mic'),String(speaking),'Speaking sessions'],
+    [icon('medal'),S.badges.length+'/'+badges.length,'Badges earned'],
+    [icon('progress'),avgPron===null?'—':avgPron+'%','Avg pronunciation'],
+    [icon('timer'),String(mins),'Practice minutes'],
   ];
   root.innerHTML=`
     <div class="p-head">
       <div class="avatar" aria-hidden="true">${esc(initial)}</div>
       <div style="min-width:0">
-        <h2 class="p-name" id="p-edit" style="cursor:pointer">${esc(name)} <span class="edit-hint">✏️</span></h2>
+        <h2 class="p-name" id="p-edit" style="cursor:pointer">${esc(name)} <span class="edit-hint">${icon('write','in-tx')}</span></h2>
         <p class="p-sub">Day ${dn} of your 90-day path</p>
-        <div>${S.placement?`<span class="chip">${esc(S.placement.band)} · ${S.placement.score}/100</span>`:`<span class="chip ghost" data-go="#/placement" style="cursor:pointer">🧭 Take placement test</span>`}<span class="chip ghost">🎯 ${S.dailyMinutes||30} min/day</span></div>
+        <div>${S.placement?`<span class="chip">${esc(S.placement.band)} · ${S.placement.score}/100</span>`:`<span class="chip ghost" data-go="#/placement" style="cursor:pointer">${icon('compass','in-tx')} Take placement test</span>`}<span class="chip ghost">${icon('target','in-tx')} ${S.dailyMinutes||30} min/day</span></div>
       </div>
     </div>
     <h2 class="p-sec">Your stats</h2>
@@ -653,14 +652,14 @@ function profile(root){
     </div>
     <div class="card" style="margin-top:var(--sp-3)"><div class="kicker">Journey so far</div>
       <div class="kv"><span>Days active</span><b>${daysActive}</b></div>
-      <div class="kv"><span>Best streak</span><b>🔥 ${S.streak.best} days</b></div>
-      <div class="kv" style="border:0"><span>Total XP earned</span><b>⭐ ${S.xp}</b></div></div>
+      <div class="kv"><span>Best streak</span><b>${icon('streak','in-tx')} ${S.streak.best} days</b></div>
+      <div class="kv" style="border:0"><span>Total XP earned</span><b>${icon('star','in-tx')} ${S.xp}</b></div></div>
     <h2 class="p-sec">Actions</h2>
     <div class="p-actions">
-      <button class="btn ghost" id="p-update"><span class="ic-20">🔄</span>&nbsp; Check for updates</button>
-      <button class="btn" id="p-install"><span class="ic-20">📲</span>&nbsp; Install app</button>
-      <button class="btn ghost" id="p-share"><span class="ic-20">📤</span>&nbsp; Share Speak Fluently</button>
-      <button class="btn danger" id="p-reset"><span class="ic-20">🔄</span>&nbsp; Start over from Day 1</button>
+      <button class="btn ghost" id="p-update"><span class="ic-20">${icon('refresh')}</span>&nbsp; Check for updates</button>
+      <button class="btn" id="p-install"><span class="ic-20">${icon('download')}</span>&nbsp; Install app</button>
+      <button class="btn ghost" id="p-share"><span class="ic-20">${icon('share')}</span>&nbsp; Share Speak Fluently</button>
+      <button class="btn danger" id="p-reset"><span class="ic-20">${icon('reset')}</span>&nbsp; Start over from Day 1</button>
     </div>
     <p class="small dim center" id="p-ver">App version: …</p>
     <p class="small dim center">Progress is stored on this device only · works fully offline</p>`;
