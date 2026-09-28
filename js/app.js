@@ -1,7 +1,7 @@
 /* Speak Fluently — hash router + PWA boot. All paths relative: works under any subpath. */
 (function(){
 'use strict';
-const APP_V=27; // must match version.json — bump both on every release
+const APP_V=28; // must match version.json — bump both on every release
 window.SF_VERSION=APP_V; // readable by screens (Profile shows it)
 const TABS=[
   ['#/home','🏠','Home'],['#/learn','📚','Learn'],['#/practice','⚔️','Practice'],
@@ -205,6 +205,21 @@ window.ForceUpdate=async function(){
   }catch(e){}
   const h=location.hash||'#/home';
   location.href=location.pathname+'?fresh='+Date.now()+h;
+};
+/* ---------- smart check: only the nuclear path when an update actually exists ---------- */
+window.CheckForUpdates=async function(){
+  const say=m=>{try{if(window.UI&&UI.toast)UI.toast(m);}catch(e){}};
+  try{
+    if(!navigator.onLine){say('Connect to the internet first, then try again.');return;}
+    say('Checking for updates…');
+    const r=await fetch('version.json',{cache:'no-store'});
+    const j=r.ok?await r.json():null;
+    const latest=j&&typeof j.v==='number'?j.v:null;
+    const mine=window.SF_VERSION||0;
+    if(latest&&latest!==mine){window.ForceUpdate();}
+    else if(latest){say('You’re on the latest version ✓');}
+    else{say('Couldn’t check — try again in a bit.');}
+  }catch(e){say('Couldn’t check — try again in a bit.');}
 };
 if('serviceWorker' in navigator){
   window.addEventListener('load',()=>{

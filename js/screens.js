@@ -673,7 +673,7 @@ function profile(root){
   root.querySelector('#p-edit').onclick=edit;
   root.querySelector('#p-edit2').onclick=edit;
   root.querySelector('#p-share').onclick=shareApp;
-  root.querySelector('#p-update').onclick=()=>{if(window.ForceUpdate)window.ForceUpdate();};
+  root.querySelector('#p-update').onclick=()=>{if(window.CheckForUpdates)window.CheckForUpdates();};
   // version readout: running version vs latest deployed
   try{
     const rv=window.SF_VERSION||'?';
