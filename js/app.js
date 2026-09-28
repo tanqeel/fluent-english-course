@@ -1,6 +1,7 @@
 /* Speak Fluently — hash router + PWA boot. All paths relative: works under any subpath. */
 (function(){
 'use strict';
+const APP_V=25; // must match version.json — bump both on every release
 const TABS=[
   ['#/home','🏠','Home'],['#/learn','📚','Learn'],['#/practice','⚔️','Practice'],
   ['#/review','📇','Review'],['#/progress','📊','Progress'],['#/coach','🤖','Coach'],
@@ -164,24 +165,35 @@ function watchForUpdates(reg){
   const check=()=>{ // re-check for updates; silent when offline
     try{const p=reg.update();if(p&&p.catch)p.catch(()=>{});}catch(e){}
   };
-  reg.addEventListener('updatefound',()=>{
-    const w=reg.installing;if(!w)return;
-    w.addEventListener('statechange',()=>{
-      if(w.state==='installed'&&navigator.serviceWorker.controller)showUpdateToast();
-    });
-  });
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)check();});
   check(); // check on every app start
+  // backstop: if the running code is older than what's deployed, force an update check.
+  // version.json is served network-first by the worker, so this sees the deployed truth.
+  fetch('version.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{
+    if(j&&typeof j.v==='number'&&j.v!==APP_V){
+      check();
+      // if the new worker still hasn't taken over after 10s, offer a manual refresh
+      setTimeout(()=>{if(!updateToastShown)showUpdateToast();},10000);
+    }
+  }).catch(()=>{});
+}
+function autoReload(){
+  // move onto the new worker with exactly one reload per session — never loop
+  let done=false;
+  try{done=sessionStorage.getItem('sf_ar')==='1';}catch(e){}
+  if(done){if(!updateToastShown)showUpdateToast();return;}
+  try{sessionStorage.setItem('sf_ar','1');}catch(e){}
+  location.reload();
 }
 if('serviceWorker' in navigator){
   window.addEventListener('load',()=>{
     navigator.serviceWorker.register('sw.js')
       .then(reg=>watchForUpdates(reg))
       .catch(err=>console.warn('SW:',err));
-    // a new worker that activated + claimed while the app was open -> offer refresh
+    // a new worker activated + claimed -> switch to it automatically, no tap needed
     let hadController=!!navigator.serviceWorker.controller;
     navigator.serviceWorker.addEventListener('controllerchange',()=>{
-      if(hadController)showUpdateToast();
+      if(hadController)autoReload();
       hadController=true;
     });
   });

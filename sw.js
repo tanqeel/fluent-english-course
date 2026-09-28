@@ -1,7 +1,8 @@
 /* Speak Fluently service worker — offline-first. All URLs relative: safe under any subpath. */
-const CACHE='fluent-v24';
+const CACHE='fluent-v25';
+const APP_VERSION=25; // informational: matches version.json; bump both together
 const PRECACHE=[
-  'index.html','manifest.webmanifest',
+  'index.html','manifest.webmanifest','version.json',
   'css/styles.css',
   'js/store.js','js/sm2.js','js/theme.js','js/ui.js','js/content.js','js/drills.js','js/screens.js','js/speak.js','js/aicoach.js','js/app.js',
   'content/module-foundations.json','content/module-accuracy.json','content/module-pronunciation.json',
@@ -28,6 +29,15 @@ self.addEventListener('activate',e=>{
 self.addEventListener('fetch',e=>{
   const url=new URL(e.request.url);
   if(e.request.method!=='GET'||url.origin!==location.origin)return;
+  // version check: always network-first so the app sees the deployed truth,
+  // never a stale cached copy
+  if(url.pathname.endsWith('version.json')){
+    e.respondWith(fetch(e.request).then(res=>{
+      if(res.ok){const cp=res.clone();caches.open(CACHE).then(c=>c.put(e.request,cp));}
+      return res;
+    }).catch(()=>caches.match(e.request)));
+    return;
+  }
   // audio: cache on first play, then serve offline (lazy — keeps install light)
   if(url.pathname.endsWith('.mp3')){
     e.respondWith(caches.open(CACHE).then(c=>c.match(e.request).then(hit=>{
