@@ -8,7 +8,7 @@
 const {el,esc,md,toast,modal,xpToast}=UI;
 const KEY_LS='fluent_gemini_key';      // the API key — device only
 const STORE_LS='fluent_coach_v1';       // chat history + xp caps — device only
-const GEMINI_API='https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
+const GEMINI_API='https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent';
 const MODEL_LABEL='Gemini 2.0 Flash';
 const FREE_API='https://text.pollinations.ai/';
 const FREE_MODEL='openai';
