@@ -85,7 +85,7 @@ function home(root){
 /* ---------- share the app ---------- */
 function shareApp(){
   const url=location.origin+location.pathname;
-  const text='Speak Fluently — free English course app: lessons, speaking practice, AI coach. '+url;
+  const text="I'm learning English with Speak Fluently — free lessons, speaking practice, AI coach & IELTS prep. No signup, works offline. Try it: "+url;
   if(navigator.share){
     navigator.share({title:'Speak Fluently',text,url}).catch(()=>{});
   }else if(navigator.clipboard&&navigator.clipboard.writeText){
