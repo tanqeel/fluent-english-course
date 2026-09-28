@@ -62,13 +62,13 @@ function modal(html){
   return bg;
 }
 
-function xpToast(n){toast(`+${n} XP ⚡`);refreshHud();}
+function xpToast(n){toast(`+${n} XP ${icon('xp','in-pill')}`);refreshHud();}
 
 function refreshHud(){
   const st=Store.streakStatus(),L=Store.level(),S=Store.S;
   const s=$('#hud-streak'),xp=$('#hud-xp');
-  if(s){s.innerHTML=`🔥 ${S.streak.current}`;s.classList.toggle('hot',S.streak.current>0);}
-  if(xp)xp.innerHTML=`⚡ ${S.xp}`;
+  if(s){s.innerHTML=`${icon('streak','in-pill')} ${S.streak.current}`;s.classList.toggle('hot',S.streak.current>0);}
+  if(xp)xp.innerHTML=`${icon('xp','in-pill')} ${S.xp}`;
   const nb=window.__newBadges;
   if(nb&&nb.length){
     window.__newBadges=[];
@@ -81,5 +81,6 @@ function refreshHud(){
   if(window.__freezeEarned){window.__freezeEarned=false;setTimeout(()=>toast('🛡️ Streak Freeze earned! One missed day won\'t break your streak.',3200),600);}
 }
 
-window.UI={el,esc,md,toast,confetti,modal,xpToast,refreshHud,$};
+function icon(n,cls){return '<img class="ic3d '+(cls||'')+'" src="icons/ui/'+n+'.png" alt="">';}
+window.UI={el,esc,md,toast,confetti,modal,xpToast,refreshHud,icon,$};
 })();

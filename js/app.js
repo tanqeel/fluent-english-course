@@ -1,17 +1,17 @@
 /* Speak Fluently — hash router + PWA boot. All paths relative: works under any subpath. */
 (function(){
 'use strict';
-const APP_V=31; // must match version.json — bump both on every release
+const APP_V=32; // must match version.json — bump both on every release
 window.SF_VERSION=APP_V; // readable by screens (Profile shows it)
 const TABS=[
-  ['#/home','🏠','Home'],['#/learn','📚','Learn'],['#/practice','⚔️','Practice'],
-  ['#/review','📇','Review'],['#/progress','📊','Progress'],['#/coach','🤖','Coach'],
-  ['#/profile','👤','Profile']
+  ['#/home','home','Home'],['#/learn','learn','Learn'],['#/practice','practice','Practice'],
+  ['#/review','review','Review'],['#/progress','progress','Progress'],['#/coach','coach','Coach'],
+  ['#/profile','profile','Profile']
 ];
 function drawTabs(active){
   const bar=document.getElementById('tabbar');
   bar.innerHTML=TABS.map(([h,ic,label])=>
-    `<a href="${h}" class="${active===h?'on':''}"><span class="ic">${ic}</span><span class="lb">${label}</span></a>`).join('');
+    `<a href="${h}" class="${active===h?'on':''}"><span class="ic">${UI.icon(ic)}</span><span class="lb">${label}</span></a>`).join('');
 }
 function route(){
   const hash=location.hash||'#/home';

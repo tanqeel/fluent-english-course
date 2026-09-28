@@ -124,7 +124,14 @@ nav.bottom .wrap{width:100%;max-width:600px;margin:0 auto;display:flex;height:va
 nav.bottom a{flex:1;min-height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;
   gap:3px;color:var(--dim);font-size:var(--fs-xs);font-weight:700;text-decoration:none;transition:color .2s;
   white-space:nowrap;min-width:0}
-nav.bottom a .ic{font-size:21px;filter:grayscale(.6);opacity:.75;transition:.2s}
+nav.bottom a .ic{font-size:21px;opacity:.7;transition:.2s}
+/* ---------- 3D glossy icon set (v32): crisp tiles cut from the approved sheet ---------- */
+.ic3d{width:30px;height:30px;border-radius:8px;object-fit:cover;display:inline-block;vertical-align:middle}
+nav.bottom a .ic .ic3d{width:30px;height:30px}
+.in-pill{width:18px;height:18px;border-radius:5px}
+.in-qh{width:34px;height:34px}
+.in-greet{width:24px;height:24px;border-radius:7px}
+#toast .ic3d{width:18px;height:18px;border-radius:5px}
 nav.bottom a.on{color:var(--acc-ink)}
 nav.bottom a.on .ic{filter:none;opacity:1;transform:scale(1.12)}
 
@@ -477,6 +484,7 @@ nav.bottom a .lb{font-size:10px;font-weight:700;white-space:nowrap;max-width:100
   .brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .pill{padding:6px 10px;font-size:12px;min-height:32px}
   .hud{gap:6px}
+  nav.bottom a .ic .ic3d{width:26px;height:26px;border-radius:7px}
   .icon-btn{width:40px;height:40px}
   nav.bottom a{font-size:10px}
   nav.bottom a .ic{font-size:19px}

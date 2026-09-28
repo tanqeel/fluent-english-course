@@ -1,6 +1,6 @@
 /* Speak Fluently service worker — offline-first. All URLs relative: safe under any subpath. */
-const CACHE='fluent-v31';
-const APP_VERSION=31; // informational: matches version.json; bump both together
+const CACHE='fluent-v32';
+const APP_VERSION=32; // informational: matches version.json; bump both together
 const PRECACHE=[
   'index.html','manifest.webmanifest','version.json',
   'css/styles.css',
@@ -13,6 +13,7 @@ const PRECACHE=[
   'content/quizzes.json','content/taskcards.json','content/placement.json',
   'content/pronunciation.json','content/scenarios.json','content/stories.json',
   'icons/icon-192.png','icons/icon-512.png','icons/icon-64.png','icons/apple-touch-icon.png',
+  'icons/ui/home.png','icons/ui/learn.png','icons/ui/practice.png','icons/ui/review.png','icons/ui/progress.png','icons/ui/coach.png','icons/ui/profile.png','icons/ui/streak.png','icons/ui/xp.png',
   'icons/favicon-32.png','icons/favicon-16.png','icons/maskable-192.png','icons/maskable-512.png'
 ];
 self.addEventListener('install',e=>{

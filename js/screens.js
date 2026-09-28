@@ -1,6 +1,6 @@
 /* Screens — Home, Learn, Module, Lesson, Practice, Review, Progress */
 (function(){
-const {el,esc,toast,confetti,modal,xpToast}=UI;
+const {el,esc,toast,confetti,modal,xpToast,icon}=UI;
 
 function greet(){const h=new Date().getHours();
   return h<5?'Late night grind':h<12?'Good morning':h<17?'Good afternoon':h<21?'Good evening':'Late night grind';}
@@ -63,7 +63,7 @@ function home(root){
     <div class="card"><div class="kicker">Today's plan · Week ${week.week}</div>
       <p style="margin:8px 0"><b>${esc(week.focus)}</b></p>
       <p class="small mut" style="margin:0">🎯 Milestone: ${esc(week.milestone)}</p>
-      <p class="small dim" style="margin:6px 0 0">~${S.dailyMinutes||plan.dailyMinutes} min · ${due?`📇 <b style="color:var(--acc)">${due} cards due</b> in Review`:'📇 Review deck clear — nice!'}</p>
+      <p class="small dim" style="margin:6px 0 0">~${S.dailyMinutes||plan.dailyMinutes} min · ${due?`${icon('review','in-greet')} <b style="color:var(--acc)">${due} cards due</b> in Review`:`${icon('review','in-greet')} Review deck clear — nice!`}</p>
       <div class="row mt" style="gap:8px">
         <button class="btn" data-go="#/learn" style="flex:1">Learn →</button>
         ${due?`<button class="btn vio" data-go="#/review" style="flex:1">Review ${due} cards</button>`:''}
@@ -72,9 +72,9 @@ function home(root){
     <h2 class="sec">Quick hits</h2>
     <div class="qh-grid">
       <button class="qh" data-go="#/speak"><span class="ic-28">🗣️</span><span>Speak<small>Pronunciation lab</small></span></button>
-      <button class="qh" data-go="#/practice"><span class="ic-28">⚔️</span><span>Drills<small>Practice arena</small></span></button>
-      <button class="qh" data-go="#/coach"><span class="ic-28">🤖</span><span>AI Coach<small>Free · no key needed</small></span></button>
-      <button class="qh" data-go="#/progress"><span class="ic-28">📊</span><span>Progress<small>Stats & badges</small></span></button>
+      <button class="qh" data-go="#/practice"><span class="ic-28">${icon('practice','in-qh')}</span><span>Drills<small>Practice arena</small></span></button>
+      <button class="qh" data-go="#/coach"><span class="ic-28">${icon('coach','in-qh')}</span><span>AI Coach<small>Free · no key needed</small></span></button>
+      <button class="qh" data-go="#/progress"><span class="ic-28">${icon('progress','in-qh')}</span><span>Progress<small>Stats & badges</small></span></button>
     </div>
     <button class="btn ghost mt" id="share-app" style="width:100%"><span class="ic-20">📤</span> Share Speak Fluently with a friend</button>
     <p class="small dim center mt">Chalo — ek chhota step roz. ${due?'Pehle Review clear karo, phir naya seekho.':''}</p>`;
@@ -133,7 +133,7 @@ function onboarding(root){
 /* ================= LEARN ================= */
 function learn(root){
   const S=Store.S;
-  let html=`<div class="greet">Learn 📚</div><p class="sub">${Content.MODULES.length} modules · bite-sized lessons · everyday, work & exam English</p>
+  let html=`<div class="greet">Learn ${icon('learn','in-greet')}</div><p class="sub">${Content.MODULES.length} modules · bite-sized lessons · everyday, work & exam English</p>
   ${!S.placement?`<div class="card" style="border:1.5px solid var(--acc);cursor:pointer" data-go="#/placement">
     <div class="kicker" style="color:var(--acc)">🧭 START HERE</div>
     <p style="margin:8px 0"><b>Placement test</b> <span class="small dim">· not taken yet</span></p>
@@ -237,7 +237,7 @@ const ENGINES=[
   ['timed-quiz','⏱️','Timed quiz'],['speaking-task','🎙️','Speaking task']];
 function practice(root,engine){
   if(!engine){
-    let html=`<div class="greet">Drill arena ⚔️</div><p class="sub">Pick a drill type — or go random. Every rep counts.</p>
+    let html=`<div class="greet">Drill arena ${icon('practice','in-greet')}</div><p class="sub">Pick a drill type — or go random. Every rep counts.</p>
       <div class="card" style="border:1.5px solid var(--acc);cursor:pointer" data-go="#/speak">
         <div class="kicker" style="color:var(--acc)">🗣️ NEW · SPEAK STUDIO</div>
         <p style="margin:8px 0"><b>Pronunciation Lab · Roleplays · Stories · Daily Challenge</b></p>
@@ -483,7 +483,7 @@ function startPlacement(root){
 function review(root,tab){
   tab=tab||'cards';
   const due=Store.dueCards(),errs=Store.S.errorLog;
-  root.innerHTML=`<div class="greet">Review 📇</div>
+  root.innerHTML=`<div class="greet">Review ${icon('review','in-greet')}</div>
     <p class="sub">Spaced repetition + your personal mistake log. This is where fluency is actually built.</p>
     <div class="tabs">
       <button class="tab ${tab==='cards'?'on':''}" data-t="cards">🃏 Flashcards (${due.length} due)</button>
@@ -542,7 +542,7 @@ function progress(root){
     cal+=`<div class="d${hit?' hit':''}${k0?' today':''}">${d.getDate()}</div>`;}
   const planDone=S.planDone||{};
   root.innerHTML=`
-    <div class="greet">Progress 📊</div><p class="sub">Level ${L.n} · ${esc(L.name)} · ${S.xp} total XP</p>
+    <div class="greet">Progress ${icon('progress','in-greet')}</div><p class="sub">Level ${L.n} · ${esc(L.name)} · ${S.xp} total XP</p>
     <div class="card"><div class="kicker">XP · last 14 days</div>
       <div class="bars">${days.map(d=>`<div class="b${d.xp?'':' zero'}" style="height:${Math.max(4,d.xp/mx*100)}%" title="${d.key}: ${d.xp} XP"></div>`).join('')}</div>
       <div class="row" style="justify-content:space-between"><span class="small dim">${days[0].key.slice(5)}</span><span class="small dim">${days[13].key.slice(5)}</span></div></div>
@@ -565,7 +565,7 @@ function progress(root){
       <div class="kv"><span>Speaking tasks</span><b>${S.speakingDone}</b></div>
       <div class="kv"><span>SRS reviews</span><b>${S.srsReviews}</b></div>
       <div class="kv" style="border:0"><span>Mistakes reviewed</span><b>${S.errorReviews}</b></div></div>
-    <p class="small dim center">Charts &amp; checklist live here — your name, sharing and reset moved to the <a href="#/profile">👤 Profile</a> tab.</p>`;
+    <p class="small dim center">Charts &amp; checklist live here — your name, sharing and reset moved to the <a href="#/profile">${icon('profile','in-greet')} Profile</a> tab.</p>`;
   root.querySelectorAll('#plan-list .check').forEach(c=>c.onclick=()=>{
     const w=+c.dataset.w;S.planDone=S.planDone||{};
     if(S.planDone[w])delete S.planDone[w];else{S.planDone[w]=Date.now();confetti(40);}
