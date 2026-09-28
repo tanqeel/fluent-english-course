@@ -1,7 +1,7 @@
 /* Speak Fluently — hash router + PWA boot. All paths relative: works under any subpath. */
 (function(){
 'use strict';
-const APP_V=41; // must match version.json — bump both on every release
+const APP_V=42; // must match version.json — bump both on every release
 window.SF_VERSION=APP_V; // readable by screens (Profile shows it)
 const TABS=[
   ['#/home','home','Home'],['#/learn','learn','Learn'],['#/practice','practice','Practice'],
@@ -98,10 +98,30 @@ function showManualInstall(w){
 function showInstallPopup(force){
   if(document.getElementById('install-popup'))return;
   if(!force&&lsGet(LS_DONE))return;
-  const hasNative=!!deferredInstall;
   const w=document.createElement('div');
   w.id='install-popup';w.className='install-popup';
   w.setAttribute('role','dialog');w.setAttribute('aria-modal','true');w.setAttribute('aria-labelledby','ip-title');
+  w.addEventListener('click',e=>{if(e.target===w)dismissInstallPopup();});   // backdrop = not now
+  const escH=e=>{if(e.key==='Escape')dismissInstallPopup();};
+  w._esc=escH;document.addEventListener('keydown',escH);
+  /* already inside the installed app: the browser cannot offer "install"
+     again, so say so plainly and show the way to the fresh icon */
+  if(isStandalone()){
+    w.innerHTML=`
+    <div class="ip-card">
+      <button class="ip-x" id="ip-x" aria-label="Close">✕</button>
+      <div class="ip-icon">✓</div>
+      <h3 id="ip-title">Already installed ✓</h3>
+      <p class="mut small" style="margin:6px 0 18px">You're using the installed app. For the brand-new glossy icon: uninstall Speak Fluently from your home screen, then open the site in Chrome and tap <b>Install app</b>.</p>
+      <button class="btn" id="ip-ok">Got it</button>
+    </div>`;
+    document.body.appendChild(w);
+    w.querySelector('#ip-x').onclick=()=>dismissInstallPopup(true);
+    w.querySelector('#ip-ok').onclick=()=>dismissInstallPopup(true);
+    setTimeout(()=>{try{w.querySelector('#ip-ok').focus();}catch(e){}},60);
+    return;
+  }
+  const hasNative=!!deferredInstall;
   w.innerHTML=`
     <div class="ip-card">
       <button class="ip-x" id="ip-x" aria-label="Not now">✕</button>
@@ -111,9 +131,6 @@ function showInstallPopup(force){
       <button class="btn" id="ip-go">${hasNative?'Install app':'How to install'}</button>
       <button class="btn ghost mt" id="ip-no">Not now</button>
     </div>`;
-  w.addEventListener('click',e=>{if(e.target===w)dismissInstallPopup();});   // backdrop = not now
-  const escH=e=>{if(e.key==='Escape')dismissInstallPopup();};
-  w._esc=escH;document.addEventListener('keydown',escH);
   document.body.appendChild(w);
   w.querySelector('#ip-x').onclick=()=>dismissInstallPopup();
   w.querySelector('#ip-no').onclick=()=>dismissInstallPopup();
