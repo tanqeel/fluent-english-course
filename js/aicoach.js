@@ -91,7 +91,8 @@ async function callGemini(key,systemInstruction,parts,opts){
    Provider chain (first success wins):
    1) Pollinations text API — POST {messages, model:"openai"}
    2) Pollinations GET fallback (prompt in URL)
-   3) Puter.js (lazy-loaded SDK, keyless) — model gpt-5-nano
+   3) LLM7 — OpenAI-compatible, anonymous key "unused", model "default"
+   4) Puter.js (lazy-loaded SDK, keyless) — model gpt-5-nano
    All need internet; everything else in the app works offline. */
 function isOfflineErr(e){return e instanceof TypeError||(e&&/failed to fetch|networkerror|load failed/i.test(e.message||''));}
 async function fetchTimeout(url,init,ms){
@@ -127,6 +128,21 @@ async function pollinationsGET(system,messages){
   if(!t)throw {friendly:'The coach came back empty.',retryable:true};
   return t;
 }
+async function llm7Chat(payload){
+  const msgs=payload.map(m=>({role:m.role,content:String(m.content).slice(0,4000)}));
+  const res=await fetchTimeout('https://api.llm7.io/v1/chat/completions',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Authorization':'Bearer unused'},
+    body:JSON.stringify({model:'default',messages:msgs,max_tokens:600,temperature:0.7})
+  },45000);
+  const txt=await res.text();
+  let j=null;try{j=JSON.parse(txt);}catch(e){}
+  if(j&&j.error)throw {friendly:'Free AI had a hiccup.',retryable:true};
+  if(!res.ok)throw {friendly:'Free AI had a hiccup ('+res.status+').',retryable:true};
+  const t=String((j&&j.choices&&j.choices[0]&&j.choices[0].message&&j.choices[0].message.content)||'').trim();
+  if(!t)throw {friendly:'The coach came back empty.',retryable:true};
+  return t;
+}
 function loadPuter(){
   return new Promise((res,rej)=>{
     if(window.puter&&window.puter.ai)return res(window.puter);
@@ -158,7 +174,7 @@ async function puterChat(payload){
 async function callFreeAI(system,messages,opts){
   opts=opts||{};
   const payload=[{role:'system',content:system}].concat(messages);
-  const tries=[()=>pollinationsPOST(payload),()=>pollinationsGET(system,messages),()=>puterChat(payload)];
+  const tries=[()=>pollinationsPOST(payload),()=>pollinationsGET(system,messages),()=>llm7Chat(payload),()=>puterChat(payload)];
   let last=null;
   for(const fn of tries){
     try{const t=await fn();if(t)return t;}
