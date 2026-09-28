@@ -1,7 +1,7 @@
 /* Speak Fluently — hash router + PWA boot. All paths relative: works under any subpath. */
 (function(){
 'use strict';
-const APP_V=29; // must match version.json — bump both on every release
+const APP_V=30; // must match version.json — bump both on every release
 window.SF_VERSION=APP_V; // readable by screens (Profile shows it)
 const TABS=[
   ['#/home','🏠','Home'],['#/learn','📚','Learn'],['#/practice','⚔️','Practice'],
@@ -186,25 +186,27 @@ function autoReload(){
   try{sessionStorage.setItem('sf_ar','1');}catch(e){}
   location.reload();
 }
-/* ---------- manual hard update: nuclear option when auto-update ever stalls ----------
-   Unregisters workers, wipes all caches, then reloads with a cache-busting URL
-   so every file comes fresh from the network. Needs internet. */
+/* ---------- manual hard update: pulls the newest service worker and reloads onto it ----------
+   The worker's install precaches with cache:'reload', so it can never install
+   stale files — this is what actually moves the phone onto the new version. */
 window.ForceUpdate=async function(){
   const say=m=>{try{if(window.UI&&UI.toast)UI.toast(m);else alert(m);}catch(e){}};
   try{
     if(!navigator.onLine){say('Connect to the internet first, then try again.');return;}
     say('Pulling the latest version…');
-    if('serviceWorker' in navigator){
-      const regs=await navigator.serviceWorker.getRegistrations();
-      await Promise.all(regs.map(r=>r.unregister().catch(()=>{})));
-    }
-    if('caches' in window){
-      const keys=await caches.keys();
-      await Promise.all(keys.map(k=>caches.delete(k).catch(()=>{})));
-    }
-  }catch(e){}
-  const h=location.hash||'#/home';
-  location.href=location.pathname+'?fresh='+Date.now()+h;
+    if(!('serviceWorker' in navigator)){location.reload();return;}
+    const reg=await navigator.serviceWorker.getRegistration();
+    if(reg){try{await reg.update();}catch(e){}}
+    // wait until the (possibly new) worker takes control, then reload onto it
+    await new Promise(res=>{
+      let done=false;
+      const fin=()=>{if(!done){done=true;res();}};
+      const to=setTimeout(fin,12000);
+      navigator.serviceWorker.addEventListener('controllerchange',()=>{clearTimeout(to);fin();});
+    });
+    await new Promise(r=>setTimeout(r,600));
+    location.reload();
+  }catch(e){location.reload();}
 };
 /* ---------- smart check: only the nuclear path when an update actually exists ---------- */
 window.CheckForUpdates=async function(){

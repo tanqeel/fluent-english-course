@@ -1,6 +1,6 @@
 /* Speak Fluently service worker — offline-first. All URLs relative: safe under any subpath. */
-const CACHE='fluent-v29';
-const APP_VERSION=26; // informational: matches version.json; bump both together
+const CACHE='fluent-v30';
+const APP_VERSION=30; // informational: matches version.json; bump both together
 const PRECACHE=[
   'index.html','manifest.webmanifest','version.json',
   'css/styles.css',
@@ -16,7 +16,12 @@ const PRECACHE=[
   'icons/favicon-32.png','icons/favicon-16.png','icons/maskable-192.png','icons/maskable-512.png'
 ];
 self.addEventListener('install',e=>{
-  e.waitUntil(caches.open(CACHE).then(c=>c.addAll(PRECACHE)).then(()=>self.skipWaiting()));
+  // cache:'reload' bypasses the browser HTTP cache (GitHub Pages sends
+  // max-age=600) AND refreshes it — so a new worker can never precache
+  // stale files. Without this, phones got stuck on old content while
+  // version.json already reported the new release.
+  const fresh=PRECACHE.map(u=>new Request(u,{cache:'reload'}));
+  e.waitUntil(caches.open(CACHE).then(c=>c.addAll(fresh)).then(()=>self.skipWaiting()));
 });
 self.addEventListener('message',e=>{ // manual activation path (kept for robustness)
   if(e.data&&e.data.type==='SKIP_WAITING')self.skipWaiting();
