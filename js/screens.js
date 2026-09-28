@@ -660,7 +660,6 @@ function profile(root){
       <button class="btn ghost" id="p-update"><span class="ic-20">🔄</span>&nbsp; Check for updates</button>
       <button class="btn" id="p-install"><span class="ic-20">📲</span>&nbsp; Install app</button>
       <button class="btn ghost" id="p-share"><span class="ic-20">📤</span>&nbsp; Share Speak Fluently</button>
-      <button class="btn ghost" id="p-edit2"><span class="ic-20">✏️</span>&nbsp; Edit name &amp; daily goal</button>
       <button class="btn danger" id="p-reset"><span class="ic-20">🔄</span>&nbsp; Start over from Day 1</button>
     </div>
     <p class="small dim center" id="p-ver">App version: …</p>
@@ -668,7 +667,6 @@ function profile(root){
   root.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>location.hash=b.dataset.go);
   const edit=()=>openNameGoalModal(()=>profile(root));
   root.querySelector('#p-edit').onclick=edit;
-  root.querySelector('#p-edit2').onclick=edit;
   root.querySelector('#p-share').onclick=shareApp;
   root.querySelector('#p-update').onclick=()=>{if(window.CheckForUpdates)window.CheckForUpdates();};
   // version readout: running version vs latest deployed

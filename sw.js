@@ -1,6 +1,6 @@
 /* Speak Fluently service worker — offline-first. All URLs relative: safe under any subpath. */
-const CACHE='fluent-v30';
-const APP_VERSION=30; // informational: matches version.json; bump both together
+const CACHE='fluent-v31';
+const APP_VERSION=31; // informational: matches version.json; bump both together
 const PRECACHE=[
   'index.html','manifest.webmanifest','version.json',
   'css/styles.css',
