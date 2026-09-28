@@ -1,7 +1,8 @@
 /* Speak Fluently — hash router + PWA boot. All paths relative: works under any subpath. */
 (function(){
 'use strict';
-const APP_V=26; // must match version.json — bump both on every release
+const APP_V=27; // must match version.json — bump both on every release
+window.SF_VERSION=APP_V; // readable by screens (Profile shows it)
 const TABS=[
   ['#/home','🏠','Home'],['#/learn','📚','Learn'],['#/practice','⚔️','Practice'],
   ['#/review','📇','Review'],['#/progress','📊','Progress'],['#/coach','🤖','Coach'],
@@ -185,6 +186,26 @@ function autoReload(){
   try{sessionStorage.setItem('sf_ar','1');}catch(e){}
   location.reload();
 }
+/* ---------- manual hard update: nuclear option when auto-update ever stalls ----------
+   Unregisters workers, wipes all caches, then reloads with a cache-busting URL
+   so every file comes fresh from the network. Needs internet. */
+window.ForceUpdate=async function(){
+  const say=m=>{try{if(window.UI&&UI.toast)UI.toast(m);else alert(m);}catch(e){}};
+  try{
+    if(!navigator.onLine){say('Connect to the internet first, then try again.');return;}
+    say('Pulling the latest version…');
+    if('serviceWorker' in navigator){
+      const regs=await navigator.serviceWorker.getRegistrations();
+      await Promise.all(regs.map(r=>r.unregister().catch(()=>{})));
+    }
+    if('caches' in window){
+      const keys=await caches.keys();
+      await Promise.all(keys.map(k=>caches.delete(k).catch(()=>{})));
+    }
+  }catch(e){}
+  const h=location.hash||'#/home';
+  location.href=location.pathname+'?fresh='+Date.now()+h;
+};
 if('serviceWorker' in navigator){
   window.addEventListener('load',()=>{
     navigator.serviceWorker.register('sw.js')

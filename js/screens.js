@@ -659,18 +659,34 @@ function profile(root){
       <div class="kv" style="border:0"><span>Total XP earned</span><b>⭐ ${S.xp}</b></div></div>
     <h2 class="p-sec">Actions</h2>
     <div class="p-actions">
+      <button class="btn ghost" id="p-update"><span class="ic-20">🔄</span>&nbsp; Check for updates</button>
       <button class="btn" id="p-install"><span class="ic-20">📲</span>&nbsp; Install app</button>
       <button class="btn ghost" id="p-share"><span class="ic-20">📤</span>&nbsp; Share Speak Fluently</button>
       <button class="btn ghost" id="p-edit2"><span class="ic-20">✏️</span>&nbsp; Edit name &amp; daily goal</button>
       <button class="btn ghost" id="p-theme"><span class="ic-20">${themeIcon}</span>&nbsp; Theme: ${themeMode==='system'?'System (follows phone)':themeMode==='light'?'Light':'Dark'}</button>
       <button class="btn danger" id="p-reset"><span class="ic-20">🔄</span>&nbsp; Start over from Day 1</button>
     </div>
+    <p class="small dim center" id="p-ver">App version: …</p>
     <p class="small dim center">Progress is stored on this device only · works fully offline</p>`;
   root.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>location.hash=b.dataset.go);
   const edit=()=>openNameGoalModal(()=>profile(root));
   root.querySelector('#p-edit').onclick=edit;
   root.querySelector('#p-edit2').onclick=edit;
   root.querySelector('#p-share').onclick=shareApp;
+  root.querySelector('#p-update').onclick=()=>{if(window.ForceUpdate)window.ForceUpdate();};
+  // version readout: running version vs latest deployed
+  try{
+    const rv=window.SF_VERSION||'?';
+    const vel=root.querySelector('#p-ver');
+    fetch('version.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{
+      if(!vel)return;
+      if(j&&typeof j.v==='number'){
+        vel.textContent=(j.v===rv)
+          ?`App version v${rv} — up to date ✓`
+          :`App version v${rv} · latest v${j.v} — tap Check for updates ⬆`;
+      }else vel.textContent=`App version v${rv}`;
+    }).catch(()=>{if(vel)vel.textContent=`App version v${rv}`;});
+  }catch(e){}
   const pInstall=root.querySelector('#p-install');
   /* always available in Profile: the installed-detection can be wrong,
      so the button stays permanent and always opens the install flow */
