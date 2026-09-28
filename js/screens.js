@@ -621,8 +621,6 @@ function profile(root){
   let mins=0;
   for(const lid of Object.keys(S.lessonsDone)){const f=Content.findLesson(lid);if(f&&f.lesson)mins+=f.lesson.minutes||10;}
   mins+=Math.round((S.speakStats||[]).reduce((a,s)=>a+(s.secs||0),0)/60);
-  const themeMode=window.Theme?Theme.get():'system';
-  const themeIcon=themeMode==='light'?'☀️':themeMode==='dark'?'🌙':'📱';
   const stats=[
     ['🔥',S.streak.current+'d','Streak · best '+S.streak.best+'d'],
     ['⭐',String(S.xp),'XP · Level '+L.n+' '+L.name],
@@ -663,7 +661,6 @@ function profile(root){
       <button class="btn" id="p-install"><span class="ic-20">📲</span>&nbsp; Install app</button>
       <button class="btn ghost" id="p-share"><span class="ic-20">📤</span>&nbsp; Share Speak Fluently</button>
       <button class="btn ghost" id="p-edit2"><span class="ic-20">✏️</span>&nbsp; Edit name &amp; daily goal</button>
-      <button class="btn ghost" id="p-theme"><span class="ic-20">${themeIcon}</span>&nbsp; Theme: ${themeMode==='system'?'System (follows phone)':themeMode==='light'?'Light':'Dark'}</button>
       <button class="btn danger" id="p-reset"><span class="ic-20">🔄</span>&nbsp; Start over from Day 1</button>
     </div>
     <p class="small dim center" id="p-ver">App version: …</p>
@@ -692,7 +689,6 @@ function profile(root){
      so the button stays permanent and always opens the install flow */
   if(window.AppInstall){pInstall.onclick=()=>window.AppInstall.show(true);}
   else{pInstall.style.display='none';}
-  root.querySelector('#p-theme').onclick=()=>{if(window.Theme){Theme.cycle();}profile(root);};
   root.querySelector('#p-reset').onclick=confirmReset;
 }
 
