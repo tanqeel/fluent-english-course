@@ -1,21 +1,46 @@
 /* Fluent AI Coach — 100% client-side.
-   DEFAULT: "Free AI" (Pollinations text API) — free, no key, no signup, zero setup.
-   OPTIONAL UPGRADE: your own free Gemini key for smarter feedback (esp. speaking).
-   The Gemini key, when set, lives ONLY in localStorage on this device and is sent
-   ONLY to Google's generativelanguage API. Nothing else ever sees it. */
+   DEFAULT: "Free AI" (Pollinations → LLM7 → Puter.js chain) — free, no key, no signup, zero setup.
+   OPTIONAL UPGRADE: your own free key — Gemini, Groq, or OpenRouter — for a smarter coach
+   (Gemini also unlocks speaking feedback on recordings).
+   Any key, when set, lives ONLY in localStorage on this device and is sent
+   ONLY to that provider's API. Nothing else ever sees it. */
 (function(){
 'use strict';
 const {el,esc,md,toast,modal,xpToast}=UI;
-const KEY_LS='fluent_gemini_key';      // the API key — device only
+const KEY_LS='fluent_coach_key';        // {p:provider,k:key} — device only, sent only to that provider
 const STORE_LS='fluent_coach_v1';       // chat history + xp caps — device only
 const GEMINI_API='https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent';
-const MODEL_LABEL='Gemini 2.0 Flash';
+const GROQ_API='https://api.groq.com/openai/v1/chat/completions';
+const GROQ_MODEL='openai/gpt-oss-20b';
+const OR_API='https://openrouter.ai/api/v1/chat/completions';
+const OR_MODEL='openai/gpt-oss-20b:free';
 const FREE_API='https://text.pollinations.ai/';
 const FREE_MODEL='openai';
-
-function getKey(){try{return localStorage.getItem(KEY_LS)||'';}catch(e){return '';}}
-function setKey(k){try{localStorage.setItem(KEY_LS,k.trim());}catch(e){}}
-function clearKey(){try{localStorage.removeItem(KEY_LS);}catch(e){}}
+/* Bring-your-own-key providers — every one has a free tier, no card.
+   The keyless chain (Pollinations → LLM7 → Puter.js) stays the default for everyone. */
+const PROVIDERS={
+  gemini:{label:'Gemini',model:'Gemini Flash (latest)',keyUrl:'https://aistudio.google.com/apikey',
+    steps:['Open <b>Google AI Studio</b> — Google\'s free site for Gemini keys.','Sign in, tap <b>"Get API key"</b> → <b>"Create API key"</b>. Free, no card.','Copy the key and paste it here:'],
+    note:'Includes speaking feedback on your recordings.'},
+  groq:{label:'Groq',model:'Llama / GPT-OSS (free)',keyUrl:'https://console.groq.com/keys',
+    steps:['Open <b>Groq Console</b> and sign up free — no card.','Go to <b>API Keys</b> → <b>Create API key</b> and copy it.','Paste the key here:'],
+    note:'Extremely fast free models. Text coach only — speaking feedback needs a Gemini key.'},
+  openrouter:{label:'OpenRouter',model:'Free :free models',keyUrl:'https://openrouter.ai/keys',
+    steps:['Open <b>OpenRouter</b> and sign up free — no card.','Go to <b>Keys</b> → <b>Create</b> and copy the key.','Paste the key here:'],
+    note:'Many free models behind one key. Text coach only — speaking feedback needs a Gemini key.'}
+};
+function getKeyObj(){
+  try{
+    const v=localStorage.getItem(KEY_LS)||localStorage.getItem('fluent_gemini_key')||'';
+    if(!v)return null;
+    if(v.charAt(0)==='{'){const o=JSON.parse(v);if(o&&o.k)return {p:o.p||'gemini',k:String(o.k)};}
+    else return {p:'gemini',k:v};   // legacy plain-text Gemini key
+  }catch(e){}
+  return null;
+}
+function getKey(){const o=getKeyObj();return o?o.k:'';}
+function setKey(p,k){try{localStorage.setItem(KEY_LS,JSON.stringify({p:p,k:String(k).trim()}));localStorage.removeItem('fluent_gemini_key');}catch(e){}}
+function clearKey(){try{localStorage.removeItem(KEY_LS);localStorage.removeItem('fluent_gemini_key');}catch(e){}}
 
 function cs(){let s;try{s=JSON.parse(localStorage.getItem(STORE_LS))||null;}catch(e){s=null;}
   if(!s)s={chat:[],xpDay:'',xpGiven:0};
@@ -62,7 +87,7 @@ async function callGemini(key,systemInstruction,parts,opts){
     res=await fetch(GEMINI_API+'?key='+encodeURIComponent(key),{
       method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({
-        system_instruction:{parts:[{text:systemInstruction}]},
+        systemInstruction:{parts:[{text:systemInstruction}]},
         contents:[{role:'user',parts:parts}],
         generationConfig:{maxOutputTokens:opts.maxTokens||500,temperature:opts.temp??0.7}
       })
@@ -86,6 +111,34 @@ async function callGemini(key,systemInstruction,parts,opts){
     &&data.candidates[0].content.parts.map(p=>p.text||'').join('');
   if(!text)throw {friendly:'The coach came back empty. Try again.'};
   return text;
+}
+/* ---------- OpenAI-compatible call (Groq / OpenRouter, user's own free key) ---------- */
+async function callOpenAICompat(base,key,model,system,messages,opts){
+  opts=opts||{};
+  const payload=[{role:'system',content:system}]
+    .concat(messages.map(m=>({role:m.role,content:String(m.content).slice(0,4000)})));
+  let res;
+  try{
+    res=await fetchTimeout(base,{method:'POST',
+      headers:{'Content-Type':'application/json','Authorization':'Bearer '+key},
+      body:JSON.stringify({model:model,messages:payload,max_tokens:opts.maxTokens||600,temperature:opts.temp!=null?opts.temp:0.7})
+    },60000);
+  }catch(e){
+    throw {friendly:'No internet connection. AI Coach needs internet — the rest of the app works offline. 🌐'};
+  }
+  const txt=await res.text();
+  let data=null;try{data=JSON.parse(txt);}catch(e){}
+  if(!res.ok){
+    const msg=data&&data.error&&(data.error.message||data.error.code)||'';
+    if(res.status===401||res.status===403)
+      throw {friendly:'That key didn\'t work ('+res.status+'). Double-check you copied the whole key — no extra spaces.'};
+    if(res.status===429)
+      throw {friendly:'Too many requests — free tier rate limit. Wait a minute and try again. ⏳'};
+    throw {friendly:'The provider refused the request ('+res.status+(msg?': '+String(msg).slice(0,80):'')+').'};
+  }
+  const t=String(data&&data.choices&&data.choices[0]&&data.choices[0].message&&data.choices[0].message.content||'').trim();
+  if(!t)throw {friendly:'The coach came back empty. Try again.'};
+  return t;
 }
 /* ---------- Free AI — no key, no signup ----------
    Provider chain (first success wins):
@@ -186,23 +239,39 @@ async function callFreeAI(system,messages,opts){
     }
   }
   if(last&&last.friendly==='busy')
-    throw {friendly:'Free AI is busy right now (rate limit). Wait a minute and try again — or add a free Gemini key in ⚙️ settings for the smarter coach. ⏳'};
-  throw {friendly:'Free AI is having trouble right now. Try again in a bit — or add a free Gemini key in ⚙️ settings for the smarter coach. 🤖'};
+    throw {friendly:'Free AI is busy right now (rate limit). Wait a minute and try again — or add a free key in ⚙️ settings for the smarter coach. ⏳'};
+  throw {friendly:'Free AI is having trouble right now. Try again in a bit — or add a free key in ⚙️ settings for the smarter coach. 🤖'};
 }
 
-/* ---------- unified dispatcher: Gemini key when set, else Free AI ---------- */
-function activeProvider(){return getKey()?'gemini':'free';}
+/* ---------- unified dispatcher: user's key (any provider) when set, else Free AI ---------- */
+function activeProvider(){const o=getKeyObj();return o?o.p:'free';}
+async function testKey(p,k){
+  if(p==='groq')return callOpenAICompat(GROQ_API,k,GROQ_MODEL,'You are a test. Reply with exactly: OK',[{role:'user',content:'Say OK'}],{maxTokens:5,temp:0});
+  if(p==='openrouter')return callOpenAICompat(OR_API,k,OR_MODEL,'You are a test. Reply with exactly: OK',[{role:'user',content:'Say OK'}],{maxTokens:5,temp:0});
+  return callGemini(k,'You are a test. Reply with exactly: OK',[{text:'Say OK'}],{maxTokens:5,temp:0});
+}
 async function askCoach(system,messages,opts){
-  if(getKey()){
-    // adapt [{role:'user'|'assistant',content}] to Gemini contents
-    const contents=messages.map(m=>({role:m.role==='assistant'?'model':'user',parts:[{text:m.content}]}));
-    return callGemini(getKey(),system,contents,opts);
+  const o=getKeyObj();
+  if(o&&o.p==='groq')return callOpenAICompat(GROQ_API,o.k,GROQ_MODEL,system,messages,opts);
+  if(o&&o.p==='openrouter')return callOpenAICompat(OR_API,o.k,OR_MODEL,system,messages,opts);
+  if(o){
+    // Gemini: fold system + conversation into one prompt (parts API)
+    const convo=messages.map(m=>(m.role==='assistant'?'Coach: ':'You: ')+m.content).join('\n');
+    return callGemini(o.k,system,[{text:convo}],opts);
   }
   return callFreeAI(system,messages,opts);
 }
 
 /* ---------- setup screen ---------- */
 function setupView(root,back){
+  let prov='gemini';
+  const renderSteps=()=>{
+    const P=PROVIDERS[prov];
+    root.querySelector('#s-st1').innerHTML=P.steps[0];
+    root.querySelector('#s-st2').innerHTML=P.steps[1];
+    root.querySelector('#s-st3').innerHTML=P.steps[2];
+    root.querySelector('#s-note').textContent=P.note;
+  };
   root.innerHTML=`
   <div class="step-tag">AI Coach · setup</div>
   <div class="greet">Start coaching ${UI.icon('coach','in-tx')}</div>
@@ -214,28 +283,34 @@ function setupView(root,back){
     <p class="small dim" style="margin:8px 0 0">Free AI sends your messages to a public free service to generate replies — don't paste passwords or private info.</p></div>
   <div class="card">
     <div class="kicker" style="color:var(--vio)">${UI.icon('key','in-tx')} Optional upgrade</div>
-    <p style="margin:8px 0"><b>Smarter coach</b> — add a free Gemini key for better feedback,
-    including <b>speaking feedback on your recordings</b>.</p>
-    <button class="btn ghost" id="s-showkey" style="width:auto;padding:10px 18px">Add a free Gemini key · 2 min</button>
-    <div id="s-keyflow" style="display:none">
+    <p style="margin:8px 0"><b>Smarter coach</b> — bring your own free key. Pick a provider:</p>
+    <div class="row" id="s-provrow" style="gap:8px">
+      ${Object.keys(PROVIDERS).map(p=>`<button class="btn ghost s-prov${p===prov?' sel':''}" data-p="${p}" style="flex:1">${PROVIDERS[p].label}</button>`).join('')}
+    </div>
+    <div style="margin-top:6px">
       <div class="kicker mt">Step 1</div>
-      <p style="margin:8px 0">Open <b>Google AI Studio</b> — Google's free site for Gemini keys.</p>
-      <button class="btn ghost" id="s-open">Open aistudio.google.com ↗</button>
+      <p style="margin:8px 0" id="s-st1"></p>
+      <button class="btn ghost" id="s-open" style="width:auto;padding:10px 18px">Open key site ↗</button>
       <div class="kicker mt">Step 2</div>
-      <p style="margin:8px 0">Sign in, tap <b>"Get API key"</b> → <b>"Create API key"</b>. Free, no card.</p>
+      <p style="margin:8px 0" id="s-st2"></p>
       <div class="kicker mt">Step 3</div>
-      <p style="margin:8px 0">Copy the key and paste it here:</p>
-      <input class="field" id="s-key" type="password" placeholder="Paste your Gemini API key" autocomplete="off" spellcheck="false">
+      <p style="margin:8px 0" id="s-st3"></p>
+      <input class="field" id="s-key" type="password" placeholder="Paste your API key" autocomplete="off" spellcheck="false">
       <button class="btn vio" id="s-save">Save & test connection</button>
       <p class="small dim" id="s-status" style="margin:8px 0 0"></p>
-      <p class="small dim" style="margin:8px 0 0">🔒 The key is stored <b>only</b> in this browser on your device, sent <b>only</b> to Google's API. Remove it anytime from Coach → ⚙️.</p>
+      <p class="small dim" style="margin:8px 0 0">🔒 The key is stored <b>only</b> in this browser on your device, sent <b>only</b> to that provider's API. Remove it anytime from Coach → ⚙️.</p>
+      <p class="small dim" id="s-note" style="margin:8px 0 0"></p>
     </div></div>
   <button class="btn ghost mt" id="s-back">← Back</button>`;
+  renderSteps();
+  root.querySelectorAll('.s-prov').forEach(b=>b.onclick=()=>{
+    prov=b.dataset.p;
+    root.querySelectorAll('.s-prov').forEach(x=>x.classList.toggle('sel',x===b));
+    root.querySelector('#s-key').value='';root.querySelector('#s-status').textContent='';
+    renderSteps();
+  });
   root.querySelector('#s-free').onclick=()=>{toast('Free AI is on — happy practicing!');back();};
-  root.querySelector('#s-showkey').onclick=e=>{const f=root.querySelector('#s-keyflow');
-    const open=f.style.display!=='none';f.style.display=open?'none':'block';
-    e.target.textContent=open?'Add a free Gemini key · 2 min':'Hide key setup';};
-  root.querySelector('#s-open').onclick=()=>window.open('https://aistudio.google.com/apikey','_blank','noopener');
+  root.querySelector('#s-open').onclick=()=>window.open(PROVIDERS[prov].keyUrl,'_blank','noopener');
   root.querySelector('#s-back').onclick=back;
   root.querySelector('#s-save').onclick=async()=>{
     const k=root.querySelector('#s-key').value.trim();
@@ -243,8 +318,8 @@ function setupView(root,back){
     if(!k){st.textContent='Paste the key first';return;}
     st.innerHTML='<span class="dim">Testing…</span>';
     try{
-      await callGemini(k,'You are a test. Reply with exactly: OK',{text:'Say OK'},{maxTokens:5,temp:0});
-      setKey(k);st.innerHTML='<b style="color:var(--acc)">✅ Connected! Smarter coach is live.</b>';confetti(80);
+      await testKey(prov,k);
+      setKey(prov,k);st.innerHTML='<b style="color:var(--acc)">✅ Connected! Smarter coach is live.</b>';confetti(80);
       setTimeout(back,900);
     }catch(e){st.innerHTML='<b style="color:var(--red)">'+esc(e.friendly||'Connection failed.')+'</b>';}
   };
@@ -269,17 +344,20 @@ function bubble(who,text){
 }
 function keySettings(root){
   const prov=activeProvider();
+  const P=PROVIDERS[prov]||null;
+  const head=prov==='free'
+    ?`<b style="color:var(--acc)">${UI.icon("star","in-tx")} Free AI</b><br><span class="small dim">No key · conversation + writing work now · speaking feedback needs a Gemini key</span>`
+    :`<b style="color:var(--acc)">${UI.icon("key","in-tx")} ${esc(P.label)} key</b><br><span class="small dim">Model: ${esc(P.model)} · free tier${prov==="gemini"?" · speaking feedback ON":""}</span>`;
+  const tail=prov==='free'
+    ?`<button class="btn vio" id="k-upgrade">Upgrade: add a free key ↗</button>
+      <p class="small dim">Smarter feedback — your choice of Gemini, Groq or OpenRouter. Still free, takes 2 minutes.</p>`
+    :`<button class="btn danger" id="k-remove">Remove my key</button>
+      <p class="small dim">Removes the key from this device immediately. The coach falls back to Free AI. Chat history and progress stay.</p>`;
   root.innerHTML=`<div class="step-tag">AI Coach · settings</div>
   <div class="greet">Coach settings ⚙️</div>
   <div class="card"><div class="kicker">Active provider</div>
-    <p style="margin:8px 0">${prov==='gemini'
-      ?'<b style="color:var(--acc)">'+UI.icon('key','in-tx')+' Gemini key</b><br><span class="small dim">Model: '+esc(MODEL_LABEL)+' · free tier · speaking feedback ON</span>'
-      :'<b style="color:var(--acc)">${UI.icon(\'star\',\'in-tx\')} Free AI</b><br><span class="small dim">No key · conversation + writing work now · speaking feedback needs a Gemini key</span>'}</p>
-    ${prov==='gemini'
-      ?`<button class="btn danger" id="k-remove">Remove my key</button>
-        <p class="small dim">Removes the key from this device immediately. The coach falls back to Free AI. Chat history and progress stay.</p>`
-      :`<button class="btn vio" id="k-upgrade">Upgrade: add a free Gemini key ↗</button>
-        <p class="small dim">For smarter feedback and speaking feedback on your recordings. Still free — takes 2 minutes.</p>`}</div>
+    <p style="margin:8px 0">${head}</p>
+    ${tail}</div>
   <button class="btn ghost mt" id="k-back">← Coach home</button>`;
   root.querySelector('#k-back').onclick=()=>coachHome(root);
   const up=root.querySelector('#k-upgrade');
@@ -295,9 +373,9 @@ function keySettings(root){
 /* ---------- coach home ---------- */
 function coachHome(root){
   const prov=activeProvider();
-  const provLine=prov==='gemini'
-    ?'<p class="small dim" style="margin:0 0 10px">${UI.icon(\'key\',\'in-tx\')} Smarter coach active · <a href="javascript:void(0)" id="c-prov" style="color:var(--vio)">settings</a></p>'
-    :'<p class="small dim" style="margin:0 0 10px">${UI.icon(\'star\',\'in-tx\')} Free AI active — no key needed · <a href="javascript:void(0)" id="c-prov" style="color:var(--vio)">settings / upgrade</a></p>';
+  const provLine=prov==='free'
+    ?`<p class="small dim" style="margin:0 0 10px">${UI.icon("star","in-tx")} Free AI active — no key needed · <a href="javascript:void(0)" id="c-prov" style="color:var(--vio)">settings / upgrade</a></p>`
+    :`<p class="small dim" style="margin:0 0 10px">${UI.icon("key","in-tx")} ${esc(PROVIDERS[prov].label)} coach active · <a href="javascript:void(0)" id="c-prov" style="color:var(--vio)">settings</a></p>`;
   let html=`<div class="step-tag">AI Coach <span class="ai-badge">${UI.icon('coach','in-tx')} AI</span> · needs internet</div>
   <div class="greet">AI Coach ${UI.icon('coach','in-tx')}</div>
   <p class="sub">Your strict tutor, inside the app. Corrects everything — never empty praise.</p>
