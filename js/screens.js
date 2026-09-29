@@ -656,9 +656,9 @@ function profile(root){
       <div class="kv" style="border:0"><span>Total XP earned</span><b>${icon('star','in-tx')} ${S.xp}</b></div></div>
     <h2 class="p-sec">Actions</h2>
     <div class="p-actions">
-      <button class="btn ghost" id="p-update"><span class="ic-20">${icon('refresh')}</span>&nbsp; Check for updates</button>
+      <button class="btn" id="p-update"><span class="ic-20">${icon('refresh')}</span>&nbsp; Check for updates</button>
       <button class="btn" id="p-install"><span class="ic-20">${icon('download')}</span>&nbsp; Install app</button>
-      <button class="btn ghost" id="p-share"><span class="ic-20">${icon('share')}</span>&nbsp; Share Speak Fluently</button>
+      <button class="btn" id="p-share"><span class="ic-20">${icon('share')}</span>&nbsp; Share Speak Fluently</button>
       <button class="btn danger" id="p-reset"><span class="ic-20">${icon('reset')}</span>&nbsp; Start over from Day 1</button>
     </div>
     <p class="small dim center" id="p-ver">App version: …</p>
