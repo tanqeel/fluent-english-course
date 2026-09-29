@@ -632,7 +632,7 @@ function profile(root){
   ];
   root.innerHTML=`
     <div class="p-head">
-      <div class="avatar" aria-hidden="true">${esc(initial)}</div>
+      <div class="avatar" id="p-avatar" role="button" tabindex="0" aria-label="Change profile photo">${S.avatar?`<img class="avatar-img" src="${S.avatar}" alt="Profile photo">`:esc(initial)}<span class="avatar-badge">${icon('write','in-tx')}</span></div>
       <div style="min-width:0">
         <h2 class="p-name" id="p-edit" style="cursor:pointer">${esc(name)} <span class="edit-hint">${icon('write','in-tx')}</span></h2>
         <p class="p-sub">Day ${dn} of your 90-day path</p>
@@ -666,6 +666,9 @@ function profile(root){
   root.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>location.hash=b.dataset.go);
   const edit=()=>openNameGoalModal(()=>profile(root));
   root.querySelector('#p-edit').onclick=edit;
+  const avBtn=root.querySelector('#p-avatar');
+  avBtn.onclick=()=>openAvatarModal(()=>profile(root));
+  avBtn.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openAvatarModal(()=>profile(root));}};
   root.querySelector('#p-share').onclick=shareApp;
   root.querySelector('#p-update').onclick=()=>{if(window.CheckForUpdates)window.CheckForUpdates();};
   // version readout: running version vs latest deployed
@@ -687,6 +690,57 @@ function profile(root){
   if(window.AppInstall){pInstall.onclick=()=>window.AppInstall.show(true);}
   else{pInstall.style.display='none';}
   root.querySelector('#p-reset').onclick=confirmReset;
+}
+
+/* ---------- profile photo: upload / remove (stored on device only) ---------- */
+function openAvatarModal(refresh){
+  const has=!!Store.S.avatar;
+  const initial=(Store.S.name||'F').trim().charAt(0).toUpperCase()||'F';
+  const m=modal(`
+    <div class="center">
+      ${has?`<img class="av-modal-img" src="${Store.S.avatar}" alt="Profile photo">`
+            :`<div class="av-modal-img" style="display:grid;place-items:center;font-size:44px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--vio1),var(--vio2))">${esc(initial)}</div>`}
+      <h3 style="margin:12px 0 4px">Profile photo</h3>
+      <p class="mut small" style="margin:0 0 12px">Saved on this device only — never uploaded anywhere.</p>
+      <button class="btn" id="av-upload">Upload photo</button>
+      ${has?`<button class="btn ghost mt" id="av-remove">Remove photo</button>`:''}
+      <button class="btn ghost mt" id="av-close">Close</button>
+    </div>
+    <input type="file" id="av-file" accept="image/*" style="display:none">`);
+  m.querySelector('#av-close').onclick=()=>m.remove();
+  m.querySelector('#av-upload').onclick=()=>m.querySelector('#av-file').click();
+  const rm=m.querySelector('#av-remove');
+  if(rm)rm.onclick=()=>{Store.S.avatar='';Store.save();m.remove();toast('Photo removed');refresh();};
+  m.querySelector('#av-file').onchange=e=>{
+    const f=e.target.files&&e.target.files[0];
+    if(!f)return;
+    loadAvatarFile(f).then(url=>{
+      Store.S.avatar=url;Store.save();m.remove();toast('Profile photo updated ✓');refresh();
+    }).catch(()=>toast('Could not read that image — try another one.'));
+  };
+}
+function loadAvatarFile(file){
+  // downscale to a 256px square JPEG data URL so it fits easily in localStorage
+  return new Promise((res,rej)=>{
+    const rd=new FileReader();
+    rd.onerror=()=>rej(new Error('read'));
+    rd.onload=()=>{
+      const img=new Image();
+      img.onerror=()=>rej(new Error('decode'));
+      img.onload=()=>{
+        try{
+          const S=256,c=document.createElement('canvas');c.width=S;c.height=S;
+          const x=c.getContext('2d');
+          const sc=Math.max(S/img.width,S/img.height);
+          const w=img.width*sc,h=img.height*sc;
+          x.drawImage(img,(S-w)/2,(S-h)/2,w,h);
+          res(c.toDataURL('image/jpeg',0.85));
+        }catch(e){rej(e);}
+      };
+      img.src=rd.result;
+    };
+    rd.readAsDataURL(file);
+  });
 }
 
 /* ================= SPEAK STUDIO (js/speak.js owns the views) ================= */
