@@ -123,6 +123,11 @@ function fillBlank(step,host,api){
 
 /* ---------- complete the dialogue ---------- */
 function dialogue(step,host,api){
+  // turn labels: "you"->"You say:", "them"->"They say:", anything else capitalized + " says:"
+  const whoLabel=w=>{w=String(w||'');
+    if(/^you$/i.test(w))return 'You say:';
+    if(/^them$/i.test(w))return 'They say:';
+    return w.charAt(0).toUpperCase()+w.slice(1)+' says:';};
   const wrap=el(`<div><p class="mut small">${UI.icon('roleplay','in-tx')} ${esc(step.scene)}</p><div class="lines"></div></div>`);
   host.appendChild(wrap);
   const lines=wrap.querySelector('.lines');
@@ -134,7 +139,7 @@ function dialogue(step,host,api){
       markDrill('dialogue',score===turns.length);api.award(score===turns.length?(step.xp||15):Math.ceil((step.xp||15)/2));continueBtn(host,api);return;
     }
     const t=turns[ti];
-    const line=el(`<div class="card" style="margin:10px 0"><p class="small dim" style="margin:0 0 6px"><b style="color:var(--vio)">${esc(t.who)}</b> says:</p><div class="opts"></div></div>`);
+    const line=el(`<div class="card" style="margin:10px 0"><p class="small dim" style="margin:0 0 6px"><b style="color:var(--vio)">${esc(whoLabel(t.who))}</b></p><div class="opts"></div></div>`);
     const box=line.querySelector('.opts');
     let answered=false;
     shuffle(t.options).forEach((opt,i)=>{
@@ -188,7 +193,7 @@ function shadowing(step,host,api){
     <div class="row" style="justify-content:center;gap:10px;margin:10px 0">
       <button class="btn ghost" id="sh-play" style="width:auto;padding:12px 20px">▶ Model</button>
     </div>
-    <div class="row" style="justify-content:center"><button class="rec-btn" id="sh-rec">${UI.icon('mic','in-tx')}</button></div>
+    <div class="row" style="justify-content:center"><button class="rec-btn" id="sh-rec" aria-label="Record your voice">${UI.icon('mic','in-tx')}</button></div>
     <p class="center small dim" id="sh-status">Tap ${UI.icon('mic','in-tx')} and shadow the line out loud</p>
     <div id="sh-back"></div>
     ${step.tip?`<div class="tip">${UI.icon('tip','in-tx')} ${esc(step.tip)}</div>`:''}
@@ -222,7 +227,15 @@ function shadowing(step,host,api){
           back.appendChild(d);
         }
       }
-    }catch(e){toast(UI.icon('mic','in-tx')+' Mic blocked — allow microphone access to record.');}
+    }catch(e){
+      toast(UI.icon('mic','in-tx')+' Mic blocked — allow microphone access to record.');
+      // never trap the user: offer a way forward without the recording (no XP for a skipped rep)
+      if(!wrap.querySelector('#sh-skip')){
+        const sk=el(`<button class="btn ghost mt" id="sh-skip">Skip recording →</button>`);
+        sk.onclick=()=>{continueBtn(host,api,'Continue →');sk.remove();};
+        back.appendChild(sk);
+      }
+    }
   };
 }
 
@@ -512,7 +525,7 @@ function speakingTask(step,host,api){
     <div class="timer" id="sp-t">${Math.floor(total/60)}:${String(total%60).padStart(2,'0')}</div>
     <div class="row" style="justify-content:center;gap:8px">
       <button class="btn ghost" id="sp-start" style="width:auto;padding:12px 22px">▶ Start timer</button>
-      <button class="rec-btn" id="sp-rec" style="margin:0">${UI.icon('mic','in-tx')}</button>
+      <button class="rec-btn" id="sp-rec" style="margin:0" aria-label="Record your voice">${UI.icon('mic','in-tx')}</button>
     </div>
     <p class="center small dim" id="sp-status">Record yourself, then listen back.</p>
     <div id="sp-back"></div>
@@ -548,7 +561,15 @@ function speakingTask(step,host,api){
           back.appendChild(d);
         }
       }
-    }catch(e){toast(UI.icon('mic','in-tx')+' Mic blocked — allow microphone access to record.');}
+    }catch(e){
+      toast(UI.icon('mic','in-tx')+' Mic blocked — allow microphone access to record.');
+      // never trap the user: offer a way forward without the recording (no XP for a skipped rep)
+      if(!wrap.querySelector('#sp-skip')){
+        const sk=el(`<button class="btn ghost mt" id="sp-skip">Skip recording →</button>`);
+        sk.onclick=()=>{continueBtn(host,api,'Continue →');sk.remove();};
+        back.appendChild(sk);
+      }
+    }
   };
   // checklist toggles
   wrap.querySelectorAll('.check').forEach(c=>c.onclick=()=>c.classList.toggle('done'));
