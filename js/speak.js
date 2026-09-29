@@ -231,7 +231,7 @@ function pronView(root,setId){
       <div class="row" style="justify-content:center;gap:10px;margin:12px 0">
         <button class="btn ghost" id="pl-model" style="width:auto;padding:12px 20px">🔊 Model</button>
         ${srAvailable()?`<button class="btn" id="pl-say" style="width:auto;padding:12px 22px">${UI.icon('mic','in-tx')} Say it</button>`:''}
-        <button class="btn vio" id="pl-self" style="width:auto;padding:12px 20px">${UI.icon('listen','in-tx')} Record + self-check</button>
+        <button class="btn" id="pl-self" style="width:auto;padding:12px 20px">${UI.icon('listen','in-tx')} Record + self-check</button>
       </div>
       ${L.tip?`<div class="tip">${UI.icon('tip','in-tx')} ${esc(L.tip)}</div>`:''}
       <div id="pl-out"></div>
@@ -280,7 +280,7 @@ function pronView(root,setId){
         'Speech check hiccup — try again, or use record + self-check.';
       out.innerHTML=`<div class="card"><p class="mut">${esc(msg)}</p>
         <div class="row" style="gap:8px"><button class="btn ghost" id="pl-re2" style="flex:1">🔁 Try again</button>
-        <button class="btn vio" id="pl-self2" style="flex:1">${UI.icon('listen','in-tx')} Record + self-check</button></div></div>`;
+        <button class="btn" id="pl-self2" style="flex:1">${UI.icon('listen','in-tx')} Record + self-check</button></div></div>`;
       out.querySelector('#pl-re2').onclick=()=>runCheck(L);
       out.querySelector('#pl-self2').onclick=()=>selfCheck(L);
     }
@@ -406,7 +406,7 @@ function scenarioPlay(root,scId){
         <div class="card" style="border:1.5px solid var(--acc)"><div class="kicker">${UI.icon('target','in-tx')} Your move</div>
           <p style="margin:8px 0"><b>${esc(t.prompt)}</b></p></div>
         <div id="opts">${t.options.map((o,i)=>`<button class="opt say" data-o="${i}">${UI.icon('chat','in-tx')} ${esc(o.label)}</button>`).join('')}</div>
-        <button class="btn vio mt" id="t-free">${UI.icon('mic','in-tx')} Freestyle — say it my own way</button>
+        <button class="btn mt" id="t-free">${UI.icon('mic','in-tx')} Freestyle — say it my own way</button>
         <div id="t-note"></div>`);
       root.querySelectorAll('[data-o]').forEach(b=>b.onclick=()=>choose(+b.dataset.o));
       root.querySelector('#t-free').onclick=()=>freestyle(t);

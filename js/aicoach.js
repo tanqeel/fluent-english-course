@@ -296,7 +296,7 @@ function setupView(root,back){
       <div class="kicker mt">Step 3</div>
       <p style="margin:8px 0" id="s-st3"></p>
       <input class="field" id="s-key" type="password" placeholder="Paste your API key" autocomplete="off" spellcheck="false">
-      <button class="btn vio" id="s-save">Save & test connection</button>
+      <button class="btn" id="s-save">Save & test connection</button>
       <p class="small dim" id="s-status" style="margin:8px 0 0"></p>
       <p class="small dim" style="margin:8px 0 0">🔒 The key is stored <b>only</b> in this browser on your device, sent <b>only</b> to that provider's API. Remove it anytime from Coach → ⚙️.</p>
       <p class="small dim" id="s-note" style="margin:8px 0 0"></p>
@@ -349,7 +349,7 @@ function keySettings(root){
     ?`<b style="color:var(--acc)">${UI.icon("star","in-tx")} Free AI</b><br><span class="small dim">No key · conversation + writing work now · speaking feedback needs a Gemini key</span>`
     :`<b style="color:var(--acc)">${UI.icon("key","in-tx")} ${esc(P.label)} key</b><br><span class="small dim">Model: ${esc(P.model)} · free tier${prov==="gemini"?" · speaking feedback ON":""}</span>`;
   const tail=prov==='free'
-    ?`<button class="btn vio" id="k-upgrade">Upgrade: add a free key ↗</button>
+    ?`<button class="btn" id="k-upgrade">Upgrade: add a free key ↗</button>
       <p class="small dim">Smarter feedback — your choice of Gemini, Groq or OpenRouter. Still free, takes 2 minutes.</p>`
     :`<button class="btn danger" id="k-remove">Remove my key</button>
       <p class="small dim">Removes the key from this device immediately. The coach falls back to Free AI. Chat history and progress stay.</p>`;
@@ -436,7 +436,7 @@ function chatView(root){
 function writeView(root){
   shell(root,'Writing '+UI.icon('write','in-tx'),'Paste anything — email, essay, proposal. Get scored + fixed.',body=>{
     body.innerHTML=`<textarea class="field" id="w-in" rows="6" placeholder="Paste your English writing here…"></textarea>
-      <button class="btn vio" id="w-go">Score my writing <span class="ai-badge">${UI.icon('coach','in-tx')} AI</span></button>
+      <button class="btn" id="w-go">Score my writing <span class="ai-badge">${UI.icon('coach','in-tx')} AI</span></button>
       <div id="w-out" class="mt"></div>`;
     let busy=false;
     body.querySelector('#w-go').onclick=async()=>{

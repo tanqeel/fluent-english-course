@@ -66,7 +66,7 @@ function home(root){
       <p class="small dim" style="margin:6px 0 0">~${S.dailyMinutes||plan.dailyMinutes} min · ${due?`${icon('review','in-greet')} <b style="color:var(--acc)">${due} cards due</b> in Review`:`${icon('review','in-greet')} Review deck clear — nice!`}</p>
       <div class="row mt" style="gap:8px">
         <button class="btn" data-go="#/learn" style="flex:1">Learn →</button>
-        ${due?`<button class="btn vio" data-go="#/review" style="flex:1">Review ${due} cards</button>`:''}
+        ${due?`<button class="btn ghost" data-go="#/review" style="flex:1">Review ${due} cards</button>`:''}
       </div></div>
     ${dailyCard}
     <h2 class="sec">Quick hits</h2>
@@ -246,7 +246,7 @@ function practice(root,engine){
     for(const [e,ic,name] of ENGINES)html+=`<div class="bdg" data-e="${e}" style="cursor:pointer"><span class="e">${ic}</span>${name}</div>`;
     html+=`</div>
       <div class="row mt" style="gap:8px">
-        <button class="btn vio" id="tab-quiz" style="flex:1">${icon('write','in-tx')} Module quizzes</button>
+        <button class="btn" id="tab-quiz" style="flex:1">${icon('write','in-tx')} Module quizzes</button>
         <button class="btn ghost" id="tab-task" style="flex:1">${icon('mic','in-tx')} Speaking tasks</button>
       </div>`;
     root.innerHTML=html;
@@ -276,7 +276,7 @@ function practice(root,engine){
     const api=makeApi({module:'practice',onDone:()=>{
       const after=root.querySelector('#after');
       after.innerHTML='';
-      const b=el(`<button class="btn vio mt">Next drill →</button>`);
+      const b=el(`<button class="btn mt">Next drill →</button>`);
       b.onclick=()=>{idx=(idx+1)%pool.length;run();window.scrollTo({top:0});};
       after.appendChild(b);
     }});
@@ -308,7 +308,7 @@ function quizView(root,qid){
   if(!qz){root.innerHTML='<div class="empty">Quiz not found.</div>';return;}
   root.innerHTML=`<div class="step-tag">${esc(qz.title)}</div><div id="drill"></div>`;
   const api=makeApi({module:'quiz',quiz:qid,onDone:()=>{
-    const b=el(`<button class="btn vio mt">← Back to quizzes</button>`);
+    const b=el(`<button class="btn ghost mt">← Back to quizzes</button>`);
     b.onclick=()=>quizList(root);root.appendChild(b);
   }});
   Drills.mount('timed-quiz',{engine:'timed-quiz',id:qid,uid:'quiz:'+qid,title:qz.title,
@@ -347,7 +347,7 @@ function taskView(root,tid,backFilter){
   const api=makeApi({module:'taskcard',task:tid,onDone:()=>{
     Store.S.taskCardsDone=Store.S.taskCardsDone||{};
     Store.S.taskCardsDone[tid]=Date.now();Store.save();
-    const b=el(`<button class="btn vio mt">← Back to task cards</button>`);
+    const b=el(`<button class="btn ghost mt">← Back to task cards</button>`);
     b.onclick=()=>taskList(root,backFilter);root.appendChild(b);
   }});
   const step={engine:t.kind==='journal'?'journal':'speaking-task',id:tid,
@@ -632,7 +632,7 @@ function profile(root){
   ];
   root.innerHTML=`
     <div class="p-head">
-      <div class="avatar" id="p-avatar" role="button" tabindex="0" aria-label="Change profile photo">${S.avatar?`<img class="avatar-img" src="${S.avatar}" alt="Profile photo">`:esc(initial)}<span class="avatar-badge">${icon('write','in-tx')}</span></div>
+      <div class="avatar" id="p-avatar" role="button" tabindex="0" aria-label="Change profile photo">${S.avatar?`<img class="avatar-img" src="${S.avatar}" alt="Profile photo">`:esc(initial)+`<span class="avatar-badge">${icon('write','in-tx')}</span>`}</div>
       <div style="min-width:0">
         <h2 class="p-name" id="p-edit" style="cursor:pointer">${esc(name)} <span class="edit-hint">${icon('write','in-tx')}</span></h2>
         <p class="p-sub">Day ${dn} of your 90-day path</p>
@@ -699,7 +699,7 @@ function openAvatarModal(refresh){
   const m=modal(`
     <div class="center">
       ${has?`<img class="av-modal-img" src="${Store.S.avatar}" alt="Profile photo">`
-            :`<div class="av-modal-img" style="display:grid;place-items:center;font-size:44px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--vio1),var(--vio2))">${esc(initial)}</div>`}
+            :`<div class="av-modal-img" style="display:grid;place-items:center;font-size:44px;font-weight:800;color:var(--on-btn);background:linear-gradient(180deg,var(--btn1),var(--btn2))">${esc(initial)}</div>`}
       <h3 style="margin:12px 0 4px">Profile photo</h3>
       <p class="mut small" style="margin:0 0 12px">Saved on this device only — never uploaded anywhere.</p>
       <button class="btn" id="av-upload">Upload photo</button>

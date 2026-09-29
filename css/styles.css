@@ -197,8 +197,6 @@ h2.sec{font-size:15px;margin:var(--sp-6) 0 var(--sp-1);letter-spacing:.4px;font-
   box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 3px 0 rgba(15,23,42,.07)}
 .btn.ghost:hover{border-color:var(--acc)}
 .btn.ghost:active{transform:translateY(2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 1px 0 rgba(15,23,42,.07)}
-.btn.vio{background:linear-gradient(180deg,var(--vio1),var(--vio2));color:#fff;
-  box-shadow:inset 0 2px 0 rgba(255,255,255,.35),inset 0 -3px 0 rgba(15,23,42,.18),0 6px 18px var(--vio-soft)}
 .btn.danger{background:linear-gradient(180deg,var(--dgr1),var(--dgr2));color:#fff;
   box-shadow:inset 0 2px 0 rgba(255,255,255,.35),inset 0 -3px 0 rgba(15,23,42,.18),
     0 6px 18px color-mix(in srgb,var(--dgr2) 28%,transparent)}
@@ -466,10 +464,10 @@ button.chip:active{transform:scale(.94)}
 /* ---------- profile ---------- */
 .p-head{display:flex;align-items:center;gap:var(--sp-4);padding:var(--sp-5) 0 var(--sp-3)}
 .avatar{width:78px;height:78px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;
-  font-size:30px;font-weight:800;color:#fff;position:relative;overflow:hidden;cursor:pointer;
-  background:linear-gradient(135deg,var(--vio1),var(--vio2));
+  font-size:30px;font-weight:800;color:var(--on-btn);position:relative;overflow:hidden;cursor:pointer;
+  background:linear-gradient(180deg,var(--btn1),var(--btn2));
   border:3px solid color-mix(in srgb,var(--acc) 70%,transparent);
-  box-shadow:0 6px 18px var(--vio-soft),inset 0 2px 0 rgba(255,255,255,.35)}
+  box-shadow:0 6px 18px var(--acc-soft),inset 0 2px 0 rgba(255,255,255,.45)}
 .avatar-img{width:100%;height:100%;object-fit:cover;display:block}
 .avatar-badge{position:absolute;right:2px;bottom:2px;width:26px;height:26px;border-radius:50%;
   background:var(--acc);display:grid;place-items:center;border:2px solid var(--bg);
