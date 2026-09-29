@@ -288,7 +288,7 @@ function pronView(root,setId){
   async function selfCheck(L){
     const out=root.querySelector('#pl-out');
     out.innerHTML=`<div class="card"><div class="kicker">Record + honest self-check</div>
-      <div class="row" style="justify-content:center"><button class="rec-btn" id="sc-rec">${UI.icon('mic','in-tx')}</button></div>
+      <div class="row" style="justify-content:center"><button class="rec-btn" id="sc-rec" aria-label="Record your voice">${UI.icon('mic','in-tx')}</button></div>
       <p class="center small dim" id="sc-st">Tap ${UI.icon('mic','in-tx')}, say the line, then listen back.</p>
       <div id="sc-back"></div></div>`;
     const R=Drills.makeRecorder();
@@ -434,7 +434,7 @@ function scenarioPlay(root,scId){
   async function freestyle(t){
     const box=root.querySelector('#t-note');
     box.innerHTML=`<div class="card" style="margin-top:12px"><div class="kicker">${UI.icon('mic','in-tx')} Freestyle — record yourself</div>
-      <div class="row" style="justify-content:center"><button class="rec-btn" id="f-rec">${UI.icon('mic','in-tx')}</button></div>
+      <div class="row" style="justify-content:center"><button class="rec-btn" id="f-rec" aria-label="Record your voice">${UI.icon('mic','in-tx')}</button></div>
       <p class="center small dim" id="f-st">Say your own version of: ${esc(t.prompt)}</p>
       <div id="f-back"></div></div>`;
     const R=Drills.makeRecorder();
