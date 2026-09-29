@@ -345,7 +345,8 @@ audio{width:100%;margin:8px 0;display:block}
 .bdg{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);
   border-radius:16px;padding:13px 8px;text-align:center;font-size:12px;min-height:44px;
   box-shadow:inset 0 1px 0 rgba(255,255,255,.5),var(--shadow-sm);
-  transition:background-color .25s,border-color .25s,transform .15s}
+  transition:background-color .25s,border-color .25s,transform .15s;
+  font:inherit;color:var(--txt);cursor:pointer}
 .bdg:active{transform:scale(.96)}
 .bdg .e{font-size:30px;display:block;margin-bottom:5px}
 .bdg.locked{opacity:.38;filter:grayscale(1)}
@@ -465,6 +466,7 @@ button.chip:active{transform:scale(.94)}
 .p-head{display:flex;align-items:center;gap:var(--sp-4);padding:var(--sp-5) 0 var(--sp-3)}
 .avatar{width:78px;height:78px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;
   font-size:30px;font-weight:800;color:var(--on-btn);position:relative;overflow:hidden;cursor:pointer;
+  font-family:inherit;padding:0;
   background:linear-gradient(180deg,var(--btn1),var(--btn2));
   border:3px solid color-mix(in srgb,var(--acc) 70%,transparent);
   box-shadow:0 6px 18px var(--acc-soft),inset 0 2px 0 rgba(255,255,255,.45)}
