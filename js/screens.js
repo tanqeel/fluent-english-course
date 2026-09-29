@@ -238,12 +238,12 @@ const ENGINES=[
 function practice(root,engine){
   if(!engine){
     let html=`<div class="greet">Drill arena ${icon('practice','in-greet')}</div><p class="sub">Pick a drill type — or go random. Every rep counts.</p>
-      <div class="card" style="border:1.5px solid var(--acc);cursor:pointer" data-go="#/speak">
+      <button class="card" data-go="#/speak" style="border:1.5px solid var(--acc);cursor:pointer;width:100%;text-align:left;font:inherit;color:var(--txt);display:block">
         <div class="kicker" style="color:var(--acc)">${icon('mic','in-tx')} NEW · SPEAK STUDIO</div>
         <p style="margin:8px 0"><b>Pronunciation Lab · Roleplays · Stories · Daily Challenge</b></p>
-        <p class="small dim" style="margin:0">The speaking gym — word-level feedback, offline conversations, mistake repair.</p></div>
+        <p class="small dim" style="margin:0">The speaking gym — word-level feedback, offline conversations, mistake repair.</p></button>
       <div class="card"><button class="btn" data-e="random">${icon('dice','in-tx')} Surprise me (mixed)</button></div><div class="badge-grid">`;
-    for(const [e,ic,name] of ENGINES)html+=`<div class="bdg" data-e="${e}" style="cursor:pointer"><span class="e">${ic}</span>${name}</div>`;
+    for(const [e,ic,name] of ENGINES)html+=`<button class="bdg" data-e="${e}"><span class="e">${ic}</span>${name}</button>`;
     html+=`</div>
       <div class="row mt" style="gap:8px">
         <button class="btn" id="tab-quiz" style="flex:1">${icon('write','in-tx')} Module quizzes</button>
@@ -553,7 +553,7 @@ function progress(root){
       <div class="kv" style="border:0"><span>Comebacks</span><b>${icon('muscle','in-tx')} ${S.comebacks}</b></div></div>
     <h2 class="sec">Badges (${S.badges.length}/${defs.length})</h2>
     <div class="badge-grid">${defs.map(b=>{const got=S.badges.includes(b.id);
-      return `<div class="bdg${got?'':' locked'}"><span class="e">${icon(b.icon,'in-badge')}</span><b>${esc(b.name)}</b><small>${esc(b.desc)}</small></div>`;}).join('')}</div>
+      return `<button class="bdg${got?'':' locked'}" data-b="${b.id}"><span class="e">${icon(b.icon,'in-badge')}</span><b>${esc(b.name)}</b><small>${esc(b.desc)}</small></button>`;}).join('')}</div>
     <h2 class="sec">90-day checklist</h2>
     <div class="card" id="plan-list">${plan.weeks.map(w=>`
       <div class="check${planDone[w.week]?' done':''}" data-w="${w.week}"><div class="box">${planDone[w.week]?'✓':''}</div>
@@ -569,6 +569,15 @@ function progress(root){
     const w=+c.dataset.w;S.planDone=S.planDone||{};
     if(S.planDone[w])delete S.planDone[w];else{S.planDone[w]=Date.now();confetti(40);}
     Store.save();progress(root);
+  });
+  root.querySelectorAll('.badge-grid .bdg').forEach(b=>b.onclick=()=>{
+    const d=defs.find(x=>x.id===b.dataset.b);if(!d)return;
+    const got=S.badges.includes(d.id);
+    modal(`<div style="font-size:52px;margin-bottom:6px">${icon(d.icon,'in-badge-lg')}</div>
+      <h3 style="margin:0 0 6px">${esc(d.name)}</h3>
+      <p class="mut" style="margin:0 0 10px">${esc(d.desc)}</p>
+      <p class="small" style="margin:0 0 14px;color:${got?'var(--acc)':'var(--dim)'};font-weight:700">${got?'✅ Earned — nice work!':'🔒 Locked — keep going!'}</p>
+      <button class="btn" onclick="this.closest('.modal-bg').remove()">Close</button>`);
   });
 }
 
@@ -632,7 +641,7 @@ function profile(root){
   ];
   root.innerHTML=`
     <div class="p-head">
-      <div class="avatar" id="p-avatar" role="button" tabindex="0" aria-label="Change profile photo">${S.avatar?`<img class="avatar-img" src="${S.avatar}" alt="Profile photo">`:esc(initial)+`<span class="avatar-badge">${icon('write','in-tx')}</span>`}</div>
+      <button class="avatar" id="p-avatar" aria-label="Change profile photo">${S.avatar?`<img class="avatar-img" src="${S.avatar}" alt="Profile photo">`:esc(initial)+`<span class="avatar-badge">${icon('write','in-tx')}</span>`}</button>
       <div style="min-width:0">
         <h2 class="p-name" id="p-edit" style="cursor:pointer">${esc(name)} <span class="edit-hint">${icon('write','in-tx')}</span></h2>
         <p class="p-sub">Day ${dn} of your 90-day path</p>
@@ -668,7 +677,6 @@ function profile(root){
   root.querySelector('#p-edit').onclick=edit;
   const avBtn=root.querySelector('#p-avatar');
   avBtn.onclick=()=>openAvatarModal(()=>profile(root));
-  avBtn.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openAvatarModal(()=>profile(root));}};
   root.querySelector('#p-share').onclick=shareApp;
   root.querySelector('#p-update').onclick=()=>{if(window.CheckForUpdates)window.CheckForUpdates();};
   // version readout: running version vs latest deployed
