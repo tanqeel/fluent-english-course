@@ -238,8 +238,6 @@ async function callFreeAI(system,messages,opts){
       last={friendly:'Free AI had a hiccup.',retryable:true};
     }
   }
-  if(last&&last.friendly==='busy')
-    throw {friendly:'Free AI is busy right now (rate limit). Wait a minute and try again — or add a free key in ⚙️ settings for the smarter coach. ⏳'};
   throw {friendly:'Free AI is having trouble right now. Try again in a bit — or add a free key in ⚙️ settings for the smarter coach. 🤖'};
 }
 
