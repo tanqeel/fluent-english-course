@@ -4,7 +4,7 @@
  "tagline": "How English Actually Gets Learned",
  "icon": "star",
  "color": "#34d399",
- "description": "You don't need more grammar tables. You need to understand the machine you're operating: input goes in, output comes out, feedback corrects the loop. Learners who underst",
+ "description": "You don't need more grammar tables. You need to understand the machine you're operating: input goes in, output comes out, feedback corrects the loop. Learners who understand this loop improve faster than those who memorize rules.",
  "lessons": [
   {
    "id": "foundations-l1",
