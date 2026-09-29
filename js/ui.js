@@ -57,7 +57,12 @@ function confetti(n=90){
 function modal(html){
   const bg=el('<div class="modal-bg"><div class="modal"></div></div>');
   bg.firstElementChild.innerHTML=html;
-  bg.addEventListener('click',e=>{if(e.target===bg)bg.remove();});
+  const close=()=>bg.remove();
+  bg.addEventListener('click',e=>{if(e.target===bg)close();});
+  bg._esc=e=>{if(e.key==='Escape'){close();document.removeEventListener('keydown',bg._esc);}};
+  document.addEventListener('keydown',bg._esc);
+  const _rm=bg.remove.bind(bg);
+  bg.remove=()=>{document.removeEventListener('keydown',bg._esc);_rm();};
   document.body.appendChild(bg);
   return bg;
 }
